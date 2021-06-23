@@ -86,7 +86,7 @@ let mapleader=','
 let g:ruby_host_prog = '~/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/neovim-0.8.1/exe/neovim-ruby-host'
 
 "========================================================
-" REQUIRE CONFIG FILES
+" LUA CONFIGS
 "========================================================
 lua <<EOF
 require('eviline')
@@ -139,16 +139,7 @@ let g:ale_disable_lsp = 1
 let g:ale_fix_on_save = 1
 
 "========================================================
-" CONFIG MISC
-"========================================================
-let g:indentLine_enabled = 0
-" Tmux navigation
-let g:tmux_navigator_no_mappings = 1
-
-let g:move_key_modifier = 'C'
-let g:jsx_ext_required = 0
-"========================================================
-" CONFIG VIM ESEARCH
+" VIM ESEARCH
 "========================================================
 let g:esearch = {}
 let g:esearch.default_mappings = 0
@@ -195,7 +186,7 @@ nmap <silent> <leader>ff <plug>(esearch)
 highlight link esearchLineNr Comment
 highlight link esearchCursorLineNr esearchFilename
 "========================================================
-" CONFIG SIGNIFY
+" SIGNIFY
 "========================================================
 let g:signify_vcs_list = ['git']
 let g:signify_sign_show_count = 0
@@ -208,7 +199,7 @@ highlight SignifySignAdd guibg=255
 highlight SignifySignDelete guibg=255
 highlight SignifySignChange guibg=255
 "========================================================
-" CONFIG FZF
+" FZF
 "========================================================
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 let $FZF_DEFAULT_OPTS='--layout=reverse'
@@ -299,7 +290,7 @@ noremap <silent>rm <ESC>:call fzf#vim#files('./app/models/', {'options': g:fzf_p
 let g:fzf_preview_window = ['down:50%', 'ctrl-/']
 noremap <leader>ag <ESC>:Rg<space>
 "========================================================
-" CONFIG EASYMOTION
+" EASYMOTION
 "========================================================
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
@@ -307,7 +298,7 @@ map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 nmap <silent> <tab> <Plug>(easymotion-bd-w)
 "========================================================
-" CONFIG GIT
+" GIT
 "========================================================
 nnoremap <silent> <leader>gt :call TimeLapse() <cr>
 nnoremap <silent> <leader>gb :Git blame<cr>
@@ -316,8 +307,13 @@ nnoremap <silent> <leader>gd :Git diff<cr>
 " Tig
 nnoremap <leader>t :TigStatus<CR>
 "========================================================
-" CONFIG MISC
+" MISC
 "========================================================
+let g:indentLine_enabled = 0
+let g:tmux_navigator_no_mappings = 1
+let g:move_key_modifier = 'C'
+let g:jsx_ext_required = 0
+
 map <silent> <leader>urt <ESC>:call URT()<CR>
 nnoremap \ ,
 map <silent> <leader>' cs'"
@@ -338,7 +334,7 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 
 "========================================================
-" STARTIFY CONFIGS
+" STARTIFY
 "========================================================
 let g:startify_change_to_dir = 0
 let g:startify_session_dir = '~/.vim/session'
