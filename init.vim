@@ -1,5 +1,9 @@
 filetype off
 call plug#begin('~/.vim/plugged')
+Plug 'sindrets/diffview.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'iberianpig/tig-explorer.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -28,7 +32,6 @@ Plug 'tpope/vim-endwise'
 Plug 'alvan/vim-closetag'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "========================================================
@@ -93,10 +96,26 @@ require('eviline')
 require('lspconfig_config')
 require('compe_config')
 require('nvimtree_config')
+require('telescope_config')
+require('diffview_config')
 EOF
 
 "========================================================
-" NVIM-TREE.LUA
+" TELESCOPE
+"========================================================
+nnoremap <silent> <C-j> <ESC>:call v:lua.git_diff({})<CR>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+"========================================================
+" DIFF VIEW
+"========================================================
+nnoremap <leader>dv :DiffviewOpen<CR>
+
+"========================================================
+" NVIM-TREE
 "========================================================
 nnoremap <leader>v :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
@@ -181,7 +200,7 @@ let g:esearch.win_map = [
  \ ['n', '<cr>', '<plug>(esearch-win-open)'],
  \ ['n', '<esc>', ':q!<cr>']
  \]
-nmap <silent> <leader>ff <plug>(esearch)
+nmap <silent> <leader>es <plug>(esearch)
 
 highlight link esearchLineNr Comment
 highlight link esearchCursorLineNr esearchFilename
