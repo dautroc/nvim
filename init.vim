@@ -320,7 +320,6 @@ nmap <silent> <tab> <Plug>(easymotion-bd-w)
 "========================================================
 nnoremap <silent> <leader>gt :call TimeLapse() <cr>
 nnoremap <silent> <leader>gb :Git blame<cr>
-nnoremap <silent> <leader>gd :Git diff<cr>
 
 "========================================================
 " MISC
