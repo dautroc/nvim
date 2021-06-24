@@ -7,13 +7,9 @@ local on_attach = function(client, bufnr)
 
 	local opts = { noremap=true, silent=true }
 
-	buf_set_keymap('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-	buf_set_keymap('n', 'gj', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-	buf_set_keymap('n', 'gx', ':sp<CR><Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-	buf_set_keymap('n', 'gv', ':vsp<CR><Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-	buf_set_keymap('n', 'gr', ":lua require'telescope.builtin'.lsp_references{}<CR>", opts)
-	buf_set_keymap('n', 'gi', ":lua require'telescope.builtin'.lsp_implementations{}<CR>", opts)
-	buf_set_keymap('n', 'ga', ":lua require'telescope.builtin'.lsp_code_actions{}<CR>", opts)
+	buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+	buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 end
 
 local servers = {"solargraph"}

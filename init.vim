@@ -5,12 +5,9 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
-Plug 'iberianpig/tig-explorer.vim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/git-time-lapse'
 Plug 'tyrannicaltoucan/vim-deep-space'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'mhinz/vim-signify'
 Plug 'eugen0329/vim-esearch'
 Plug 'yegappan/mru'
@@ -32,6 +29,7 @@ Plug 'tpope/vim-endwise'
 Plug 'alvan/vim-closetag'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'ojroques/nvim-lspfuzzy'
 call plug#end()
 
 "========================================================
@@ -99,16 +97,16 @@ require('compe_config')
 require('nvimtree_config')
 require('telescope_config')
 require('diffview_config')
+require('lspfuzzy').setup {}
 EOF
 
 "========================================================
 " TELESCOPE
 "========================================================
-nnoremap <silent> <C-j> <ESC>:call v:lua.git_diff({})<CR>
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 "========================================================
 " DIFF VIEW
@@ -324,8 +322,6 @@ nnoremap <silent> <leader>gt :call TimeLapse() <cr>
 nnoremap <silent> <leader>gb :Git blame<cr>
 nnoremap <silent> <leader>gd :Git diff<cr>
 
-" Tig
-nnoremap <leader>t :TigStatus<CR>
 "========================================================
 " MISC
 "========================================================
