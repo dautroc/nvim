@@ -40,3 +40,16 @@ function NvimTreeOSOpen()
     vim.fn.jobstart("open '" .. node.absolute_path .. "' &", {detach = true})
   end
 end
+
+local tree ={}
+tree.open = function ()
+   require'bufferline.state'.set_offset(31, 'FileTree')
+   require'nvim-tree'.find_file(true)
+end
+
+tree.close = function ()
+   require'bufferline.state'.set_offset(0)
+   require'nvim-tree'.close()
+end
+
+return tree
