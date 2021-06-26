@@ -44,7 +44,6 @@ endif
 
 nnoremap <nowait><silent> <C-C> :noh<CR>
 nnoremap <silent>qq :q<CR>
-" set autochdir
 set clipboard=unnamedplus
 set completeopt=menuone,noselect " Prerequisite for compe
 set ignorecase
