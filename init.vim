@@ -1,5 +1,6 @@
 filetype off
 call plug#begin('~/.vim/plugged')
+Plug 'romgrk/barbar.nvim'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sindrets/diffview.nvim'
@@ -88,6 +89,23 @@ let mapleader=','
 " Config language provider
 let g:ruby_host_prog = '~/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/neovim-0.8.1/exe/neovim-ruby-host'
 
+"========================================================
+" BARBAR
+"========================================================
+nnoremap <silent>    <C-j> :BufferPrevious<CR>
+nnoremap <silent>    <C-k> :BufferNext<CR>
+" Goto buffer in position...
+nnoremap <silent>    <F1> :BufferGoto 1<CR>
+nnoremap <silent>    <F2> :BufferGoto 2<CR>
+nnoremap <silent>    <F3> :BufferGoto 3<CR>
+nnoremap <silent>    <F4> :BufferGoto 4<CR>
+nnoremap <silent>    <F5> :BufferGoto 5<CR>
+nnoremap <silent>    <F6> :BufferGoto 6<CR>
+nnoremap <silent>    <F7> :BufferGoto 7<CR>
+nnoremap <silent>    <F8> :BufferGoto 8<CR>
+nnoremap <silent>    <F9> :BufferLast<CR>
+" Close buffer
+nnoremap <silent>    <C-c> :BufferClose<CR>
 "========================================================
 " LUA CONFIGS
 "========================================================
