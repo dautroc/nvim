@@ -44,7 +44,7 @@ endif
 
 nnoremap <nowait><silent> <C-C> :noh<CR>
 nnoremap <silent>qq :q<CR>
-set autochdir
+" set autochdir
 set clipboard=unnamedplus
 set completeopt=menuone,noselect " Prerequisite for compe
 set ignorecase
@@ -154,7 +154,7 @@ let g:ale_fixers = {
 \ 'rspec': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_disable_lsp = 1
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
 "========================================================
 " VIM ESEARCH

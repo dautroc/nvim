@@ -32,3 +32,11 @@ vim.g.nvim_tree_bindings = {
 	["["]             = tree_cb("next_git_item"),
 	["q"]             = tree_cb("close"),
 }
+
+function NvimTreeOSOpen()
+  local lib = require "nvim-tree.lib"
+  local node = lib.get_node_at_cursor()
+  if node then
+    vim.fn.jobstart("open '" .. node.absolute_path .. "' &", {detach = true})
+  end
+end
