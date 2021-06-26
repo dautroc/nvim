@@ -1,5 +1,7 @@
 filetype off
 call plug#begin('~/.vim/plugged')
+Plug 'nvim-treesitter/playground'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sindrets/diffview.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -22,7 +24,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'flazz/vim-colorschemes'
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
@@ -97,6 +99,8 @@ require('nvimtree_config')
 require('telescope_config')
 require('diffview_config')
 require('lspfuzzy').setup {}
+require('treesister_config')
+require('autopairs_config')
 EOF
 
 "========================================================
