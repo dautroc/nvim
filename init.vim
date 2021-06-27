@@ -1,10 +1,10 @@
 filetype off
 call plug#begin('~/.vim/plugged')
+Plug 'mhinz/vim-startify'
 Plug 'moll/vim-bbye'
 Plug 'preservim/vimux'
 Plug 'vim-test/vim-test'
 Plug 'folke/which-key.nvim'
-Plug 'glepnir/dashboard-nvim'
 Plug 'romgrk/barbar.nvim'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -300,16 +300,36 @@ map <silent> <leader><leader> <C-^><CR>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 "========================================================
-" DASHBOARD
+" STARTIFY
 "========================================================
-autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
-let g:dashboard_default_executive ='telescope'
+let g:startify_change_to_dir = 0
+let g:startify_session_dir = '~/.vim/session'
+let g:startify_session_persistence = 1
+let g:startify_session_number = 3
+let g:startify_session_sort = 1
 
-let g:dashboard_custom_header = [
-\ ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
-\ ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
-\ ' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
-\ ' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
-\ ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
-\ ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
-\]
+function! GetUniqueSessionName()
+  let path = fnamemodify(getcwd(), ':~:t')
+  let path = empty(path) ? 'no-project' : path
+  let branch = system('git branch --no-color --show-current 2>/dev/null')
+  let branch = empty(branch) ? '' : '-' . branch
+  return substitute(path . branch, '/', '-', 'g')
+endfunction
+" Don't forget to create ~/.vim/session, or vim requires an extra enter when exit
+autocmd VimLeavePre * silent execute 'SSave! ' . GetUniqueSessionName()
+
+function! StarifyGitModified()
+    let files = systemlist('git ls-files -m 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+function! StarifyGitUntracked()
+    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+let g:startify_lists = [
+      \ { 'type': 'sessions',                      'header': ['   Sessions']       },
+      \ { 'type': 'dir',                           'header': ['   MRU '. getcwd()] },
+      \ { 'type': function('StarifyGitModified'),  'header': ['   Git modified']},
+      \ { 'type': function('StarifyGitUntracked'), 'header': ['   Git untracked']},
+      \ ]
