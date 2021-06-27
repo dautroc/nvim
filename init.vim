@@ -1,5 +1,7 @@
 filetype off
 call plug#begin('~/.vim/plugged')
+Plug 'folke/which-key.nvim'
+Plug 'glepnir/dashboard-nvim'
 Plug 'romgrk/barbar.nvim'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -19,7 +21,6 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'dense-analysis/ale'
-Plug 'mhinz/vim-startify'
 Plug 'tomtom/tcomment_vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'terryma/vim-multiple-cursors'
@@ -105,7 +106,7 @@ nnoremap <silent>    <F7> :BufferGoto 7<CR>
 nnoremap <silent>    <F8> :BufferGoto 8<CR>
 nnoremap <silent>    <F9> :BufferLast<CR>
 " Close buffer
-nnoremap <silent>    <C-c> :BufferClose<CR>
+nnoremap <silent>    <C-x> :BufferClose<CR>
 "========================================================
 " LUA CONFIGS
 "========================================================
@@ -119,7 +120,13 @@ require('diffview_config')
 require('lspfuzzy').setup {}
 require('treesister_config')
 require('autopairs_config')
+require("which-key").setup {}
 EOF
+
+"========================================================
+" WHICH KEY
+"========================================================
+nnoremap <leader>w :WhichKey<CR>
 
 "========================================================
 " TELESCOPE
@@ -128,6 +135,7 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>fr <cmd>lua require('telescope.builtin').oldfiles()<cr>
 
 "========================================================
 " DIFF VIEW
@@ -238,97 +246,6 @@ highlight SignifySignAdd guibg=255
 highlight SignifySignDelete guibg=255
 highlight SignifySignChange guibg=255
 "========================================================
-" FZF
-"========================================================
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
-let $FZF_DEFAULT_OPTS='--layout=reverse'
-
-" Default all to a floating window
-let g:fzf_layout = { 'window': 'call FzfFloatingWindow()' }
-function! FzfFloatingWindow()
-  let height = float2nr((&lines - 2) * 0.9) " lightline + status
-  let row = float2nr((&lines - height) / 2)
-  let width = float2nr(&columns * 0.9)
-  let col = float2nr((&columns - width) / 2)
-
-  let opts = {
-        \ 'relative': 'editor',
-        \ 'row': row,
-        \ 'col': col,
-        \ 'width': width,
-        \ 'height': height
-        \ }
-
-  let buf = nvim_create_buf(v:false, v:true)
-  let win = nvim_open_win(buf, v:true, opts)
-
-  "Set Floating Window Highlighting
-  call setwinvar(win, '&winhl', 'Normal:Pmenu')
-
-  setlocal
-        \ buftype=nofile
-        \ nobuflisted
-        \ bufhidden=hide
-        \ nonumber
-        \ norelativenumber
-        \ signcolumn=no
-endfunction
-
-" Search recent files
-function! FilterOldfiles(path_prefix) abort
-  let path_prefix = '\V'. escape(a:path_prefix, '\')
-  let counter     = 30
-  let entries     = {}
-  let oldfiles    = []
-
-  for fname in MruGetFiles()
-    if counter <= 0
-      break
-    endif
-
-    let absolute_path = resolve(fname)
-    " filter duplicates, bookmarks and entries from the skiplist
-    if has_key(entries, absolute_path)
-          \ || !filereadable(absolute_path)
-          \ || match(absolute_path, path_prefix)
-      continue
-    endif
-    let relative_path = fnamemodify(absolute_path, ":~:.")
-
-    let entries[absolute_path]  = 1
-    let counter                -= 1
-    let oldfiles += [relative_path]
-  endfor
-
-  return oldfiles
-endfunction
-
-function! FzfRecentFiles()
-  return fzf#run(fzf#wrap({
-        \ 'source': FilterOldfiles(getcwd()),
-        \ 'options': [
-        \ '-m', '--header-lines', !empty(expand('%')),
-        \ '--prompt', 'Recent files> ',
-        \ "--preview", "bat {} --color=always --style=plain",
-        \ '--preview-window', 'down:50%'
-        \ ]}))
-endfunction
-noremap <silent> <c-h> <ESC>:call FzfRecentFiles()<CR>
-
-" Search files
-let g:fzf_preview_source=" --preview='bat {} --color=always --style=plain' --preview-window down:50%"
-noremap <silent> <c-p> <ESC>:call fzf#vim#files('.', {'options': g:fzf_preview_source})<CR>
-
-" Search files in specified rails folder
-noremap <silent>rc <ESC>:call fzf#vim#files('./app/controllers/', {'options': g:fzf_preview_source})<CR>
-noremap <silent>ra <ESC>:call fzf#vim#files('./app/api/', {'options': g:fzf_preview_source})<CR>
-noremap <silent>rs <ESC>:call fzf#vim#files('./spec/', {'options': g:fzf_preview_source})<CR>
-noremap <silent>rm <ESC>:call fzf#vim#files('./app/models/', {'options': g:fzf_preview_source})<CR>
-
-" A backup searcher for esearch
-let g:fzf_preview_window = ['down:50%', 'ctrl-/']
-noremap <leader>ag <ESC>:Rg<space>
-"========================================================
 " EASYMOTION
 "========================================================
 let g:EasyMotion_do_mapping = 0
@@ -368,38 +285,17 @@ map <silent> <space>l <C-W>l
 map <silent> <leader><leader> <C-^><CR>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
-
 "========================================================
-" STARTIFY
+" DASHBOARD
 "========================================================
-let g:startify_change_to_dir = 0
-let g:startify_session_dir = '~/.vim/session'
-let g:startify_session_persistence = 1
-let g:startify_session_number = 3
-let g:startify_session_sort = 1
+autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
+let g:dashboard_default_executive ='telescope'
 
-function! GetUniqueSessionName()
-  let path = fnamemodify(getcwd(), ':~:t')
-  let path = empty(path) ? 'no-project' : path
-  let branch = system('git branch --no-color --show-current 2>/dev/null')
-  let branch = empty(branch) ? '' : '-' . branch
-  return substitute(path . branch, '/', '-', 'g')
-endfunction
-" Don't forget to create ~/.vim/session, or vim requires an extra enter when exit
-autocmd VimLeavePre * silent execute 'SSave! ' . GetUniqueSessionName()
-
-function! StarifyGitModified()
-    let files = systemlist('git ls-files -m 2>/dev/null')
-    return map(files, "{'line': v:val, 'path': v:val}")
-endfunction
-
-function! StarifyGitUntracked()
-    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
-    return map(files, "{'line': v:val, 'path': v:val}")
-endfunction
-let g:startify_lists = [
-      \ { 'type': 'sessions',                      'header': ['   Sessions']       },
-      \ { 'type': 'dir',                           'header': ['   MRU '. getcwd()] },
-      \ { 'type': function('StarifyGitModified'),  'header': ['   Git modified']},
-      \ { 'type': function('StarifyGitUntracked'), 'header': ['   Git untracked']},
-      \ ]
+let g:dashboard_custom_header = [
+\ ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
+\ ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
+\ ' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
+\ ' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
+\ ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
+\ ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
+\]
