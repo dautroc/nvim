@@ -1,5 +1,8 @@
 filetype off
 call plug#begin('~/.vim/plugged')
+Plug 'moll/vim-bbye'
+Plug 'preservim/vimux'
+Plug 'vim-test/vim-test'
 Plug 'folke/which-key.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'romgrk/barbar.nvim'
@@ -69,12 +72,12 @@ set ttyfast
 set updatetime=300
 set encoding=utf-8
 
-nnoremap tn  :tabnew<CR>
-nnoremap th  :tabfirst<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tj  :tabprev<CR>
-nnoremap tk  :tabnext<CR>
-nnoremap tt  :tabclose<CR>
+" nnoremap tn  :tabnew<CR>
+" nnoremap th  :tabfirst<CR>
+" nnoremap tl  :tablast<CR>
+" nnoremap tj  :tabprev<CR>
+" nnoremap tk  :tabnext<CR>
+" nnoremap tt  :tabclose<CR>
 
 if has("autocmd")
   autocmd FileType jsonnet set tabstop=2 shiftwidth=2 softtabstop=2
@@ -89,12 +92,23 @@ let mapleader=','
 
 " Config language provider
 let g:ruby_host_prog = '~/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/neovim-0.8.1/exe/neovim-ruby-host'
+"========================================================
+" VIM TEST
+"========================================================
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tv :TestVisit<CR>
+let g:VimuxUseNearest = 0
+let g:test#strategy = 'vimux'
+let test#ruby#rspec#executable = 'bundle exec rspec'
 
 "========================================================
 " BARBAR
 "========================================================
-nnoremap <silent>    <C-j> :BufferPrevious<CR>
-nnoremap <silent>    <C-k> :BufferNext<CR>
+nnoremap <silent>    tj :BufferPrevious<CR>
+nnoremap <silent>    tk :BufferNext<CR>
 " Goto buffer in position...
 nnoremap <silent>    <F1> :BufferGoto 1<CR>
 nnoremap <silent>    <F2> :BufferGoto 2<CR>
@@ -106,7 +120,7 @@ nnoremap <silent>    <F7> :BufferGoto 7<CR>
 nnoremap <silent>    <F8> :BufferGoto 8<CR>
 nnoremap <silent>    <F9> :BufferLast<CR>
 " Close buffer
-nnoremap <silent>    <C-x> :BufferClose<CR>
+nnoremap <silent>    tt :BufferClose<CR>
 "========================================================
 " LUA CONFIGS
 "========================================================

@@ -11,7 +11,7 @@ vim.g.nvim_tree_bindings = {
 	["o"]              = tree_cb("edit"),
 	["v"]              = tree_cb("vsplit"),
 	["x"]              = tree_cb("split"),
-	["<C-t>"]          = tree_cb("tabnew"),
+	["t"]              = tree_cb("tabnew"),
 
 	-- Togle hidden files
 	["I"]              = tree_cb("toggle_ignored"),
