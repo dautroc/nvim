@@ -4,8 +4,6 @@ Plug 'mhinz/vim-startify'
 Plug 'moll/vim-bbye'
 Plug 'preservim/vimux'
 Plug 'vim-test/vim-test'
-Plug 'folke/which-key.nvim'
-Plug 'romgrk/barbar.nvim'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sindrets/diffview.nvim'
@@ -105,23 +103,6 @@ let g:test#strategy = 'vimux'
 let test#ruby#rspec#executable = 'bundle exec rspec'
 
 "========================================================
-" BARBAR
-"========================================================
-nnoremap <silent>    tj :BufferPrevious<CR>
-nnoremap <silent>    tk :BufferNext<CR>
-" Goto buffer in position...
-nnoremap <silent>    <F1> :BufferGoto 1<CR>
-nnoremap <silent>    <F2> :BufferGoto 2<CR>
-nnoremap <silent>    <F3> :BufferGoto 3<CR>
-nnoremap <silent>    <F4> :BufferGoto 4<CR>
-nnoremap <silent>    <F5> :BufferGoto 5<CR>
-nnoremap <silent>    <F6> :BufferGoto 6<CR>
-nnoremap <silent>    <F7> :BufferGoto 7<CR>
-nnoremap <silent>    <F8> :BufferGoto 8<CR>
-nnoremap <silent>    <F9> :BufferLast<CR>
-" Close buffer
-nnoremap <silent>    tt :BufferClose<CR>
-"========================================================
 " LUA CONFIGS
 "========================================================
 lua <<EOF
@@ -134,13 +115,11 @@ require('diffview_config')
 require('lspfuzzy').setup {}
 require('treesister_config')
 require('autopairs_config')
-require("which-key").setup {}
 EOF
 
 "========================================================
 " WHICH KEY
 "========================================================
-nnoremap <leader>w :WhichKey<CR>
 
 "========================================================
 " TELESCOPE
