@@ -309,7 +309,6 @@ function! StarifyGitUntracked()
     return map(files, "{'line': v:val, 'path': v:val}")
 endfunction
 let g:startify_lists = [
-      \ { 'type': 'sessions',                      'header': ['   Sessions']       },
       \ { 'type': 'dir',                           'header': ['   MRU '. getcwd()] },
       \ { 'type': function('StarifyGitModified'),  'header': ['   Git modified']},
       \ { 'type': function('StarifyGitUntracked'), 'header': ['   Git untracked']},
