@@ -299,16 +299,6 @@ let g:startify_session_persistence = 1
 let g:startify_session_number = 3
 let g:startify_session_sort = 1
 
-function! GetUniqueSessionName()
-  let path = fnamemodify(getcwd(), ':~:t')
-  let path = empty(path) ? 'no-project' : path
-  let branch = system('git branch --no-color --show-current 2>/dev/null')
-  let branch = empty(branch) ? '' : '-' . branch
-  return substitute(path . branch, '/', '-', 'g')
-endfunction
-
-autocmd VimLeavePre * silent execute 'SSave! ' . GetUniqueSessionName()
-
 function! StarifyGitModified()
     let files = systemlist('git ls-files -m 2>/dev/null')
     return map(files, "{'line': v:val, 'path': v:val}")
