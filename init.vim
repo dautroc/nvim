@@ -306,7 +306,7 @@ function! GetUniqueSessionName()
   let branch = empty(branch) ? '' : '-' . branch
   return substitute(path . branch, '/', '-', 'g')
 endfunction
-" Don't forget to create ~/.vim/session, or vim requires an extra enter when exit
+
 autocmd VimLeavePre * silent execute 'SSave! ' . GetUniqueSessionName()
 
 function! StarifyGitModified()
