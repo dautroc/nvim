@@ -1,5 +1,6 @@
 filetype off
 call plug#begin('~/.vim/plugged')
+Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'moll/vim-bbye'
 Plug 'preservim/vimux'
@@ -77,6 +78,9 @@ set encoding=utf-8
 " nnoremap tk  :tabnext<CR>
 " nnoremap tt  :tabclose<CR>
 
+" Language provider
+let g:ruby_host_prog = '~/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/neovim-0.8.1/exe/neovim-ruby-host'
+
 if has("autocmd")
   autocmd FileType jsonnet set tabstop=2 shiftwidth=2 softtabstop=2
   autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2
@@ -88,8 +92,16 @@ colorscheme deep-space
 let mapleader=','
 :imap jj <Esc>
 
-" Config language provider
-let g:ruby_host_prog = '~/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/neovim-0.8.1/exe/neovim-ruby-host'
+"========================================================
+" SCROLL BAR
+"========================================================
+augroup ScrollbarInit
+  autocmd!
+  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
+  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+  autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
+augroup end
+
 "========================================================
 " VIM TEST
 "========================================================
