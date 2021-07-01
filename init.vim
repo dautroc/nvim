@@ -1,6 +1,5 @@
 filetype off
 call plug#begin('~/.vim/plugged')
-Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'moll/vim-bbye'
 Plug 'preservim/vimux'
@@ -93,16 +92,6 @@ let mapleader=','
 :imap jj <Esc>
 
 "========================================================
-" SCROLL BAR
-"========================================================
-augroup ScrollbarInit
-  autocmd!
-  autocmd CursorMoved,VimResized,QuitPre              * silent! lua require('scrollbar').show()
-  autocmd WinEnter,FocusGained                        * silent! lua require('scrollbar').show()
-  autocmd WinLeave,BufLeave,BufWinLeave,FocusLost     * silent! lua require('scrollbar').clear()
-augroup end
-
-"========================================================
 " VIM TEST
 "========================================================
 nmap <silent> <leader>tn :TestNearest<CR>
@@ -152,6 +141,8 @@ nnoremap <leader>dv :DiffviewOpen<CR>
 "========================================================
 nnoremap <leader>v :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+
 let g:nvim_tree_git_hl = 1
 let g:nvim_tree_highlight_opened_files = 1
 let g:nvim_tree_hide_dotfiles = 1
