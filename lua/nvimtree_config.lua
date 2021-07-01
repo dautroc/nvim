@@ -1,36 +1,24 @@
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+vim.g.nvim_tree_disable_default_keybindings = 1
 vim.g.nvim_tree_bindings = {
-	["<CR>"] = ":YourVimFunction()<cr>",
-	["u"] = ":lua require'some_module'.some_function()<cr>",
-
-	-- Dir up/down
-	["-"]              = tree_cb("dir_up"),
-	["="]              = tree_cb("cd"),
-
-	-- Open file
-	["o"]              = tree_cb("edit"),
-	["v"]              = tree_cb("vsplit"),
-	["x"]              = tree_cb("split"),
-	["t"]              = tree_cb("tabnew"),
-
-	-- Togle hidden files
-	["I"]              = tree_cb("toggle_ignored"),
-	["H"]              = tree_cb("toggle_dotfiles"),
-
-	-- Edit
-	["R"]              = tree_cb("refresh"),
-	["a"]              = tree_cb("create"),
-	["d"]              = tree_cb("remove"),
-	["r"]              = tree_cb("rename"),
-	["<C-r>"]          = tree_cb("full_rename"),
-	["<C-x>"]          = tree_cb("cut"),
-	["c"]              = tree_cb("copy"),
-	["p"]              = tree_cb("paste"),
-
-	-- Git items
-	["]"]             = tree_cb("prev_git_item"),
-	["["]             = tree_cb("next_git_item"),
-	["q"]             = tree_cb("close"),
+	{ key = "o",                            cb = tree_cb("edit") },
+	{ key = "v",                            cb = tree_cb("vsplit") },
+	{ key = "x",                            cb = tree_cb("split") },
+	{ key = "t",                            cb = tree_cb("tabnew") },
+	{ key = "I",                            cb = tree_cb("toggle_ignored") },
+	{ key = "H",                            cb = tree_cb("toggle_dotfiles") },
+	{ key = "R",                            cb = tree_cb("refresh") },
+	{ key = "a",                            cb = tree_cb("create") },
+	{ key = "d",                            cb = tree_cb("remove") },
+	{ key = "r",                            cb = tree_cb("rename") },
+	{ key = "<C->",                         cb = tree_cb("full_rename") },
+	{ key = "Y",                            cb = tree_cb("cut") },
+	{ key = "y",                            cb = tree_cb("copy") },
+	{ key = "p",                            cb = tree_cb("paste") },
+	{ key = "[",                            cb = tree_cb("prev_git_item") },
+	{ key = "]",                            cb = tree_cb("next_git_item") },
+	{ key = "q",                            cb = tree_cb("close") },
+	{ key = "g?",                           cb = tree_cb("toggle_help") },
 }
 
 function NvimTreeOSOpen()
