@@ -1,7 +1,6 @@
 filetype off
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
-Plug 'moll/vim-bbye'
 Plug 'preservim/vimux'
 Plug 'vim-test/vim-test'
 Plug 'nvim-treesitter/playground'
