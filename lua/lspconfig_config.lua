@@ -1,4 +1,5 @@
 local nvim_lsp = require('lspconfig')
+local lspfuzzy = require 'lspfuzzy'
 require'lspconfig'.solargraph.setup{}
 
 local on_attach = function(client, bufnr)
@@ -13,7 +14,9 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
 
-local servers = {"solargraph"}
+local servers = {'solargraph'}
 for _, lsp in ipairs(servers) do
 	nvim_lsp[lsp].setup { on_attach = on_attach }
 end
+
+lspfuzzy.setup {}  -- Make the LSP client use FZF instead of the quickfix list
