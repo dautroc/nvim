@@ -116,10 +116,11 @@ map('i', 'jj', '<ESC>')
 map('', '<leader>pp', ':let @+=@%<CR>', { silent = true })
 
 -------------------- TREE-SITTER ---------------------------
-require('treesister_config')
+require('treesitter_config')
 
 -------------------- LSP -----------------------------------
 require('lspconfig_config')
+
 -------------------- EASY MOTION -----------------------------------
 
 g.EasyMotion_do_mapping = 0
@@ -128,6 +129,7 @@ g.EasyMotion_smartcase = 1
 --map('', '/', '<Plug>(easymotion-sn)')
 --map('o', '/', '<Plug>(easymotion-tn)')
 --map('n', '<tab>', "<Plug>(easymotion-bd-w)", { silent = true })
+
 -------------------- DIFF VIEW ------------------------------
 map('n', '<leader>dv', '<CMD>:DiffviewOpen<CR>')
 require('diffview_config')
@@ -139,6 +141,7 @@ map('n', '<C-h>', ':Telescope help_tags<cr>')
 map('n', '<C-r>', ':Telescope oldfiles<cr>')
 
 require('telescope_config')
+
 -------------------- ALE ------------------------------
 g.ale_linter_aliases = {rspec = {'ruby'}}
 g.ale_linters = {
@@ -154,6 +157,7 @@ _ale_fixer['rspec'] = {'remove_trailing_lines', 'trim_whitespace'};
 g.ale_fixer = _ale_fixer
 g.ale_disable_lsp = 1
 g.ale_fix_on_save = 0
+
 -------------------- SIGNIFY ------------------------------
 g.signify_vcs_list = {'git'}
 g.signify_sign_show_count = 0
@@ -162,14 +166,15 @@ g.signify_sign_delete            = '-'
 g.signify_sign_delete_first_line = '-'
 g.signify_sign_change            = '·'
 g.signify_sign_changedelete      = g.signify_sign_change
+
 -------------------- VIM TEST ------------------------------
 map('n', '<leader>tn', ':TestNearest<CR>')
 map('n', '<leader>tf', ':TestFile<CR>')
 map('n', '<leader>ts', ':TestSuite<CR>')
 
 g.VimuxUseNearest = 0
--- g.test.strategy = 'vimux'
--- g.test.ruby.rspec.executable = 'bundle exec rspec'
+g['test#strategy'] = 'vimux'
+g['test#ruby#rspec#executable'] = 'bundle exec rspec'
 
 -------------------- STARIFY ------------------------------
 g.startify_change_to_dir = 0
@@ -180,8 +185,9 @@ g.startify_session_sort = 1
 
 -------------------- OTHER PLUGINS ------------------------------
 require('compe_config')
-	require('eviline')
+require('eviline')
 require('autopairs_config')
+
 -------------------- COMMANDS ------------------------------
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
 cmd 'au FileType jsonnet set tabstop=2 shiftwidth=2 softtabstop=2'
