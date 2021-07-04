@@ -1,3 +1,6 @@
+local u = require('utils')
+u.map('n', '<leader>dv', '<CMD>:DiffviewOpen<CR>')
+
 local cb = require'diffview.config'.diffview_callback
 
 require'diffview'.setup {

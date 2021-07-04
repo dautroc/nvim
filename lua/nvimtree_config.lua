@@ -1,7 +1,30 @@
+local u = require('utils')
+u.map('n', '<leader>v', '<CMD>:NvimTreeToggle<CR>')
+u.map('n', '<leader>r', '<CMD>:NvimTreeRefresh<CR>')
+u.map('n', '<leader>n', '<CMD>:NvimTreeFindFile<CR>')
+
+u.g.nvim_tree_git_hl = 1
+u.g.nvim_tree_highlight_opened_files = 1
+u.g.nvim_tree_hide_dotfiles = 1
+u.g.nvim_tree_follow = 1
+u.g.nvim_tree_gitignore = 1
+u.g.nvim_tree_disable_window_picker = 1
+u.g.nvim_tree_special_files = { 'README.md', 'Makefile', 'MAKEFILE' }
+u.g.nvim_tree_window_picker_exclude = {
+  filetype = { 'packer', 'qf' },
+  buftype = { 'terminal' }
+}
+u.g.nvim_tree_show_icons = {
+  git = 1,
+  folders = 1,
+  files = 1,
+  folder_arrows = 1,
+}
+
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 
-vim.g.nvim_tree_disable_default_keybindings = 1
-vim.g.nvim_tree_bindings = {
+u.g.nvim_tree_disable_default_keybindings = 1
+u.g.nvim_tree_bindings = {
   { key = "o",                            cb = tree_cb("edit") },
   { key = "v",                            cb = tree_cb("vsplit") },
   { key = "x",                            cb = tree_cb("split") },
@@ -26,7 +49,7 @@ function NvimTreeOSOpen()
   local lib = require "nvim-tree.lib"
   local node = lib.get_node_at_cursor()
   if node then
-    vim.fn.jobstart("open '" .. node.absolute_path .. "' &", {detach = true})
+    u.fn.jobstart("open '" .. node.absolute_path .. "' &", {detach = true})
   end
 end
 
