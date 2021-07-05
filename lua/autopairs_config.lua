@@ -1,3 +1,4 @@
+local u = require('utils')
 local npairs = require("nvim-autopairs")
 local endwise = require('nvim-autopairs.ts-rule').endwise
 
@@ -8,3 +9,6 @@ npairs.add_rules({
   endwise('def$', 'end', 'rb', 'method'),
   endwise('then$', 'end', 'lua', 'if_statement')
 })
+
+u.g.endwise_no_mappings = 1
+u.g.AutoPairsMultilineClose = 0

@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
 use 'wbthomason/packer.nvim'
 
+-- use {'eugen0329/vim-esearch'}
 use {'nvim-treesitter/nvim-treesitter'}
 use {'neovim/nvim-lspconfig'}
 use {'junegunn/fzf.vim',

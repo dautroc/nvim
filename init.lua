@@ -1,6 +1,7 @@
 require('plugins')
 require('settings')
 require('mappings')
+-- require('esearch_config')
 require('nvimtree_config')
 require('treesitter_config')
 require('lspconfig_config')
