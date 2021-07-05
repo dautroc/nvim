@@ -5,3 +5,8 @@ u.g.startify_session_dir = '~/.vim/session'
 u.g.startify_session_persistence = 1
 u.g.startify_session_number = 3
 u.g.startify_session_sort = 1
+
+u.g.startify_lists = {
+  { type = 'dir',                    header = {'   MRU'}},
+	{ type = 'sessions',               header = {'   Sessions'}},
+}

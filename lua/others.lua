@@ -8,7 +8,7 @@ u.g.EasyMotion_do_mapping = 0
 u.g.EasyMotion_smartcase = 1
 u.nmap('/', '<Plug>(easymotion-sn)')
 u.nmap('/', '<Plug>(easymotion-tn)')
-u.nmap('<leader>w', '<Plug>(easymotion-bd-w)')
+u.nmap('<tab>', '<Plug>(easymotion-bd-w)')
 
 -------------------- GIT ------------------------------
 u.map('n', '<leader>gt', ':call TimeLapse() <CR>', { silent = true })
