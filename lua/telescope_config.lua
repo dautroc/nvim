@@ -1,8 +1,8 @@
 local u = require('utils')
 u.map('n', '<C-p>', ':Telescope find_files<cr>')
-u.map('n', '<C-g>', ':Telescope live_grep<cr>')
+u.map('n', '<leader>ag', ':Telescope live_grep<cr>')
 u.map('n', '<C-h>', ':Telescope help_tags<cr>')
-u.map('n', '<C-r>', ':Telescope oldfiles<cr>')
+u.map('n', '<leader>fr', ':Telescope oldfiles<cr>')
 
 local actions = require('telescope.actions')
 require('telescope').setup{
