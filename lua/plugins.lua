@@ -1,35 +1,44 @@
-vim.cmd 'packadd paq-nvim'
-local paq = require('paq-nvim').paq
-paq {'savq/paq-nvim', opt = true}
-paq {'nvim-treesitter/nvim-treesitter'}
-paq {'neovim/nvim-lspconfig'}
--- paq {'junegunn/fzf', run = fn['fzf#install']}
--- paq {'junegunn/fzf.vim'}
--- paq {'yegappan/mru'}
-paq {'ojroques/nvim-lspfuzzy'}
-paq {'kyazdani42/nvim-web-devicons'}
-paq {'kyazdani42/nvim-tree.lua'}
-paq {'mhinz/vim-startify'}
-paq {'preservim/vimux'}
-paq {'vim-test/vim-test'}
-paq {'sindrets/diffview.nvim'}
-paq {'nvim-lua/popup.nvim'}
-paq {'nvim-lua/plenary.nvim'}
-paq {'nvim-telescope/telescope.nvim'}
-paq {'glepnir/galaxyline.nvim' , branch = 'main'}
-paq {'tpope/vim-fugitive'}
-paq {'vim-scripts/git-time-lapse'}
-paq {'tyrannicaltoucan/vim-deep-space'}
-paq {'mhinz/vim-signify'}
-paq {'hrsh7th/nvim-compe'}
-paq {'dense-analysis/ale'}
-paq {'tomtom/tcomment_vim'}
-paq {'easymotion/vim-easymotion'}
-paq {'terryma/vim-multiple-cursors'}
-paq {'ntpeters/vim-better-whitespace'}
-paq {'flazz/vim-colorschemes'}
-paq {'windwp/nvim-autopairs'}
-paq {'Yggdroot/indentLine'}
-paq {'tpope/vim-surround'}
-paq {'tpope/vim-endwise'}
-paq {'alvan/vim-closetag'}
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function()
+use 'wbthomason/packer.nvim'
+
+use {'nvim-treesitter/nvim-treesitter'}
+use {'neovim/nvim-lspconfig'}
+use {'junegunn/fzf.vim',
+  requires = {{'junegunn/fzf', run = vim.fn['fzf#install']}}
+}
+use {'yegappan/mru'}
+use {'ojroques/nvim-lspfuzzy'}
+use {'kyazdani42/nvim-tree.lua',
+  requires = {{'kyazdani42/nvim-web-devicons'}}
+}
+use {'mhinz/vim-startify'}
+use {'preservim/vimux'}
+use {'vim-test/vim-test'}
+use {'sindrets/diffview.nvim'}
+use {
+  'nvim-telescope/telescope.nvim',
+  requires = {
+		{'nvim-lua/popup.nvim'},
+		{'nvim-lua/plenary.nvim'}
+	}
+}
+use {'glepnir/galaxyline.nvim' , branch = 'main'}
+use {'tpope/vim-fugitive'}
+use {'vim-scripts/git-time-lapse'}
+use {'tyrannicaltoucan/vim-deep-space'}
+use {'mhinz/vim-signify'}
+use {'hrsh7th/nvim-compe'}
+use {'dense-analysis/ale'}
+use {'tomtom/tcomment_vim'}
+use {'easymotion/vim-easymotion'}
+use {'terryma/vim-multiple-cursors'}
+use {'ntpeters/vim-better-whitespace'}
+use {'flazz/vim-colorschemes'}
+use {'windwp/nvim-autopairs'}
+use {'Yggdroot/indentLine'}
+use {'tpope/vim-surround'}
+use {'tpope/vim-endwise'}
+use {'alvan/vim-closetag'}
+end)
