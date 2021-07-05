@@ -34,12 +34,7 @@ use {'hrsh7th/nvim-compe'}
 use {'dense-analysis/ale'}
 use {'tomtom/tcomment_vim'}
 use {'easymotion/vim-easymotion'}
-use {'terryma/vim-multiple-cursors'}
-use {'ntpeters/vim-better-whitespace'}
 use {'flazz/vim-colorschemes'}
 use {'windwp/nvim-autopairs'}
-use {'Yggdroot/indentLine'}
-use {'tpope/vim-surround'}
-use {'tpope/vim-endwise'}
-use {'alvan/vim-closetag'}
+use {'mg979/vim-visual-multi', branch = 'master'}
 end)

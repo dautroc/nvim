@@ -10,5 +10,4 @@ npairs.add_rules({
   endwise('then$', 'end', 'lua', 'if_statement')
 })
 
-u.g.endwise_no_mappings = 1
 u.g.AutoPairsMultilineClose = 0
