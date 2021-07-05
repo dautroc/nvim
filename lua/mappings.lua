@@ -25,6 +25,3 @@ u.map('', '<leader>pp', ':let @+=@%<CR>', { silent = true })
 
 -- Leader
 u.g.mapleader = ','
-
--- Ripgrep
-u.nmap('<leader>ag', '<ESC>:Rg<CR>')
