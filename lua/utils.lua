@@ -33,21 +33,6 @@ function U.xmap(key, action, opts)
   U.plugmap("x", key, action, opts)
 end
 
-function U.YankOneLine()
-  U.fn.setreg("+", U.fn.trim(U.fn.getline('.')))
-  print("[YankOneLine] one line yanked to system clipboard")
-end
-
-function U.ToggleMouse()
-  if vim.o.mouse == "" then
-    vim.o.mouse = "a"
-    print("[ToggleMouse] mouse enabled")
-  else
-    vim.o.mouse = ""
-    print("[ToggleMouse] mouse disabled")
-  end
-end
-
 function U.GetLineEnd()
   local label = {unix = "LF", mac = "CR", dos = "CRLF"}
   return label[vim.bo.fileformat]

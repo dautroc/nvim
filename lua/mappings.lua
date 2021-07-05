@@ -20,8 +20,5 @@ u.map('n', 'tt', ':tabclose<CR>', { silent = true })
 -- Quick escape
 u.map('i', 'jj', '<ESC>')
 
--- Get file path
-u.map('', '<leader>pp', ':let @+=@%<CR>', { silent = true })
-
 -- Leader
 u.g.mapleader = ','
