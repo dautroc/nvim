@@ -17,4 +17,4 @@ require('autopairs_config')
 require('eviline')
 require('commands')
 require('others')
-
+require('luatab_config')
