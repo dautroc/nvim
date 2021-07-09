@@ -4,18 +4,28 @@ local u = require('utils')
 u.map('n', '<C-c>', '<CMD>:noh<CR>', { nowait = true })
 
 -- Switch window
-u.map('', '<space>h', '<C-W>h', { silent = true })
-u.map('', '<space>j', '<C-W>j', { silent = true })
-u.map('', '<space>k', '<C-W>k', { silent = true })
-u.map('', '<space>l', '<C-W>l', { silent = true })
+u.map('', '<space>h', '<C-W>h',    { silent = true })
+u.map('', '<space>j', '<C-W>j',    { silent = true })
+u.map('', '<space>k', '<C-W>k',    { silent = true })
+u.map('', '<space>l', '<C-W>l',    { silent = true })
 
 -- Tab control
-u.map('n', 'tn', ':tabnew<CR>',   { silent = true })
-u.map('n', 'th', ':tabfirst<CR>', { silent = true })
-u.map('n', 'tl', ':tablast<CR>',  { silent = true })
-u.map('n', 'tj', ':tabprev<CR>',  { silent = true })
-u.map('n', 'tk', ':tabnext<CR>',  { silent = true })
-u.map('n', 'tt', ':tabclose<CR>', { silent = true })
+u.map('n', 'tn', ':tabnew<CR>',    { silent = true })
+u.map('n', 'th', ':tabfirst<CR>',  { silent = true })
+u.map('n', 'tl', ':tablast<CR>',   { silent = true })
+u.map('n', 'tj', ':tabprev<CR>',   { silent = true })
+u.map('n', 'tk', ':tabnext<CR>',   { silent = true })
+u.map('n', 'tt', ':tabclose<CR>',  { silent = true })
+
+u.map('n', '<F1>', '1gt',          { silent = true })
+u.map('n', '<F2>', '2gt',          { silent = true })
+u.map('n', '<F3>', '3gt',          { silent = true })
+u.map('n', '<F4>', '4gt',          { silent = true })
+u.map('n', '<F5>', '5gt',          { silent = true })
+u.map('n', '<F6>', '6gt',          { silent = true })
+u.map('n', '<F7>', '7gt',          { silent = true })
+u.map('n', '<F8>', '8gt',          { silent = true })
+u.map('n', '<F9>', ':tablast<CR>', { silent = true })
 
 -- Quick escape
 u.map('i', 'jj', '<ESC>')
