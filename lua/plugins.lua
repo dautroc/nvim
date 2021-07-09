@@ -37,4 +37,5 @@ use {'easymotion/vim-easymotion'}
 use {'flazz/vim-colorschemes'}
 use {'windwp/nvim-autopairs'}
 use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
+use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 end)
