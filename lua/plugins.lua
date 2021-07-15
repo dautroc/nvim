@@ -33,10 +33,17 @@ use {'mhinz/vim-signify'}
 use {'hrsh7th/nvim-compe'}
 use {'dense-analysis/ale'}
 use {'tomtom/tcomment_vim'}
-use {'easymotion/vim-easymotion'}
 use {'flazz/vim-colorschemes'}
 use {'windwp/nvim-autopairs'}
 use {'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons'}
 use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
 use {'tpope/vim-endwise'}
+use {
+  'phaazon/hop.nvim',
+  as = 'hop',
+  config = function()
+    -- you can configure Hop the way you like here; see :h hop-config
+    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  end
+}
 end)
