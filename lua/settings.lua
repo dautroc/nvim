@@ -14,5 +14,5 @@ u.opt.signcolumn = 'yes'
 u.opt.termguicolors = true
 u.opt.relativenumber = true
 u.opt.clipboard = 'unnamedplus'
-u.opt.completeopt = {'menuone', 'noselect'}
+u.opt.completeopt = "menuone,noselect"
 u.opt.wrap = false

@@ -7,7 +7,7 @@ end
 
 vim.api.nvim_command('packadd packer.nvim')
 
-local no_errors = pcall(function()
+local no_errors, error_msg = pcall(function()
 
   local time
   local profile_info
@@ -93,13 +93,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/git-time-lapse"
   },
-  indentLine = {
+  ["luatab.nvim"] = {
     loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/indentLine"
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/luatab.nvim"
   },
   mru = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/mru"
+  },
+  neogit = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/neogit"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -149,14 +153,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
-  ["vim-better-whitespace"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-better-whitespace"
-  },
-  ["vim-closetag"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-closetag"
-  },
   ["vim-colorschemes"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-colorschemes"
@@ -181,10 +177,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
-  ["vim-multiple-cursors"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-multiple-cursors"
-  },
   ["vim-signify"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-signify"
@@ -192,10 +184,6 @@ _G.packer_plugins = {
   ["vim-startify"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-startify"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
   ["vim-test"] = {
     loaded = true,
@@ -213,5 +201,5 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
-  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: ".v:exception | echom "Please check your config for correctness" | echohl None')
+  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end
