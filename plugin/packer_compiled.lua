@@ -69,14 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ale = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/ale"
-  },
-  ["diffview.nvim"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/diffview.nvim"
-  },
   fzf = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/fzf"
@@ -93,6 +85,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/git-time-lapse"
   },
+  hop = {
+    config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0" },
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/hop"
+  },
   ["luatab.nvim"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/luatab.nvim"
@@ -101,10 +98,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/mru"
   },
-  neogit = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/neogit"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
@@ -112,14 +105,6 @@ _G.packer_plugins = {
   ["nvim-compe"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-compe"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
-  },
-  ["nvim-lspfuzzy"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-lspfuzzy"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -137,21 +122,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
-  ["plenary.nvim"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/plenary.nvim"
-  },
-  ["popup.nvim"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/popup.nvim"
-  },
   tcomment_vim = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/tcomment_vim"
-  },
-  ["telescope.nvim"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-colorschemes"] = {
     loaded = true,
@@ -160,14 +133,6 @@ _G.packer_plugins = {
   ["vim-deep-space"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-deep-space"
-  },
-  ["vim-easymotion"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-easymotion"
-  },
-  ["vim-endwise"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-endwise"
   },
   ["vim-esearch"] = {
     loaded = true,
@@ -196,6 +161,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: hop
+time([[Config for hop]], true)
+try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0", "config", "hop")
+time([[Config for hop]], false)
 if should_profile then save_profiles() end
 
 end)
