@@ -5,7 +5,7 @@ use 'wbthomason/packer.nvim'
 
 use {'eugen0329/vim-esearch'}
 use {'nvim-treesitter/nvim-treesitter'}
--- use {'neovim/nvim-lspconfig'}
+use {'neovim/nvim-lspconfig'}
 use {'junegunn/fzf.vim',
   requires = {{'junegunn/fzf', run = vim.fn['fzf#install']}}
 }
@@ -22,7 +22,6 @@ use {'vim-scripts/git-time-lapse'}
 use {'tyrannicaltoucan/vim-deep-space'}
 use {'mhinz/vim-signify'}
 use {'hrsh7th/nvim-compe'}
--- use {'dense-analysis/ale'}
 use {'tomtom/tcomment_vim'}
 use {'flazz/vim-colorschemes'}
 use {'windwp/nvim-autopairs'}
