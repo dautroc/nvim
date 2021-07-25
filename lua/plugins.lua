@@ -33,4 +33,5 @@ use {
     require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
   end
 }
+use {'tpope/vim-projectionist'}
 end)
