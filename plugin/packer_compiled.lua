@@ -11,7 +11,7 @@ local no_errors, error_msg = pcall(function()
 
   local time
   local profile_info
-  local should_profile = false
+  local should_profile = true
   if should_profile then
     local hrtime = vim.loop.hrtime
     profile_info = {}
@@ -141,6 +141,10 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-projectionist"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-projectionist"
   },
   ["vim-signify"] = {
     loaded = true,

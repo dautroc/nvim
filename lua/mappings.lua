@@ -32,3 +32,26 @@ u.map('i', 'jj', '<ESC>')
 
 -- Leader
 u.g.mapleader = ','
+
+-- Undo break points
+u.imap(',', ',<C-g>u')
+u.imap('.', '.<C-g>u')
+u.imap('!', '!<C-g>u')
+u.imap('?', '?<C-g>u')
+u.imap('[', '[<C-g>u')
+u.imap(']', ']<C-g>u')
+u.imap('{', '{<C-g>u')
+u.imap('}', '}<C-g>u')
+u.imap('(', '(<C-g>u')
+u.imap(')', ')<C-g>u')
+
+-- Copy till end
+u.nmap('Y', 'y$')
+
+-- Move text
+u.vmap('J', ":m '>+1<CR>gv=gv")
+u.vmap('K', ":m '<-2<CR>gv=gv")
+u.imap('<C-j>', '<ESC>:m .+1<CR>==')
+u.imap('<C-k>', '<ESC>:m .-2<CR>==')
+u.nmap('<C-j>', ':m .+1<CR>==')
+u.nmap('<C-k>', ':m .-2<CR>==')
