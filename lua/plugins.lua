@@ -33,4 +33,5 @@ use {
   end
 }
 use {'tpope/vim-projectionist'}
+use {'tpope/vim-surround'}
 end)
