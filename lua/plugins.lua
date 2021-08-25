@@ -32,6 +32,7 @@ use {
     require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
   end
 }
-use {'tpope/vim-projectionist'}
 use {'tpope/vim-surround'}
+use {'ntpeters/vim-better-whitespace'}
+use {'tpope/vim-rails'}
 end)

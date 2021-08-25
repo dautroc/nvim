@@ -69,10 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["completion-nvim"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/completion-nvim"
-  },
   fzf = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/fzf"
@@ -130,6 +126,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/tcomment_vim"
   },
+  ["vim-better-whitespace"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-better-whitespace"
+  },
   ["vim-colorschemes"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-colorschemes"
@@ -149,6 +149,10 @@ _G.packer_plugins = {
   ["vim-projectionist"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-projectionist"
+  },
+  ["vim-rails"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-rails"
   },
   ["vim-signify"] = {
     loaded = true,
