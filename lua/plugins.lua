@@ -19,7 +19,6 @@ use {'tpope/vim-fugitive'}
 use {'vim-scripts/git-time-lapse'}
 use {'tyrannicaltoucan/vim-deep-space'}
 use {'mhinz/vim-signify'}
-use {'hrsh7th/nvim-compe'}
 use {'tomtom/tcomment_vim'}
 use {'flazz/vim-colorschemes'}
 use {'windwp/nvim-autopairs'}
@@ -37,5 +36,12 @@ use {'ntpeters/vim-better-whitespace'}
 use {
   'nvim-telescope/telescope.nvim',
   requires = { {'nvim-lua/plenary.nvim'} }
+}
+use {
+  "hrsh7th/nvim-cmp",
+  requires = {
+    "hrsh7th/vim-vsnip",
+    "hrsh7th/cmp-buffer",
+  }
 }
 end)
