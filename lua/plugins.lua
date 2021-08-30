@@ -8,7 +8,6 @@ use {'nvim-treesitter/nvim-treesitter'}
 use {'junegunn/fzf.vim',
   requires = {{'junegunn/fzf', run = vim.fn['fzf#install']}}
 }
-use {'yegappan/mru'}
 use {'kyazdani42/nvim-tree.lua',
   requires = {{'kyazdani42/nvim-web-devicons'}}
 }
@@ -35,5 +34,8 @@ use {
 use {'tpope/vim-projectionist'}
 use {'tpope/vim-surround'}
 use {'ntpeters/vim-better-whitespace'}
--- use {'tpope/vim-rails'}
+use {
+  'nvim-telescope/telescope.nvim',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
 end)

@@ -58,3 +58,11 @@ u.nmap('<C-k>', ':m .-2<CR>==')
 
 -- Copy path
 u.nmap('cp', ':let @+ = expand("%")<cr>')
+
+-- Telescope
+
+u.nmap('<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<cr>")
+u.nmap('<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>")
+u.nmap('<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>")
+u.nmap('<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>")
+u.nmap('<leader>fr', "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
