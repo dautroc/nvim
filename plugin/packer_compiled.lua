@@ -150,10 +150,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-projectionist"
   },
-  ["vim-rails"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-rails"
-  },
   ["vim-signify"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-signify"

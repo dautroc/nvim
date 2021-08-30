@@ -55,3 +55,6 @@ u.imap('<C-j>', '<ESC>:m .+1<CR>==')
 u.imap('<C-k>', '<ESC>:m .-2<CR>==')
 u.nmap('<C-j>', ':m .+1<CR>==')
 u.nmap('<C-k>', ':m .-2<CR>==')
+
+-- Copy path
+u.nmap('cp', ':let @+ = expand("%")<cr>')

@@ -36,7 +36,7 @@ u.g.nvim_tree_bindings = {
   { key = "d",                            cb = tree_cb("remove") },
   { key = "r",                            cb = tree_cb("rename") },
   { key = "<C-x>",                        cb = tree_cb("cut") },
-	{ key = "Y",                            cb = tree_cb("copy_path") },
+  { key = "Y",                            cb = tree_cb("copy_path") },
   { key = "y",                            cb = tree_cb("copy") },
   { key = "p",                            cb = tree_cb("paste") },
   { key = "[",                            cb = tree_cb("prev_git_item") },
