@@ -34,6 +34,7 @@ u.map('i', 'jj', '<ESC>')
 u.g.mapleader = ','
 
 -- Undo break points
+u.imap('_', '_<C-g>u')
 u.imap(',', ',<C-g>u')
 u.imap('.', '.<C-g>u')
 u.imap('!', '!<C-g>u')

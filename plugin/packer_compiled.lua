@@ -69,9 +69,9 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["cmp-buffer"] = {
+  coq_nvim = {
     loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/coq_nvim"
   },
   fzf = {
     loaded = true,
@@ -101,10 +101,6 @@ _G.packer_plugins = {
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
-  },
-  ["nvim-cmp"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-cmp"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -173,10 +169,6 @@ _G.packer_plugins = {
   ["vim-test"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-test"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   },
   vimux = {
     loaded = true,
