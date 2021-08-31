@@ -1,7 +1,7 @@
 local npairs = require('nvim-autopairs')
 
 npairs.setup{
-  ignored_next_char = "[%w%:%.]" --Don't add pairs if the next char is alphanumeric
+  ignored_next_char = "[%w%.]" --Don't add pairs if the next char is alphanumeric
 }
 
 local remap = vim.api.nvim_set_keymap
@@ -50,5 +50,6 @@ MUtils.BS = function()
 end
 remap('i', '<bs>', 'v:lua.MUtils.BS()', { expr = true, noremap = true })
 
--- Ruby endwise
+-- Endwise
+npairs.add_rules(require('nvim-autopairs.rules.endwise-lua'))
 npairs.add_rules(require('nvim-autopairs.rules.endwise-ruby'))
