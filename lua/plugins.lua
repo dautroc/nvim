@@ -37,11 +37,5 @@ use {
   'nvim-telescope/telescope.nvim',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
-use {
-  "hrsh7th/nvim-cmp",
-  requires = {
-    "hrsh7th/vim-vsnip",
-    "hrsh7th/cmp-buffer",
-  }
-}
+use { 'ms-jpq/coq_nvim', branch = 'coq'}
 end)
