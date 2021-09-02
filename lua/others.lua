@@ -4,6 +4,7 @@ local u = require('utils')
 u.g.indentLine_enabled = 0
 
 -------------------- GIT ------------------------------
+u.g.gitblame_enabled = 0
 u.g.gitblame_message_template = '<summary> • <date> • <author> • <sha>'
 u.map('n', '<leader>gb', ':GitBlameToggle<CR>', { silent = true })
 
