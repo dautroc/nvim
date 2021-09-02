@@ -15,8 +15,8 @@ use {'mhinz/vim-startify'}
 use {'preservim/vimux'}
 use {'vim-test/vim-test'}
 use {'glepnir/galaxyline.nvim' , branch = 'main'}
-use {'tpope/vim-fugitive'}
-use {'vim-scripts/git-time-lapse'}
+-- use {'tpope/vim-fugitive'}
+-- use {'vim-scripts/git-time-lapse'}
 use {'tyrannicaltoucan/vim-deep-space'}
 use {'mhinz/vim-signify'}
 use {'tomtom/tcomment_vim'}
@@ -38,4 +38,5 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 use { 'ms-jpq/coq_nvim', branch = 'coq'}
+use {'f-person/git-blame.nvim'}
 end)

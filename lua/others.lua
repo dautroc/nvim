@@ -4,8 +4,8 @@ local u = require('utils')
 u.g.indentLine_enabled = 0
 
 -------------------- GIT ------------------------------
-u.map('n', '<leader>gt', ':call TimeLapse() <CR>', { silent = true })
-u.map('n', '<leader>gb', ':Git blame<CR>', { silent = true })
+u.g.gitblame_message_template = '<summary> • <date> • <author> • <sha>'
+u.map('n', '<leader>gb', ':GitBlameToggle<CR>', { silent = true })
 
 -------------------- BETTER WHITE SPACE ------------------------------
 u.g.better_whitespace_enabled = 1

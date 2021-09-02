@@ -62,6 +62,7 @@ u.nmap('cp', ':let @+ = expand("%")<cr>')
 
 -- Telescope
 
+u.nmap('<C-p>', "<cmd>lua require('telescope.builtin').find_files()<cr>")
 u.nmap('<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<cr>")
 u.nmap('<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 u.nmap('<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>")
