@@ -68,3 +68,6 @@ u.nmap('<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 u.nmap('<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>")
 u.nmap('<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 u.nmap('<leader>fr', "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
+
+-- Buffers
+u.nmap('<leader>bf', ':buffers<CR>:buffer<Space>')
