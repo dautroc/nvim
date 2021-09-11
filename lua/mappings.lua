@@ -49,7 +49,7 @@ u.imap(')', ')<C-g>u')
 -- Copy till end
 u.nmap('Y', 'y$')
 
--- Move text
+-- Move line
 u.vmap('<C-j>', ":m '>+1<CR>gv=gv")
 u.vmap('<C-k>', ":m '<-2<CR>gv=gv")
 u.imap('<C-j>', '<ESC>:m .+1<CR>==')
@@ -67,7 +67,8 @@ u.nmap('<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<cr>")
 u.nmap('<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 u.nmap('<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>")
 u.nmap('<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>")
-u.nmap('<leader>fr', "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
+u.nmap('<leader>fo', "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
+u.nmap('<leader>fp', "<cmd>lua require('telescope.builtin').pickers()<cr>")
 
--- Buffers
+-- Buffers switching
 u.nmap('<leader>bf', ':buffers<CR>:buffer<Space>')
