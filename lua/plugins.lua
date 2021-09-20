@@ -36,5 +36,5 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 use { 'ms-jpq/coq_nvim', branch = 'coq'}
-use {'f-person/git-blame.nvim'}
+use {'tpope/vim-fugitive'}
 end)
