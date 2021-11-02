@@ -37,4 +37,5 @@ use {
 }
 use { 'ms-jpq/coq_nvim', branch = 'coq'}
 use {'tpope/vim-fugitive'}
+use {'github/copilot.vim'}
 end)
