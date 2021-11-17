@@ -5,6 +5,7 @@ use 'wbthomason/packer.nvim'
 
 use {'eugen0329/vim-esearch'}
 use {'nvim-treesitter/nvim-treesitter'}
+use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 use {'junegunn/fzf.vim',
   requires = {{'junegunn/fzf', run = vim.fn['fzf#install']}}
 }
