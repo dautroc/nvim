@@ -3,8 +3,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
 use 'wbthomason/packer.nvim'
 
+use {'neovim/nvim-lspconfig'}
 use {'eugen0329/vim-esearch'}
-use {'nvim-treesitter/nvim-treesitter'}
 use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 use {'junegunn/fzf.vim',
   requires = {{'junegunn/fzf', run = vim.fn['fzf#install']}}
