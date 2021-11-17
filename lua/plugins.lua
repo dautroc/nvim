@@ -36,7 +36,7 @@ use {
   'nvim-telescope/telescope.nvim',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
-use { 'ms-jpq/coq_nvim', branch = 'coq'}
 use {'tpope/vim-fugitive'}
 use {'github/copilot.vim'}
+use {'ms-jpq/coq_nvim', branch = 'coq'}
 end)

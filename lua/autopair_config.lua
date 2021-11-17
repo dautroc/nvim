@@ -13,7 +13,7 @@ vim.g.coq_settings = {
   auto_start = true,
   clients = {
     buffers = {
-    same_filetype = true
+      same_filetype = true
     }
   }
 }
