@@ -5,7 +5,7 @@ u.map('n', '<leader>n', '<CMD>:NvimTreeFindFile<CR>')
 
 u.g.nvim_tree_git_hl = 1
 u.g.nvim_tree_highlight_opened_files = 1
-u.g.nvim_tree_gitignore = 1
+u.g.nvim_tree_gitignore = 0
 u.g.nvim_tree_disable_window_picker = 1
 u.g.nvim_tree_special_files = { 'README.md', 'Makefile', 'MAKEFILE' }
 u.g.nvim_tree_window_picker_exclude = {
