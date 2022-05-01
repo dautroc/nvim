@@ -39,4 +39,5 @@ use {
 use {'tpope/vim-fugitive'}
 use {'github/copilot.vim'}
 use {'ms-jpq/coq_nvim', branch = 'coq'}
+use {'davidgranstrom/nvim-markdown-preview'}
 end)
