@@ -16,3 +16,8 @@ u.opt.relativenumber = true
 u.opt.clipboard = 'unnamedplus'
 u.opt.completeopt = "menu,menuone,noinsert"
 u.opt.wrap = false
+
+-- Set tabstop
+u.opt.tabstop = 2
+u.opt.softtabstop = 2
+u.opt.shiftwidth = 2
