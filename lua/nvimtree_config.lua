@@ -28,6 +28,13 @@ require'nvim-tree'.setup {
   git = {
     ignore = false
   },
+  actions = {
+    open_file = {
+      window_picker = {
+        enable =  false,
+      },
+    }
+  },
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = false,
