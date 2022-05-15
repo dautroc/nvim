@@ -21,3 +21,5 @@ u.opt.wrap = false
 u.opt.tabstop = 2
 u.opt.softtabstop = 2
 u.opt.shiftwidth = 2
+
+u.g.ruby_host_prog = '~/.rbenv/versions/3.1.2/bin/neovim-ruby-host'

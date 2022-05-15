@@ -1,6 +1,7 @@
 local nvim_lsp = require('lspconfig')
 
 nvim_lsp.solargraph.setup{}
+nvim_lsp.sumneko_lua.setup{}
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
