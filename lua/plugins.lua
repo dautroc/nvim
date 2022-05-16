@@ -43,4 +43,5 @@ use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
 use {'davidgranstrom/nvim-markdown-preview'}
 use {"williamboman/nvim-lsp-installer"}
 use {'kdheepak/lazygit.nvim'}
+use {'famiu/nvim-reload'}
 end)
