@@ -41,15 +41,6 @@ use {'github/copilot.vim'}
 use {'ms-jpq/coq_nvim', branch = 'coq'}
 use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
 use {'davidgranstrom/nvim-markdown-preview'}
-use {
-    "williamboman/nvim-lsp-installer",
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            require("nvim-lsp-installer").setup {}
-            local lspconfig = require("lspconfig")
-            lspconfig.sumneko_lua.setup {}
-        end
-    }
-}
+use {"williamboman/nvim-lsp-installer"}
+use {'kdheepak/lazygit.nvim'}
 end)

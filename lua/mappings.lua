@@ -72,3 +72,6 @@ u.nmap('<leader>fp', "<cmd>lua require('telescope.builtin').pickers()<cr>")
 
 -- Buffers switching
 u.nmap('<leader>bf', ':buffers<CR>:buffer<Space>')
+
+-- Lazygit
+u.nmap('<leader>lg', ":LazyGit<CR>")
