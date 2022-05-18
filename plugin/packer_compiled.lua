@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["coq.artifacts"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/coq.artifacts",
+    url = "https://github.com/ms-jpq/coq.artifacts"
+  },
   coq_nvim = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/coq_nvim",
@@ -100,6 +105,11 @@ _G.packer_plugins = {
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/hop",
     url = "https://github.com/phaazon/hop.nvim"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["luatab.nvim"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/luatab.nvim",
@@ -110,6 +120,26 @@ _G.packer_plugins = {
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-markdown-preview"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-markdown-preview",
+    url = "https://github.com/davidgranstrom/nvim-markdown-preview"
+  },
+  ["nvim-reload"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-reload",
+    url = "https://github.com/famiu/nvim-reload"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -119,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,

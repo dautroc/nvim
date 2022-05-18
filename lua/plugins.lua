@@ -44,4 +44,5 @@ use {'davidgranstrom/nvim-markdown-preview'}
 use {"williamboman/nvim-lsp-installer"}
 use {'kdheepak/lazygit.nvim'}
 use {'famiu/nvim-reload'}
+use {'windwp/nvim-ts-autotag'}
 end)
