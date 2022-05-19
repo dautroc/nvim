@@ -8,8 +8,8 @@ nvim_lsp.sumneko_lua.setup {}
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>h', '<cmd>lua vim.diagnostic.hide()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>s', '<cmd>lua vim.diagnostic.show()<CR><CR>', opts)
+-- vim.api.nvim_set_keymap('n', '<space>h', '<cmd>lua vim.diagnostic.hide()<CR>', opts)
+-- vim.api.nvim_set_keymap('n', '<space>s', '<cmd>lua vim.diagnostic.show()<CR><CR>', opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
