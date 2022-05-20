@@ -16,3 +16,4 @@ require('hop_config')
 require('telescope_config')
 require('lspconfig_config')
 require("nvim-lsp-installer").setup {}
+require("marks_config")

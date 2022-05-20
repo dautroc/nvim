@@ -45,4 +45,5 @@ use {"williamboman/nvim-lsp-installer"}
 use {'kdheepak/lazygit.nvim'}
 use {'famiu/nvim-reload'}
 use {'windwp/nvim-ts-autotag'}
+use {'chentoast/marks.nvim'}
 end)
