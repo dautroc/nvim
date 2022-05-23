@@ -17,3 +17,4 @@ require('telescope_config')
 require('lspconfig_config')
 require("nvim-lsp-installer").setup {}
 require("marks_config")
+require("whichkey_config")
