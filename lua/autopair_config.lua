@@ -9,7 +9,10 @@ local remap = vim.api.nvim_set_keymap
 npairs.setup({ map_bs = false })
 
 vim.g.coq_settings = {
-  keymap = { recommended = false },
+  keymap = {
+		recommended = false,
+		jump_to_mark = ""
+	},
   auto_start = true,
   clients = {
     buffers = {
