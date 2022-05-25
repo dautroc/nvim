@@ -46,5 +46,4 @@ use {'kdheepak/lazygit.nvim'}
 use {'famiu/nvim-reload'}
 use {'windwp/nvim-ts-autotag'}
 use {'chentoast/marks.nvim'}
-use {'folke/which-key.nvim'}
 end)
