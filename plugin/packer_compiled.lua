@@ -118,7 +118,7 @@ _G.packer_plugins = {
   ["marks.nvim"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/marks.nvim",
-    url = "https://github.com/chentau/marks.nvim"
+    url = "https://github.com/chentoast/marks.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
