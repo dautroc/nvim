@@ -1,6 +1,9 @@
+-- Vim configuration
 require('plugins')
 require('settings')
-require('mappings')
+require('key_bindings')
+
+-- Plugin configuration
 require('esearch_config')
 require('fzf_config')
 require('nvimtree_config')
