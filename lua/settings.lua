@@ -16,10 +16,17 @@ u.opt.relativenumber = true
 u.opt.clipboard = 'unnamedplus'
 u.opt.completeopt = "menu,menuone,noinsert"
 u.opt.wrap = false
+u.g.ruby_host_prog = '~/.rbenv/versions/3.1.2/bin/neovim-ruby-host'
 
--- Set tabstop
+-- TAB STOP
 u.opt.tabstop = 2
 u.opt.softtabstop = 2
 u.opt.shiftwidth = 2
 
-u.g.ruby_host_prog = '~/.rbenv/versions/3.1.2/bin/neovim-ruby-host'
+-------------------- INDENT LINE -----------------------------------
+u.g.indentLine_enabled = 0
+
+-------------------- BETTER WHITE SPACE ------------------------------
+u.g.better_whitespace_enabled = 1
+u.g.strip_whitespace_on_save = 1
+u.g.strip_whitespace_confirm = 0

@@ -74,5 +74,7 @@ u.nmap('<leader>sh', "<cmd>lua require('telescope.builtin').search_history()<cr>
 u.nmap('<leader>km', "<cmd>lua require('telescope.builtin').keymaps()<cr>")
 u.nmap('<leader>ss', "<cmd>lua require('telescope.builtin').spell_suggest()<cr>")
 
--- Lazygit
+-- GIT
 u.nmap('<leader>lg', ":LazyGit<CR>")
+u.nmap('<leader>gb', ':Git blame<CR>', { nowait = true })
+
