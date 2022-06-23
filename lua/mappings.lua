@@ -67,11 +67,8 @@ u.nmap('<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<cr>")
 u.nmap('<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 u.nmap('<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>")
 u.nmap('<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>")
-u.nmap('<leader>fo', "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
-u.nmap('<leader>fp', "<cmd>lua require('telescope.builtin').pickers()<cr>")
-
--- Buffers switching
-u.nmap('<leader>bf', ':buffers<CR>:buffer<Space>')
+u.nmap('<leader>fr', "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
+u.nmap('<leader>fe', "<cmd>lua require('telescope.builtin').resume()<cr>")
 
 -- Lazygit
 u.nmap('<leader>lg', ":LazyGit<CR>")
