@@ -69,6 +69,10 @@ u.nmap('<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>")
 u.nmap('<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 u.nmap('<leader>fr', "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
 u.nmap('<leader>fe', "<cmd>lua require('telescope.builtin').resume()<cr>")
+u.nmap('<leader>fm', "<cmd>lua require('telescope.builtin').marks()<cr>")
+u.nmap('<leader>sh', "<cmd>lua require('telescope.builtin').search_history()<cr>")
+u.nmap('<leader>km', "<cmd>lua require('telescope.builtin').keymaps()<cr>")
+u.nmap('<leader>ss', "<cmd>lua require('telescope.builtin').spell_suggest()<cr>")
 
 -- Lazygit
 u.nmap('<leader>lg', ":LazyGit<CR>")
