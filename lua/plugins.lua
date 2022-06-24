@@ -46,4 +46,5 @@ use {'kdheepak/lazygit.nvim'}
 use {'famiu/nvim-reload'}
 use {'windwp/nvim-ts-autotag'}
 use {'chentoast/marks.nvim'}
+use {'crusj/bookmarks.nvim', branch = 'main', requires = { 'kyazdani42/nvim-web-devicons' }}
 end)
