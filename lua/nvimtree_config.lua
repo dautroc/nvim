@@ -3,16 +3,6 @@ u.map('n', '<leader>v', '<CMD>:NvimTreeToggle<CR>')
 u.map('n', '<leader>r', '<CMD>:NvimTreeRefresh<CR>')
 u.map('n', '<leader>n', '<CMD>:NvimTreeFindFile<CR>')
 
-u.g.nvim_tree_git_hl = 1
-u.g.nvim_tree_highlight_opened_files = 1
-u.g.nvim_tree_special_files = { 'README.md', 'Makefile', 'MAKEFILE' }
-u.g.nvim_tree_show_icons = {
-  git = 1,
-  folders = 1,
-  files = 1,
-  folder_arrows = 1,
-}
-
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 
 function NvimTreeOSOpen()
@@ -23,8 +13,12 @@ function NvimTreeOSOpen()
   end
 end
 
-
 require'nvim-tree'.setup {
+	renderer = {
+		highlight_git = true,
+		highlight_opened_files = "all",
+		special_files = { 'README.md', 'Makefile', 'MAKEFILE' },
+	},
   git = {
     ignore = false
   },
