@@ -1,6 +1,6 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function()
+return require('packer').startup(function(use)
 use 'wbthomason/packer.nvim'
 
 use {'neovim/nvim-lspconfig'}
@@ -36,7 +36,6 @@ use {
   'nvim-telescope/telescope.nvim',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
-use {'tpope/vim-fugitive'}
 use {'github/copilot.vim'}
 use {'ms-jpq/coq_nvim', branch = 'coq'}
 use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
