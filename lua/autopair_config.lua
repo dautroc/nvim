@@ -13,6 +13,7 @@ vim.g.coq_settings = {
 		recommended = false,
 		jump_to_mark = ""
 	},
+	["keymap.repeat"] = "z", -- repeat is keyword in lua, make completion for coq
   auto_start = true,
   clients = {
     buffers = {
@@ -24,8 +25,8 @@ vim.g.coq_settings = {
 -- these mappings are coq recommended mappings unrelated to nvim-autopairs
 remap('i', '<esc>', [[pumvisible() ? "<c-e><esc>" : "<esc>"]], { expr = true, noremap = true })
 remap('i', '<c-c>', [[pumvisible() ? "<c-e><c-c>" : "<c-c>"]], { expr = true, noremap = true })
-remap('i', '<tab>', [[pumvisible() ? "<c-n>" : "<tab>"]], { expr = true, noremap = true })
-remap('i', '<s-tab>', [[pumvisible() ? "<c-p>" : "<bs>"]], { expr = true, noremap = true })
+remap('i', '<c-j>', [[pumvisible() ? "<npairs>" : "<tab>"]], { expr = true, noremap = true })
+remap('i', '<c-k>', [[pumvisible() ? "<c-p>" : "<bs>"]], { expr = true, noremap = true })
 
 -- skip it, if you use another global object
 _G.MUtils= {}

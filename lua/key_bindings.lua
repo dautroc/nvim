@@ -52,8 +52,6 @@ u.nmap('Y', 'y$')
 -- Move line
 u.vmap('<C-j>', ":m '>+1<CR>gv=gv")
 u.vmap('<C-k>', ":m '<-2<CR>gv=gv")
-u.imap('<C-j>', '<ESC>:m .+1<CR>==')
-u.imap('<C-k>', '<ESC>:m .-2<CR>==')
 u.nmap('<C-j>', ':m .+1<CR>==')
 u.nmap('<C-k>', ':m .-2<CR>==')
 
