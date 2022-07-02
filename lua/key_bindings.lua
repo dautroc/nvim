@@ -74,5 +74,6 @@ u.nmap('<leader>ss', "<cmd>lua require('telescope.builtin').spell_suggest()<cr>"
 
 -- GIT
 u.nmap('<leader>lg', ":LazyGit<CR>")
-u.nmap('<leader>gb', ':Git blame<CR>', { nowait = true })
+u.nmap('<leader>lc', ':LazyGitFilterCurrentFile<CR>', { nowait = true })
+u.nmap('<leader>lf', ':LazyGitFilter<CR>', { nowait = true })
 
