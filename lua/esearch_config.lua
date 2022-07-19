@@ -12,8 +12,8 @@ esearch.case    = 'smart'
 esearch.win_map = {
 { 'n', 'x',   '<plug>(esearch-win-split:reuse:stay):q!<cr>' },
 { 'n', 'v',   '<plug>(esearch-win-vsplit:reuse:stay):q!<cr>' },
-{ 'n', '{',   '<plug>(esearch-win-jump:filename:up)' },
-{ 'n', '}',   '<plug>(esearch-win-jump:filename:down)' },
+{ 'n', 'K',   '<plug>(esearch-win-jump:filename:up)' },
+{ 'n', 'J',   '<plug>(esearch-win-jump:filename:down)' },
 { 'n', 'j',   '<plug>(esearch-win-jump:entry:down)' },
 { 'n', 'k',   '<plug>(esearch-win-jump:entry:up)' },
 { 'n', 'r',   '<plug>(esearch-win-reload)' },

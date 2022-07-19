@@ -13,7 +13,6 @@ vim.g.coq_settings = {
 		recommended = false,
 		jump_to_mark = ""
 	},
-	["keymap.repeat"] = "z", -- repeat is keyword in lua, make completion for coq
   auto_start = true,
   clients = {
     buffers = {
