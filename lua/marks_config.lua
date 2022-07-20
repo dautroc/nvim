@@ -1,8 +1,8 @@
 require'marks'.setup {
 	mappings = {
 		set_next = "m,",
-    next = "<C-l>",
-    prev = "<C-h>",
+    next = "gn",
+    prev = "gp",
 		delete_buf = "dm<space>",
 	},
   -- whether to map keybinds or not. default true
