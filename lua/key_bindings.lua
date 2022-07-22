@@ -59,7 +59,6 @@ u.nmap('Y', 'y$')
 u.nmap('cp', ':let @+ = expand("%")<cr>')
 
 -- Telescope
-
 u.nmap('<C-p>', "<cmd>lua require('telescope.builtin').find_files()<cr>")
 u.nmap('<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<cr>")
 u.nmap('<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>")
@@ -77,4 +76,3 @@ u.nmap('<leader>lg', ":LazyGit<CR>")
 u.nmap('<leader>lc', ':LazyGitFilterCurrentFile<CR>', { nowait = true })
 u.nmap('<leader>lf', ':LazyGitFilter<CR>', { nowait = true })
 u.nmap('<leader>gb', ':GitBlameToggle<CR>', { nowait = true })
-
