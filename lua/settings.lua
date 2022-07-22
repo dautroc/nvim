@@ -30,3 +30,6 @@ u.g.indentLine_enabled = 0
 u.g.better_whitespace_enabled = 1
 u.g.strip_whitespace_on_save = 1
 u.g.strip_whitespace_confirm = 0
+
+-------------------- GIT BLAME ------------------------------
+u.g.gitblame_enabled = 0
