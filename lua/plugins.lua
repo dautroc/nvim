@@ -46,4 +46,8 @@ use {'famiu/nvim-reload'}
 use {'windwp/nvim-ts-autotag'}
 use {'chentoast/marks.nvim'}
 use {'f-person/git-blame.nvim'}
+use {
+	'ruifm/gitlinker.nvim',
+	requires = 'nvim-lua/plenary.nvim',
+}
 end)
