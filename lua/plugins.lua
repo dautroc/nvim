@@ -36,7 +36,6 @@ use {
   'nvim-telescope/telescope.nvim',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
-use {'github/copilot.vim'}
 use {'ms-jpq/coq_nvim', branch = 'coq'}
 use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
 use {'davidgranstrom/nvim-markdown-preview'}
