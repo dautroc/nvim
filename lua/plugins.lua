@@ -37,7 +37,6 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 use {'ms-jpq/coq_nvim', branch = 'coq'}
-use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
 use {'davidgranstrom/nvim-markdown-preview'}
 use {"williamboman/nvim-lsp-installer"}
 use {'kdheepak/lazygit.nvim'}
