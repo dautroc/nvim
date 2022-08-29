@@ -20,3 +20,4 @@ require('lspconfig_config')
 require('nvim-lsp-installer').setup {}
 require('marks_config')
 require('gitlinker_config')
+require('coq_config')
