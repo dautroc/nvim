@@ -5,3 +5,7 @@ npairs.setup{
 }
 
 npairs.setup({ map_bs = false })
+
+-- Endwise
+npairs.add_rules(require('nvim-autopairs.rules.endwise-lua'))
+npairs.add_rules(require('nvim-autopairs.rules.endwise-ruby'))

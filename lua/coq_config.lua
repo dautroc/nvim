@@ -7,9 +7,6 @@ vim.g.coq_settings = {
   clients = {
     buffers = {
       same_filetype = true
-    },
-		tabnine = {
-			enabled = true
-		}
+    }
   }
 }
