@@ -29,7 +29,7 @@ use {
     require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
   end
 }
-use {'tpope/vim-projectionist'}
+-- use {'tpope/vim-projectionist'}
 use {'tpope/vim-surround'}
 use {'ntpeters/vim-better-whitespace'}
 use {
@@ -37,6 +37,7 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 use {'ms-jpq/coq_nvim', branch = 'coq'}
+use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
 use {'davidgranstrom/nvim-markdown-preview'}
 use {"williamboman/nvim-lsp-installer"}
 use {'kdheepak/lazygit.nvim'}
@@ -48,4 +49,5 @@ use {
 	'ruifm/gitlinker.nvim',
 	requires = 'nvim-lua/plenary.nvim',
 }
+use {'tpope/vim-rails'}
 end)
