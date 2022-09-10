@@ -29,7 +29,7 @@ use {
     require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
   end
 }
--- use {'tpope/vim-projectionist'}
+use {'tpope/vim-projectionist'}
 use {'tpope/vim-surround'}
 use {'ntpeters/vim-better-whitespace'}
 use {
@@ -49,5 +49,5 @@ use {
 	'ruifm/gitlinker.nvim',
 	requires = 'nvim-lua/plenary.nvim',
 }
-use {'tpope/vim-rails'}
+-- use {'tpope/vim-rails'}
 end)

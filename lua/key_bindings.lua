@@ -50,10 +50,10 @@ u.imap(')', ')<C-g>u')
 u.nmap('Y', 'y$')
 
 -- Move line
--- u.vmap('<C-j>', ":m '>+1<CR>gv=gv")
--- u.vmap('<C-k>', ":m '<-2<CR>gv=gv")
--- u.nmap('<C-j>', ':m .+1<CR>==')
--- u.nmap('<C-k>', ':m .-2<CR>==')
+u.vmap('<C-j>', ":m '>+1<CR>gv=gv")
+u.vmap('<C-k>', ":m '<-2<CR>gv=gv")
+u.nmap('<C-j>', ':m .+1<CR>==')
+u.nmap('<C-k>', ':m .-2<CR>==')
 
 -- Copy path
 u.nmap('cp', ':let @+ = expand("%")<cr>')
