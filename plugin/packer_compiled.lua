@@ -220,6 +220,11 @@ _G.packer_plugins = {
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-projectionist",
     url = "https://github.com/tpope/vim-projectionist"
   },
+  ["vim-rails"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-rails",
+    url = "https://github.com/tpope/vim-rails"
+  },
   ["vim-signify"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-signify",
@@ -240,10 +245,10 @@ _G.packer_plugins = {
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
   },
-  vimux = {
+  ["vim-tmuxify"] = {
     loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vimux",
-    url = "https://github.com/preservim/vimux"
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-tmuxify",
+    url = "https://github.com/jebaum/vim-tmuxify"
   }
 }
 

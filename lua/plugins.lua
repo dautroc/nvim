@@ -13,7 +13,6 @@ use {'kyazdani42/nvim-tree.lua',
   requires = {{'kyazdani42/nvim-web-devicons'}}
 }
 use {'mhinz/vim-startify'}
-use {'preservim/vimux'}
 use {'vim-test/vim-test'}
 use {'glepnir/galaxyline.nvim' , branch = 'main'}
 use {'tyrannicaltoucan/vim-deep-space'}
@@ -29,6 +28,7 @@ use {
     require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
   end
 }
+use {'tpope/vim-rails'}
 use {'tpope/vim-projectionist'}
 use {'tpope/vim-surround'}
 use {'ntpeters/vim-better-whitespace'}
@@ -49,5 +49,5 @@ use {
 	'ruifm/gitlinker.nvim',
 	requires = 'nvim-lua/plenary.nvim',
 }
--- use {'tpope/vim-rails'}
+use {'jebaum/vim-tmuxify'}
 end)
