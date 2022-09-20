@@ -8,7 +8,6 @@ require('esearch_config')
 require('fzf_config')
 require('nvimtree_config')
 require('treesitter_config')
-require('autopair_config')
 require('signify_config')
 require('vimtest_config')
 require('starify_config')
@@ -21,3 +20,4 @@ require('nvim-lsp-installer').setup {}
 require('marks_config')
 require('gitlinker_config')
 require('coq_config')
+require("nvim-autopairs").setup {}

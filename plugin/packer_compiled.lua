@@ -210,6 +210,11 @@ _G.packer_plugins = {
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-deep-space",
     url = "https://github.com/tyrannicaltoucan/vim-deep-space"
   },
+  ["vim-dispatch"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-dispatch",
+    url = "https://github.com/tpope/vim-dispatch"
+  },
   ["vim-esearch"] = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-esearch",
@@ -244,11 +249,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
-  },
-  ["vim-tmuxify"] = {
-    loaded = true,
-    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-tmuxify",
-    url = "https://github.com/jebaum/vim-tmuxify"
   }
 }
 

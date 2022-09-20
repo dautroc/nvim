@@ -49,5 +49,5 @@ use {
 	'ruifm/gitlinker.nvim',
 	requires = 'nvim-lua/plenary.nvim',
 }
-use {'jebaum/vim-tmuxify'}
+use {'tpope/vim-dispatch'}
 end)
