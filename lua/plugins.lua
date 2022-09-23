@@ -29,7 +29,7 @@ use {
   end
 }
 use {'tpope/vim-rails'}
-use {'tpope/vim-projectionist'}
+-- use {'tpope/vim-projectionist'}
 use {'tpope/vim-surround'}
 use {'ntpeters/vim-better-whitespace'}
 use {

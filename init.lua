@@ -21,5 +21,6 @@ require('marks_config')
 require('gitlinker_config')
 require('coq_config')
 require("nvim-autopairs").setup {}
+require("vim_rails_config")
 
 vim.diagnostic.disable()
