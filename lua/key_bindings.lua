@@ -46,6 +46,8 @@ u.imap('}', '}<C-g>u')
 u.imap('(', '(<C-g>u')
 u.imap(')', ')<C-g>u')
 
+u.nmap('<leader>u', ':UndotreeToggle<CR>')
+
 -- Copy till end
 u.nmap('Y', 'y$')
 

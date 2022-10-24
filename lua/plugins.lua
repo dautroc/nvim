@@ -50,4 +50,5 @@ use {
 	requires = 'nvim-lua/plenary.nvim',
 }
 use {'tpope/vim-dispatch'}
+use {'mbbill/undotree'}
 end)
