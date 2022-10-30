@@ -51,4 +51,5 @@ use {
 }
 use {'tpope/vim-dispatch'}
 use {'mbbill/undotree'}
+use {'markstory/vim-zoomwin'}
 end)
