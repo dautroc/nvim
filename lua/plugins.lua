@@ -21,13 +21,7 @@ use {'tomtom/tcomment_vim'}
 use {'flazz/vim-colorschemes'}
 use {'windwp/nvim-autopairs'}
 use {'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons'}
-use {
-  'phaazon/hop.nvim',
-  as = 'hop',
-  config = function()
-    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-  end
-}
+use {'phaazon/hop.nvim'}
 use {'tpope/vim-rails'}
 -- use {'tpope/vim-projectionist'}
 use {'tpope/vim-surround'}
