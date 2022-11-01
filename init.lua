@@ -22,5 +22,6 @@ require('gitlinker_config')
 require('coq_config')
 require("nvim-autopairs").setup {}
 require("vim_rails_config")
+require("silicon_config")
 
 vim.diagnostic.disable()

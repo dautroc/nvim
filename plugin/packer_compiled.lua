@@ -185,6 +185,11 @@ _G.packer_plugins = {
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["silicon.lua"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/silicon.lua",
+    url = "https://github.com/narutoxy/silicon.lua"
+  },
   tcomment_vim = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/tcomment_vim",
@@ -249,6 +254,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
+  },
+  ["vim-zoomwin"] = {
+    loaded = true,
+    path = "/Users/eh/.local/share/nvim/site/pack/packer/start/vim-zoomwin",
+    url = "https://github.com/markstory/vim-zoomwin"
   }
 }
 

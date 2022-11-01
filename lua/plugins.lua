@@ -52,4 +52,8 @@ use {
 use {'tpope/vim-dispatch'}
 use {'mbbill/undotree'}
 use {'markstory/vim-zoomwin'}
+use {
+	'narutoxy/silicon.lua',
+	requires = { 'nvim-lua/plenary.nvim' }
+}
 end)
