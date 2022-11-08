@@ -19,7 +19,7 @@ use {'tyrannicaltoucan/vim-deep-space'}
 use {'mhinz/vim-signify'}
 use {'tomtom/tcomment_vim'}
 use {'flazz/vim-colorschemes'}
-use {'windwp/nvim-autopairs'}
+-- use {'windwp/nvim-autopairs'}
 use {'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons'}
 use {'phaazon/hop.nvim'}
 use {'tpope/vim-rails'}
@@ -50,4 +50,5 @@ use {
 	'narutoxy/silicon.lua',
 	requires = { 'nvim-lua/plenary.nvim' }
 }
+use {'cohama/lexima.vim'}
 end)

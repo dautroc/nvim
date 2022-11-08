@@ -20,7 +20,7 @@ require('nvim-lsp-installer').setup {}
 require('marks_config')
 require('gitlinker_config')
 require('coq_config')
-require("nvim-autopairs").setup {}
+-- require("nvim-autopairs").setup {}
 require("vim_rails_config")
 require("silicon_config")
 
