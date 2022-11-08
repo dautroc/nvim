@@ -68,6 +68,7 @@ u.nmap('<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>")
 u.nmap('<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 u.nmap('<leader>fr', "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
 u.nmap('<leader>km', "<cmd>lua require('telescope.builtin').keymaps()<cr>")
+u.nmap('<leader>tt', "<cmd>lua require('telescope-tabs').list_tabs()<cr>", { nowait = true })
 
 -- GIT
 u.nmap('<leader>lg', ":LazyGit<CR>")

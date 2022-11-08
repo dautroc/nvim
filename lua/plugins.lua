@@ -51,4 +51,13 @@ use {
 	requires = { 'nvim-lua/plenary.nvim' }
 }
 use {'cohama/lexima.vim'}
+use {
+	'LukasPietzschmann/telescope-tabs',
+	requires = { 'nvim-telescope/telescope.nvim' },
+	config = function()
+		require'telescope-tabs'.setup{
+			-- Your custom config :^)
+		}
+	end
+}
 end)
