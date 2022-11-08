@@ -3,7 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 use 'wbthomason/packer.nvim'
 
-use {'neovim/nvim-lspconfig'}
+-- use {'neovim/nvim-lspconfig'}
 use {'eugen0329/vim-esearch'}
 use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 use {'junegunn/fzf.vim',
@@ -31,9 +31,8 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 use {'ms-jpq/coq_nvim', branch = 'coq'}
-use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
 use {'davidgranstrom/nvim-markdown-preview'}
-use {"williamboman/nvim-lsp-installer"}
+-- use {"williamboman/nvim-lsp-installer"}
 use {'kdheepak/lazygit.nvim'}
 use {'famiu/nvim-reload'}
 use {'windwp/nvim-ts-autotag'}

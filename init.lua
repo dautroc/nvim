@@ -15,8 +15,8 @@ require('eviline')
 require('luatab_config')
 require('hop_config')
 require('telescope_config')
-require('lspconfig_config')
-require('nvim-lsp-installer').setup {}
+-- require('lspconfig_config')
+-- require('nvim-lsp-installer').setup {}
 require('marks_config')
 require('gitlinker_config')
 require('coq_config')
