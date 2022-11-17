@@ -10,4 +10,4 @@ require('silicon').setup({
 	font = "JetBrainsMono Nerd Font Mono"
 })
 
-require('utils').vmap('<C-p>', ":lua require('silicon').visualise_api({})<CR>")
+require('utils').vmap('<C-p>', ":lua require('silicon').visualise_cmdline({})<CR>")
