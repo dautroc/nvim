@@ -19,9 +19,12 @@ u.opt.wrap = false
 u.g.ruby_host_prog = '~/.rbenv/versions/3.1.2/bin/neovim-ruby-host'
 
 -- TAB STOP
-u.opt.tabstop = 2
-u.opt.softtabstop = 2
+-- https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
+u.opt.tabstop = 4
+u.opt.softtabstop = 0
+u.opt.expandtab = true
 u.opt.shiftwidth = 2
+u.opt.smarttab = true
 
 -------------------- INDENT LINE -----------------------------------
 u.g.indentLine_enabled = 0
