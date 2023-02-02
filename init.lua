@@ -1,27 +1,16 @@
--- Vim configuration
-require('plugins')
-require('settings')
-require('key_bindings')
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Plugin configuration
-require('esearch_config')
-require('fzf_config')
-require('nvimtree_config')
-require('treesitter_config')
-require('signify_config')
-require('vimtest_config')
-require('starify_config')
-require('eviline')
-require('luatab_config')
-require('hop_config')
-require('telescope_config')
--- require('lspconfig_config')
--- require('nvim-lsp-installer').setup {}
-require('marks_config')
-require('gitlinker_config')
-require('coq_config')
--- require("nvim-autopairs").setup {}
-require("vim_rails_config")
-require("silicon_config")
-
-vim.diagnostic.disable()
+local plugins = {}
+local opts = {}
+require("lazy").setup(plugins, opts)
