@@ -7,14 +7,20 @@ local opts = { silent = true }
 vim.g.mapleader = " "
 vim.b.maplocalleader = ";"
 
+---------------------------------------
 ------------- Normal Mode -------------
+---------------------------------------
+-- Quick actions
+keymap("n", "<leader>w", ":w<cr>")
+keymap("n", "<leader>q", ":q<cr>")
+keymap("n", "jk", "<esc>")
+
 -- Better move around
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
--- Better Window Navigation
 -- Window Keymap
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -46,11 +52,29 @@ keymap("n", "<leader>.", vim.cmd.Ex, opts)
 -- _LAZYGIT_TOGGLE
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
+---------------------------------------
 ------------- Insert Mode -------------
+---------------------------------------
 -- Delete whole word backward
 keymap("i", "<C-BS>", "<C-W>", opts)
 
+-- Undo break points
+keymap("i", "_", "_<C-g>u", opts)
+keymap("i", ",", ",<C-g>u", opts)
+keymap("i", ".", ".<C-g>u", opts)
+keymap("i", "!", "!<C-g>u", opts)
+keymap("i", "?", "?<C-g>u", opts)
+keymap("i", "[", "[<C-g>u", opts)
+keymap("i", "]", "]<C-g>u", opts)
+keymap("i", "{", "{<C-g>u", opts)
+keymap("i", "}", "}<C-g>u", opts)
+keymap("i", "(", "(<C-g>u", opts)
+keymap("i", ")", ")<C-g>u", opts)
+keymap("i", " ", " <C-g>u", opts)
+
+---------------------------------------
 ------------- Visual Mode -------------
+---------------------------------------
 -- Stay in indent mode
 keymap("x", "<", "<gv", opts)
 keymap("x", ">", ">gv", opts)
