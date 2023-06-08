@@ -30,3 +30,5 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
     vim.cmd("tabdo wincmd =")
   end,
 })
+
+vim.cmd 'colorscheme material'
