@@ -1,5 +1,6 @@
 return {
 	"tpope/vim-rails",
+  event = "VeryLazy",
   keys = {
     { "<leader>aa", "<cmd>:A<cr>", desc = "Open alternate file" },
     { "<leader>av", "<cmd>:AV<cr>", desc = "Open alternate file in vsplit" },
