@@ -1,4 +1,4 @@
-<h1 align="center">Nvim config<br> For Sophia Laura daily work
+<h1 align="center">Sophia's Nvim config<br>
 <br>
 <a href="https://www.lua.org/">
 <img
