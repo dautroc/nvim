@@ -41,3 +41,49 @@ Clone this nvim config
 ```sh
 git clone https://github.com/dautroc/nvim.git ~/.config/nvim
 ```
+
+## Structure
+`~/.config/nvim`
+
+```sh
+nvim
+ ├── after
+ │   └── ftplugin
+ │       ├── ruby.lua
+ ├── init.lua
+ ├── lua
+ │   ├── core
+ │   │   ├── autocommands.lua
+ │   │   ├── keymaps.lua
+ │   │   └── options.lua
+ │   ├── lazy-setup.lua
+ │   ├── plugins
+ │   │   ├── autopairs.lua
+ │   │   ├── autotag.lua
+ │   │   ├── cmp.lua
+ │   │   ├── colorizer.lua
+ │   │   ├── comment.lua
+ │   │   ├── copilot.lua
+ │   │   ├── devicons.lua
+ │   │   ├── dressing.lua
+ │   │   ├── fugitive.lua
+ │   │   ├── gitsigns.lua
+ │   │   ├── indentline.lua
+ │   │   ├── lsp.lua
+ │   │   ├── lualine.lua
+ │   │   ├── markdown-preview.lua
+ │   │   ├── mason.lua
+ │   │   ├── null-ls.lua
+ │   │   ├── nvimtree.lua
+ │   │   ├── rosepine.lua
+ │   │   ├── telescope.lua
+ │   │   ├── toggleterm.lua
+ │   │   └── treesitter.lua
+ │   ├── settings
+ │   │   ├── lua_ls.lua
+ │   └── utils
+ │       └── init.lua
+ ├── plugin
+ │   └── netrw.lua
+ └── README.md
+```
