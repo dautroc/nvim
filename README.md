@@ -1,4 +1,4 @@
-<h1 align="center">Neovim IDE<br> For Web Development
+<h1 align="center">Nvim config<br> For Web Development (Rails)
 <br>
 <a href="https://www.lua.org/">
 <img
@@ -13,4 +13,38 @@
 </h1>
 
 ## About
-This nvim config is built for web development (mostly part for Rails developer).
+This nvim configuration is built for web development (mostly part for Rails project).
+
+## Setup
+
+First you need have your nvim version at least 0.9.1
+
+```sh
+git clone https://github.com/neovim/neovim.git
+cd neovim
+git checkout release-0.9
+make CMAKE_BUILD_TYPE=Release
+sudo make install
+```
+
+## Config Dependencies
+- node >= 18
+- npm >= 9
+- gcc
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [fd](https://github.com/sharkdp/fd)
+- [Nerd Fonts](https://www.nerdfonts.com/) - An easy tool to install ([getnf](https://github.com/ronniedroid/getnf))
+
+
+## Install the config
+
+Make sure to remove or move your current `nvim` directory
+
+Backup your config 
+```sh
+mv ~/.config/nvim/ ~/.config/nvim-bak/
+```
+
+```sh
+git clone https://github.com/dautroc/nvim.git ~/.config/nvim
+```
