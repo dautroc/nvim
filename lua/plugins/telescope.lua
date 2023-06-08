@@ -21,13 +21,13 @@ return {
 			selection_caret = " ",
 			path_display = { "smart" },
 			file_ignore_patterns = { ".git/", "node_modules", ".idea" },
-			-- mappings = {
-			-- 	i = {
-			-- 		["<esc>"] = "close",
-			-- 		["<C-j>"] = "move_selection_next",
-			-- 		["<C-k>"] = "move_selection_previous",
-			-- 	},
-			-- },
+			mappings = {
+				i = {
+					["<esc>"] = "close",
+					["<C-j>"] = "move_selection_next",
+					["<C-k>"] = "move_selection_previous",
+				},
+			},
 		},
 		extensions = {
 			fzf = {
