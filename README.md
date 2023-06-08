@@ -12,11 +12,11 @@
 </h1>
 
 ## About
-This nvim configuration is built for web development (mostly part for Rails project).
+This Neovim configuration is specifically tailored for web development, with a focus on Rails projects in particular.
 
 ## Setup
 
-First you need have your nvim version at least 0.9.1. Follow [nvim instruction](https://neovim.io/)
+First, ensure that your Neovim version is at least 0.9.1. You can follow the instructions provided by Neovim [here](https://neovim.io/) to install or update it
 
 ## Config Dependencies
 - node >= 18
@@ -42,7 +42,9 @@ git clone https://github.com/dautroc/nvim.git ~/.config/nvim
 ```
 
 ## Structure
-Please note that the structure may changes since I can add more plugins to server my work.
+
+Please note that the structure may change as I may add more plugins to enhance my workflow.
+
 `~/.config/nvim`
 
 ```sh
