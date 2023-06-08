@@ -13,6 +13,7 @@ vim.b.maplocalleader = ";"
 -- Quick actions
 keymap("n", "<leader>w", ":w<cr>")
 keymap("n", "<leader>q", ":q<cr>")
+keymap("n", "<leader>Q", ":qa<cr>")
 
 -- Better move around
 keymap("n", "<C-d>", "<C-d>zz")
