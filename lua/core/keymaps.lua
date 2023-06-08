@@ -13,7 +13,6 @@ vim.b.maplocalleader = ";"
 -- Quick actions
 keymap("n", "<leader>w", ":w<cr>")
 keymap("n", "<leader>q", ":q<cr>")
-keymap("n", "jk", "<esc>")
 
 -- Better move around
 keymap("n", "<C-d>", "<C-d>zz")
@@ -22,10 +21,10 @@ keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
 -- Window Keymap
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<cmd>lua require('tmux').move_left()<cr>", opts)
+keymap("n", "<C-j>", "<cmd>lua require('tmux').move_down()<cr>", opts)
+keymap("n", "<C-k>", "<cmd>lua require('tmux').move_up()<cr>", opts)
+keymap("n", "<C-l>", "<cmd>lua require('tmux').move_right()<cr>", opts)
 
 -- Better search and highlight
 keymap("n", "n", "nzzzv", opts)
@@ -55,8 +54,8 @@ keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 ---------------------------------------
 ------------- Insert Mode -------------
 ---------------------------------------
--- Delete whole word backward
-keymap("i", "<C-BS>", "<C-W>", opts)
+-- Quick escape
+keymap("i", "jk", "<esc>")
 
 -- Undo break points
 keymap("i", "_", "_<C-g>u", opts)
