@@ -43,14 +43,15 @@ git clone https://github.com/dautroc/nvim.git ~/.config/nvim
 ```
 
 ## Structure
+Please note that the structure may changes.
 `~/.config/nvim`
 
 ```sh
 nvim
+ ├── init.lua
  ├── after
  │   └── ftplugin
- │       ├── ruby.lua
- ├── init.lua
+ │   │   └── rb.lua
  ├── lua
  │   ├── core
  │   │   ├── autocommands.lua
@@ -87,3 +88,13 @@ nvim
  │   └── netrw.lua
  └── README.md
 ```
+
+Note:
+- after/ftplugin: directory in Neovim (and Vim) is a location where you can place filetype-specific configuration files that will be loaded after the default configuration for a given filetype.
+- init.lua: main configuration here, first loaded when nvim start up
+- lua/:
+  - core/: nvim settings 
+  - plugins/: all plugin files that lazynvim will load
+  - settings/: lua settings for nvim for removing warning (optional)  
+  - utils/: centralize servers, parser, linters
+- plugin/netrw.lua: Better netrw
