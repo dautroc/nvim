@@ -17,15 +17,7 @@ This nvim configuration is built for web development (mostly part for Rails proj
 
 ## Setup
 
-First you need have your nvim version at least 0.9.1
-
-```sh
-git clone https://github.com/neovim/neovim.git
-cd neovim
-git checkout release-0.9
-make CMAKE_BUILD_TYPE=Release
-sudo make install
-```
+First you need have your nvim version at least 0.9.1. Follow [nvim instruction](https://neovim.io/)
 
 ## Config Dependencies
 - node >= 18
@@ -45,6 +37,7 @@ Backup your config
 mv ~/.config/nvim/ ~/.config/nvim-bak/
 ```
 
+Clone this nvim config
 ```sh
 git clone https://github.com/dautroc/nvim.git ~/.config/nvim
 ```
