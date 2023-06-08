@@ -10,9 +10,10 @@ return {
 	},
 	keys = {
 		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
-		{ "<leader>fw", "<cmd>Telescope live_grep<CR>", desc = "Find a string" },
+		{ "<leader>fs", "<cmd>Telescope live_grep<CR>", desc = "Find a string" },
 		{ "<leader>b", "<cmd>Telescope buffers<CR>", desc = "Find buffers" },
 		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Find keymaps" },
+		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find old files" },
 	},
 	opts = {
 		defaults = {
