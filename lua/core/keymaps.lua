@@ -14,6 +14,7 @@ vim.b.maplocalleader = ";"
 keymap("n", "<leader>w", ":w<cr>")
 keymap("n", "<leader>q", ":q<cr>")
 keymap("n", "<leader>Q", ":qa<cr>")
+keymap("n", "<leader><tab>", ":b#<cr>")
 
 -- Better move around
 keymap("n", "<C-d>", "<C-d>zz")
@@ -39,9 +40,9 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "x", '"_x', opts)
 keymap("n", "X", '"_X', opts)
 
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+-- Navigate in line
+keymap("n", "<S-l>", "$", opts)
+keymap("n", "<S-h>", "^", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", vim.cmd.nohlsearch, opts)
