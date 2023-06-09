@@ -11,11 +11,13 @@ M.servers = {
   "yamlls",
   "tailwindcss",
   "gopls",
+  "solargraph",
 }
 
 M.linters = {
   "prettier",
   "stylua",
+  "rubocop",
 }
 
 M.parsers = {
@@ -41,6 +43,7 @@ M.parsers = {
   "go",
   "rust",
   "dockerfile",
+  "ruby",
 }
 
 return M
