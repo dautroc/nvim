@@ -28,7 +28,7 @@ return -- Lua
 			},
 			gitsigns = { enabled = false }, -- disables git signs
 			plugins = {
-				tmux = { enabled = true },
+				tmux = { enabled = false },
 				alacritty = {
 					enabled = true,
 					font = "14", -- font size
