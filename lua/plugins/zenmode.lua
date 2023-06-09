@@ -2,7 +2,7 @@ return -- Lua
 {
 	"folke/zen-mode.nvim",
 	keys = {
-		{ "<leader>z", "<cmd>ZenMode<CR>" },
+		{ "<leader>z", "<cmd>ZenMode<CR>", desc = "ZenMode" },
 	},
 	config = function()
 		require("zen-mode").setup({

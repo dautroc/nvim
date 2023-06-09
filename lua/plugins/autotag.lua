@@ -8,6 +8,7 @@ return {
 		"typescriptreact",
 		"svelte",
 		"vue",
+		"eruby",
 	},
 	opts = {},
 }

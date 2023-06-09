@@ -16,6 +16,9 @@ keymap("n", "<leader>q", ":q<cr>")
 keymap("n", "<leader>Q", ":qa<cr>")
 keymap("n", "<leader><tab>", ":b#<cr>")
 
+-- Ctags jumps
+keymap("n", "<leader>c", "g<C-]>")
+
 -- Better identation
 keymap("n", ";", "==")
 keymap("v", ";", "==")
