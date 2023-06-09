@@ -3,6 +3,7 @@ return {
 	keys = {
 		{ "<leader>nn", ":ZkNew<CR>" },
 		{ "<leader>nf", ":ZkNotes<CR>" },
+		{ "<leader>nt", ":ZkTags<CR>" },
 	},
 	config = function()
 		require("zk").setup({
