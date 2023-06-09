@@ -31,4 +31,5 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
   end,
 })
 
+-- Set colorscheme
 vim.cmd 'colorscheme material'

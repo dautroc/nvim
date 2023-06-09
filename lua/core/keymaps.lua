@@ -16,6 +16,10 @@ keymap("n", "<leader>q", ":q<cr>")
 keymap("n", "<leader>Q", ":qa<cr>")
 keymap("n", "<leader><tab>", ":b#<cr>")
 
+-- Better identation
+keymap("n", ";", "==")
+keymap("v", ";", "==")
+
 -- Better move around
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
