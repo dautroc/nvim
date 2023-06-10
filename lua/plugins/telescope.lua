@@ -10,11 +10,15 @@ return {
 	},
 	keys = {
 		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
-		{ "<leader>fs", "<cmd>Telescope live_grep<CR>", desc = "Find a string" },
-		{ "<leader>b", "<cmd>Telescope buffers<CR>", desc = "Find buffers" },
-		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Find keymaps" },
-		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find old files" },
+		{ "<leader>fs", "<cmd>Telescope live_grep<CR>", desc = "Live grep" },
+		{ "<leader>fw", "<cmd>Telescope grep_string<CR>", desc = "Grep string" },
+
+		{ "<leader>b", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
+		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
+		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
+
+    -- Rails
 		{ "<leader>rm", ":Telescope find_files cwd=app/models<CR>", desc = "rails models" },
 		{ "<leader>rs", ":Telescope find_files cwd=app/services<CR>", desc = "rails services" },
 		{ "<leader>rc", ":Telescope find_files cwd=app/controllers<CR>", desc = "rails controllers" },

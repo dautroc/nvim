@@ -33,6 +33,11 @@ return -- Lua
 					enabled = true,
 					font = "14", -- font size
 				},
+
+        kitty = {
+          enabled = true,
+          font = "+4", -- font size increase
+        },
 			},
 		})
 	end,
