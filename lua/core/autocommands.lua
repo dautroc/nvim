@@ -36,4 +36,5 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 vim.cmd("autocmd BufWritePost *.rb silent !ctags -R .")
 
 -- Set colorscheme
+vim.g.material_style = "darker"
 vim.cmd 'colorscheme material'
