@@ -1,5 +1,5 @@
 vim.g['test#ruby#rspec#executable'] = 'bundle exec rspec'
-vim.g['test#strategy'] = 'vimux'
+vim.g['test#strategy'] = 'kitty'
 
 return {
 	"vim-test/vim-test",
