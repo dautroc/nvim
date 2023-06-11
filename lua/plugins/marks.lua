@@ -1,7 +1,7 @@
 return {
 	"chentoast/marks.nvim",
 	keys = {
-		{ "<leader>mm", ":BookmarksListAll<CR>" },
+		{ "<leader>mm", ":BookmarksListAll<CR>", desc = "BookmarksListAll" },
 	},
 	config = function()
 		require("marks").setup({

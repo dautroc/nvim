@@ -2,9 +2,6 @@ return {
 	"zbirenbaum/copilot.lua",
 	cmd = "Copilot",
 	event = "InsertEnter",
-	keys = {
-		{ "<leader>ct", "<cmd>Copilot toggle<CR>", desc = "Copilot toggle" },
-	},
 	opts = {
 		panel = {
 			enabled = true,

@@ -11,13 +11,13 @@ vim.b.maplocalleader = ";"
 ------------- Normal Mode -------------
 ---------------------------------------
 -- Quick actions
-keymap("n", "<leader>w", ":w<cr>")
-keymap("n", "<leader>q", ":q<cr>")
-keymap("n", "<leader>Q", ":qa<cr>")
-keymap("n", "<leader><tab>", ":b#<cr>")
+keymap("n", "<leader>w", ":w<cr>", { desc = "Save file" })
+keymap("n", "<leader>q", ":q<cr>", { desc = "Quit file" })
+keymap("n", "<leader>Q", ":qa<cr>", { desc = "Quit all files" })
+keymap("n", "<leader><tab>", ":b#<cr>", { desc = "Switch to last buffer" })
 
 -- Ctags jumps
-keymap("n", "<leader>c", "g<C-]>")
+keymap("n", "<leader>c", "g<C-]>", { desc = "Jump to tag" })
 
 -- Better identation
 keymap("n", ";", "==")
@@ -52,13 +52,13 @@ keymap("n", "<S-l>", "$", opts)
 keymap("n", "<S-h>", "^", opts)
 
 -- Clear highlights
-keymap("n", "<leader>h", vim.cmd.nohlsearch, opts)
+keymap("n", "<leader>h", vim.cmd.nohlsearch, { desc = "Clear highlights" })
 
 -- Netrw File Explorer
-keymap("n", "<leader>.", vim.cmd.Ex, opts)
+keymap("n", "<leader>.", vim.cmd.Ex, { desc = "Open Netrw" })
 
 -- _LAZYGIT_TOGGLE
-keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Toggle Lazygit" })
 
 ---------------------------------------
 ------------- Insert Mode -------------
