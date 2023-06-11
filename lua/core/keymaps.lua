@@ -54,9 +54,6 @@ keymap("n", "<S-h>", "^", opts)
 -- Clear highlights
 keymap("n", "<leader>h", vim.cmd.nohlsearch, { desc = "Clear highlights" })
 
--- Netrw File Explorer
-keymap("n", "<leader>.", vim.cmd.Ex, { desc = "Open Netrw" })
-
 -- _LAZYGIT_TOGGLE
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Toggle Lazygit" })
 
