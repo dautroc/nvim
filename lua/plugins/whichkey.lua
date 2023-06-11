@@ -8,7 +8,7 @@ return {
 	config = function()
 		local wk = require("which-key")
 
-		wk.register({ prefix = "<leader>" }, {
+		wk.register({
 			f = { name = "+find" },
 			r = { name = "+rails" },
 			g = { name = "+git" },
@@ -23,7 +23,10 @@ return {
 			},
 			m = { name = "+misc" },
 			t = { name = "+test" },
-			n = { name = "+note" },
-		})
+      o = {
+        name = "+obsidian",
+        l = "+links",
+      }
+		}, { prefix = "<leader>" })
 	end,
 }
