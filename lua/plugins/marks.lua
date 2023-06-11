@@ -1,5 +1,6 @@
 return {
 	"chentoast/marks.nvim",
+  event = "BufEnter",
 	keys = {
 		{ "<leader>mm", ":BookmarksListAll<CR>", desc = "BookmarksListAll" },
 	},
