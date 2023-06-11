@@ -1,16 +1,16 @@
 return {
 	"epwalsh/obsidian.nvim",
 	keys = {
-		{ "<leader>ot", ":ObsidianToday", desc = "Create a new daily note" },
-		{ "<leader>on", ":ObsidianNew", desc = "Create new node" },
-		{ "<leader>oo", ":ObsidianOpen", desc = "Open in obsidian" },
-		{ "<leader>os", ":ObsidianSearch", desc = "Search notes" },
-		{ "<leader>oq", ":ObsidianQuickSwitch", desc = "Quick switch note" },
+		{ "<leader>ot", ":ObsidianToday<CR>", desc = "Create a new daily note" },
+		{ "<leader>on", ":ObsidianNew<CR>", desc = "Create new node" },
+		{ "<leader>oo", ":ObsidianOpen<CR>", desc = "Open in obsidian" },
+		{ "<leader>os", ":ObsidianSearch<CR>", desc = "Search notes" },
+		{ "<leader>oq", ":ObsidianQuickSwitch<CR>", desc = "Quick switch note" },
 
     -- Link
-		{ "<leader>olf", ":ObsidianFollowLink", desc = "Follow link" },
-		{ "<leader>oln", ":ObsidianLinkNew", desc = "Create new note with link for selected text", mode = "v" },
-		{ "<leader>oll", ":ObsidianLink", desc = "Link selected text to a note", mode = "v" },
+		{ "<leader>olf", ":ObsidianFollowLink<CR>", desc = "Follow link" },
+		{ "<leader>oln", ":ObsidianLinkNew<CR>", desc = "Create new note with link for selected text", mode = "v" },
+		{ "<leader>oll", ":ObsidianLink<CR>", desc = "Link selected text to a note", mode = "v" },
 	},
 	lazy = true,
 	event = "VeryLazy",
