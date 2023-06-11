@@ -30,6 +30,11 @@ keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
 -- Window Keymap
+-- keymap("n", "<C-h>", "<cmd>lua require('tmux').move_left()<cr>", opts)
+-- keymap("n", "<C-j>", "<cmd>lua require('tmux').move_down()<cr>", opts)
+-- keymap("n", "<C-k>", "<cmd>lua require('tmux').move_up()<cr>", opts)
+-- keymap("n", "<C-l>", "<cmd>lua require('tmux').move_right()<cr>", opts)
+
 keymap("n", "<C-h>", "<cmd>KittyNavigateLeft<cr>", opts)
 keymap("n", "<C-j>", "<cmd>KittyNavigateDown<cr>", opts)
 keymap("n", "<C-k>", "<cmd>KittyNavigateUp<cr>", opts)
