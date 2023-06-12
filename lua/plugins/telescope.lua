@@ -10,6 +10,7 @@ return {
 	},
 	keys = {
 		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
+		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		{ "<leader>fs", "<cmd>Telescope live_grep<CR>", desc = "Live grep" },
 		{ "<leader>fw", "<cmd>Telescope grep_string<CR>", desc = "Grep string" },
 		{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
@@ -18,16 +19,16 @@ return {
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
 
 		-- Rails
-		{ "<leader>rm", ":Telescope find_files cwd=app/models<CR>", desc = "rails models" },
-		{ "<leader>rs", ":Telescope find_files cwd=app/services<CR>", desc = "rails services" },
-		{ "<leader>rc", ":Telescope find_files cwd=app/controllers<CR>", desc = "rails controllers" },
-		{ "<leader>ra", ":Telescope find_files cwd=app/api<CR>", desc = "rails api" },
-		{ "<leader>rp", ":Telescope find_files cwd=app/policies<CR>", desc = "rails policies" },
-		{ "<leader>ri", ":Telescope find_files cwd=app/mailers<CR>", desc = "rails mailer" },
-		{ "<leader>rf", ":Telescope find_files cwd=spec/factories<CR>", desc = "rails factories" },
-		{ "<leader>rl", ":Telescope find_files cwd=config/locales<CR>", desc = "rails locales" },
-		{ "<leader>rr", ":Telescope find_files cwd=lib/tasks<CR>", desc = "rake tasks" },
-		{ "<leader>rv", ":Telescope find_files cwd=app/views<CR>", desc = "rails views" },
+		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "rails models" },
+		{ "<leader>rs", "<cmd>Telescope find_files cwd=app/services<CR>", desc = "rails services" },
+		{ "<leader>rc", "<cmd>Telescope find_files cwd=app/controllers<CR>", desc = "rails controllers" },
+		{ "<leader>ra", "<cmd>Telescope find_files cwd=app/api<CR>", desc = "rails api" },
+		{ "<leader>rp", "<cmd>Telescope find_files cwd=app/policies<CR>", desc = "rails policies" },
+		{ "<leader>ri", "<cmd>Telescope find_files cwd=app/mailers<CR>", desc = "rails mailer" },
+		{ "<leader>rf", "<cmd>Telescope find_files cwd=spec/factories<CR>", desc = "rails factories" },
+		{ "<leader>rl", "<cmd>Telescope find_files cwd=config/locales<CR>", desc = "rails locales" },
+		{ "<leader>rr", "<cmd>Telescope find_files cwd=lib/tasks<CR>", desc = "rake tasks" },
+		{ "<leader>rv", "<cmd>Telescope find_files cwd=app/views<CR>", desc = "rails views" },
 	},
 	opts = {
 		defaults = {

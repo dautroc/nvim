@@ -11,10 +11,10 @@ vim.b.maplocalleader = ";"
 ------------- Normal Mode -------------
 ---------------------------------------
 -- Quick actions
-keymap("n", "<leader>w", ":w<cr>", { desc = "Save file" })
-keymap("n", "<leader>q", ":q<cr>", { desc = "Quit file" })
-keymap("n", "<leader>Q", ":qa<cr>", { desc = "Quit all files" })
-keymap("n", "<leader><tab>", ":b#<cr>", { desc = "Switch to last buffer" })
+keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
+keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
+keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
+keymap("n", "<leader><tab>", "<cmd>b#<cr>", { desc = "Switch to last buffer" })
 
 -- Ctags jumps
 keymap("n", "<leader>c", "g<C-]>", { desc = "Jump to tag" })

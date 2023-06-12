@@ -11,8 +11,8 @@ return {
     { "<leader>gB", "<cmd>Git branch<CR>", desc = "Git Branch" },
     { "<leader>ga", "<cmd>Git add %<CR>", desc = "Git Add" },
     { "<leader>gd", "<cmd>Gvdiffsplit!<CR>", desc = "Git Diff" },
-    { "<leader>dp", ":diffput ", desc = "Git Diff Put" },
-    { "<leader>dg", ":diffget ", desc = "Git Diff Get" },
+    { "<leader>dp", "<cmd>diffput ", desc = "Git Diff Put" },
+    { "<leader>dg", "<cmd>diffget ", desc = "Git Diff Get" },
   },
   config = function ()
     local status_ok, fugitive = pcall(require, "vim-fugitive")

@@ -1,10 +1,10 @@
 return {
 	"ThePrimeagen/harpoon",
 	keys = {
-		{ "<leader>ba", ":lua require('harpoon.mark').add_file()<CR>", desc = "Add bookmark file" },
-		{ "<leader>bn", ":lua require('harpoon.ui').nav_next()<CR>", desc = "Next bookmark" },
-		{ "<leader>bp", ":lua require('harpoon.ui').nav_prev()<CR>", desc = "Previous bookmark" },
-		{ "<leader>bm", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", desc = "Bookmark menu" },
+		{ "<leader>ba", "<cmd>lua require('harpoon.mark').add_file()<CR>", desc = "Add bookmark file" },
+		{ "<leader>bn", "<cmd>lua require('harpoon.ui').nav_next()<CR>", desc = "Next bookmark" },
+		{ "<leader>bp", "<cmd>lua require('harpoon.ui').nav_prev()<CR>", desc = "Previous bookmark" },
+		{ "<leader>bm", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", desc = "Bookmark menu" },
 	},
 	dependencies = {
 		"nvim-lua/plenary.nvim",

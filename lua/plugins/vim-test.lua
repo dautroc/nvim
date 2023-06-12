@@ -4,8 +4,8 @@ vim.g['test#strategy'] = 'vimux'
 return {
 	"vim-test/vim-test",
 	keys = {
-		{ "<leader>tf", ":TestFile<cr>" },
-    { "<leader>tn", ":TestNearest<cr>" }
+		{ "<leader>tf", "<cmd>TestFile<cr>" },
+    { "<leader>tn", "<cmd>TestNearest<cr>" }
 	},
   dependencies = { 'preservim/vimux' }
 }

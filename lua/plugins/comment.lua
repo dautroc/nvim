@@ -14,7 +14,7 @@ return {
 		},
 		{
 			"<leader>/",
-			":lua require('Comment.api').toggle.linewise.current()<CR>",
+			"<cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
 			desc = "Toggle comment",
 		},
 		{

@@ -1,7 +1,7 @@
 return {
 	"stevearc/oil.nvim",
 	keys = {
-		{ "<leader>.", ":Oil<CR>", desc = "Open Oil" },
+		{ "<leader>.", "<cmd>Oil<CR>", desc = "Open Oil" },
 	},
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
