@@ -1,10 +1,11 @@
 return {
 	"LeonHeidelbach/trailblazer.nvim",
 	keys = {
-		{ "mm", "<CMD>TrailBlazerNewTrailMark<CR>zz", desc = "Jump toggle" },
+		{ "mm", "<CMD>TrailBlazerNewTrailMark<CR>", desc = "Jump toggle" },
 		{ "gj", "<CMD>TrailBlazerPeekMoveNextDown<CR>zz", desc = "Jump next" },
 		{ "gk", "<CMD>TrailBlazerPeekMovePreviousUp<CR>zz", desc = "Jump back" },
-		{ "md", "<CMD>TrailBlazerDeleteAllTrailMarks<CR>zz", desc = "Jump delete" },
+		{ "md", "<CMD>TrailBlazerDeleteAllTrailMarks<CR>", desc = "Jump delete" },
+		{ "ml", "<CMD>TrailBlazerOpenTrailMarkList<CR>", desc = "Jump list" },
 	},
 	config = function()
 		require("trailblazer").setup({
