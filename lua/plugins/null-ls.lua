@@ -48,8 +48,11 @@ return {
 				}),
 				formatting.black.with({ extra_args = { "--fast" } }),
 				formatting.stylua,
-				formatting.google_java_format,
-				diagnostics.flake8,
+        formatting.rubocop,
+        formatting.erb_lint,
+
+        -- diagnostics
+        diagnostics.erb_lint,
 			},
 		})
 	end,

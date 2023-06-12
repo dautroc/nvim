@@ -10,7 +10,6 @@ M.servers = {
   "jsonls",
   "yamlls",
   "tailwindcss",
-  "gopls",
   "solargraph",
 }
 
@@ -27,10 +26,8 @@ M.parsers = {
   "markdown_inline",
   "latex",
   "bash",
-  "python",
   "cpp",
   "c",
-  "java",
   "javascript",
   "typescript",
   "tsx",
@@ -40,8 +37,6 @@ M.parsers = {
   "yaml",
   "toml",
   "regex",
-  "go",
-  "rust",
   "dockerfile",
   "ruby",
 }
