@@ -2,7 +2,7 @@ return {
 	"epwalsh/obsidian.nvim",
 	keys = {
 		{ "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Create a new daily note" },
-		{ "<leader>on", "<cmd>ObsidianNew<CR>", desc = "Create new node" },
+		{ "<leader>on", "<cmd>ObsidianNew new_note<CR>", desc = "Create new node" },
 		{ "<leader>oo", "<cmd>ObsidianOpen<CR>", desc = "Open in obsidian" },
 		{ "<leader>os", "<cmd>ObsidianSearch<CR>", desc = "Search notes" },
 		{ "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", desc = "Quick switch note" },
