@@ -17,16 +17,16 @@ return {
 			l = {
 				name = "+lsp",
 				a = "Code Action",
-        r = "Rename",
-        s = "Signature Help",
-        i = "Lsp Info",
+				r = "Rename",
+				s = "Signature Help",
+				i = "Lsp Info",
 			},
 			m = { name = "+misc" },
 			t = { name = "+test" },
-      o = {
-        name = "+obsidian",
-        l = "+links",
-      }
+			o = {
+				name = "+obsidian",
+				l = "+links",
+			},
 		}, { prefix = "<leader>" })
 	end,
 }
