@@ -36,5 +36,4 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 vim.cmd("autocmd BufWritePost *.rb silent !ctags -R .")
 
 -- Set colorscheme
-vim.g.material_style = "oceanic"
 vim.cmd 'colorscheme material'
