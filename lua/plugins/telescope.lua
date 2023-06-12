@@ -3,6 +3,7 @@ return {
 	cmd = { "Telescope" },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
+		"nvim-telescope/telescope-project.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -17,6 +18,7 @@ return {
 		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
+		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
 
 		-- Rails
 		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "rails models" },
@@ -58,13 +60,26 @@ return {
 					override_file_sorter = true, -- override the file sorter
 					case_mode = "smart_case", -- or "ignore_case" or "respect_case" the default case_mode is "smart_case"
 				},
+				project = {
+					project = {
+						base_dirs = {
+							{ path = "~/workspace", max_depth = 2 },
+							{ path = "~/nvim", max_depth = 1 },
+						},
+						hidden_files = true, -- default: false
+						theme = "dropdown",
+						order_by = "asc",
+						search_by = "title",
+						sync_with_nvim_tree = true, -- default false
+					},
+				},
 			},
 		})
 
-    -- Extensions
-		local extensions = { "fzf", "harpoon" }
+		-- Extensions
+		local extensions = { "fzf", "harpoon", "project" }
 		for _, ext in ipairs(extensions) do
-      require("telescope").load_extension(ext)
+			require("telescope").load_extension(ext)
 		end
 	end,
 }
