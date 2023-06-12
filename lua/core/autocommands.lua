@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 })
 
 -- Generate ctags on save for ruby files
-vim.cmd("autocmd BufWritePost *.rb silent !ctags -R .")
+-- vim.cmd("autocmd BufWritePost *.rb silent !ctags -R .")
 
 -- Set colorscheme
 vim.cmd 'colorscheme material'
