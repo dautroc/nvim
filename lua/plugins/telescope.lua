@@ -77,7 +77,7 @@ return {
 		})
 
 		-- Extensions
-		local extensions = { "fzf", "harpoon", "project", "noice" }
+		local extensions = { "fzf", "project" }
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)
 		end
