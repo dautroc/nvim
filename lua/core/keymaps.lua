@@ -26,8 +26,8 @@ keymap("n", "co", "<cmd>copen<cr>")
 keymap("n", "<leader>c", "g<C-]>", { desc = "Jump to tag" })
 
 -- Better identation
-keymap("n", ";", "==")
-keymap("v", ";", "==")
+keymap("n", "<leader>ma", "==", { desc = "Auto identation" })
+keymap("v", "<leader>ma", "==", { desc = "Auto identation" })
 
 -- Better move around
 keymap("n", "<C-d>", "<C-d>zz")
