@@ -19,6 +19,7 @@ return {
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
+		{ "<leader>fm", "<cmd>Telescope marks<CR>", desc = "Marks" },
 
 		-- Rails
 		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "rails models" },
