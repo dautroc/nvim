@@ -16,6 +16,12 @@ keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 keymap("n", "<leader><tab>", "<cmd>b#<cr>", { desc = "Switch to last buffer" })
 
+-- Quickfix list
+keymap("n", "cn", "<cmd>cnext<cr>")
+keymap("n", "cp", "<cmd>cprev<cr>")
+keymap("n", "cc", "<cmd>cclose<cr>")
+keymap("n", "co", "<cmd>copen<cr>")
+
 -- Ctags jumps
 keymap("n", "<leader>c", "g<C-]>", { desc = "Jump to tag" })
 
