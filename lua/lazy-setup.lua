@@ -20,7 +20,7 @@ require("lazy").setup("plugins", {
   },
   install = {
     missing = true,
-    colorscheme = { "material" },
+    colorscheme = { "gruvbox-material" },
   },
   ui = {
     size = { width = 0.8, height = 0.8 },

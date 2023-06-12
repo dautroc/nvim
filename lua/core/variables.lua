@@ -1,2 +1,1 @@
--- material
-vim.g.material_style = "oceanic"
+vim.g.gruvbox_material_better_performance = 1
