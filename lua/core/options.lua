@@ -26,6 +26,7 @@ vim.opt.shiftwidth = 2                                 -- the number of spaces i
 vim.opt.tabstop = 2                                    -- insert 2 spaces for a tab
 vim.opt.cursorline = true                              -- highlight the current line
 vim.opt.relativenumber = true                          -- set numbered lines
+vim.opt.number = true
 vim.opt.laststatus = 3                                 -- only the last window will always have a status line
 vim.opt.showcmd = false                                -- hide (partial) command in the last line of the screen (for performance)
 vim.opt.ruler = false                                  -- hide the line and column number of the cursor position
@@ -41,7 +42,6 @@ vim.opt.iskeyword:append("-")                          -- treats words with `-` 
 vim.opt.formatoptions:remove({ "c", "r", "o" })        -- This is a sequence of letters which describes how automatic formatting is to be done
 vim.opt.linebreak = true                               -- Enable line breaks
 vim.opt.laststatus = 0                                 -- disables the status line
--- vim.opt.colorcolumn = "80"                             -- side column 
 vim.opt.wildmenu=true                                  -- completion of commands
 vim.opt.wildignorecase=true                            -- case insensitive completion
 vim.opt.wildmode = "longest,full,full"                 -- how the completion is done
