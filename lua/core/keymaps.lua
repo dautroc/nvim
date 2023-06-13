@@ -15,6 +15,7 @@ keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 keymap("n", "<leader><tab>", "<cmd>b#<cr>", { desc = "Switch to last buffer" })
+keymap("n", "<leader>R", "<cmd>!ctags -R --languages=ruby<cr>", { desc = "Update ctags" })
 
 -- Better mark jump
 keymap("n", "gj", "gjzz")
