@@ -1,4 +1,4 @@
-vim.opt.background = "light"
+vim.opt.background = "dark"
 vim.opt.foldenable = false -- disable folding by default
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
@@ -53,3 +53,9 @@ vim.opt.fillchars = {
 	diff = " ", -- set diff character to a space
 	msgsep = "‾", -- set message separator character to a horizontal bar
 }
+
+-- Global variables
+vim.g.gruvbox_material_background = "medium"
+vim.g.gruvbox_material_better_performance = 1
+vim.g.gruvbox_material_foreground = "mix"
+
