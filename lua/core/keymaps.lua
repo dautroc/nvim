@@ -16,6 +16,10 @@ keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 keymap("n", "<leader><tab>", "<cmd>b#<cr>", { desc = "Switch to last buffer" })
 
+-- Better mark jump
+keymap("n", "gj", "gjzz")
+keymap("n", "gk", "gkzz")
+
 -- Quickfix list
 keymap("n", "cn", "<cmd>cnext<cr>")
 keymap("n", "cp", "<cmd>cprev<cr>")
