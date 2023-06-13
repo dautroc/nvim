@@ -21,7 +21,5 @@ nvim
  │   │   ├── lua_ls.lua
  │   └── utils
  │       └── init.lua
- ├── plugin
- │   └── netrw.lua
  └── README.md
 ```
