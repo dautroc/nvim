@@ -5,7 +5,7 @@ return {
 		{ "<leader>on", "<cmd>ObsidianNew new_note<CR>", desc = "Create new node" },
 		{ "<leader>oo", "<cmd>ObsidianOpen<CR>", desc = "Open in obsidian" },
 		{ "<leader>os", "<cmd>ObsidianSearch<CR>", desc = "Search notes" },
-		{ "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", desc = "Quick switch note" },
+		{ "<leader>of", "<cmd>ObsidianQuickSwitch<CR>", desc = "Find by name" },
 
     -- Link
 		{ "<leader>olf", "<cmd>ObsidianFollowLink<CR>", desc = "Follow link" },
