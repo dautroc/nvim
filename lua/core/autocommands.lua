@@ -31,9 +31,3 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 		vim.cmd("tabdo wincmd =")
 	end,
 })
-
--- Generate ctags on save for ruby files
--- vim.cmd("autocmd BufWritePost *.rb silent !ctags -R .")
-
--- Set colorscheme
-vim.cmd("colorscheme gruvbox-material")

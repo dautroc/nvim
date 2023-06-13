@@ -1,5 +1,5 @@
 require "core.options"
 require "core.keymaps"
-require "core.colorscheme"
 require "lazy-setup"
+require "core.colorscheme"
 require "core.autocommands"
