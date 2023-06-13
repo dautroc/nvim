@@ -9,7 +9,7 @@ return {
 		local wk = require("which-key")
 
 		wk.register({
-      b = { name = "+buffer/bookmark" },
+			b = { name = "+buffer/bookmark" },
 			f = { name = "+find" },
 			r = { name = "+rails" },
 			g = { name = "+git" },
@@ -22,7 +22,10 @@ return {
 				s = "Signature Help",
 				i = "Lsp Info",
 			},
-			m = { name = "+misc" },
+			m = {
+				name = "+misc",
+				t = "theme",
+			},
 			t = { name = "+test" },
 			o = {
 				name = "+obsidian",
