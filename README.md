@@ -1,7 +1,5 @@
 ## Structure
 
-Please note that the structure may change as I may add more plugins to enhance my workflow.
-
 ```sh
 nvim
  ├── init.lua
