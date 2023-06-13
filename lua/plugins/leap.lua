@@ -1,7 +1,7 @@
 return {
 	"ggandor/leap.nvim",
 	config = function()
-		vim.keymap.set("n", "s", function()
+		vim.keymap.set({ "n", "v" }, "s", function()
 			local current_window = vim.fn.win_getid()
 			require("leap").leap({ target_windows = { current_window } })
 		end)
@@ -10,10 +10,10 @@ return {
 		max_phase_one_kargets = nil,
 		highlight_unlabeled_phase_one_targets = false,
 		max_highlighted_traversal_targets = 10,
-    case_sensitive = false,
-    equivalence_classes = { " \t\r\n" },
+		case_sensitive = false,
+		equivalence_classes = { " \t\r\n" },
 		substitute_chars = {},
-    safe_labels = { "s", "f", "n", "u", "t" },
+		safe_labels = { "s", "f", "n", "u", "t" },
 		labels = { "s", "f", "n", "j", "k" },
 		special_keys = {
 			repeat_search = "<enter>",
