@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-project.nvim",
+    "nvim-telescope/telescope-live-grep-args.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -20,6 +21,7 @@ return {
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
 		{ "<leader>fm", "<cmd>Telescope marks<CR>", desc = "Marks" },
+    { "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", desc = "Live grep args" },
 
 		-- Rails
 		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "rails models" },
@@ -78,7 +80,7 @@ return {
 		})
 
 		-- Extensions
-		local extensions = { "fzf", "project" }
+		local extensions = { "fzf", "project", "live_grep_args" }
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)
 		end

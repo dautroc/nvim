@@ -22,11 +22,16 @@ return {
 	opts = {
 		dir = "~/Dropbox/obsidian",
 		daily_notes = {
-			folder = "dailies",
+			folder = "daily",
 			date_format = "%Y-%m-%d",
 		},
 		completion = {
 			nvim_cmp = true,
 		},
+    templates = {
+      subdir = "templates",
+      date_format = "%Y-%m-%d-%a",
+      time_format = "%H:%M"
+    }
   },
 }
