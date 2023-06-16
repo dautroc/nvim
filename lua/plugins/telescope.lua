@@ -21,6 +21,7 @@ return {
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
+		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
     { "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", desc = "Live grep args" },
     { "<leader>fn", "<cmd>lua require('utils.telescope').grep_at_current_tree_node()<CR>", desc = "Grep at current tree node" },
 
