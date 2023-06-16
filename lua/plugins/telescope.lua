@@ -5,6 +5,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-project.nvim",
     "nvim-telescope/telescope-live-grep-args.nvim",
+    "AckslD/nvim-neoclip.lua",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -20,8 +21,8 @@ return {
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
-		{ "<leader>fm", "<cmd>Telescope marks<CR>", desc = "Marks" },
     { "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", desc = "Live grep args" },
+    { "<leader>fn", "<cmd>lua require('utils.telescope').grep_at_current_tree_node()<CR>", desc = "Grep at current tree node" },
 
 		-- Rails
 		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "rails models" },
@@ -36,6 +37,9 @@ return {
 		{ "<leader>rv", "<cmd>Telescope find_files cwd=app/views<CR>", desc = "rails views" },
 	},
 	config = function()
+    require("neoclip").setup()
+
+    local lga_actions = require("telescope-live-grep-args.actions")
 		require("telescope").setup({
 			defaults = {
 				prompt_prefix = " ",
@@ -46,8 +50,18 @@ return {
 					i = {
 						[";"] = "close",
 						["<esc>"] = "close",
-						["<C-j>"] = "move_selection_next",
-						["<C-k>"] = "move_selection_previous",
+            ["<C-k>"] = lga_actions.quote_prompt(),
+
+            -- Filter by file type
+            ["<C-f>"] = lga_actions.quote_prompt({
+              postfix = " -g ",
+            }),
+            ["<C-d>"] = lga_actions.quote_prompt({
+              postfix = " -g **/dir/** ",
+            }),
+            ["<C-i>"] = lga_actions.quote_prompt({
+              postfix = " --iglob ",
+            }),
 					},
 				},
 			},
@@ -80,7 +94,7 @@ return {
 		})
 
 		-- Extensions
-		local extensions = { "fzf", "project", "live_grep_args" }
+		local extensions = { "fzf", "project", "live_grep_args", "neoclip" }
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)
 		end
