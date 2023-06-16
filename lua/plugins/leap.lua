@@ -1,7 +1,7 @@
 return {
 	"ggandor/leap.nvim",
 	config = function()
-		vim.keymap.set({ "n", "v" }, "s", function()
+		vim.keymap.set({ "n", "v" }, "w", function()
 			local current_window = vim.fn.win_getid()
 			require("leap").leap({ target_windows = { current_window } })
 		end)
