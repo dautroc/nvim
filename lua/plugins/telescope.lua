@@ -23,7 +23,6 @@ return {
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
     { "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", desc = "Live grep args" },
-    { "<leader>fn", "<cmd>lua require('utils.telescope').grep_at_current_tree_node()<CR>", desc = "Grep at current tree node" },
 
 		-- Rails
 		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "rails models" },
@@ -51,17 +50,10 @@ return {
 					i = {
 						[";"] = "close",
 						["<esc>"] = "close",
-            ["<C-k>"] = lga_actions.quote_prompt(),
 
             -- Filter by file type
             ["<C-f>"] = lga_actions.quote_prompt({
-              postfix = " -g ",
-            }),
-            ["<C-d>"] = lga_actions.quote_prompt({
-              postfix = " -g **/dir/** ",
-            }),
-            ["<C-i>"] = lga_actions.quote_prompt({
-              postfix = " --iglob ",
+              postfix = " -g '**/dir/**'",
             }),
 					},
 				},
