@@ -12,17 +12,20 @@ return {
 		},
 	},
 	keys = {
+    -- Basic builtin
+    { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
+    { "<leader>fh", "<cmd>Telescope keymaps<CR>", desc = "Helps" },
+
+    -- Find everything
 		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
 		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
-		{ "<leader>fs", "<cmd>Telescope live_grep<CR>", desc = "Live grep" },
 		{ "<leader>fw", "<cmd>Telescope grep_string<CR>", desc = "Grep string" },
 		{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
-		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
-    { "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", desc = "Live grep args" },
+    { "<leader>fs", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", desc = "Live grep args" },
 
 		-- Rails
 		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "rails models" },
@@ -50,11 +53,6 @@ return {
 					i = {
 						[";"] = "close",
 						["<esc>"] = "close",
-
-            -- Filter by file type
-            ["<C-f>"] = lga_actions.quote_prompt({
-              postfix = " -g '**/dir/**'",
-            }),
 					},
 				},
 			},
@@ -83,6 +81,14 @@ return {
 						sync_with_nvim_tree = true, -- default false
 					},
 				},
+        live_grep_args = {
+          auto_quoting = true,
+          mappings = {
+            i = {
+              ["<C-f>"] = lga_actions.quote_prompt({ postfix = ' --iglob "**/dir/**"' }),
+            },
+          },
+        }
 			},
 		})
 
