@@ -71,9 +71,6 @@ keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Toggle Laz
 ---------------------------------------
 ------------- Insert Mode -------------
 ---------------------------------------
--- Quick escape
-keymap("i", "jk", "<esc>")
-
 -- Undo break points
 keymap("i", "_", "_<C-g>u", opts)
 keymap("i", ",", ",<C-g>u", opts)
