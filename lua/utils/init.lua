@@ -9,7 +9,6 @@ M.servers = {
   "bashls",
   "jsonls",
   "yamlls",
-  "tailwindcss",
   "solargraph",
 }
 
