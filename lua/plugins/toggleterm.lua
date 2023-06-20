@@ -1,6 +1,6 @@
 return {
 	"akinsho/toggleterm.nvim",
-	event = "BufReadPre",
+	event = "VeryLazy",
 	config = function()
 		-- Using protected call
 		local status_ok, toggleterm = pcall(require, "toggleterm")
