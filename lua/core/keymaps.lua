@@ -68,7 +68,6 @@ keymap("n", "<leader>h", vim.cmd.nohlsearch, { desc = "Clear highlights" })
 
 -- Custom function
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Toggle Lazygit" })
-keymap("n", "<leader>k", "<cmd>lua _TASKELL_TOGGLE()<CR>", { desc = "Toggle Taskell" })
 
 ---------------------------------------
 ------------- Insert Mode -------------
