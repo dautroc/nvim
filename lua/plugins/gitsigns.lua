@@ -1,5 +1,8 @@
 return {
   'lewis6991/gitsigns.nvim',
+  keys = {
+    { "<leader>gb", "<CMD>lua require('gitsigns').blame_line({full=true})<CR>", desc = "Git blame" }
+  },
   event = "BufReadPre",
   opts = {
     signs = {
@@ -9,7 +12,7 @@ return {
       topdelete = { hl = "GitSignsDelete", text = "󰐊", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
       changedelete = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
     },
-    signcolumn = true,   -- Toggle with `:Gitsigns toggle_signs`
+    signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
     watch_gitdir = {
       interval = 1000,
       follow_files = true,
@@ -17,12 +20,14 @@ return {
     attach_to_untracked = true,
     current_line_blame_opts = {
       virt_text = true,
-      virt_text_pos = "eol",   -- 'eol' | 'overlay' | 'right_align'
+      virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
       delay = 1000,
     },
     sign_priority = 6,
     update_debounce = 100,
-    status_formatter = nil,   -- Use default
+    status_formatter = nil, -- Use default
+
+    he = false,
     preview_config = {
       -- Options passed to nvim_open_win
       border = "single",
