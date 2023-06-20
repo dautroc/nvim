@@ -12,7 +12,7 @@ return {
 		},
 	},
 	keys = {
-    -- Basic builtin
+    -- Vim mappings
     { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
     { "<leader>fh", "<cmd>Telescope keymaps<CR>", desc = "Helps" },
 
@@ -55,7 +55,6 @@ return {
         },
         border = true,
 
-        -- preview = true,
 				prompt_prefix = " ",
 				selection_caret = " ",
 				path_display = { "smart" },
