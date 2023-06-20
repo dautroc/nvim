@@ -48,32 +48,14 @@ return {
 
 		require("telescope").setup({
 			defaults = {
-        -- Preview image using catimg
-        preview = {
-          mime_hook = function(filepath, bufnr, opts)
-            local is_image = function(filepath)
-              local image_extensions = {'png','jpg'}   -- Supported image formats
-              local split_path = vim.split(filepath:lower(), '.', {plain=true})
-              local extension = split_path[#split_path]
-              return vim.tbl_contains(image_extensions, extension)
-            end
-            if is_image(filepath) then
-              local term = vim.api.nvim_open_term(bufnr, {})
-              local function send_output(_, data, _ )
-                for _, d in ipairs(data) do
-                  vim.api.nvim_chan_send(term, d..'\r\n')
-                end
-              end
-              vim.fn.jobstart(
-                {
-                  'catimg', filepath  -- Terminal image viewer command
-                }, 
-                {on_stdout=send_output, stdout_buffered=true, pty=true})
-            else
-              require("telescope.previewers.utils").set_preview_message(bufnr, opts.winid, "Binary cannot be previewed")
-            end
-          end
+        -- Layout config
+        layout_strategy = 'bottom_pane',
+        layout_config = {
+          height = 0.3,
         },
+        border = true,
+
+        -- preview = true,
 				prompt_prefix = " ",
 				selection_caret = " ",
 				path_display = { "smart" },
@@ -89,10 +71,19 @@ return {
 				},
 			},
 			pickers = {
-        theme = "ivy",
 				oldfiles = {
 					cwd_only = true,
+          path_display = { "absolute" },
 				},
+        find_files = {
+          path_display = { "absolute" },
+        },
+        buffers = {
+          path_display = { "absolute" },
+        },
+        grep_string = {
+          path_display = { "absolute" },
+        },
 			},
 			extensions = {
 				fzf = {
@@ -108,7 +99,6 @@ return {
 							{ path = "~/nvim", max_depth = 1 },
 						},
 						hidden_files = true, -- default: false
-						theme = "ivy",
 						order_by = "asc",
 						search_by = "title",
 						sync_with_nvim_tree = true, -- default false
