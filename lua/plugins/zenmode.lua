@@ -1,5 +1,4 @@
-return -- Lua
-{
+return {
 	"folke/zen-mode.nvim",
 	keys = {
 		{ "<leader>z", "<cmd>ZenMode<CR>", desc = "ZenMode" },
@@ -33,11 +32,10 @@ return -- Lua
 					enabled = true,
 					font = "14", -- font size
 				},
-
-        -- kitty = {
-        --   enabled = true,
-        --   font = "+4", -- font size increase
-        -- },
+				-- kitty = {
+				--   enabled = true,
+				--   font = "+4", -- font size increase
+				-- },
 			},
 		})
 	end,
