@@ -42,10 +42,10 @@ keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
 -- Window Keymap
-keymap("n", "<C-h>", "<cmd>lua require('tmux').move_left()<cr>", opts)
-keymap("n", "<C-j>", "<cmd>lua require('tmux').move_down()<cr>", opts)
-keymap("n", "<C-k>", "<cmd>lua require('tmux').move_up()<cr>", opts)
-keymap("n", "<C-l>", "<cmd>lua require('tmux').move_right()<cr>", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Better search and highlight
 keymap("n", "n", "nzzzv", opts)
