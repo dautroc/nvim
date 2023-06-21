@@ -1,6 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
-  lazy = false,
+	lazy = false,
 	config = function()
 		-- Using protected call
 		local status_ok, lualine = pcall(require, "lualine")
@@ -46,14 +46,14 @@ return {
 				globalstatus = true,
 				icons_enabled = true,
 				theme = "auto",
-				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
 				disabled_filetypes = { "alpha", "dashboard" },
 				always_divide_middle = true,
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { "branch" },
+				lualine_b = { "branch", "diff", diagnostics },
 				lualine_c = { "filename" },
 				lualine_x = { diff, spaces, "encoding", filetype },
 				lualine_y = { location },
