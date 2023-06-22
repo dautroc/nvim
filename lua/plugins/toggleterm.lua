@@ -9,7 +9,13 @@ return {
 		end
 
 		toggleterm.setup({
-			size = 20,
+			size = function(term)
+				if term.direction == "horizontal" then
+					return 20
+				elseif term.direction == "vertical" then
+					return (vim.o.columns * 0.5)
+				end
+			end,
 			open_mapping = [[<c-\>]],
 			hide_numbers = true,
 			shade_terminals = true,
@@ -20,9 +26,6 @@ return {
 			direction = "horizontal",
 			close_on_exit = true,
 			shell = vim.o.shell,
-			float_opts = {
-				border = "curved",
-			},
 		})
 
 		function _G.set_terminal_keymaps()
