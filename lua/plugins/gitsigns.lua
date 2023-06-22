@@ -27,7 +27,6 @@ return {
     update_debounce = 100,
     status_formatter = nil, -- Use default
 
-    he = false,
     preview_config = {
       -- Options passed to nvim_open_win
       border = "single",
