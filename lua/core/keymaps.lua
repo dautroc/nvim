@@ -7,9 +7,6 @@ local opts = { silent = true }
 vim.g.mapleader = " "
 vim.b.maplocalleader = ";"
 
----------------------------------------
-------------- Normal Mode -------------
----------------------------------------
 -- Quick actions
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
@@ -17,10 +14,6 @@ keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 keymap("n", "<leader><tab>", "<cmd>b#<cr>", { desc = "Switch to last buffer" })
 keymap("n", "<leader>R", "<cmd>!ctags -R --languages=ruby<cr>", { desc = "Update ctags" })
-
--- Better mark jump
-keymap("n", "gj", "gjzz")
-keymap("n", "gk", "gkzz")
 
 -- Quickfix list
 keymap("n", "cn", "<cmd>cnext<cr>")
@@ -42,10 +35,6 @@ keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
 -- Window Keymap
--- keymap("n", "<C-h>", "<C-w>h", opts)
--- keymap("n", "<C-j>", "<C-w>j", opts)
--- keymap("n", "<C-k>", "<C-w>k", opts)
--- keymap("n", "<C-l>", "<C-w>l", opts)
 keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
 keymap({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
 keymap({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
@@ -70,12 +59,6 @@ keymap("n", "<S-h>", "^", opts)
 -- Clear highlights
 keymap("n", "<leader>h", vim.cmd.nohlsearch, { desc = "Clear highlights" })
 
--- Custom function
-keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { desc = "Toggle Lazygit" })
-
----------------------------------------
-------------- Insert Mode -------------
----------------------------------------
 -- Undo break points
 keymap("i", "_", "_<C-g>u", opts)
 keymap("i", ",", ",<C-g>u", opts)
@@ -90,9 +73,6 @@ keymap("i", "(", "(<C-g>u", opts)
 keymap("i", ")", ")<C-g>u", opts)
 keymap("i", " ", " <C-g>u", opts)
 
----------------------------------------
-------------- Visual Mode -------------
----------------------------------------
 -- Stay in indent mode
 keymap("x", "<", "<gv", opts)
 keymap("x", ">", ">gv", opts)
