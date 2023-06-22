@@ -42,10 +42,14 @@ keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
 -- Window Keymap
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- keymap("n", "<C-h>", "<C-w>h", opts)
+-- keymap("n", "<C-j>", "<C-w>j", opts)
+-- keymap("n", "<C-k>", "<C-w>k", opts)
+-- keymap("n", "<C-l>", "<C-w>l", opts)
+keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
+keymap({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
+keymap({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
+keymap({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
 
 -- Better search and highlight
 keymap("n", "n", "nzzzv", opts)
