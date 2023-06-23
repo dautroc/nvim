@@ -14,7 +14,7 @@ return {
 	keys = {
     -- Vim mappings
     { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
-    { "<leader>fh", "<cmd>Telescope keymaps<CR>", desc = "Helps" },
+    { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Helps" },
 
     -- Find everything
 		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
@@ -29,7 +29,7 @@ return {
 
 		-- Rails
 		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "rails models" },
-		{ "<leader>rs", "<cmd>Telescope find_files cwd=app/services<CR>", desc = "rails services" },
+		{ "<leadea>rs", "<cmd>Telescope find_files cwd=app/services<CR>", desc = "rails services" },
 		{ "<leader>rc", "<cmd>Telescope find_files cwd=app/controllers<CR>", desc = "rails controllers" },
 		{ "<leader>ra", "<cmd>Telescope find_files cwd=app/api<CR>", desc = "rails api" },
 		{ "<leader>rp", "<cmd>Telescope find_files cwd=app/policies<CR>", desc = "rails policies" },
