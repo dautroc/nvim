@@ -26,7 +26,9 @@ return {
 				name = "+misc",
 				t = "theme",
 			},
-			t = { name = "+test" },
+			t = {
+				name = "+test",
+			},
 			o = {
 				name = "+obsidian",
 				l = "+links",
