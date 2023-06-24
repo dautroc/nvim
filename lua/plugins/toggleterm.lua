@@ -64,12 +64,12 @@ return {
 
 		vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _Lazygit_toggle()<CR>", { noremap = true, silent = true })
 
-		for i = 1, 9 do
-			vim.api.nvim_set_keymap("n", "<leader>" .. i, "<cmd>" .. i .. "ToggleTerm" .. "<CR>", {
-				noremap = true,
-				silent = true,
-        desc = "ToggleTerm " .. i .. ""
-			})
-		end
+		-- for i = 1, 9 do
+		-- 	vim.api.nvim_set_keymap("n", "<leader>" .. i, "<cmd>" .. i .. "ToggleTerm" .. "<CR>", {
+		-- 		noremap = true,
+		-- 		silent = true,
+		--       desc = "ToggleTerm " .. i .. ""
+		-- 	})
+		-- end
 	end,
 }
