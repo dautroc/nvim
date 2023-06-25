@@ -13,7 +13,6 @@ return {
 		{ "<leader>oll", "<cmd>ObsidianLink<CR>", desc = "Link selected text to a note", mode = "v" },
 	},
 	lazy = true,
-	event = "VeryLazy",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"hrsh7th/nvim-cmp",
