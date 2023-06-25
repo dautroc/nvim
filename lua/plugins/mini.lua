@@ -7,6 +7,19 @@ return {
 	version = false,
 	config = function()
 		require("mini.splitjoin").setup()
-		require("mini.files").setup()
+		require("mini.files").setup({
+			mappings = {
+				close = "q",
+				go_in = "l",
+				go_in_plus = "<CR>",
+				go_out = "h",
+				go_out_plus = "H",
+				reset = "<BS>",
+				show_help = "g?",
+				synchronize = "w",
+				trim_left = "<",
+				trim_right = ">",
+			},
+		})
 	end,
 }
