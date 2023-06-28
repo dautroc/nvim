@@ -108,6 +108,11 @@ return {
           mappings = {
             i = {
               ["<C-f>"] = lga_actions.quote_prompt({ postfix = ' --iglob "**/dir/**"' }),
+              [";"] = "close",
+              ["<esc>"] = "close",
+              ["<C-u>"] = false,
+              ["<C-d>"] = actions.delete_buffer + actions.move_to_top,
+              ["<C-p>"] = action_layout.toggle_preview,
             },
           },
         }
