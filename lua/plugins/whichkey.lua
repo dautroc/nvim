@@ -24,10 +24,9 @@ return {
 			},
 			m = {
 				name = "+misc",
-				t = "theme",
 			},
 			t = {
-				name = "+test",
+				name = "+test/term",
 			},
 			o = {
 				name = "+obsidian",
