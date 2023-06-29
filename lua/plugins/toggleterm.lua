@@ -3,7 +3,7 @@ return {
 	event = "VeryLazy",
 	keys = {
 		{ "<leader>ts", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term send current line" },
-		{ "<leader>ts", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "Term send visual selection", mode = "v" },
+		{ "<leader>ts", ":ToggleTermSendVisualSelection<cr>", desc = "Term send visual selection", mode = "v" },
 	},
 	config = function()
 		-- Using protected call
