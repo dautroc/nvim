@@ -29,7 +29,7 @@ return {
 
 		-- Rails
 		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "rails models" },
-		{ "<leadea>rs", "<cmd>Telescope find_files cwd=app/services<CR>", desc = "rails services" },
+		{ "<leader>rs", "<cmd>Telescope find_files cwd=app/services<CR>", desc = "rails services" },
 		{ "<leader>rc", "<cmd>Telescope find_files cwd=app/controllers<CR>", desc = "rails controllers" },
 		{ "<leader>ra", "<cmd>Telescope find_files cwd=app/api<CR>", desc = "rails api" },
 		{ "<leader>rp", "<cmd>Telescope find_files cwd=app/policies<CR>", desc = "rails policies" },
