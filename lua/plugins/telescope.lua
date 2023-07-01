@@ -43,9 +43,7 @@ return {
     require("neoclip").setup()
 
     local lga_actions = require("telescope-live-grep-args.actions")
-    local actions = require("telescope.actions")
-    local action_layout = require("telescope.actions.layout")
-
+    -- local actions = require("telescope.actions")
 		require("telescope").setup({
 			defaults = {
         -- Layout config
@@ -62,10 +60,7 @@ return {
 				mappings = {
 					i = {
 						[";"] = "close",
-						["<esc>"] = "close",
             ["<C-u>"] = false,
-            ["<C-d>"] = actions.delete_buffer + actions.move_to_top,
-            ["<C-p>"] = action_layout.toggle_preview,
 					},
 				},
 			},
@@ -107,12 +102,9 @@ return {
           auto_quoting = true,
           mappings = {
             i = {
-              ["<C-f>"] = lga_actions.quote_prompt({ postfix = ' --iglob "**/dir/**"' }),
+              ["<C-f>"] = lga_actions.quote_prompt({ postfix = ' --iglob "**//**"' }),
               [";"] = "close",
-              ["<esc>"] = "close",
               ["<C-u>"] = false,
-              ["<C-d>"] = actions.delete_buffer + actions.move_to_top,
-              ["<C-p>"] = action_layout.toggle_preview,
             },
           },
         }
