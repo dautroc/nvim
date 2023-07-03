@@ -34,7 +34,7 @@ return {
 
 		function _G.set_terminal_keymaps()
 			local opts = { buffer = 0 }
-			vim.keymap.set("t", "jk", [[<C-\><C-n>]], opts)
+			vim.keymap.set("t", ";", [[<C-\><C-n>]], opts)
 			vim.keymap.set("t", "<C-h>", [[<CMD>NavigatorLeft<CR>]], opts)
 			vim.keymap.set("t", "<C-j>", [[<CMD>NavigatorDown<CR>]], opts)
 			vim.keymap.set("t", "<C-k>", [[<CMD>NavigatorUp<CR>]], opts)
