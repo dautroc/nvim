@@ -15,6 +15,10 @@ keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 keymap("n", "<leader><tab>", "<cmd>b#<cr>", { desc = "Switch to last buffer" })
 keymap("n", "<leader>R", "<cmd>!ctags -R --languages=ruby<cr>", { desc = "Update ctags" })
 
+-- Buffers
+keymap("n", "<leader>bb", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy buffer path" })
+keymap("n", "<leader>bl", [[<cmd>let @+ = join([expand('%'),  line(".")], ':')<cr>]], { desc = "Copy buffer path with line number" })
+
 -- Quickfix list
 keymap("n", "cn", "<cmd>cnext<cr>")
 keymap("n", "cp", "<cmd>cprev<cr>")
