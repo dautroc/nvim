@@ -53,8 +53,8 @@ keymap("n", "x", '"_x', opts)
 keymap("n", "X", '"_X', opts)
 
 -- Navigate in line
-keymap({ "n", "v" }, "<S-l>", "$", opts)
-keymap({ "n", "v" }, "<S-h>", "^", opts)
+keymap({ "n", "v" }, "<S-l>", "<cmd>bnext<cr>", opts)
+keymap({ "n", "v" }, "<S-h>", "<cmd>bprev<cr>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", vim.cmd.nohlsearch, { desc = "Clear highlights" })
