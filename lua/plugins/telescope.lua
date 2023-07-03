@@ -60,6 +60,7 @@ return {
 				mappings = {
 					i = {
 						[";"] = "close",
+            ["<esc>"] = "close",
             ["<C-u>"] = false,
             ["<C-j>"] = "move_selection_next",
             ["<C-k>"] = "move_selection_previous",
@@ -106,6 +107,7 @@ return {
             i = {
               ["<C-f>"] = lga_actions.quote_prompt({ postfix = ' --iglob "**//**"' }),
               [";"] = "close",
+              ["<esc>"] = "close",
               ["<C-u>"] = false,
               ["<C-j>"] = "move_selection_next",
               ["<C-k>"] = "move_selection_previous",
