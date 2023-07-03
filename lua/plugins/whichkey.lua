@@ -24,6 +24,7 @@ return {
 			},
 			m = {
 				name = "+misc",
+				s = "+search/replace",
 			},
 			t = {
 				name = "+test/term",
