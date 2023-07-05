@@ -2,13 +2,13 @@ local M = {}
 
 M.servers = {
   "lua_ls",
-  "cssls",
-  "html",
+  -- "cssls",
+  -- "html",
   "tsserver",
-  "eslint",
-  "bashls",
-  "jsonls",
-  "yamlls",
+  -- "eslint",
+  -- "bashls",
+  -- "jsonls",
+  -- "yamlls",
   "solargraph",
 }
 
