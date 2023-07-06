@@ -53,6 +53,7 @@ vim.opt.fillchars = {
 	diff = " ", -- set diff character to a space
 	msgsep = "‾", -- set message separator character to a horizontal bar
 }
+vim.opt.spell = true
 
 -- Global variables
 vim.g.gruvbox_material_background = "medium"
