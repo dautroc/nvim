@@ -10,7 +10,10 @@ return {
 
 		wk.register({
 			b = { name = "+buffer/bookmark" },
-			f = { name = "+find" },
+			f = {
+				name = "+find",
+				f = "+find and replace",
+			},
 			r = { name = "+rails" },
 			g = { name = "+git" },
 			d = { name = "+diff mode" },
@@ -22,13 +25,8 @@ return {
 				s = "Signature Help",
 				i = "Lsp Info",
 			},
-			m = {
-				name = "+misc",
-				s = "+search/replace",
-			},
-			t = {
-				name = "+test/term",
-			},
+			m = {name = "+misc",},
+			t = {name = "+test/term",},
 			o = {
 				name = "+obsidian",
 				l = "+links",
