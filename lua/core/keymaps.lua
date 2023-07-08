@@ -21,10 +21,9 @@ keymap("n", "<leader>bb", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy buffer
 keymap("n", "<leader>bl", [[<cmd>let @+ = join([expand('%'),  line(".")], ':')<cr>]], { desc = "Copy buffer path with line number" })
 
 -- Quickfix list
-keymap("n", "cn", "<cmd>cnext<cr>")
-keymap("n", "cp", "<cmd>cprev<cr>")
-keymap("n", "cc", "<cmd>cclose<cr>")
-keymap("n", "co", "<cmd>copen<cr>")
+keymap("n", "<leader>mqn", "<cmd>cnext<cr>")
+keymap("n", "<leader>mqp", "<cmd>cprev<cr>")
+keymap("n", "<leader>mqo", "<cmd>copen<cr>")
 
 -- Ctags jumps
 keymap("n", "<leader>c", "g<C-]>", { desc = "Jump to tag" })

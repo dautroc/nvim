@@ -25,8 +25,11 @@ return {
 				s = "Signature Help",
 				i = "Lsp Info",
 			},
-			m = {name = "+misc",},
-			t = {name = "+test/term",},
+			m = {
+				name = "+misc",
+				q = "+quick fix list",
+			},
+			t = { name = "+test/term" },
 			o = {
 				name = "+obsidian",
 				l = "+links",
