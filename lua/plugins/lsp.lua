@@ -89,7 +89,7 @@ return {
     end
 
     vim.diagnostic.config({
-      virtual_text = true,
+      virtual_text = false,
       signs = {
         active = signs,
       },
@@ -106,13 +106,13 @@ return {
         suffix = "",
       },
     })
-    -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    --   border = "rounded",
-    -- })
-    --
-    -- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-    --   border = "rounded",
-    -- })
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+      border = "rounded",
+    })
+
+    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+      border = "rounded",
+    })
     -- Setting up lua server
     lspconfig.lua_ls.setup({
       on_attach = on_attach,
