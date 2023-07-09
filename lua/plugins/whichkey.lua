@@ -27,7 +27,6 @@ return {
 			},
 			m = {
 				name = "+misc",
-				q = "+qfl",
 			},
 			t = { name = "+test/term" },
 			o = {

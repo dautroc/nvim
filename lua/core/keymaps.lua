@@ -13,11 +13,19 @@ keymap("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 keymap("n", "<leader><tab>", "<cmd>b#<cr>", { desc = "Switch to last buffer" })
+
+-- Custom functions
 keymap("n", "<leader>ms", "<cmd>lua require('core.functions').say_word()<cr>", { desc = "Say word" })
+keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })
 
 -- Buffers
 keymap("n", "<leader>bb", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy buffer path" })
-keymap("n", "<leader>bl", [[<cmd>let @+ = join([expand('%'),  line(".")], ':')<cr>]], { desc = "Copy buffer path with line number" })
+keymap(
+	"n",
+	"<leader>bl",
+	[[<cmd>let @+ = join([expand('%'),  line(".")], ':')<cr>]],
+	{ desc = "Copy buffer path with line number" }
+)
 
 -- Quickfix list
 keymap("n", "<leader>cn", "<cmd>cnext<cr>")
