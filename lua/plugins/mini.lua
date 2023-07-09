@@ -10,9 +10,9 @@ return {
 		require("mini.files").setup({
 			mappings = {
 				close = "q",
-				go_in = "l",
+				go_in = "L",
 				go_in_plus = "<CR>",
-				go_out = "-",
+				go_out = "H",
 				go_out_plus = "_",
 				reset = "<BS>",
 				show_help = "g?",
