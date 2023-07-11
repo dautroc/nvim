@@ -26,6 +26,8 @@ keymap(
 	[[<cmd>let @+ = join([expand('%'),  line(".")], ':')<cr>]],
 	{ desc = "Copy buffer path with line number" }
 )
+keymap({ "n", "v" }, "<S-l>", "<cmd>bnext<cr>", opts)
+keymap({ "n", "v" }, "<S-h>", "<cmd>bprev<cr>", opts)
 
 -- Quickfix list
 keymap("n", "<leader>cn", "<cmd>cnext<cr>")
@@ -64,10 +66,6 @@ keymap("n", "<esc>", "<cmd>noh<cr>", opts)
 keymap("v", "p", '"_dP', opts)
 keymap("n", "x", '"_x', opts)
 keymap("n", "X", '"_X', opts)
-
--- Navigate in line
-keymap({ "n", "v" }, "<S-l>", "<cmd>bnext<cr>", opts)
-keymap({ "n", "v" }, "<S-h>", "<cmd>bprev<cr>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", vim.cmd.nohlsearch, { desc = "Clear highlights" })
