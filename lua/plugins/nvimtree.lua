@@ -2,7 +2,7 @@ return {
   "nvim-tree/nvim-tree.lua",
   enabled = true,
   keys = {
-    { "<leader>E", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
+    { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
   },
   opts = {
     update_focused_file = {
