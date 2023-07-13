@@ -105,7 +105,7 @@ return {
           auto_quoting = true,
           mappings = {
             i = {
-              ["<C-f>"] = lga_actions.quote_prompt({ postfix = ' --iglob "**//**"' }),
+              ["<C-f>"] = lga_actions.quote_prompt({ postfix = ' --iglob "**/app/**"' }),
               [";"] = "close",
               ["<esc>"] = "close",
               ["<C-u>"] = false,
