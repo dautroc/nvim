@@ -28,7 +28,8 @@ return {
 			m = {
 				name = "+misc",
 			},
-			t = { name = "+test/term" },
+			t = { name = "+test" },
+			k = { name = "+term" },
 			o = {
 				name = "+obsidian",
 				l = "+links",

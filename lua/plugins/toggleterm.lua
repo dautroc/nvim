@@ -1,12 +1,19 @@
 return {
 	"akinsho/toggleterm.nvim",
-	event = "VeryLazy",
 	keys = {
-		{ "<leader>ts", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term send current line" },
-		{ "<leader>ts", ":ToggleTermSendVisualSelection<cr>", desc = "Term send visual selection", mode = "v" },
+		{ "<leader>kt", "<cmd>ToggleTerm<cr>", desc = "Term toggle" },
+    -- Term direction
+		{ "<leader>kv", "<cmd>ToggleTerm direction=vertical<cr>", desc = "Term vertical" },
+		{ "<leader>kx", "<cmd>ToggleTerm direction=horizontal size=20<cr>", desc = "Term horizontal" },
+		{ "<leader>kf", "<cmd>ToggleTerm direction=float<cr>", desc = "Term float" },
+
+    -- Term actions
+		{ "<leader>kl", "<cmd>TermSelect<cr>", desc = "Term list" },
+		{ "<leader>ks", "<cmd>ToggleTermSetName<cr>", desc = "Term set name" },
+		{ "<leader>kk", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term execute" },
+		{ "<leader>kk", ":ToggleTermSendVisualSelection<cr>", desc = "Term execute", mode = "v" },
 	},
 	config = function()
-		-- Using protected call
 		local status_ok, toggleterm = pcall(require, "toggleterm")
 		if not status_ok then
 			return
@@ -20,7 +27,7 @@ return {
 					return (vim.o.columns * 0.5)
 				end
 			end,
-			open_mapping = [[<c-\>]],
+			open_mapping = [[<c-t>]],
 			hide_numbers = true,
 			shade_terminals = true,
 			shading_factor = 2,
