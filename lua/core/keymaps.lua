@@ -48,6 +48,8 @@ keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
+keymap("n", "gh", "^", { desc = "Move to first character" })
+keymap("n", "gl", "$", { desc = "Move to last character" })
 
 -- Window Keymap
 keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")

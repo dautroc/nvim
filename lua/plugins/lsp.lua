@@ -34,7 +34,7 @@ return {
       vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
       vim.keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
       vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
-      vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
+      -- vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
       vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
       vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
       vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
