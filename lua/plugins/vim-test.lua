@@ -4,8 +4,8 @@ vim.g['test#strategy'] = 'toggleterm'
 return {
 	"vim-test/vim-test",
 	keys = {
-		{ "<leader>tf", "<cmd>TestFile<cr>", desc = "Test file" },
-    { "<leader>tn", "<cmd>TestNearest<cr>", desc = "Test Nearest" }
+		{ "<leader>rT", "<cmd>TestFile<cr>", desc = "Test file" },
+    { "<leader>rt", "<cmd>TestNearest<cr>", desc = "Test nearest" }
 	},
   dependencies = { 'preservim/vimux' }
 }

@@ -11,8 +11,7 @@ vim.b.maplocalleader = ";"
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
-keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
-keymap("n", "<leader><tab>", "<cmd>b#<cr>", { desc = "Switch to last buffer" })
+keymap("n", "<leader><tab>", "<cmd>qa<cr>", { desc = "Quit all files" })
 
 -- Custom functions
 keymap("n", "<leader>ms", "<cmd>lua require('core.functions').say_word()<cr>", { desc = "Say word" })
@@ -26,18 +25,12 @@ keymap(
 	[[<cmd>let @+ = join([expand('%'),  line(".")], ':')<cr>]],
 	{ desc = "Copy buffer path with line number" }
 )
-keymap({ "n", "v" }, "<S-l>", "<cmd>bnext<cr>", opts)
-keymap({ "n", "v" }, "<S-h>", "<cmd>bprev<cr>", opts)
 
 -- Quickfix list
 keymap("n", "<leader>cn", "<cmd>cnext<cr>")
 keymap("n", "<leader>cp", "<cmd>cprev<cr>")
 keymap("n", "<leader>co", "<cmd>copen<cr>")
 keymap("n", "<leader>cc", "<cmd>cclose<cr>")
-
--- Ctags jumps
--- keymap("n", "<leader>c", "g<C-]>", { desc = "Jump to tag" })
--- keymap("n", "<leader>R", "<cmd>!ctags -R --languages=ruby<cr>", { desc = "Update ctags" })
 
 -- Better identation
 keymap("n", "<leader>ma", "==", { desc = "Auto identation" })
@@ -48,8 +41,13 @@ keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
-keymap("n", "gh", "^", { desc = "Move to first character" })
-keymap("n", "gl", "$", { desc = "Move to last character" })
+
+-- Go mode
+keymap({ "n", "v" }, "gh", "^", { desc = "Move to line start", silent = true })
+keymap({ "n", "v" }, "gl", "$", { desc = "Move to line end", silent = true })
+keymap({ "n", "v" }, "ga", "<cmd>b#<cr>", { desc = "Switch to last buffer", silent = true })
+keymap({ "n", "v" }, "gn", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
+keymap({ "n", "v" }, "gp", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
 
 -- Window Keymap
 keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")

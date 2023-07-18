@@ -1,17 +1,17 @@
 return {
 	"akinsho/toggleterm.nvim",
 	keys = {
-		{ "<leader>kt", "<cmd>ToggleTerm<cr>", desc = "Term toggle" },
+		{ "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "Term toggle" },
     -- Term direction
-		{ "<leader>kv", "<cmd>ToggleTerm direction=vertical<cr>", desc = "Term vertical" },
-		{ "<leader>kx", "<cmd>ToggleTerm direction=horizontal size=20<cr>", desc = "Term horizontal" },
-		{ "<leader>kf", "<cmd>ToggleTerm direction=float<cr>", desc = "Term float" },
+		{ "<leader>tv", "<cmd>ToggleTerm direction=vertical<cr>", desc = "Term vertical" },
+		{ "<leader>tx", "<cmd>ToggleTerm direction=horizontal size=20<cr>", desc = "Term horizontal" },
+		{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "Term float" },
 
     -- Term actions
-		{ "<leader>kl", "<cmd>TermSelect<cr>", desc = "Term list" },
-		{ "<leader>ks", "<cmd>ToggleTermSetName<cr>", desc = "Term set name" },
-		{ "<leader>kk", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term execute" },
-		{ "<leader>kk", ":ToggleTermSendVisualSelection<cr>", desc = "Term execute", mode = "v" },
+		{ "<leader>tl", "<cmd>TermSelect<cr>", desc = "Term list" },
+		{ "<leader>ts", "<cmd>ToggleTermSetName<cr>", desc = "Term set name" },
+		{ "<leader>tk", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term execute" },
+		{ "<leader>tk", ":ToggleTermSendVisualSelection<cr>", desc = "Term execute", mode = "v" },
 	},
 	config = function()
 		local status_ok, toggleterm = pcall(require, "toggleterm")
