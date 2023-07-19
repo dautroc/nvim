@@ -1,5 +1,6 @@
 return {
 	"akinsho/toggleterm.nvim",
+  event = "VeryLazy",
 	keys = {
 		{ "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "Term toggle" },
     -- Term direction
