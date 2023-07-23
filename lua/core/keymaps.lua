@@ -46,8 +46,8 @@ keymap("n", "N", "Nzzzv")
 keymap({ "n", "v" }, "gh", "^", { desc = "Move to line start", silent = true })
 keymap({ "n", "v" }, "gl", "$", { desc = "Move to line end", silent = true })
 keymap({ "n", "v" }, "ga", "<cmd>b#<cr>", { desc = "Switch to last buffer", silent = true })
-keymap({ "n", "v" }, "gn", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
-keymap({ "n", "v" }, "gp", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
+keymap({ "n", "v" }, "L", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
+keymap({ "n", "v" }, "H", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
 
 -- Window Keymap
 keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
