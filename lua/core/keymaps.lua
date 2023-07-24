@@ -11,7 +11,7 @@ vim.b.maplocalleader = ";"
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
-keymap("n", "<leader><tab>", "<cmd>qa<cr>", { desc = "Quit all files" })
+keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 
 -- Custom functions
 keymap("n", "<leader>ms", "<cmd>lua require('core.functions').say_word()<cr>", { desc = "Say word" })
