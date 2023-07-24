@@ -2,7 +2,7 @@ return {
 	"williamboman/mason.nvim",
 	cmd = "Mason",
   keys = {
-		{ "<leader>lI", "<cmd>Mason<CR>", desc = "Opens Mason" },
+		{ "<leader>M", "<cmd>Mason<CR>", desc = "Opens Mason" },
 	},
 	opts = {
 		ui = {

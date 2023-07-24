@@ -18,13 +18,6 @@ return {
 			g = { name = "+git" },
 			d = { name = "+diff mode" },
 			a = { name = "+alternative" },
-			l = {
-				name = "+lsp",
-				a = "Code Action",
-				r = "Rename",
-				s = "Signature Help",
-				i = "Lsp Info",
-			},
 			m = {
 				name = "+misc",
 			},

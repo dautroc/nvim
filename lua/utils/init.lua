@@ -1,23 +1,5 @@
 local M = {}
 
-M.servers = {
-  "lua_ls",
-  -- "cssls",
-  -- "html",
-  "tsserver",
-  -- "eslint",
-  -- "bashls",
-  -- "jsonls",
-  -- "yamlls",
-  "solargraph",
-}
-
-M.linters = {
-  "prettier",
-  "stylua",
-  "rubocop",
-}
-
 M.parsers = {
   "lua",
   "vim",
