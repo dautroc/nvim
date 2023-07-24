@@ -67,9 +67,6 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "x", '"_x', opts)
 keymap("n", "X", '"_X', opts)
 
--- Clear highlights
-keymap("n", "<leader>h", vim.cmd.nohlsearch, { desc = "Clear highlights" })
-
 -- Undo break points
 keymap("i", "_", "_<C-g>u", opts)
 keymap("i", ",", ",<C-g>u", opts)
