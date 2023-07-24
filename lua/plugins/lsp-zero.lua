@@ -22,7 +22,7 @@ return {
 
     lsp.on_attach(function(client, bufnr)
       local opts = { buffer = bufnr, silent = true }
-      lsp.default_keymaps({ buffer = bufnr })
+      -- lsp.default_keymaps({ buffer = bufnr })
 
       vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
       vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
