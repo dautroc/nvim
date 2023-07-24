@@ -1,5 +1,8 @@
 return {
 	"nvimdev/guard.nvim",
+	keys = {
+		{ "gq", "<cmd>GuardFmt<cr>", "Guard format" },
+	},
 	config = function()
 		local ft = require("guard.filetype")
 		-- use stylua to format lua files and no linter
