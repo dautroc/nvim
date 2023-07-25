@@ -11,6 +11,8 @@ return {
 		-- use lsp to format first then use rubocop format
 		ft("ruby"):fmt("lsp"):append("rubocop"):lint("rubocop")
 
-		require("guard").setup()
+		require("guard").setup({
+			fmt_on_save = false,
+		})
 	end,
 }
