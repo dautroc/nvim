@@ -44,11 +44,9 @@ return {
 				["core.dirman"] = { -- Manages Neorg workspaces
 					config = {
 						workspaces = {
-							home = "~/Dropbox/notes/home",
-							employment_hero = "~/Dropbox/notes/employment_hero",
-							joylists = "~/Dropbox/notes/joylists",
+							notes = "~/Dropbox/notes",
 						},
-						default_workspace = "home",
+						default_workspace = "notes",
 					},
 				},
 			},
