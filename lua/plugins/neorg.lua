@@ -1,7 +1,7 @@
 return {
 	"nvim-neorg/neorg",
 	keys = {
-    -- Telescope module
+		-- Telescope module
 		{ "<leader>nw", "<cmd>Telescope neorg switch_workspace<cr>", desc = "Switch workspace" },
 		{ "<leader>nil", "<cmd>Telescope neorg insert_link<cr>", desc = "Insert link" },
 		{ "<leader>nif", "<cmd>Telescope neorg insert_file_link<cr>", desc = "Insert file link" },
@@ -10,11 +10,12 @@ return {
 		{ "<leader>nj", "<cmd>Neorg journal<cr>", desc = "Journal" },
 		{ "<leader>nc", "<cmd>Neorg inject-metadata<cr>", desc = "Inject metadata" },
 		{ "<leader>nn", "<cmd>Neorg index<cr>", desc = "Index" },
+		{ "<leader>no", "<cmd>Neorg toc<cr>", desc = "Table of content" },
 	},
 	build = ":Neorg sync-parsers",
 	dependencies = {
-	  "nvim-lua/plenary.nvim",
-	  "nvim-neorg/neorg-telescope"
+		"nvim-lua/plenary.nvim",
+		"nvim-neorg/neorg-telescope",
 	},
 	config = function()
 		local neorg_callbacks = require("neorg.callbacks")
