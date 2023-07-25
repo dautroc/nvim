@@ -27,6 +27,15 @@ return {
 				name = "+obsidian",
 				l = "+links",
 			},
+			n = {
+				name = "+neorg",
+				i = {
+					name = "+insert",
+				},
+				f = {
+					name = "+find",
+				},
+			},
 		}, { prefix = "<leader>" })
 	end,
 }
