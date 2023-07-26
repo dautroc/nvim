@@ -5,13 +5,14 @@ local opts = { silent = true }
 
 --Map leader keys
 vim.g.mapleader = " "
-vim.b.maplocalleader = ","
+vim.g.maplocalleader = ","
 
 -- Quick actions
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
+keymap("n", "<leader>mv", "<cmd>vs<cr>", { desc = "Vertical split" })
 
 -- Custom functions
 keymap("n", "<leader>ms", "<cmd>lua require('core.functions').say_word()<cr>", { desc = "Say word" })
