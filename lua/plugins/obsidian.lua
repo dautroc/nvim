@@ -1,16 +1,15 @@
 return {
 	"epwalsh/obsidian.nvim",
 	keys = {
-		{ "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Create a new daily note" },
+		{ "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Open today note" },
+		{ "<leader>oy", "<cmd>ObsidianYesterday<CR>", desc = "Open yesterday note" },
 		{ "<leader>on", "<cmd>ObsidianNew new_note<CR>", desc = "Create new node" },
 		{ "<leader>oo", "<cmd>ObsidianOpen<CR>", desc = "Open in obsidian" },
 		{ "<leader>os", "<cmd>ObsidianSearch<CR>", desc = "Search notes" },
 		{ "<leader>of", "<cmd>ObsidianQuickSwitch<CR>", desc = "Find by name" },
 
-    -- Link
-		{ "<leader>olf", "<cmd>ObsidianFollowLink<CR>", desc = "Follow link" },
-		{ "<leader>oln", "<cmd>ObsidianLinkNew<CR>", desc = "Create new note with link for selected text", mode = "v" },
-		{ "<leader>oll", "<cmd>ObsidianLink<CR>", desc = "Link selected text to a note", mode = "v" },
+		-- Link
+		{ "<localleader>n", "<cmd>ObsidianLinkNew<CR>", desc = "Create new note with link for selected text", mode = "v" },
 	},
 	lazy = true,
 	dependencies = {
@@ -27,10 +26,24 @@ return {
 		completion = {
 			nvim_cmp = true,
 		},
-    templates = {
-      subdir = "templates",
-      date_format = "%Y-%m-%d-%a",
-      time_format = "%H:%M"
-    }
-  },
+		templates = {
+			subdir = "templates",
+			date_format = "%Y-%m-%d-%a",
+			time_format = "%H:%M",
+		},
+		follow_url_func = function(url)
+			vim.fn.jobstart({ "open", url })
+		end,
+	},
+  config = function(_, opts)
+    require("obsidian").setup(opts)
+
+    vim.keymap.set("n", "gf", function()
+      if require("obsidian").util.cursor_on_markdown_link() then
+        return "<cmd>ObsidianFollowLink<CR>"
+      else
+        return "gf"
+      end
+    end, { noremap = false, expr = true })
+  end
 }

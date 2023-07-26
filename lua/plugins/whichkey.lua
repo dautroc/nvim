@@ -25,7 +25,6 @@ return {
 			k = { name = "+term" },
 			o = {
 				name = "+obsidian",
-				l = "+links",
 			},
 			n = {
 				name = "+neorg",
