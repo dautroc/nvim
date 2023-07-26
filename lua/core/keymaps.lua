@@ -14,6 +14,13 @@ keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 keymap("n", "<leader>mv", "<cmd>vs<cr>", { desc = "Vertical split" })
 
+-- Layout
+keymap("n", "<leader>ll", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
+keymap("n", "<leader>ln", "<cmd>tabnew<cr>", { desc = "New layout" })
+keymap("n", "<leader>lk", "<cmd>tabnext<cr>", { desc = "Next layout" })
+keymap("n", "<leader>lj", "<cmd>tabprev<cr>", { desc = "Previous layout" })
+keymap("n", "<leader>lc", "<cmd>tabclose<cr>", { desc = "Close layout" })
+
 -- Custom functions
 keymap("n", "<leader>ms", "<cmd>lua require('core.functions').say_word()<cr>", { desc = "Say word" })
 keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })

@@ -23,6 +23,7 @@ return {
 			},
 			t = { name = "+test" },
 			k = { name = "+term" },
+			l = { name = "+layout" },
 			o = {
 				name = "+obsidian",
 			},
