@@ -5,7 +5,7 @@ local opts = { silent = true }
 
 --Map leader keys
 vim.g.mapleader = " "
-vim.b.maplocalleader = ";"
+vim.b.maplocalleader = ","
 
 -- Quick actions
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })

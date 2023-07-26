@@ -8,7 +8,7 @@ return {
 
 		{ "<leader>nt", "<cmd>Neorg toggle-concealer<cr>", desc = "Toggle concealer" },
 		{ "<leader>nj", "<cmd>Neorg journal<cr>", desc = "Journal" },
-		{ "<leader>nc", "<cmd>Neorg inject-metadata<cr>", desc = "Inject metadata" },
+		{ "<leader>na", "<cmd>Neorg inject-metadata<cr>", desc = "Add metadata" },
 		{ "<leader>nn", "<cmd>Neorg index<cr>", desc = "Index" },
 		{ "<leader>no", "<cmd>Neorg toc<cr>", desc = "Table of content" },
 	},
