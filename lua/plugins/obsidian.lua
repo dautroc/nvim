@@ -9,7 +9,8 @@ return {
 		{ "<leader>of", "<cmd>ObsidianQuickSwitch<CR>", desc = "Find by name" },
 
 		-- Link
-		{ "<localleader>n", "<cmd>ObsidianLinkNew<CR>", desc = "Create new note with link for selected text", mode = "v" },
+		{ "<localleader>f", "<cmd>ObsidianFollowLink<CR>", desc = "Follow link" },
+		{ "<localleader>c", "<cmd>ObsidianLinkNew<CR>", desc = "Create new note with link for selected text", mode = "v" },
 	},
 	lazy = true,
 	dependencies = {
@@ -35,15 +36,4 @@ return {
 			vim.fn.jobstart({ "open", url })
 		end,
 	},
-  config = function(_, opts)
-    require("obsidian").setup(opts)
-
-    vim.keymap.set("n", "gf", function()
-      if require("obsidian").util.cursor_on_markdown_link() then
-        return "<cmd>ObsidianFollowLink<CR>"
-      else
-        return "gf"
-      end
-    end, { noremap = false, expr = true })
-  end
 }
