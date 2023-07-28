@@ -14,7 +14,10 @@ return {
 				name = "+find",
 				f = "+find and replace",
 			},
-			r = { name = "+rails" },
+			r = {
+				name = "+rails",
+				t = "+test",
+			},
 			g = { name = "+git" },
 			d = { name = "+diff mode" },
 			a = { name = "+alternative" },
