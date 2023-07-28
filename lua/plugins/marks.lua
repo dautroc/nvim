@@ -35,8 +35,8 @@ return {
 			},
 			mappings = {
 				toggle = "mm",
-				prev = "gk",
-				next = "gj",
+				prev = "mk",
+				next = "mj",
 				delete_buf = "md",
 				set_bookmark0 = "m0",
 			},
