@@ -9,10 +9,10 @@ vim.g.maplocalleader = ","
 
 -- Quick actions
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
-keymap("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
+keymap("n", "<leader>x", "<cmd>new<cr>", { desc = "Split" })
+keymap("n", "<leader>v", "<cmd>vnew<cr>", { desc = "Vsplit" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
-keymap("n", "<leader>mv", "<cmd>vs<cr>", { desc = "Vertical split" })
 
 -- Layout
 keymap("n", "<leader>ll", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
