@@ -57,11 +57,17 @@ keymap({ "n", "v" }, "ga", "<cmd>b#<cr>", { desc = "Switch to last buffer", sile
 keymap({ "n", "v" }, "L", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
 keymap({ "n", "v" }, "H", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
 
--- Window Keymap
-keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
-keymap({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
-keymap({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
-keymap({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
+-- Wezterm navigator
+-- keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
+-- keymap({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
+-- keymap({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
+-- keymap({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
+
+-- Tmux navigator
+keymap({"n", "t"}, "<C-h>", "<cmd>lua require('tmux').move_left()<cr>")
+keymap({"n", "t"}, "<C-j>", "<cmd>lua require('tmux').move_down()<cr>")
+keymap({"n", "t"}, "<C-k>", "<cmd>lua require('tmux').move_up()<cr>")
+keymap({"n", "t"}, "<C-l>", "<cmd>lua require('tmux').move_right()<cr>")
 
 -- Better search and highlight
 keymap("n", "n", "nzzzv", opts)
