@@ -4,10 +4,10 @@ vim.g["test#strategy"] = "vimux"
 return {
 	"vim-test/vim-test",
 	keys = {
-		{ "<leader>rtf", "<cmd>TestFile<cr>", desc = "Test file" },
-		{ "<leader>rtn", "<cmd>TestNearest<cr>", desc = "Test nearest" },
-		{ "<leader>rtl", "<cmd>TestLast<cr>", desc = "Test last" },
-		{ "<leader>rtv", "<cmd>TestVisit<cr>", desc = "Test visit" },
+		{ "<leader>tf", "<cmd>TestFile<cr>", desc = "Test file" },
+		{ "<leader>tn", "<cmd>TestNearest<cr>", desc = "Test nearest" },
+		{ "<leader>tl", "<cmd>TestLast<cr>", desc = "Test last" },
+		{ "<leader>tv", "<cmd>TestVisit<cr>", desc = "Test visit" },
 	},
 	dependencies = { "preservim/vimux" },
 }
