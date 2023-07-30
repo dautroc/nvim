@@ -9,8 +9,8 @@ return {
 		{ "<leader>of", "<cmd>ObsidianQuickSwitch<CR>", desc = "Find by name" },
 
 		-- Link
-		{ "<localleader>f", "<cmd>ObsidianFollowLink<CR>", desc = "Follow link" },
-		{ "<localleader>c", "<cmd>ObsidianLinkNew<CR>", desc = "Create new note with link for selected text", mode = "v" },
+		{ "<leader>oF", "<cmd>ObsidianFollowLink<CR>", desc = "Follow link" },
+		{ "<leader>oc", "<cmd>ObsidianLinkNew<CR>", desc = "Create new note with link for selected text", mode = "v" },
 	},
 	lazy = true,
 	dependencies = {
@@ -32,8 +32,6 @@ return {
 			date_format = "%Y-%m-%d-%a",
 			time_format = "%H:%M",
 		},
-		follow_url_func = function(url)
-			vim.fn.jobstart({ "open", url })
-		end,
+		mappings = {},
 	},
 }
