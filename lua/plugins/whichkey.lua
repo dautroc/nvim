@@ -16,7 +16,6 @@ return {
 			},
 			r = {
 				name = "+rails",
-				t = "+test",
 			},
 			g = { name = "+git" },
 			d = { name = "+diff mode" },
@@ -25,7 +24,6 @@ return {
 				name = "+misc",
 			},
 			t = { name = "+test" },
-			k = { name = "+term" },
 			l = { name = "+layout" },
 			o = {
 				name = "+obsidian",
@@ -38,7 +36,7 @@ return {
 				f = {
 					name = "+find",
 				},
-			},
+k		},
 		}, { prefix = "<leader>" })
 	end,
 }
