@@ -42,6 +42,7 @@ return {
 		{ "<leader>rl", "<cmd>Telescope find_files cwd=config/locales<CR>", desc = "rails locales" },
 		{ "<leader>rr", "<cmd>Telescope find_files cwd=lib/tasks<CR>", desc = "rake tasks" },
 		{ "<leader>rv", "<cmd>Telescope find_files cwd=app/views<CR>", desc = "rails views" },
+		{ "<leader>re", "<cmd>lua require('core.functions').list_table_columns()<CR>", desc = "List table column" },
 	},
 	config = function()
 		require("neoclip").setup()
