@@ -16,9 +16,9 @@ keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 
 -- Layout
 keymap("n", "<leader>ll", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
-keymap("n", "<leader>ln", "<cmd>tabnew<cr>", { desc = "New layout" })
-keymap("n", "<leader>lf", "<cmd>tabnext<cr>", { desc = "Next layout" })
-keymap("n", "<leader>ld", "<cmd>tabprev<cr>", { desc = "Previous layout" })
+keymap("n", "<leader>la", "<cmd>tabnew<cr>", { desc = "Add layout" })
+keymap("n", "<leader>ln", "<cmd>tabnext<cr>", { desc = "Next layout" })
+keymap("n", "<leader>lp", "<cmd>tabprev<cr>", { desc = "Previous layout" })
 keymap("n", "<leader>lx", "<cmd>tabclose<cr>", { desc = "Close layout" })
 
 -- Custom functions
