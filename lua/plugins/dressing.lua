@@ -1,5 +1,6 @@
 return {
   "stevearc/dressing.nvim",
+  enabled = false,
   event = "BufRead",
   config = function()
     local status_ok, dressing = pcall(require, "dressing")
@@ -13,7 +14,7 @@ return {
         title_pos = "left",
         insert_only = true,
         start_in_insert = true,
-        anchor = "SW",
+        -- anchor = "SW",
         border = "rounded",
         relative = "cursor",
         prefer_width = 40,
