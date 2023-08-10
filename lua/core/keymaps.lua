@@ -75,6 +75,7 @@ keymap("n", "N", "Nzzzv", opts)
 keymap("n", "*", "*zzzv", opts)
 keymap("n", "#", "#zzzv", opts)
 keymap("n", "<esc>", "<cmd>noh<cr>", opts)
+keymap("n", "<leader>h", "<cmd>noh<cr>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
