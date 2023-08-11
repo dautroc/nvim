@@ -10,6 +10,7 @@ return {
 
 		wk.register({
 			b = { name = "+buffer/bookmark" },
+			d = { name = "+devdocs" },
 			f = {
 				name = "+find",
 				f = "+find and replace",
@@ -18,7 +19,6 @@ return {
 				name = "+rails",
 			},
 			g = { name = "+git" },
-			d = { name = "+diff mode" },
 			a = { name = "+alternative" },
 			m = {
 				name = "+misc",
