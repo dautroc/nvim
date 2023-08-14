@@ -3,6 +3,7 @@ return {
   keys = {
     { "<leader>gb", "<CMD>lua require('gitsigns').blame_line({full=true})<CR>", desc = "Git blame" }
   },
+  enabled = false,
   event = "BufReadPre",
   opts = {
     signs = {
