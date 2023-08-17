@@ -1,14 +1,17 @@
 return {
 	"windwp/nvim-ts-autotag",
-	ft = {
-		"html",
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-		"svelte",
-		"vue",
-		"eruby",
-	},
-	opts = {},
+	config = function()
+		require("nvim-ts-autotag").setup({
+			filetypes = {
+				"html",
+				"javascript",
+				"javascriptreact",
+				"typescript",
+				"typescriptreact",
+				"svelte",
+				"vue",
+				"eruby",
+			},
+		})
+	end,
 }
