@@ -11,6 +11,8 @@ return {
 				"svelte",
 				"vue",
 				"eruby",
+				"embedded_template",
+				"erb",
 			},
 		})
 	end,
