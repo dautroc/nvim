@@ -1,5 +1,5 @@
 vim.g["test#ruby#rspec#executable"] = "bundle exec rspec"
-vim.g["test#strategy"] = "vimux"
+vim.g["test#strategy"] = "dispatch"
 
 return {
 	"vim-test/vim-test",
@@ -9,5 +9,5 @@ return {
 		{ "<leader>tl", "<cmd>TestLast<cr>", desc = "Test last" },
 		{ "<leader>tv", "<cmd>TestVisit<cr>", desc = "Test visit" },
 	},
-	dependencies = { "preservim/vimux" },
+	-- dependencies = { "preservim/vimux" },
 }
