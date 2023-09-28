@@ -1,9 +1,9 @@
 vim.g["test#ruby#rspec#executable"] = "bundle exec rspec"
-vim.g["test#strategy"] = "neovim"
+vim.g["test#strategy"] = "toggleterm"
 
 return {
 	"vim-test/vim-test",
-  enabled = false,
+  enabled = true,
 	keys = {
 		{ "<leader>tf", "<cmd>TestFile<cr>", desc = "Test file" },
 		{ "<leader>tn", "<cmd>TestNearest<cr>", desc = "Test nearest" },
