@@ -32,19 +32,5 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 	end,
 })
 
--- Markdown identation
 vim.cmd("autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2")
-
--- Terminal keymap
-function _G.set_terminal_keymaps()
-	local opts = { buffer = 0 }
-	vim.keymap.set("t", ";", [[<C-\><C-n>]], opts)
-	vim.keymap.set("t", "<C-h>", [[<CMD>NavigatorLeft<CR>]], opts)
-	vim.keymap.set("t", "<C-j>", [[<CMD>NavigatorDown<CR>]], opts)
-	vim.keymap.set("t", "<C-k>", [[<CMD>NavigatorUp<CR>]], opts)
-	vim.keymap.set("t", "<C-l>", [[<CMD>NavigatorRight<CR>]], opts)
-end
-
-vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
-
 
