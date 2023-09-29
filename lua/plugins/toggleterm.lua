@@ -16,7 +16,7 @@ return {
   },
   config = function()
     require("toggleterm").setup{
-      size = 20,
+      size = 15,
       shade_filetypes = {},
       shade_terminals = true,
       shading_factor = 1,
@@ -35,7 +35,7 @@ return {
         }
       },
       winbar = {
-        enabled = false,
+        enabled = true,
         name_formatter = function(term) --  term: Terminal
           return term.name
         end
