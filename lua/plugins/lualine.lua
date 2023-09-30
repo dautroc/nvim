@@ -37,6 +37,11 @@ return {
 			padding = 0,
 		}
 
+    local filename = {
+      "filename",
+      path = 1,
+    }
+
 		local spaces = function()
 			return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 		end
@@ -54,7 +59,7 @@ return {
 			sections = {
 				lualine_a = { "tabs", "mode" },
 				lualine_b = { "branch", "diff", diagnostics },
-				lualine_c = { "filename" },
+				lualine_c = { filename },
 				lualine_x = { diff, spaces, "encoding", filetype },
 				lualine_y = { location },
 				lualine_z = { "progress" },
