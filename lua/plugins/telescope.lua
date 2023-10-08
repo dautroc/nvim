@@ -52,9 +52,9 @@ return {
 		require("telescope").setup({
 			defaults = {
 				-- Layout config
-				layout_strategy = "horizontal",
+				layout_strategy = "bottom_pane",
 				layout_config = {
-					height = 0.8,
+					height = 0.3,
 				},
 				border = true,
 
