@@ -58,7 +58,7 @@ return {
 				},
 				border = true,
 
-				sorting_strategy = "ascending",
+        sorting_strategy = "ascending",
 				prompt_prefix = " ",
 				selection_caret = " ",
 				path_display = { "smart" },
@@ -77,16 +77,22 @@ return {
 				oldfiles = {
 					cwd_only = true,
 					path_display = { "absolute" },
+          previewer = false,
 				},
 				find_files = {
 					path_display = { "absolute" },
+          previewer = false,
 				},
 				buffers = {
 					path_display = { "absolute" },
+          previewer = false,
 				},
 				grep_string = {
 					path_display = { "absolute" },
 				},
+        current_buffer_fuzzy_find = {
+          previewer = false,
+        },
 			},
 			extensions = {
 				fzf = {
