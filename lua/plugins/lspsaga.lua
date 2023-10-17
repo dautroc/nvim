@@ -13,7 +13,17 @@ return {
 		{ "go", "<cmd>Lspsaga outline<cr>", desc = "Lspsaga outline" },
 	},
 	config = function()
-		require("lspsaga").setup({})
+    require("lspsaga").setup({
+      finder = {
+        keys = {
+          edit = "o",
+          vsplit = "v",
+          split = "s",
+          tabe = "t",
+          quit = "q",
+        }
+      }
+    })
 	end,
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
