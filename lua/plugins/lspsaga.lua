@@ -19,8 +19,9 @@ return {
           edit = "o",
           vsplit = "v",
           split = "s",
-          tabe = "t",
+          tabnew = "t",
           quit = "q",
+          shuttle = ",w",
         }
       }
     })
