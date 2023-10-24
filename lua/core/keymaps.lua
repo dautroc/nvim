@@ -105,3 +105,7 @@ keymap("i", " ", " <C-g>u", opts)
 -- Stay in indent mode
 keymap("x", "<", "<gv", opts)
 keymap("x", ">", ">gv", opts)
+
+-- Utils
+keymap("n", "<leader>mus", "<cmd>%!sort<cr>", opts)
+keymap("n", "<leader>muu", "<cmd>%!uniq<cr>", opts)

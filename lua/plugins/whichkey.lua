@@ -23,6 +23,7 @@ return {
       a = { name = "+alternative" },
       m = {
         name = "+misc",
+        u = { name = "+utils" },
       },
       t = { name = "+test" },
       l = { name = "+layout" },
