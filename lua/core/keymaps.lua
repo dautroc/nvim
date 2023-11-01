@@ -29,6 +29,7 @@ keymap("n", "<leader>lx", "<cmd>tabclose<cr>", { desc = "Close layout" })
 
 -- Custom functions
 keymap("n", "<leader>ms", "<cmd>lua require('core.functions').say_word()<cr>", { desc = "Say word" })
+keymap("n", "<leader>mc", "z=", { desc = "Spell check" })
 keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })
 
 -- Buffers
