@@ -62,7 +62,7 @@ return {
 				prompt_prefix = " ",
 				selection_caret = " ",
 				path_display = { "smart" },
-				file_ignore_patterns = { ".git/", "node_modules", ".idea" },
+				file_ignore_patterns = { ".git/", "node_modules", ".idea", "vendor" },
 				mappings = {
 					i = {
 						[";"] = "close",
