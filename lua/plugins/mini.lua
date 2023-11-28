@@ -12,7 +12,7 @@ return {
     require("mini.splitjoin").setup()
     require("mini.files").setup({
       mappings = {
-        close = "q",
+        close = "<ESC>",
         go_in = "L",
         go_in_plus = "<CR>",
         go_out = "H",
