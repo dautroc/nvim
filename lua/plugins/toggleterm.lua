@@ -2,17 +2,17 @@ return {
   "akinsho/toggleterm.nvim",
   event = "VeryLazy",
   keys = {
-    { "<leader>jt", "<cmd>ToggleTerm<cr>", desc = "Term toggle" },
+    -- { "<leader>jt", "<cmd>ToggleTerm<cr>", desc = "Term toggle" },
     -- Term direction
-    { "<leader>jv", "<cmd>ToggleTerm direction=vertical<cr>", desc = "Term vertical" },
-    { "<leader>jx", "<cmd>ToggleTerm direction=horizontal size=20<cr>", desc = "Term horizontal" },
-    { "<leader>jf", "<cmd>ToggleTerm direction=float<cr>", desc = "Term float" },
+    -- { "<leader>jv", "<cmd>ToggleTerm direction=vertical<cr>", desc = "Term vertical" },
+    -- { "<leader>jx", "<cmd>ToggleTerm direction=horizontal size=20<cr>", desc = "Term horizontal" },
+    -- { "<leader>jf", "<cmd>ToggleTerm direction=float<cr>", desc = "Term float" },
 
     -- Term actions
-    { "<leader>jl", "<cmd>TermSelect<cr>", desc = "Term list" },
-    { "<leader>js", "<cmd>ToggleTermSetName<cr>", desc = "Term set name" },
-    { "<leader>jk", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term execute" },
-    { "<leader>jk", ":ToggleTermSendVisualSelection<cr>", desc = "Term execute", mode = "v" },
+    -- { "<leader>jl", "<cmd>TermSelect<cr>", desc = "Term list" },
+    -- { "<leader>js", "<cmd>ToggleTermSetName<cr>", desc = "Term set name" },
+    -- { "<leader>jk", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term execute" },
+    -- { "<leader>jk", ":ToggleTermSendVisualSelection<cr>", desc = "Term execute", mode = "v" },
   },
   config = function()
     require("toggleterm").setup{

@@ -30,15 +30,15 @@ return {
       o = {
         name = "+obsidian",
       },
-      n = {
-        name = "+neorg",
-        i = {
-          name = "+insert",
-        },
-        f = {
-          name = "+find",
-        },
-      },
+      -- n = {
+      --   name = "+neorg",
+      --   i = {
+      --     name = "+insert",
+      --   },
+      --   f = {
+      --     name = "+find",
+      --   },
+      -- },
       }, { prefix = "<leader>" })
   end,
 }
