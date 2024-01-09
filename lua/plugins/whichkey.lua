@@ -19,7 +19,10 @@ return {
       r = {
         name = "+rails",
       },
-      g = { name = "+git" },
+      g = {
+        name = "+git",
+        d = { name = "+diffview" },
+      },
       a = { name = "+alternative" },
       m = {
         name = "+misc",
