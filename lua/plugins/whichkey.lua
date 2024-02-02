@@ -33,6 +33,9 @@ return {
       o = {
         name = "+obsidian",
       },
+      h = {
+        name = "+help",
+      },
       -- n = {
       --   name = "+neorg",
       --   i = {
