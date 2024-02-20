@@ -77,21 +77,21 @@ return {
 				oldfiles = {
 					cwd_only = true,
 					path_display = { "absolute" },
-          previewer = false,
+          previewer = true,
 				},
 				find_files = {
 					path_display = { "absolute" },
-          previewer = false,
+          previewer = true,
 				},
 				buffers = {
 					path_display = { "absolute" },
-          previewer = false,
+          previewer = true,
 				},
 				grep_string = {
 					path_display = { "absolute" },
 				},
         current_buffer_fuzzy_find = {
-          previewer = false,
+          previewer = true,
         },
 			},
 			extensions = {
