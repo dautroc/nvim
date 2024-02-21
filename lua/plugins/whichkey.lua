@@ -29,7 +29,7 @@ return {
         u = { name = "+utils" },
       },
       t = { name = "+test" },
-      l = { name = "+layout" },
+      -- l = { name = "+layout" },
       o = {
         name = "+obsidian",
       },

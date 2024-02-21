@@ -21,11 +21,11 @@ keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 
 -- Layout
-keymap("n", "<leader>ll", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
-keymap("n", "<leader>la", "<cmd>tabnew<cr>", { desc = "Add layout" })
-keymap("n", "<leader>ln", "<cmd>tabnext<cr>", { desc = "Next layout" })
-keymap("n", "<leader>lp", "<cmd>tabprev<cr>", { desc = "Previous layout" })
-keymap("n", "<leader>lx", "<cmd>tabclose<cr>", { desc = "Close layout" })
+keymap("n", "tl", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
+keymap("n", "ta", "<cmd>tabnew<cr>", { desc = "Add layout" })
+keymap("n", "tk", "<cmd>tabnext<cr>", { desc = "Next layout" })
+keymap("n", "tj", "<cmd>tabprev<cr>", { desc = "Previous layout" })
+keymap("n", "tt", "<cmd>tabclose<cr>", { desc = "Close layout" })
 
 -- Custom functions
 keymap("n", "<leader>ms", "<cmd>lua require('core.functions').say_word()<cr>", { desc = "Say word" })
