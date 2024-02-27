@@ -33,5 +33,8 @@ return {
 			time_format = "%H:%M",
 		},
 		mappings = {},
+    ui = {
+      enable = false
+    },
 	},
 }
