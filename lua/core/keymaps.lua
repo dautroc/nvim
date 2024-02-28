@@ -110,3 +110,7 @@ keymap("x", ">", ">gv", opts)
 -- Utils
 keymap("n", "<leader>mus", "<cmd>%!sort<cr>", opts)
 keymap("n", "<leader>muu", "<cmd>%!uniq<cr>", opts)
+
+-- LSP
+keymap("n", "<leader>lm", "<cmd>Mason<cr>", opts)
+keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)

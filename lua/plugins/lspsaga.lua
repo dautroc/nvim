@@ -9,7 +9,7 @@ return {
 		{ "gD", "<cmd>Lspsaga peek_definition<cr>", desc = "Lspsaga peek definition" },
 		{ "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", desc = "Lspsaga diagnosict next" },
 		{ "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", desc = "Lspsaga diagnosict prev" },
-		{ "gA", "<cmd>Lspsaga code_action<cr>", desc = "Lspsaga code action" },
+		{ "<leader>la", "<cmd>Lspsaga code_action<cr>", desc = "Lspsaga code action" },
 		{ "go", "<cmd>Lspsaga outline<cr>", desc = "Lspsaga outline" },
 	},
 	config = function()

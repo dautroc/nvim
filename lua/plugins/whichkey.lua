@@ -29,7 +29,11 @@ return {
         u = { name = "+utils" },
       },
       t = { name = "+test" },
-      -- l = { name = "+layout" },
+      l = { name = "+lsp",
+        i = { name = "LSP Info" },
+        m = { name = "Open Mason" },
+        a = { name = "Code Action" },
+      },
       o = {
         name = "+obsidian",
       },
