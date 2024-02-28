@@ -60,3 +60,5 @@ vim.g.gruvbox_material_background = "medium"
 vim.g.gruvbox_material_better_performance = 1
 vim.g.gruvbox_material_foreground = "mix"
 
+-- Python
+vim.g.python3_host_prog = "~/.venv/bin/python3"
