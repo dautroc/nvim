@@ -1,4 +1,5 @@
 return {
+  enabled = false,
 	"simrat39/symbols-outline.nvim",
 	keys = {
 		{ "<leader>S", "<cmd>SymbolsOutline<CR>", desc = "Symbols Outline" },
