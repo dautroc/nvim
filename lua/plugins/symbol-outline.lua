@@ -1,7 +1,7 @@
 return {
 	"simrat39/symbols-outline.nvim",
 	keys = {
-		{ "<leader>s", "<cmd>SymbolsOutline<CR>", desc = "Symbols Outline" },
+		{ "<leader>S", "<cmd>SymbolsOutline<CR>", desc = "Symbols Outline" },
 	},
 	opts = {
 		highlight_hovered_item = true,
