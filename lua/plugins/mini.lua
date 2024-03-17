@@ -37,8 +37,8 @@ return {
 	version = false,
 	config = function()
 		require("mini.trailspace").setup()
-		require("mini.splitjoin").setup()
-		require("mini.notify").setup()
+    require("mini.splitjoin").setup()
+    require("mini.notify").setup()
     require('mini.indentscope').setup()
 		require("mini.files").setup({
 			mappings = {
