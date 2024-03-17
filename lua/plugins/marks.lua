@@ -38,7 +38,6 @@ return {
 				prev = "mk",
 				next = "mj",
 				delete_buf = "md",
-				set_bookmark0 = "m0",
 			},
 		})
 	end,

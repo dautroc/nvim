@@ -33,10 +33,10 @@ keymap("n", "<leader>mc", "z=", { desc = "Spell check" })
 keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })
 
 -- Buffers
-keymap("n", "<leader>bb", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy buffer path" })
+keymap("n", "<leader>by", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy buffer path" })
 keymap(
 	"n",
-	"<leader>bl",
+	"<leader>bY",
 	[[<cmd>let @+ = join([expand('%'),  line(".")], ':')<cr>]],
 	{ desc = "Copy buffer path with line number" }
 )
@@ -69,12 +69,6 @@ keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
 keymap({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
 keymap({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
 keymap({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
-
--- Tmux navigator
--- keymap({"n", "t"}, "<C-h>", "<cmd>lua require('tmux').move_left()<cr>")
--- keymap({"n", "t"}, "<C-j>", "<cmd>lua require('tmux').move_down()<cr>")
--- keymap({"n", "t"}, "<C-k>", "<cmd>lua require('tmux').move_up()<cr>")
--- keymap({"n", "t"}, "<C-l>", "<cmd>lua require('tmux').move_right()<cr>")
 
 -- Better search and highlight
 keymap("n", "n", "nzzzv", opts)
