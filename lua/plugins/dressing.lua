@@ -1,6 +1,6 @@
 return {
   "stevearc/dressing.nvim",
-  enabled = false,
+  enabled = true,
   event = "BufRead",
   config = function()
     local status_ok, dressing = pcall(require, "dressing")

@@ -38,11 +38,11 @@ return {
 		{ "<leader>ra", "<cmd>Telescope find_files cwd=app/api<CR>", desc = "rails api" },
 		{ "<leader>rp", "<cmd>Telescope find_files cwd=app/policies<CR>", desc = "rails policies" },
 		{ "<leader>ri", "<cmd>Telescope find_files cwd=app/mailers<CR>", desc = "rails mailer" },
+		{ "<leader>rv", "<cmd>Telescope find_files cwd=app/views<CR>", desc = "rails views" },
+		{ "<leader>rM", "<cmd>Telescope find_files cwd=db/migrate<CR>", desc = "rails models" },
+		{ "<leader>rt", "<cmd>Telescope find_files cwd=lib/tasks<CR>", desc = "rake tasks" },
 		{ "<leader>rf", "<cmd>Telescope find_files cwd=spec/factories<CR>", desc = "rails factories" },
 		{ "<leader>rl", "<cmd>Telescope find_files cwd=config/locales<CR>", desc = "rails locales" },
-		{ "<leader>rr", "<cmd>Telescope find_files cwd=lib/tasks<CR>", desc = "rake tasks" },
-		{ "<leader>rv", "<cmd>Telescope find_files cwd=app/views<CR>", desc = "rails views" },
-		{ "<leader>re", "<cmd>lua require('core.functions').list_table_columns()<CR>", desc = "List table column" },
 	},
 	config = function()
 		require("neoclip").setup()
