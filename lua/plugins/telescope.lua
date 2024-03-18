@@ -25,6 +25,7 @@ return {
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
+		{ "<leader>ft", "<cmd>Telescope colorscheme<CR>", desc = "Theme picker" },
 		{
 			"<leader>fs",
 			"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
@@ -74,6 +75,9 @@ return {
 				},
 			},
 			pickers = {
+        colorscheme = {
+          enable_preview = true
+        },
 				oldfiles = {
 					cwd_only = true,
 					path_display = { "absolute" },
