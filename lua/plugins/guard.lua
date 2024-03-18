@@ -4,7 +4,7 @@ return {
     "nvimdev/guard-collection",
   },
   keys = {
-    { "gq", "<cmd>GuardFmt<cr>", "Guard format" },
+    { "gq", "<cmd>GuardFmt<cr>", desc = "Format code" },
   },
   config = function()
     local ft = require("guard.filetype")
