@@ -1,16 +1,31 @@
+function newNoteInput()
+	local user_input = vim.fn.input("New note name: ")
+  if user_input ~= '' then
+    vim.cmd("ObsidianNew " .. user_input)
+  else
+    vim.cmd('normal! :')
+    print("No note name provided")
+  end
+end
+
 return {
 	"epwalsh/obsidian.nvim",
 	keys = {
-		{ "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Open today note" },
-		{ "<leader>oy", "<cmd>ObsidianYesterday<CR>", desc = "Open yesterday note" },
-		{ "<leader>on", "<cmd>ObsidianNew new_note<CR>", desc = "Create new node" },
-		{ "<leader>oo", "<cmd>ObsidianOpen<CR>", desc = "Open in obsidian" },
-		{ "<leader>os", "<cmd>ObsidianSearch<CR>", desc = "Search notes" },
-		{ "<leader>of", "<cmd>ObsidianQuickSwitch<CR>", desc = "Find by name" },
+		{ "<leader>oss", "<cmd>ObsidianSearch<CR>", desc = "Search by text" },
+		{ "<leader>ost", "<cmd>ObsidianTags<CR>", desc = "Search by tag" },
+		{ "<leader>osn", "<cmd>ObsidianQuickSwitch<CR>", desc = "Search by name" },
+		{ "<leader>osd", "<cmd>ObsidianDailies<CR>", desc = "Search dailies" },
 
-		-- Link
-		{ "<leader>oF", "<cmd>ObsidianFollowLink<CR>", desc = "Follow link" },
-		{ "<leader>oc", "<cmd>ObsidianLinkNew<CR>", desc = "Create new note with link for selected text", mode = "v" },
+    -- Action
+		{ "<leader>oan", "<cmd>lua newNoteInput()<CR>", desc = "New node" },
+		{ "<leader>oar", "<cmd>ObsidianRename<CR>", desc = "Rename note" },
+
+    -- Link
+		{ "<leader>olf", "<cmd>ObsidianFollowLink vsplit<CR>", desc = "Follow link" },
+		{ "<leader>olb", "<cmd>ObsidianBacklinks<CR>", desc = "Follow back links" },
+		{ "<leader>oll", "<cmd>ObsidianLinks<CR>", desc = "Show links" },
+		{ "<leader>olN", "<cmd>ObsidianLinkNew<CR>", desc = "Create new note with link for selected text", mode = "v" },
+		{ "<leader>oln", "<cmd>ObsidianLink<CR>", desc = "Link visual selection to a note", mode = "v" },
 	},
 	lazy = true,
 	dependencies = {
@@ -33,8 +48,8 @@ return {
 			time_format = "%H:%M",
 		},
 		mappings = {},
-    ui = {
-      enable = false
-    },
+		ui = {
+			enable = true,
+		},
 	},
 }
