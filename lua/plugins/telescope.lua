@@ -108,7 +108,7 @@ return {
         project = {
           base_dirs = {
             { path = "~/workspace", max_depth = 2 },
-            { path = "~/nvim", max_depth = 1 },
+            { path = "~/.config/nvim", max_depth = 1 },
           },
           hidden_files = true, -- default: false
           order_by = "asc",
