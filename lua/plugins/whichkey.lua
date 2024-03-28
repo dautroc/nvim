@@ -27,6 +27,7 @@ return {
 			m = {
 				name = "+misc",
 				u = { name = "+utils" },
+				T = { name = "Toggle Theme" },
 			},
 			t = { name = "+test" },
 			l = { name = "+lsp" },
@@ -34,6 +35,7 @@ return {
 				name = "+obsidian",
 				s = { name = "+search" },
 				a = { name = "+action" },
+        l = { name = "+link" },
 			},
 			h = {
 				name = "+help",
