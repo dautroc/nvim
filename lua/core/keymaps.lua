@@ -31,6 +31,7 @@ keymap("n", "tt", "<cmd>tabclose<cr>", { desc = "Close layout" })
 keymap("n", "<leader>ms", "<cmd>lua require('core.functions').say_word()<cr>", { desc = "Say word" })
 keymap("n", "<leader>mc", "z=", { desc = "Spell check" })
 keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>mT", ":lua require('core.functions').toggle_theme()<CR>", { noremap = true, silent = true, desc = "Toggle theme" })
 
 -- Buffers
 keymap("n", "<leader>by", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy buffer path" })

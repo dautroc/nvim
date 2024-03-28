@@ -17,4 +17,17 @@ M.smart_delete = function()
 	end
 end
 
+M.toggle_theme = function()
+  current_mode = vim.o.background
+
+  if current_mode == "light" then
+    vim.api.nvim_set_option("background", "dark")
+  else
+    vim.api.nvim_set_option("background", "light")
+  end
+
+  vim.cmd("colorscheme gruvbox-material")
+end
+
+
 return M
