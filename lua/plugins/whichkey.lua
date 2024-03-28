@@ -40,6 +40,12 @@ return {
 			h = {
 				name = "+help",
 			},
+      F = {
+        name = "+spectre",
+      },
+      s = {
+        name = "+session",
+      },
 		}, { prefix = "<leader>" })
 
     wk.register({
