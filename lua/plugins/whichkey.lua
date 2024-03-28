@@ -33,8 +33,7 @@ return {
 			l = { name = "+lsp" },
 			o = {
 				name = "+obsidian",
-				s = { name = "+search" },
-				a = { name = "+action" },
+				s = { name = "+find" },
         l = { name = "+link" },
 			},
 			h = {

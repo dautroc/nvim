@@ -11,14 +11,14 @@ end
 return {
 	"epwalsh/obsidian.nvim",
 	keys = {
-		{ "<leader>oss", "<cmd>ObsidianSearch<CR>", desc = "Search by text" },
-		{ "<leader>ost", "<cmd>ObsidianTags<CR>", desc = "Search by tag" },
-		{ "<leader>osn", "<cmd>ObsidianQuickSwitch<CR>", desc = "Search by name" },
-		{ "<leader>osd", "<cmd>ObsidianDailies<CR>", desc = "Search dailies" },
+		{ "<leader>ofs", "<cmd>ObsidianSearch<CR>", desc = "Find by text" },
+		{ "<leader>oft", "<cmd>ObsidianTags<CR>", desc = "Find by tag" },
+		{ "<leader>ofh", "<cmd>ObsidianQuickSwitch<CR>", desc = "Find by name" },
+		{ "<leader>ofd", "<cmd>ObsidianDailies<CR>", desc = "Find dailies" },
 
     -- Action
-		{ "<leader>oan", "<cmd>lua newNoteInput()<CR>", desc = "New node" },
-		{ "<leader>oar", "<cmd>ObsidianRename<CR>", desc = "Rename note" },
+		{ "<leader>on", "<cmd>lua newNoteInput()<CR>", desc = "New node" },
+		{ "<leader>or", "<cmd>ObsidianRename<CR>", desc = "Rename note" },
 
     -- Link
 		{ "<leader>olf", "<cmd>ObsidianFollowLink vsplit<CR>", desc = "Follow link" },
