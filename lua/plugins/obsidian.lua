@@ -49,7 +49,7 @@ return {
 		},
 		mappings = {},
 		ui = {
-			enable = true,
+			enable = false,
 		},
 	},
 }
