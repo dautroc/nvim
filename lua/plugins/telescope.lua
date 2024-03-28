@@ -105,18 +105,16 @@ return {
 					override_file_sorter = true, -- override the file sorter
 					case_mode = "smart_case", -- or "ignore_case" or "respect_case" the default case_mode is "smart_case"
 				},
-				project = {
-					project = {
-						base_dirs = {
-							{ path = "~/workspace", max_depth = 2 },
-							{ path = "~/nvim", max_depth = 1 },
-						},
-						hidden_files = true, -- default: false
-						order_by = "asc",
-						search_by = "title",
-						sync_with_nvim_tree = true, -- default false
-					},
-				},
+        project = {
+          base_dirs = {
+            { path = "~/workspace", max_depth = 2 },
+            { path = "~/nvim", max_depth = 1 },
+          },
+          hidden_files = true, -- default: false
+          order_by = "asc",
+          search_by = "title",
+          sync_with_nvim_tree = true, -- default false
+        },
 				live_grep_args = {
 					auto_quoting = true,
 					mappings = {
