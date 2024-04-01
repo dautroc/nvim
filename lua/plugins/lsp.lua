@@ -59,12 +59,12 @@ return {
 						allocationType = "ram",
 						indexGems = true,
 						reportDiagnostics = true,
-					},
+				k},
 				},
 			}
 		end
 
 		lspconfig.ruby_lsp.setup({ on_attach = on_attach, capabilities = capabilities })
-    lspconfig.fuzzy_ls.setup({ on_attach = on_attach })
+    lspconfig.fuzzy_ls.setup({ on_attach = on_attach, capabilities = capabilities })
 	end,
 }
