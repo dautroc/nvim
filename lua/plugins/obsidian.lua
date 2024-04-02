@@ -19,7 +19,7 @@ return {
 		-- Action
 		{ "<leader>on", "<cmd>lua newNoteInput()<CR>", desc = "New node" },
 		{ "<leader>or", "<cmd>ObsidianRename<CR>", desc = "Rename note" },
-		{ "<leader>od", "<cmd>ObsidianToday<CR>", desc = "Today note" },
+		{ "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Today note" },
 
 		-- Link
 		{ "<leader>olf", "<cmd>ObsidianFollowLink vsplit<CR>", desc = "Follow link" },
@@ -50,7 +50,7 @@ return {
 		},
 		mappings = {},
 		ui = {
-			enable = true, -- set to false to disable all additional syntax features
+			enable = false, -- set to false to disable all additional syntax features
 			update_debounce = 200, -- update delay after a text change (in milliseconds)
 			-- Define how various check-boxes are displayed
 			checkboxes = {
