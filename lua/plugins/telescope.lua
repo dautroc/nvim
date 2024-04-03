@@ -22,11 +22,19 @@ return {
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
-		{ "<leader>fw", "<cmd>Telescope grep_string<CR>", desc = "Grep string" },
+		{
+			"<leader>fw",
+			"<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>",
+			desc = "Grep string",
+		},
 		{ "<leader>ft", "<cmd>Telescope colorscheme<CR>", desc = "Theme picker" },
 		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
-		{ "<leader>fs", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", desc = "Live grep args" },
+		{
+			"<leader>fs",
+			"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+			desc = "Live grep args",
+		},
 
 		-- Rails
 		{ "<leader>ra", "<cmd>Telescope find_files cwd=app/api<CR>", desc = "rails api" },
@@ -55,7 +63,7 @@ return {
 				},
 				border = true,
 
-        sorting_strategy = "ascending",
+				sorting_strategy = "ascending",
 				prompt_prefix = " ",
 				selection_caret = " ",
 				path_display = { "smart" },
@@ -71,28 +79,28 @@ return {
 				},
 			},
 			pickers = {
-        colorscheme = {
-          enable_preview = true
-        },
+				colorscheme = {
+					enable_preview = true,
+				},
 				oldfiles = {
 					cwd_only = true,
 					path_display = { "absolute" },
-          previewer = true,
+					previewer = true,
 				},
 				find_files = {
 					path_display = { "absolute" },
-          previewer = true,
+					previewer = true,
 				},
 				buffers = {
 					path_display = { "absolute" },
-          previewer = true,
+					previewer = true,
 				},
 				grep_string = {
 					path_display = { "absolute" },
 				},
-        current_buffer_fuzzy_find = {
-          previewer = true,
-        },
+				current_buffer_fuzzy_find = {
+					previewer = true,
+				},
 			},
 			extensions = {
 				fzf = {
@@ -101,21 +109,21 @@ return {
 					override_file_sorter = true, -- override the file sorter
 					case_mode = "smart_case", -- or "ignore_case" or "respect_case" the default case_mode is "smart_case"
 				},
-        project = {
-          base_dirs = {
-            { path = "~/workspace", max_depth = 2 },
-            { path = "~/.config/nvim", max_depth = 1 },
-          },
-          hidden_files = true, -- default: false
-          order_by = "asc",
-          search_by = "title",
-          sync_with_nvim_tree = true, -- default false
-        },
+				project = {
+					base_dirs = {
+						{ path = "~/workspace", max_depth = 2 },
+						{ path = "~/.config/nvim", max_depth = 1 },
+					},
+					hidden_files = true, -- default: false
+					order_by = "asc",
+					search_by = "title",
+					sync_with_nvim_tree = true, -- default false
+				},
 				live_grep_args = {
 					auto_quoting = true,
 					mappings = {
 						i = {
-							["<C-f>"] = lga_actions.quote_prompt({ postfix = ' --iglob "**/app/**"' }),
+							["<C-f>"] = lga_actions.quote_prompt({ postfix = ' -F app/' }),
 							[";"] = "close",
 							["<esc>"] = "close",
 							["<C-u>"] = false,
