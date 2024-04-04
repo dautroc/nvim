@@ -64,12 +64,6 @@ keymap({ "n", "v" }, "ga", "<cmd>b#<cr>", { desc = "Switch to last buffer", sile
 keymap({ "n", "v" }, "L", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
 keymap({ "n", "v" }, "H", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
 
--- Wezterm navigator
-keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
-keymap({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
-keymap({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
-keymap({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
-
 -- Better search and highlight
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
