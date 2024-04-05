@@ -1,5 +1,6 @@
 return {
 	"alexghergh/nvim-tmux-navigation",
+  enabled = false,
   keys = {
     {"<C-h>", "<cmd>NvimTmuxNavigateLeft<CR>"},
     {"<C-j>", "<cmd>NvimTmuxNavigateDown<CR>"},

@@ -1,13 +1,13 @@
 return {
-  'numToStr/Navigator.nvim',
-  enabled = false,
-  config = function()
-    require('Navigator').setup()
-  end
+	"numToStr/Navigator.nvim",
+	enabled = true,
+	keys = {
+		{ "<C-h>", "<cmd>NavigatorLeft<CR>", mode = { "n", "t" } },
+		{ "<C-j>", "<cmd>NavigatorDown<CR>", mode = { "n", "t" } },
+		{ "<C-k>", "<cmd>NavigatorUp<CR>", mode = { "n", "t" } },
+		{ "<C-l>", "<cmd>NavigatorRight<CR>", mode = { "n", "t" } },
+	},
+	config = function()
+		require("Navigator").setup()
+	end,
 }
--- Wezterm navigator
--- keymap({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
--- keymap({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
--- keymap({ "n", "t" }, "<C-k>", "<CMD>NavigatorUp<CR>")
--- keymap({ "n", "t" }, "<C-j>", "<CMD>NavigatorDown<CR>")
-
