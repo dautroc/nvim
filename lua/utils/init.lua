@@ -21,6 +21,7 @@ M.parsers = {
 	"dockerfile",
 	"ruby",
 	"embedded_template",
+	"vimdoc",
 }
 
 return M
