@@ -1,6 +1,7 @@
 return {
   'rmagatti/auto-session',
   enabled = true,
+  event = "VeryLazy",
   keys = {
     {
       "<leader>sr",
@@ -20,7 +21,7 @@ return {
   },
   config = function()
     require("auto-session").setup {
-      auto_session_enable_last_session = false,
+      auto_session_enable_last_session = true,
       auto_session_use_git_branch = true,
       auto_session_suppress_dirs = { "~/workspace" },
 
