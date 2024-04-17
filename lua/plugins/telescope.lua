@@ -70,7 +70,6 @@ return {
 				file_ignore_patterns = { ".git/", "node_modules", ".idea", "vendor" },
 				mappings = {
 					i = {
-						[";"] = "close",
 						["<esc>"] = "close",
 						["<C-u>"] = false,
 						["<C-j>"] = "move_selection_next",
@@ -124,7 +123,6 @@ return {
 					mappings = {
 						i = {
 							["<C-f>"] = lga_actions.quote_prompt({ postfix = ' -F app/' }),
-							[";"] = "close",
 							["<esc>"] = "close",
 							["<C-u>"] = false,
 							["<C-j>"] = "move_selection_next",
