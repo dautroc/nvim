@@ -27,8 +27,6 @@ return {
 					light = "lotus",
 				},
 			})
-
-			vim.cmd("colorscheme kanagawa-wave")
 		end,
 	},
 	{
@@ -36,9 +34,9 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {},
-		-- config = function()
-		-- 	vim.cmd.colorscheme("tokyonight-storm")
-		-- end,
+		config = function()
+			vim.cmd.colorscheme("tokyonight-storm")
+		end,
 	},
 
 	-- Additional color schemes that can be loaded on demand
