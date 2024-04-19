@@ -21,7 +21,7 @@ return {
 		{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
-		{ "<leader>fY", "<cmd>call SearchYamlKey<CR>", desc = "Yaml" },
+		{ "<leader>fY", "<cmd>call SearchYamlKey()<CR>", desc = "Yaml" },
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
 		{
 			"<leader>fw",
