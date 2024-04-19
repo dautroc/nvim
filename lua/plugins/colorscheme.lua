@@ -46,10 +46,10 @@ return {
 	-- loads color scheme plugins when using `:colorscheme ...`
 	-- but `Telescope colorscheme` and command completions
 	-- might not work as expected.
-	{ "catppuccin/nvim", name = "catppuccin", lazy = true },
+	{ "catppuccin/nvim", name = "catppuccin", lazy = false },
 	{
 		"ellisonleao/gruvbox.nvim",
-		lazy = true,
+		lazy = false,
 		config = function()
 			vim.o.background = "dark"
 		end,

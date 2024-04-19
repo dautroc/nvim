@@ -60,14 +60,19 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   group = vim.api.nvim_create_augroup("wezterm_colorscheme", { clear = true }),
   callback = function(args)
     local colorschemes = {
+      -- Kanagawa
+      ["kanagawa"] = "Kanagawa (Gogh)",
+      ["kanagawa-wave"] = "Kanagawa (Gogh)",
+      -- Tokyo
       ["tokyonight-day"] = "Tokyo Night Day",
       ["tokyonight-storm"] = "Tokyo Night Storm",
+      -- Catppuccin
       ["catppuccin-frappe"] = "Catppuccin Frappe",
       ["catppuccin-latte"] = "Catppuccin Latte",
       ["catppuccin-macchiato"] = "Catppuccin Macchiato",
       ["catppuccin-mocha"] = "Catppuccin Mocha",
+      -- Gruvbox
       ["gruvbox"] = "GruvboxDark",
-      -- add more color schemes here ...
     }
     local colorscheme = colorschemes[args.match]
     if not colorscheme then
