@@ -48,9 +48,39 @@ vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 
 -- Automatically jump to last edit cursor position
-vim.api.nvim_create_autocmd('BufReadPost', {
-  desc = 'Open file at the last position it was edited earlier',
-  group = misc_augroup,
-  pattern = '*',
-  command = 'silent! normal! g`"zv'
+-- vim.api.nvim_create_autocmd('BufReadPost', {
+--   desc = 'Open file at the last position it was edited earlier',
+--   group = misc_augroup,
+--   pattern = '*',
+--   command = 'silent! normal! g`"zv'
+-- })
+
+-- Automatically sync WezTerm color scheme with Neovim color scheme
+vim.api.nvim_create_autocmd("ColorScheme", {
+  group = vim.api.nvim_create_augroup("wezterm_colorscheme", { clear = true }),
+  callback = function(args)
+    local colorschemes = {
+      ["tokyonight-day"] = "Tokyo Night Day",
+      ["tokyonight-storm"] = "Tokyo Night Storm",
+      ["catppuccin-frappe"] = "Catppuccin Frappe",
+      ["catppuccin-latte"] = "Catppuccin Latte",
+      ["catppuccin-macchiato"] = "Catppuccin Macchiato",
+      ["catppuccin-mocha"] = "Catppuccin Mocha",
+      ["gruvbox"] = "GruvboxDark",
+      -- add more color schemes here ...
+    }
+    local colorscheme = colorschemes[args.match]
+    if not colorscheme then
+      return
+    end
+    -- Write the colorscheme to a file
+    local filename = vim.fn.expand("~/.config/wezterm/colorscheme")
+    assert(type(filename) == "string")
+    local file = io.open(filename, "w")
+    assert(file)
+    file:write(colorscheme)
+    file:close()
+    vim.notify("Setting WezTerm color scheme to " .. colorscheme, vim.log.levels.INFO)
+  end,
 })
+
