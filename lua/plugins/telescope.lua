@@ -67,7 +67,11 @@ return {
 				sorting_strategy = "ascending",
 				prompt_prefix = " ",
 				selection_caret = " ",
-				path_display = { "smart" },
+				path_display = {
+					filename_first = {
+						reverse_directories = false,
+					},
+				},
 				file_ignore_patterns = { ".git/", "node_modules", ".idea", "vendor" },
 				mappings = {
 					i = {
@@ -88,15 +92,10 @@ return {
 					previewer = true,
 				},
 				find_files = {
-					path_display = { "absolute" },
 					previewer = true,
 				},
 				buffers = {
-					path_display = { "absolute" },
 					previewer = true,
-				},
-				grep_string = {
-					path_display = { "absolute" },
 				},
 				current_buffer_fuzzy_find = {
 					previewer = true,
@@ -123,7 +122,7 @@ return {
 					auto_quoting = true,
 					mappings = {
 						i = {
-							["<C-f>"] = lga_actions.quote_prompt({ postfix = ' -F app/' }),
+							["<C-f>"] = lga_actions.quote_prompt({ postfix = " -F app/" }),
 							["<esc>"] = "close",
 							["<C-u>"] = false,
 							["<C-j>"] = "move_selection_next",
