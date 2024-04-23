@@ -42,6 +42,7 @@ function _G.set_terminal_keymaps()
   vim.keymap.set("t", "<C-j>", [[<CMD>lua require("wezterm-move").move("j")<CR>]], opts)
   vim.keymap.set("t", "<C-k>", [[<CMD>lua require("wezterm-move").move("k")<CR>]], opts)
   vim.keymap.set("t", "<C-l>", [[<CMD>lua require("wezterm-move").move("l")<CR>]], opts)
+  vim.keymap.set("t", "<C-t>", [[<CMD>ToggleTerm<CR>]], opts)
 end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")

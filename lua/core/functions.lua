@@ -17,4 +17,24 @@ M.smart_delete = function()
 	end
 end
 
+M.create_term = function(direction)
+  vim.ui.input({
+    prompt = "Enter name: ",
+  }, function(name)
+
+    if name == '' then
+      print("Name cannot be empty")
+      return
+    end
+
+    local term = require("toggleterm.terminal").Terminal:new({
+      cmd = vim.o.shell,
+      direction = direction,
+      display_name = name,
+    })
+
+    term:open()
+  end)
+end
+
 return M
