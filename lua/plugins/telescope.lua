@@ -6,7 +6,6 @@ return {
 		"nvim-telescope/telescope-project.nvim",
 		"nvim-telescope/telescope-live-grep-args.nvim",
 		"AckslD/nvim-neoclip.lua",
-		"LukasPietzschmann/telescope-tabs",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -19,7 +18,7 @@ return {
 		-- Find everything
 		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
-		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Project" },
+		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		{ "<leader>fY", "<cmd>call SearchYamlKey()<CR>", desc = "Yaml" },
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
@@ -28,9 +27,9 @@ return {
 			"<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>",
 			desc = "Grep string",
 		},
-		{ "<leader>ft", "<cmd>Telescope colorscheme<CR>", desc = "Theme picker" },
-		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
-		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buffer fuzzy find" },
+		{ "<leader>fc", "<cmd>Telescope colorscheme<CR>", desc = "Colorscheme" },
+		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Files" },
+		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy finder" },
 		{
 			"<leader>fs",
 			"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
@@ -134,7 +133,12 @@ return {
 		})
 
 		-- Extensions
-		local extensions = { "fzf", "project", "live_grep_args", "neoclip", "telescope-tabs" }
+		local extensions = {
+		  "fzf",
+		  "project",
+		  "live_grep_args",
+		  "neoclip",
+		}
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)
 		end
