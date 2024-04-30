@@ -12,6 +12,7 @@ return {
 			b = { name = "+buffer/bookmark" },
 			d = { name = "+devdocs" },
 			c = { name = "+qfixlist" },
+			i = { name = "+terms" },
 			f = {
 				name = "+find",
 				f = "+find and replace",

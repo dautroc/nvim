@@ -2,23 +2,23 @@ return {
 	"akinsho/toggleterm.nvim",
 	event = "VeryLazy",
 	keys = {
-		{ "<leader>jt", "<cmd>ToggleTerm<cr>", desc = "Term toggle" },
+		{ "<leader>it", "<cmd>ToggleTerm<cr>", desc = "Term toggle" },
 		-- Term direction
-		{ "<leader>jv", "<cmd>lua require('core.functions').create_term('vertical')<cr>", desc = "Term vertical" },
-		{ "<leader>jx", "<cmd>lua require('core.functions').create_term('horizontal')<cr>", desc = "Term horizontal" },
-		{ "<leader>jf", "<cmd>lua require('core.functions').create_term('float')<cr>", desc = "Term float" },
+		{ "<leader>iv", "<cmd>lua require('core.functions').create_term('vertical')<cr>", desc = "Term vertical" },
+		{ "<leader>ix", "<cmd>lua require('core.functions').create_term('horizontal')<cr>", desc = "Term horizontal" },
+		{ "<leader>if", "<cmd>lua require('core.functions').create_term('float')<cr>", desc = "Term float" },
 
 		-- Term actions
-		{ "<leader>jl", "<cmd>TermSelect<cr>", desc = "Term select" },
-		{ "<leader>js", "<cmd>ToggleTermSetName<cr>", desc = "Term set name" },
-		{ "<leader>jk", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term execute" },
-		{ "<leader>jk", ":ToggleTermSendVisualSelection<cr>", desc = "Term execute", mode = "v" },
+		{ "<leader>il", "<cmd>TermSelect<cr>", desc = "Term select" },
+		{ "<leader>is", "<cmd>ToggleTermSetName<cr>", desc = "Term set name" },
+		{ "<leader>ik", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term execute" },
+		{ "<leader>ik", ":ToggleTermSendVisualSelection<cr>", desc = "Term execute", mode = "v" },
 	},
 	config = function()
 		require("toggleterm").setup({
 			size = function(term)
 				if term.direction == "horizontal" then
-					return 15
+					return 20
 				elseif term.direction == "vertical" then
 					return vim.o.columns * 0.5
 				end
