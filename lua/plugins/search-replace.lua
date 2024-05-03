@@ -1,8 +1,8 @@
 return {
   "roobert/search-replace.nvim",
   keys = {
-    { "<leader>ffo", "<cmd>SearchReplaceSingleBufferOpen<CR>", desc = "Open" },
-    { "<leader>ffw", "<cmd>SearchReplaceSingleBufferCWord<CR>", desc = "CWord" },
+    { "<leader>fRo", "<cmd>SearchReplaceSingleBufferOpen<CR>", desc = "Open" },
+    { "<leader>fRw", "<cmd>SearchReplaceSingleBufferCWord<CR>", desc = "CWord" },
     { "<C-r>", "<cmd>SearchReplaceSingleBufferVisualSelection<CR>", desc = "Visual Selection", mode = "v" },
   },
   config = function()

@@ -15,7 +15,7 @@ return {
 			i = { name = "+terms" },
 			f = {
 				name = "+find",
-				f = "+find and replace",
+				R = "+find and replace",
 			},
 			r = {
 				name = "+rails",
@@ -39,7 +39,7 @@ return {
 			h = {
 				name = "+help",
 			},
-      F = {
+      R = {
         name = "+spectre",
       },
       s = {
