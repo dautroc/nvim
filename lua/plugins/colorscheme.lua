@@ -2,6 +2,7 @@ return {
 	{
 		"rebelot/kanagawa.nvim",
     lazy = false,
+    enabled = false,
 		config = function()
 			require("kanagawa").setup({
 				compile = false, -- enable compiling the colorscheme
@@ -31,11 +32,12 @@ return {
 	},
 	{
 		"folke/tokyonight.nvim",
+    enabled = false,
 		lazy = false,
 		priority = 1000,
 		opts = {},
 		config = function()
-			vim.cmd.colorscheme("tokyonight-storm")
+			vim.cmd.colorscheme("catppuccin-frappe")
 		end,
 	},
 
@@ -47,6 +49,7 @@ return {
 	{ "catppuccin/nvim", name = "catppuccin", lazy = false },
 	{
 		"ellisonleao/gruvbox.nvim",
+    enabled = false,
 		lazy = false,
 		config = function()
 			vim.o.background = "dark"
