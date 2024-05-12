@@ -10,6 +10,7 @@ return {
 
 		wk.register({
 			b = { name = "+buffer/bookmark" },
+			j = { name = "+journal" },
 			d = { name = "+devdocs" },
 			c = { name = "+qfixlist" },
 			i = { name = "+terms" },
