@@ -13,10 +13,7 @@ return {
 			d = { name = "+devdocs" },
 			c = { name = "+qfixlist" },
 			i = { name = "+terms" },
-			f = {
-				name = "+find",
-				R = "+find and replace",
-			},
+			f = { name = "+find" },
 			r = {
 				name = "+rails",
 			},
@@ -39,9 +36,6 @@ return {
 			h = {
 				name = "+help",
 			},
-      R = {
-        name = "+spectre",
-      },
       s = {
         name = "+session",
       },
