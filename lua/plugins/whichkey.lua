@@ -30,9 +30,10 @@ return {
 			t = { name = "+test" },
 			l = { name = "+lsp" },
 			o = {
-				name = "+obsidian",
-				f = { name = "+find" },
-        l = { name = "+link" },
+				name = "+org-mode",
+				-- name = "+obsidian",
+				-- f = { name = "+find" },
+    --     l = { name = "+link" },
 			},
 			h = {
 				name = "+help",
