@@ -24,4 +24,9 @@ M.parsers = {
 	"vimdoc",
 }
 
+M.servers = {
+  "ruby-lsp",
+  "solargraph",
+}
+
 return M
