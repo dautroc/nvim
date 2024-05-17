@@ -5,7 +5,6 @@ M.parsers = {
 	"vim",
 	"markdown",
 	"markdown_inline",
-	"latex",
 	"bash",
 	"cpp",
 	"c",
@@ -20,7 +19,6 @@ M.parsers = {
 	"regex",
 	"dockerfile",
 	"ruby",
-	"embedded_template",
 	"vimdoc",
 }
 

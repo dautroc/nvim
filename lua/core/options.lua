@@ -4,7 +4,7 @@ vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
-vim.opt.conceallevel = 0-- so that `` is visible in markdown files
+vim.opt.conceallevel = 1-- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.hlsearch = true -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true -- ignore case in search patterns
@@ -60,5 +60,10 @@ vim.opt.spell = false
 -- vim.g.gruvbox_material_better_performance = 1
 -- vim.g.gruvbox_material_foreground = "mix"
 
--- Python
+-- Obsidian requirements
+vim.g.vim_markdown_frontmatter = 1
+
+-- Nvim 
+vim.g.loaded_perl_provider = 0
 vim.g.python3_host_prog = "~/.venv/bin/python3"
+vim.g.ruby_host_prog = "~/.rbenv/versions/3.0.4/bin/neovim-ruby-host"
