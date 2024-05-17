@@ -10,7 +10,6 @@ end
 
 return {
 	"epwalsh/obsidian.nvim",
-  enabled = false,
   event = "VeryLazy",
 	keys = {
 		{ "<leader>ofs", "<cmd>ObsidianSearch<CR>", desc = "Find by text" },
