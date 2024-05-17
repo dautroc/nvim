@@ -3,7 +3,7 @@ return {
 	event = "LspAttach",
 	keys = {
 		{ "K", "<cmd>Lspsaga hover_doc<cr>", desc = "Lspsaga hover" },
-		{ "gr", "<cmd>Lspsaga finder ref+def<cr>", desc = "Lspsaga ref+def" },
+		{ "gr", "<cmd>Lspsaga finder ref<cr>", desc = "Lspsaga ref" },
 		{ "gR", "<cmd>Lspsaga rename<cr>", desc = "Lspsaga rename" },
 		{ "gd", "<cmd>Lspsaga goto_definition<cr>", desc = "Lspsaga goto definition" },
 		{ "gD", "<cmd>Lspsaga peek_definition<cr>", desc = "Lspsaga peek definition" },
