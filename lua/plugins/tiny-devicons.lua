@@ -5,6 +5,11 @@ return {
 	},
 	event = "VeryLazy",
 	config = function()
-		require("tiny-devicons-auto-colors").setup()
+		-- You can add as many colors as you like. More colors is better to estimate the nearest color for each devicon.
+		local theme_colors = require("catppuccin.palettes").get_palette("macchiato")
+
+		require("tiny-devicons-auto-colors").setup({
+			colors = theme_colors,
+		})
 	end,
 }
