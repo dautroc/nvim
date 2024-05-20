@@ -10,8 +10,8 @@ vim.g.maplocalleader = ","
 -- Magic mode search
 -- Dynamically add "\v" to enable very magic mode for all the useful commands;
 -- "substitute", "global" and "vimgrep".
-keymap("n", "/", [[/\v]], { noremap = true })
-keymap("n", "?", [[?\v]], { noremap = true })
+-- keymap("n", "/", [[/\v]], { noremap = true })
+-- keymap("n", "?", [[?\v]], { noremap = true })
 
 -- Quick actions
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })

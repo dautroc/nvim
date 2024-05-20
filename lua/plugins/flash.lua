@@ -4,12 +4,12 @@ return {
   opts = {
     modes = {
       search = {
-        enabled = false,
+        enabled = true,
       },
       char = {
-        enabled = false,
+        enabled = true,
         jump_labels = true,
-        multi_line = true,
+        multi_line = false,
       },
     },
   },

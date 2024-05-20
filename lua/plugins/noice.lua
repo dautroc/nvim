@@ -31,6 +31,15 @@ return {
 				opts = { skip = true },
 			},
 		},
+		messages = {
+			enabled = false,
+		},
+    popupmenu = {
+      enabled = true
+    },
+    notify = {
+      enabled = false
+    },
 	},
 	dependencies = {
 		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries

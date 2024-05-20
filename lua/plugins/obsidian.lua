@@ -62,12 +62,12 @@ return {
 		},
 		mappings = {
 			-- Smart action depending on context, either follow link or toggle checkbox.
-			["<cr>"] = {
-				action = function()
-					return require("obsidian").util.smart_action()
-				end,
-				opts = { buffer = true, expr = true },
-			},
+			-- ["<cr>"] = {
+			-- 	action = function()
+			-- 		return require("obsidian").util.smart_action()
+			-- 	end,
+			-- 	opts = { buffer = true, expr = true },
+			-- },
 		},
 		-- Optional, customize how note IDs are generated given an optional title.
 		---@param title string|?
