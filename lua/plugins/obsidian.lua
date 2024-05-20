@@ -30,6 +30,7 @@ return {
 		{ "<leader>on", "<cmd>lua newNoteInput()<CR>", desc = "New node" },
 		{ "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Today note" },
 		{ "<leader>oo", "<cmd>ObsidianOpen<CR>", desc = "Open in Obsidian" },
+		{ "<leader>oc", "<cmd>ObsidianToggleCheckbox<CR>", desc = "Toggle checkbox" },
 
 		-- Link
 		{ "<leader>olf", "<cmd>ObsidianFollowLink vsplit<CR>", desc = "Follow link" },
