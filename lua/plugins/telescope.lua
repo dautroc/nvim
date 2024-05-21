@@ -20,7 +20,7 @@ return {
 		-- Find everything
 		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		{ "<leader>ff", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
-		{ "<leader>fb", "<cmd>Telescope file_browser files=false<CR>", desc = "Buffers" },
+		{ "<leader>fb", "<cmd>Telescope file_browser files=false<CR>", desc = "File browers" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		{ "<leader>fY", "<cmd>call SearchYamlKey()<CR>", desc = "Yaml" },
