@@ -7,10 +7,9 @@ return {
 	config = function()
 		require("codesnap").setup({
 			mac_window_bar = true,
-			title = "Hello World!",
-			code_font_family = "CaskaydiaCove Nerd Font",
-			watermark_font_family = "Pacifico",
-			watermark = "",
+			code_font_family = "JetBrains Mono",
+			watermark_font_family = "Monaspace Radon Var",
+			watermark = "Loi Loi",
 			bg_theme = "default",
 			breadcrumbs_separator = "/",
 			has_breadcrumbs = true,

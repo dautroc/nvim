@@ -11,7 +11,7 @@ return {
 				-- * an absolute number of cells when > 1
 				-- * a percentage of the width / height of the editor when <= 1
 				-- * a function that returns the width or the height
-				width = 0.6, -- width of the Zen window
+				width = 0.8, -- width of the Zen window
 				height = 1, -- height of the Zen window
 				-- by default, no options are changed for the Zen window
 				-- uncomment any of the options below, or add other vim.wo options you want to apply
@@ -30,7 +30,7 @@ return {
 				tmux = { enabled = false },
 				wezterm = {
 					enabled = true,
-					font = "+4", -- (10% increase per step)
+					font = "+0", -- (10% increase per step)
 				},
 			},
 		})
