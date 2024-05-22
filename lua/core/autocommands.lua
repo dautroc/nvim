@@ -32,6 +32,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 -- 	end,
 -- })
 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- TERMINAL WINDOW NAVIGATION -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 -- Terminal window navigation
 vim.cmd("autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2")
 
@@ -50,12 +53,20 @@ vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 -- Task Warrior TUI
 local Terminal = require("toggleterm.terminal").Terminal
 local TaskWarrior = Terminal:new({ cmd = "~/./taskwarrior-tui", hidden = true, direction = "float" })
-
 function _task_warrior_toggle()
 	TaskWarrior:toggle()
 end
-
 vim.api.nvim_set_keymap("n", "<leader>j", "<cmd>lua _task_warrior_toggle()<CR>", { noremap = true, silent = true })
+-- Github Dashboard
+local GhDashboard = Terminal:new({ cmd = "gh dash", hidden = true, direction = "float" })
+function _gh_dash_toggle()
+	GhDashboard:toggle()
+end
+vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { noremap = true, silent = true })
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- -- -- TERMINAL WINDOW NAVIGATION -- -- -- --
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 -- Automatically jump to last edit cursor position
 -- vim.api.nvim_create_autocmd('BufReadPost', {
