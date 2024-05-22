@@ -86,7 +86,7 @@ return {
 					suffix = suffix .. string.char(math.random(65, 90))
 				end
 			end
-			return tostring(os.time()) .. "-" .. suffix
+			return tostring(os.date("%Y%m%d")) .. "-" .. suffix
 		end,
 		ui = {
 			enable = false, -- set to false to disable all additional syntax features
