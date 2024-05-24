@@ -15,7 +15,7 @@ return {
 	},
 	keys = {
 		-- Vim mappings
-		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
+    { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
 
 		-- Find everything
 		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
