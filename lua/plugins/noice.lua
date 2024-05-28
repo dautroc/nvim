@@ -35,10 +35,10 @@ return {
 			},
 		},
 		messages = {
-			enabled = true,
+			enabled = false,
 		},
 		popupmenu = {
-			enabled = true,
+			enabled = false,
 		},
 		notify = {
 			enabled = false,

@@ -8,6 +8,7 @@ return {
 		"AckslD/nvim-neoclip.lua",
 		"nvim-telescope/telescope-frecency.nvim",
 		"nvim-telescope/telescope-file-browser.nvim",
+		"debugloop/telescope-undo.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -15,10 +16,10 @@ return {
 	},
 	keys = {
 		-- Vim mappings
-    { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
+		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
 
 		-- Find everything
-		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
+		{ "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Resume" },
 		{ "<leader>ff", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
 		{ "<leader>fb", "<cmd>Telescope file_browser files=false<CR>", desc = "File browers" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
@@ -138,10 +139,10 @@ return {
 					hijack_netrw = true,
 					mappings = {
 						["i"] = {
-              ["<esc>"] = "close",
-              ["<C-u>"] = false,
-              ["<C-j>"] = "move_selection_next",
-              ["<C-k>"] = "move_selection_previous",
+							["<esc>"] = "close",
+							["<C-u>"] = false,
+							["<C-j>"] = "move_selection_next",
+							["<C-k>"] = "move_selection_previous",
 						},
 					},
 				},
@@ -155,7 +156,8 @@ return {
 			"live_grep_args",
 			"neoclip",
 			"frecency",
-      "file_browser"
+			"file_browser",
+      "undo",
 		}
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)
