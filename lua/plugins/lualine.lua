@@ -42,10 +42,6 @@ return {
       path = 1,
     }
 
-		local spaces = function()
-			return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
-		end
-
 		lualine.setup({
 			options = {
 				globalstatus = true,
@@ -60,7 +56,7 @@ return {
 				lualine_a = { "tabs", "mode" },
 				lualine_b = { "branch", "diff", diagnostics },
 				lualine_c = { filename },
-				lualine_x = { diff, spaces, "encoding", filetype },
+				lualine_x = { diff, "encoding", filetype },
 				lualine_y = { location },
 				lualine_z = { "progress" },
 			},
