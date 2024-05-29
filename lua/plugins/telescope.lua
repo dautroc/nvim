@@ -19,7 +19,8 @@ return {
 		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
 
 		-- Find everything
-		{ "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Resume" },
+		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
+		{ "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
 		{ "<leader>ff", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
 		{ "<leader>fb", "<cmd>Telescope file_browser files=false<CR>", desc = "File browers" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
