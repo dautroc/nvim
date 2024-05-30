@@ -1,6 +1,6 @@
 return {
   "nvim-tree/nvim-tree.lua",
-  enabled = true,
+  enabled = false,
   keys = {
     { "<leader>E", "<cmd>NvimTreeFindFile<CR>", desc = "NvimTree find file" },
   },
