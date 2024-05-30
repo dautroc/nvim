@@ -101,6 +101,3 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		vim.notify("Setting WezTerm color scheme to " .. colorscheme, vim.log.levels.INFO)
 	end,
 })
-
--- Donut
-vim.cmd('autocmd VimEnter * Donut')
