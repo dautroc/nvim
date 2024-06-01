@@ -29,31 +29,31 @@ return {
 			},
 			t = { name = "+test" },
 			l = {
-			  name = "+lsp",
-        t = "+trouble"
+				name = "+lsp",
+				t = "+trouble",
 			},
 			o = {
 				name = "+obsidian",
 				f = { name = "+find" },
-        l = { name = "+link" },
+				l = { name = "+link" },
 			},
 			h = {
 				name = "+help",
 			},
-      s = {
-        name = "+session",
-      },
+			s = {
+				name = "+session",
+			},
 		}, { prefix = "<leader>" })
 
-    wk.register({
-      g = {
-        name = "+git",
-        d = { name = "+diffview" },
-      },
-      o = {
-        name = "+obsidian",
-        l = { name = "+link" },
-      }
-    }, { prefix = "<leader>", mode = "v" })
+		wk.register({
+			g = {
+				name = "+git",
+				d = { name = "+diffview" },
+			},
+			o = {
+				name = "+obsidian",
+				l = { name = "+link" },
+			},
+		}, { prefix = "<leader>", mode = "v" })
 	end,
 }
