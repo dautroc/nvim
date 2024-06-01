@@ -1,5 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
+	enabled = false,
 	lazy = false,
 	config = function()
 		-- Using protected call
@@ -37,18 +38,18 @@ return {
 			padding = 0,
 		}
 
-    local filename = {
-      "filename",
-      path = 1,
-    }
+		local filename = {
+			"filename",
+			path = 1,
+		}
 
 		lualine.setup({
 			options = {
 				globalstatus = true,
 				icons_enabled = true,
 				theme = "auto",
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				disabled_filetypes = { "alpha", "dashboard" },
 				always_divide_middle = true,
 			},

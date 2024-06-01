@@ -38,6 +38,7 @@ return {
 	config = function()
 		require("mini.trailspace").setup()
 		require("mini.diff").setup()
+		require("mini.statusline").setup()
     require("mini.splitjoin").setup()
     require("mini.notify").setup()
     require('mini.indentscope').setup()
