@@ -28,7 +28,10 @@ return {
 				u = { name = "+utils" },
 			},
 			t = { name = "+test" },
-			l = { name = "+lsp" },
+			l = {
+			  name = "+lsp",
+        t = "+trouble"
+			},
 			o = {
 				name = "+obsidian",
 				f = { name = "+find" },
