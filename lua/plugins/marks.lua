@@ -1,5 +1,6 @@
 return {
 	"chentoast/marks.nvim",
+  enabled = false,
 	config = function()
 		require("marks").setup({
 			-- whether to map keybinds or not. default true
