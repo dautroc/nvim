@@ -1,7 +1,7 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
-  enabled = false,
+	enabled = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
@@ -27,12 +27,12 @@ return {
 			end,
 		},
 	},
-  keys = {
-    { "<leader>nr", ":Neotree reveal<CR>", desc = "Reveal" },
-    { "<leader>nb", ":Neotree source=buffers<CR>", desc = "Buffers" },
-    { "<leader>ng", ":Neotree source=git_status<CR>", desc = "Git" },
-    { "<leader>nf", ":Neotree source=filesystem<CR>", desc = "File" },
-  },
+	keys = {
+		-- { "<leader>nr", ":Neotree reveal<CR>", desc = "Reveal" },
+		{ "<leader>E", ":Neotree source=buffers<CR>", desc = "Buffers" },
+		-- { "<leader>ng", ":Neotree source=git_status<CR>", desc = "Git" },
+		-- { "<leader>nf", ":Neotree source=filesystem<CR>", desc = "File" },
+	},
 	config = function()
 		-- If you want icons for diagnostic errors, you'll need to define them somewhere:
 		vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
@@ -43,8 +43,8 @@ return {
 		require("neo-tree").setup({
 			close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
 			popup_border_style = "rounded",
-			enable_git_status = true,
-			enable_diagnostics = true,
+			enable_git_status = false,
+			enable_diagnostics = false,
 			open_files_do_not_replace_types = { "terminal", "trouble", "qf" }, -- when opening files, do not use windows containing these filetypes or buftypes
 			sort_case_insensitive = false, -- used when sorting files and directories in the tree
 			sort_function = nil, -- use a custom function for sorting files and directories in the tree
