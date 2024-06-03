@@ -30,7 +30,7 @@ return {
 				tmux = { enabled = false },
 				wezterm = {
 					enabled = true,
-					font = "+0", -- (10% increase per step)
+					font = "+2", -- (10% increase per step)
 				},
 			},
 		})
