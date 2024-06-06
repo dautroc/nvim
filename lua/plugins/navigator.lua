@@ -18,7 +18,7 @@ return {
 	},
 	{
 		"letieu/wezterm-move.nvim",
-		enabled = true,
+		enabled = false,
 		keys = {
 			{
 				"<C-h>",
@@ -54,14 +54,14 @@ return {
 	},
 	{
 		"https://git.sr.ht/~swaits/zellij-nav.nvim",
-		enabled = false,
+		enabled = true,
 		lazy = true,
 		event = "VeryLazy",
 		keys = {
-			{ "<M-h>", "<cmd>ZellijNavigateLeft<cr>", { silent = true, desc = "navigate left" } },
-			{ "<M-j>", "<cmd>ZellijNavigateDown<cr>", { silent = true, desc = "navigate down" } },
-			{ "<M-k>", "<cmd>ZellijNavigateUp<cr>", { silent = true, desc = "navigate up" } },
-			{ "<M-l>", "<cmd>ZellijNavigateRight<cr>", { silent = true, desc = "navigate right" } },
+			{ "<C-h>", "<cmd>ZellijNavigateLeft<cr>", { silent = true, desc = "navigate left" } },
+			{ "<C-j>", "<cmd>ZellijNavigateDown<cr>", { silent = true, desc = "navigate down" } },
+			{ "<C-k>", "<cmd>ZellijNavigateUp<cr>", { silent = true, desc = "navigate up" } },
+			{ "<C-l>", "<cmd>ZellijNavigateRight<cr>", { silent = true, desc = "navigate right" } },
 		},
 		opts = {},
 	},
