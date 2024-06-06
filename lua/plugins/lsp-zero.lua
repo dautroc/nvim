@@ -27,24 +27,24 @@ return {
     --- if you want to know more about lsp-zero and mason.nvim
     --- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
     require('mason').setup({})
-    require('mason-lspconfig').setup({
-      ensure_installed = {},
-      handlers = {
-        lsp_zero.default_setup,
-        lua_ls = function()
-          local lua_opts = lsp_zero.nvim_lua_ls()
-          require('lspconfig').lua_ls.setup(lua_opts)
-        end,
-
-        ruby_lsp = function()
-          require('lspconfig').ruby_lsp.setup({})
-        end,
-
-        solargraph = function()
-          require('lspconfig').solargraph.setup({})
-        end,
-      }
-    })
+    -- require('mason-lspconfig').setup({
+    --   ensure_installed = {},
+    --   handlers = {
+    --     lsp_zero.default_setup,
+    --     lua_ls = function()
+    --       local lua_opts = lsp_zero.nvim_lua_ls()
+    --       require('lspconfig').lua_ls.setup(lua_opts)
+    --     end,
+    --
+    --     -- ruby_lsp = function()
+    --     --   require('lspconfig').ruby_lsp.setup({})
+    --     -- end,
+    --
+    --     -- solargraph = function()
+    --     --   require('lspconfig').solargraph.setup({})
+    --     -- end,
+    --   }
+    -- })
 
     -- Completion
     local cmp = require('cmp')

@@ -18,7 +18,7 @@ return {
 	},
 	{
 		"letieu/wezterm-move.nvim",
-		enabled = false,
+		enabled = true,
 		keys = {
 			{
 				"<C-h>",
@@ -54,7 +54,7 @@ return {
 	},
 	{
 		"https://git.sr.ht/~swaits/zellij-nav.nvim",
-		enabled = true,
+		enabled = false,
 		lazy = true,
 		event = "VeryLazy",
 		keys = {
