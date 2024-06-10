@@ -103,3 +103,4 @@ keymap("n", "<leader>mut", "<cmd>pu=strftime('%b %d, %Y')<cr>", { desc = "Insert
 -- LSP
 keymap("n", "<leader>lm", "<cmd>Mason<cr>", opts)
 keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
+keymap("n", "<leader>ll", "<cmd>LspLog<cr>", opts)

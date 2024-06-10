@@ -51,13 +51,15 @@ end
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 -- Task Warrior TUI
-local Terminal = require("toggleterm.terminal").Terminal
-local TaskWarrior = Terminal:new({ cmd = "~/./taskwarrior-tui", hidden = true, direction = "float" })
-function _task_warrior_toggle()
-	TaskWarrior:toggle()
-end
-vim.api.nvim_set_keymap("n", "<leader>j", "<cmd>lua _task_warrior_toggle()<CR>", { noremap = true, silent = true })
+-- local Terminal = require("toggleterm.terminal").Terminal
+-- local TaskWarrior = Terminal:new({ cmd = "~/./taskwarrior-tui", hidden = true, direction = "float" })
+-- function _task_warrior_toggle()
+-- 	TaskWarrior:toggle()
+-- end
+-- vim.api.nvim_set_keymap("n", "<leader>j", "<cmd>lua _task_warrior_toggle()<CR>", { noremap = true, silent = true })
+ 
 -- Github Dashboard
+local Terminal = require("toggleterm.terminal").Terminal
 local GhDashboard = Terminal:new({ cmd = "gh dash", hidden = true, direction = "float" })
 function _gh_dash_toggle()
 	GhDashboard:toggle()
