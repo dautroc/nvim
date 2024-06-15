@@ -1,6 +1,6 @@
 return {
 	"NStefan002/screenkey.nvim",
-  enabled = false,
+  enabled = true,
 	cmd = "Screenkey",
 	version = "*",
 	config = true,
