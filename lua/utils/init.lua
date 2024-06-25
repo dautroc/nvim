@@ -20,11 +20,13 @@ M.parsers = {
 	"dockerfile",
 	"ruby",
 	"vimdoc",
+	"norg",
+	"norg_meta",
 }
 
 M.servers = {
-  "ruby-lsp",
-  "solargraph",
+	"ruby-lsp",
+	"solargraph",
 }
 
 return M

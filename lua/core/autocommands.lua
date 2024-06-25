@@ -66,6 +66,13 @@ function _gh_dash_toggle()
 end
 vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { noremap = true, silent = true })
 
+-- Serpl
+local Serpl = Terminal:new({ cmd = "serpl", hidden = true, direction = "float" })
+function _serpl_toggle()
+	Serpl:toggle()
+end
+vim.api.nvim_set_keymap("n", "<leader>fa", "<cmd>lua _serpl_toggle()<CR>", { noremap = true, silent = true })
+
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 -- -- -- TERMINAL WINDOW NAVIGATION -- -- -- --
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
