@@ -1,9 +1,10 @@
 return {
 	"mistricky/codesnap.nvim",
+	event = "BufRead",
 	build = "make",
-  keys = {
-    { "<leader>mm", "<cmd>CodeSnap<CR>", desc = "Capture code", mode = "v" },
-  },
+	keys = {
+		{ "<leader>mm", "<cmd>CodeSnap<CR>", desc = "Capture code", mode = "v" },
+	},
 	config = function()
 		require("codesnap").setup({
 			mac_window_bar = true,
@@ -12,7 +13,9 @@ return {
 			watermark = "",
 			bg_theme = "default",
 			breadcrumbs_separator = "/",
+			has_line_number = true,
 			has_breadcrumbs = true,
+			show_workspace = true,
 		})
 	end,
 }
