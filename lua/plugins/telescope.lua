@@ -35,7 +35,7 @@ return {
 		{ "<leader>fc", "<cmd>Telescope colorscheme<CR>", desc = "Colorscheme" },
 		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Files" },
 		{ "<leader>fO", "<cmd>Telescope frecency workspace=CWD<CR>", desc = "Frecency files" },
-		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
+		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old " },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy finder" },
 		{
 			"<leader>fs",

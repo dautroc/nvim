@@ -57,6 +57,12 @@ keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
+-- Resize
+keymap("n", "<down>", ":resize +2<cr>")
+keymap("n", "<up>", ":resize -2<cr>")
+keymap("n", "<right>", ":vertical resize +2<cr>")
+keymap("n", "<left>", ":vertical resize -2<cr>")
+
 -- Go mode
 keymap({ "n", "v" }, "gh", "^", { desc = "Move to line start", silent = true })
 keymap({ "n", "v" }, "gl", "$", { desc = "Move to line end", silent = true })
@@ -73,7 +79,7 @@ keymap("n", "<esc>", "<cmd>noh<cr>", opts)
 -- keymap("n", "<leader>h", "<cmd>noh<cr>", opts)
 
 -- Better paste
-keymap("v", "p", '"_dP', opts)
+-- keymap("v", "p", '"_dP', opts)
 keymap("n", "x", '"_x', opts)
 keymap("n", "X", '"_X', opts)
 

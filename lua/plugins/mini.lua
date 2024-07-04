@@ -61,6 +61,7 @@ return {
     require("mini.splitjoin").setup()
     require("mini.notify").setup()
     require('mini.indentscope').setup()
+    require('mini.icons').setup()
 		require("mini.files").setup({
 			mappings = {
 				close = "q",
@@ -88,5 +89,6 @@ return {
 				width_preview = 100,
 			},
 		})
+
 	end,
 }
