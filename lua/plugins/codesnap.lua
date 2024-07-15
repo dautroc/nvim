@@ -16,6 +16,8 @@ return {
 			has_line_number = true,
 			has_breadcrumbs = true,
 			show_workspace = true,
+      bg_x_padding = 20,
+      bg_y_padding = 20,
 		})
 	end,
 }
