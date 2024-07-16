@@ -29,6 +29,7 @@ return {
 			{ "<leader>r", group = "rails" },
 			{ "<leader>s", group = "session" },
 			{ "<leader>t", group = "test" },
+			{ "<leader>y", group = "yaml" },
 		})
 
 		wk.add({

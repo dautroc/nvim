@@ -26,7 +26,6 @@ return {
 		{ "<leader>fb", "<cmd>Telescope file_browser files=false<CR>", desc = "File browers" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
-		{ "<leader>fY", "<cmd>call SearchYamlKey()<CR>", desc = "Yaml" },
 		{
 			"<leader>fw",
 			"<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>",
