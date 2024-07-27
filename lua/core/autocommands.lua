@@ -73,13 +73,6 @@ vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { n
 -- end
 -- vim.api.nvim_set_keymap("n", "<leader>fa", "<cmd>lua _serpl_toggle()<CR>", { noremap = true, silent = true })
 
--- Suprerfile
-local Spf = Terminal:new({ cmd = "spf .", hidden = true, direction = "float" })
-function _spf_toggle()
-	Spf:toggle()
-end
-vim.api.nvim_set_keymap("n", "<leader>E", "<cmd>lua _spf_toggle()<CR>", { noremap = true, silent = true })
-
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 -- -- -- TERMINAL WINDOW NAVIGATION -- -- -- --
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
