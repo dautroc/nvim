@@ -27,6 +27,7 @@ M.parsers = {
 M.servers = {
 	"ruby-lsp",
 	"solargraph",
+  "tsserver",
 }
 
 return M

@@ -18,7 +18,6 @@ return {
 			{ "<leader>gd", group = "diffview" },
 			{ "<leader>h", group = "help" },
 			{ "<leader>i", group = "terms" },
-			{ "<leader>j", group = "journal" },
 			{ "<leader>l", group = "lsp" },
 			{ "<leader>lt", desc = "+trouble" },
 			{ "<leader>m", group = "misc" },

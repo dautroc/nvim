@@ -6,7 +6,6 @@ return {
 		"nvim-telescope/telescope-project.nvim",
 		"nvim-telescope/telescope-live-grep-args.nvim",
 		"AckslD/nvim-neoclip.lua",
-		"nvim-telescope/telescope-file-browser.nvim",
 		"debugloop/telescope-undo.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
@@ -16,13 +15,12 @@ return {
 	keys = {
 		-- Vim mappings
 		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
-		{ "<leader>j", "<cmd>Telescope buffers<CR>", desc = "Buffer jump" },
+		{ "<leader>fj", "<cmd>Telescope buffers<CR>", desc = "Buffer jump" },
 
 		-- Find everything
 		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		{ "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
-		{ "<leader>ff", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
-		{ "<leader>fb", "<cmd>Telescope file_browser files=false<CR>", desc = "File browers" },
+		{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Buffers" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		{
@@ -133,19 +131,6 @@ return {
 						},
 					},
 				},
-				file_browser = {
-					theme = "ivy",
-					-- disables netrw and use telescope-file-browser in its place
-					hijack_netrw = true,
-					mappings = {
-						["i"] = {
-							["<esc>"] = "close",
-							["<C-u>"] = false,
-							["<C-j>"] = "move_selection_next",
-							["<C-k>"] = "move_selection_previous",
-						},
-					},
-				},
 			},
 		})
 
@@ -155,7 +140,6 @@ return {
 			"project",
 			"live_grep_args",
 			"neoclip",
-			"file_browser",
       "undo",
 		}
 		for _, ext in ipairs(extensions) do
