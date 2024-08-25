@@ -29,8 +29,7 @@ return {
 			{ "<leader>s", group = "session" },
 			{ "<leader>t", group = "test" },
 			{ "<leader>y", group = "yaml" },
-			{ "<leader>N", group = "neo-tree" },
-			{ "<leader>n", group = "minimap" },
+			{ "<leader>n", group = "neo-tree" },
 		})
 
 		wk.add({
