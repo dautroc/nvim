@@ -2,7 +2,7 @@
 return {
 	"yetone/avante.nvim",
 	event = "VeryLazy",
-  enabled = true,
+  enabled = false, -- Copilot is not supported, waiting for the next release
 	build = "make",
 	opts = {
 		---@alias Provider "openai" | "claude" | "azure"  | "copilot" | [string]

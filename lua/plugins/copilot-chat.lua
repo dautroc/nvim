@@ -6,6 +6,7 @@ return {
       { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
       { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
     },
+    build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
       debug = true, -- Enable debugging
       prompts = {
@@ -65,7 +66,7 @@ return {
         function()
           require("CopilotChat").open()
         end,
-        desc = "CopilotChat - Open",
+        desc = "Open chat",
       },
       {
         "<leader>hq",
@@ -75,7 +76,7 @@ return {
             require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
           end
         end,
-        desc = "CopilotChat - Quick chat",
+        desc = "Quick chat",
       },
       {
         "<leader>hp",
@@ -83,7 +84,7 @@ return {
           local actions = require("CopilotChat.actions")
           require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
         end,
-        desc = "CopilotChat - Prompt actions",
+        desc = "Prompt actions",
       },
     },
   },

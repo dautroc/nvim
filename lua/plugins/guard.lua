@@ -14,7 +14,7 @@ return {
 
     -- use lsp to format first then use rubocop format
     ft("ruby"):fmt("lsp"):append("rubocop"):lint("rubocop")
-    ft("typescriptreact"):lint("eslint_d")
+    ft("typescriptreact"):fmt("lsp"):append("prettier"):lint("eslint_d")
 
     require("guard").setup({
       fmt_on_save = false,

@@ -89,7 +89,11 @@ return {
 				},
 				oldfiles = {
 					cwd_only = true,
-					path_display = { "absolute" },
+          path_display = {
+            filename_first = {
+              reverse_directories = false,
+            },
+          },
 					previewer = true,
 				},
 				find_files = {
