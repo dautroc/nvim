@@ -15,6 +15,8 @@ return {
     -- use lsp to format first then use rubocop format
     ft("ruby"):fmt("lsp"):append("rubocop"):lint("rubocop")
     ft("typescriptreact"):fmt("lsp"):append("prettier"):lint("eslint_d")
+    ft("go"):fmt("lsp"):append("gofumt"):lint("golangci-lint")
+    ft("python"):fmt("lsp"):append("black"):lint("flake8")
 
     require("guard").setup({
       fmt_on_save = false,
