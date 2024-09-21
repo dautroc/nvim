@@ -9,7 +9,7 @@ return {
   config = function()
     local ft = require("guard.filetype")
     -- use stylua to format lua files and no linter
-    ft("lua"):fmt("stylua")
+    ft("lua"):fmt("lsp"):append("stylua"):lint("luacheck")
     ft("json"):fmt("prettier")
 
     -- use lsp to format first then use rubocop format

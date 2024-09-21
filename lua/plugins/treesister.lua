@@ -14,14 +14,21 @@ return {
 		treesitter_config.setup({
 			ensure_installed = require("utils").parsers,
 			sync_install = false,
-
-			matchup = {
-				enable = true,
-			},
-			highlight = {
-				enable = true,
-			},
-			indent = { enable = true, disable = { "python", "css" } },
+      auto_install = true,
+      ignore_install = {},
+			highlight = { enable = true },
+      incremental_selection = {
+        enable = false,
+        -- Conflicts keymaps with other plugins
+        keymaps = {
+          init_selection = "gnn",
+          node_incremental = "grn",
+          scope_incremental = "grc",
+          node_decremental = "grm",
+        },
+      },
+			indent = { enable = true },
+			matchup = { enable = true },
 		})
 	end,
 }

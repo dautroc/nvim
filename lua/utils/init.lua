@@ -1,6 +1,8 @@
 local M = {}
 
 M.parsers = {
+  "python",
+  "go",
 	"lua",
 	"vim",
 	"markdown",
@@ -28,6 +30,9 @@ M.servers = {
 	"ruby-lsp",
 	"solargraph",
   "tsserver",
+  "golangci-lint-langserver",
+  "gopls",
+  "pyright",
 }
 
 return M
