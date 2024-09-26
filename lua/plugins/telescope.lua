@@ -8,6 +8,7 @@ return {
 		"AckslD/nvim-neoclip.lua",
 		"debugloop/telescope-undo.nvim",
 		"nvim-telescope/telescope-frecency.nvim",
+		"tsakirist/telescope-lazy.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -136,6 +137,51 @@ return {
 						},
 					},
 				},
+
+				lazy = {
+					-- <C-o>	Open selected plugin repository in browser
+					-- <M-b>	Open selected plugin with file-browser
+					-- <C-f>	Open selected plugin with find files
+					-- <C-g>	Open selected plugin with live grep (will use egrepify if installed)
+					-- <C-t>	Open selected plugin in a terminal
+					-- <C-b>	Open lazy plugins picker, works only after having called first another action
+					-- <C-r>f	Open lazy root with find files
+					-- <C-r>g	Open lazy root with live grep (will use egrepify if installed)
+					-- <C-c>d	Change the current working directory to the path of the selected plugin
+
+					-- Optional theme (the extension doesn't set a default theme)
+					theme = "ivy",
+					-- The below configuration options are the defaults
+					show_icon = true,
+					mappings = {
+						open_in_browser = "<C-o>",
+						open_in_file_browser = "<M-b>",
+						open_in_find_files = "<C-f>",
+						open_in_live_grep = "<C-g>",
+						open_in_terminal = "<C-t>",
+						open_plugins_picker = "<C-b>",
+						open_lazy_root_find_files = "<C-r>f",
+						open_lazy_root_live_grep = "<C-r>g",
+						change_cwd_to_plugin = "<C-c>d",
+					},
+					actions_opts = {
+						open_in_browser = {
+							auto_close = false,
+						},
+						change_cwd_to_plugin = {
+							auto_close = false,
+						},
+					},
+					terminal_opts = {
+						relative = "editor",
+						style = "minimal",
+						border = "rounded",
+						title = "Telescope lazy",
+						title_pos = "center",
+						width = 0.5,
+						height = 0.5,
+					},
+				},
 			},
 		})
 
@@ -146,7 +192,8 @@ return {
 			"live_grep_args",
 			"neoclip",
 			"undo",
-      "frecency",
+			"frecency",
+			"lazy",
 		}
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)
