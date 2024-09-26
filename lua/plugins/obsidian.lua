@@ -51,6 +51,7 @@ return {
 		daily_notes = {
 			folder = "daily",
 			date_format = "%Y-%m-%d",
+      template = "daily.md",
 		},
 		completion = {
 			nvim_cmp = true,

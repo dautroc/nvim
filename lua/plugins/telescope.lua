@@ -7,6 +7,7 @@ return {
 		"nvim-telescope/telescope-live-grep-args.nvim",
 		"AckslD/nvim-neoclip.lua",
 		"debugloop/telescope-undo.nvim",
+		"nvim-telescope/telescope-frecency.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -29,8 +30,8 @@ return {
 			desc = "Grep string",
 		},
 		{ "<leader>fc", "<cmd>Telescope colorscheme<CR>", desc = "Colorscheme" },
-		{ "<leader><leader>", "<cmd>Telescope find_files<CR>", desc = "Files" },
-		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old " },
+		{ "<leader><leader>", "<cmd>Telescope smart_open<CR>", desc = "Files" },
+		{ "<leader>fo", "<cmd>Telescope frecency workspace=CWD<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy finder" },
 		{
 			"<leader>fs",
@@ -89,11 +90,11 @@ return {
 				},
 				oldfiles = {
 					cwd_only = true,
-          path_display = {
-            filename_first = {
-              reverse_directories = false,
-            },
-          },
+					path_display = {
+						filename_first = {
+							reverse_directories = false,
+						},
+					},
 					previewer = true,
 				},
 				find_files = {
@@ -144,7 +145,8 @@ return {
 			"project",
 			"live_grep_args",
 			"neoclip",
-      "undo",
+			"undo",
+      "frecency",
 		}
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)

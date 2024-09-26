@@ -104,6 +104,7 @@ keymap("x", ">", ">gv", opts)
 keymap("n", "<leader>mus", "<cmd>%!sort<cr>", opts)
 keymap("n", "<leader>muu", "<cmd>%!uniq<cr>", opts)
 keymap("n", "<leader>mut", "<cmd>pu=strftime('%b %d, %Y')<cr>", { desc = "Insert date", silent = true })
+keymap("n", "<leader>muv", "ggVG", { desc = "Select all in current buffer", silent = true })
 
 -- LSP
 keymap("n", "<leader>lm", "<cmd>Mason<cr>", opts)
