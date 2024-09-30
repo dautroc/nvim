@@ -34,6 +34,7 @@ return {
 		{ "<leader><leader>", "<cmd>Telescope smart_open<CR>", desc = "Files" },
 		{ "<leader>fo", "<cmd>Telescope frecency workspace=CWD<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy finder" },
+		{ "<leader>fl", "<cmd>Telescope lazy<CR>", desc = "Lazy" },
 		{
 			"<leader>fs",
 			"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
@@ -115,6 +116,7 @@ return {
 					override_file_sorter = true, -- override the file sorter
 					case_mode = "smart_case", -- or "ignore_case" or "respect_case" the default case_mode is "smart_case"
 				},
+
 				project = {
 					base_dirs = {
 						{ path = "~/workspace", max_depth = 2 },
@@ -125,6 +127,7 @@ return {
 					search_by = "title",
 					sync_with_nvim_tree = false, -- default false
 				},
+
 				live_grep_args = {
 					auto_quoting = true,
 					mappings = {
@@ -181,6 +184,10 @@ return {
 						width = 0.5,
 						height = 0.5,
 					},
+				},
+
+				smart_open = {
+					cwd_only = true,
 				},
 			},
 		})
