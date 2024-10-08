@@ -22,7 +22,6 @@ return {
 		-- Find everything
 		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		{ "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
-		{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Buffers" },
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
 		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		{
@@ -32,7 +31,8 @@ return {
 		},
 		{ "<leader>fc", "<cmd>Telescope colorscheme<CR>", desc = "Colorscheme" },
 		{ "<leader><leader>", "<cmd>Telescope smart_open<CR>", desc = "Files" },
-		{ "<leader>fo", "<cmd>Telescope frecency workspace=CWD<CR>", desc = "Old files" },
+		{ "<leader>ff", "<cmd>Telescope frecency workspace=CWD<CR>", desc = "Frecency" },
+		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy finder" },
 		{ "<leader>fl", "<cmd>Telescope lazy<CR>", desc = "Lazy" },
 		{

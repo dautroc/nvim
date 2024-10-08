@@ -43,7 +43,6 @@ return {
 	lazy = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"hrsh7th/nvim-cmp",
 		"nvim-telescope/telescope.nvim",
 	},
 	opts = {
@@ -52,9 +51,6 @@ return {
 			folder = "daily",
 			date_format = "%Y-%m-%d",
       template = "daily.md",
-		},
-		completion = {
-			nvim_cmp = true,
 		},
 		templates = {
 			subdir = "templates",

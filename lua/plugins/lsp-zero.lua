@@ -13,8 +13,6 @@ return {
 		{ "williamboman/mason-lspconfig.nvim" },
 
 		-- Autocompletion
-		{ "hrsh7th/nvim-cmp" }, -- Required
-		{ "hrsh7th/cmp-nvim-lsp" }, -- Required
 		{ "L3MON4D3/LuaSnip" }, -- Required
 	},
   config = function()
@@ -44,18 +42,6 @@ return {
           require('lspconfig').solargraph.setup({})
         end,
       }
-    })
-
-    -- Completion
-    local cmp = require('cmp')
-    local cmp_format = lsp_zero.cmp_format()
-    cmp.setup({
-      formatting = cmp_format,
-      mapping = cmp.mapping.preset.insert({
-        -- scroll up and down the documentation window
-        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-d>'] = cmp.mapping.scroll_docs(4),
-      }),
     })
 
     -- Custom servers
