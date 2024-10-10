@@ -41,6 +41,12 @@ keymap(
 	{ desc = "Copy buffer path with line number" }
 )
 
+-- Navigation
+keymap("n", "<c-h>", "<c-w>h", { desc = "Navigate left" })
+keymap("n", "<c-j>", "<c-w>j", { desc = "Navigate down" })
+keymap("n", "<c-k>", "<c-w>k", { desc = "Navigate up" })
+keymap("n", "<c-l>", "<c-w>l", { desc = "Navigate right" })
+
 -- Quickfix list
 keymap("n", "<leader>cn", "<cmd>cnext<cr>")
 keymap("n", "<leader>cp", "<cmd>cprev<cr>")

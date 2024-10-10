@@ -99,7 +99,7 @@ end, {})
 -- end, {})
 
 return {
-  { "nvchad/volt", lazy = true },
-  { "nvchad/menu", lazy = true },
+  { "nvchad/volt", lazy = true, enabled = false },
+  { "nvchad/menu", lazy = true, enabled = false },
 }
 
