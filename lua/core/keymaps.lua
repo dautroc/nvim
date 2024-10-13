@@ -42,10 +42,10 @@ keymap(
 )
 
 -- Navigation
-keymap("n", "<c-h>", "<c-w>h", { desc = "Navigate left" })
-keymap("n", "<c-j>", "<c-w>j", { desc = "Navigate down" })
-keymap("n", "<c-k>", "<c-w>k", { desc = "Navigate up" })
-keymap("n", "<c-l>", "<c-w>l", { desc = "Navigate right" })
+-- keymap("n", "<c-h>", "<c-w>h", { desc = "Navigate left" })
+-- keymap("n", "<c-j>", "<c-w>j", { desc = "Navigate down" })
+-- keymap("n", "<c-k>", "<c-w>k", { desc = "Navigate up" })
+-- keymap("n", "<c-l>", "<c-w>l", { desc = "Navigate right" })
 
 -- Quickfix list
 keymap("n", "<leader>cn", "<cmd>cnext<cr>")
@@ -115,4 +115,3 @@ keymap("n", "<leader>muv", "ggVG", { desc = "Select all in current buffer", sile
 -- LSP
 keymap("n", "<leader>lm", "<cmd>Mason<cr>", opts)
 keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
-keymap("n", "<leader>ll", "<cmd>LspLog<cr>", opts)

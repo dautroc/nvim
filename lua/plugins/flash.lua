@@ -8,7 +8,7 @@ return {
       },
       char = {
         enabled = true,
-        jump_labels = false,
+        jump_labels = true,
         multi_line = false,
       },
     },

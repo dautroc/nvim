@@ -2,7 +2,7 @@ return {
   -- Tmux
 	-- {
 	-- 	"alexghergh/nvim-tmux-navigation",
-	-- 	enabled = false,
+	-- 	enabled = true,
 	-- 	keys = {
 	-- 		{ "<C-h>", "<cmd>NvimTmuxNavigateLeft<CR>" },
 	-- 		{ "<C-j>", "<cmd>NvimTmuxNavigateDown<CR>" },
@@ -19,42 +19,41 @@ return {
 	-- },
 
   -- Wezterm
-	-- {
-	-- 	"letieu/wezterm-move.nvim",
-	-- 	enabled = false,
-	-- 	keys = {
-	-- 		{
-	-- 			"<C-h>",
-	-- 			function()
-	-- 				require("wezterm-move").move("h")
-	-- 			end,
-	-- 		},
-	-- 		{
-	-- 			"<C-j>",
-	-- 			function()
-	-- 				require("wezterm-move").move("j")
-	-- 			end,
-	-- 		},
-	-- 		{
-	-- 			"<C-k>",
-	-- 			function()
-	-- 				require("wezterm-move").move("k")
-	-- 			end,
-	-- 		},
-	-- 		{
-	-- 			"<C-l>",
-	-- 			function()
-	-- 				require("wezterm-move").move("l")
-	-- 			end,
-	-- 		},
-	-- 		{
-	-- 			"<C-;>",
-	-- 			function()
-	-- 				require("wezterm-move").move("j")
-	-- 			end,
-	-- 		},
-	-- 	},
-	-- },
+	{
+		"letieu/wezterm-move.nvim",
+		keys = {
+			{
+				"<C-h>",
+				function()
+					require("wezterm-move").move("h")
+				end,
+			},
+			{
+				"<C-j>",
+				function()
+					require("wezterm-move").move("j")
+				end,
+			},
+			{
+				"<C-k>",
+				function()
+					require("wezterm-move").move("k")
+				end,
+			},
+			{
+				"<C-l>",
+				function()
+					require("wezterm-move").move("l")
+				end,
+			},
+			{
+				"<C-;>",
+				function()
+					require("wezterm-move").move("j")
+				end,
+			},
+		},
+	},
 
   -- Zellij
   -- {

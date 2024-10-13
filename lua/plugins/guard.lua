@@ -4,7 +4,8 @@ return {
     "nvimdev/guard-collection",
   },
   keys = {
-    { "gq", "<cmd>GuardFmt<cr>", desc = "Format code" },
+    { "<leader>lf", "<cmd>Guard fmt<cr>", desc = "Guard format" },
+    { "<leader>ll", "<cmd>Guard info<cr>", desc = "Guard info" },
   },
   config = function()
     local ft = require("guard.filetype")
@@ -15,12 +16,12 @@ return {
     -- use lsp to format first then use rubocop format
     ft("ruby"):fmt("lsp"):append("rubocop"):lint("rubocop")
     ft("typescriptreact"):fmt("lsp"):append("prettier"):lint("eslint_d")
-    ft("go"):fmt("lsp"):append("gofumt"):lint("golangci-lint")
+    -- ft("go"):fmt("lsp"):append("gofumt"):lint("golangci-lint")
     ft("python"):fmt("lsp"):append("black"):lint("flake8")
 
-    require("guard").setup({
+    vim.g.guard_config = {
       fmt_on_save = false,
       lsp_as_default_formatter = true,
-    })
+    }
   end,
 }
