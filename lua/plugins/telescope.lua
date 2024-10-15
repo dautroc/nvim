@@ -1,3 +1,6 @@
+local file_ignore_patterns =
+	{ "*.git/*", "node_modules", ".idea", "vendor", ".venv/", ".cache", ".DS_Store", "*/tmp/*" }
+
 return {
 	"nvim-telescope/telescope.nvim",
 	cmd = { "Telescope" },
@@ -9,6 +12,11 @@ return {
 		"debugloop/telescope-undo.nvim",
 		"nvim-telescope/telescope-frecency.nvim",
 		"tsakirist/telescope-lazy.nvim",
+    {
+      "danielfalk/smart-open.nvim",
+      branch = "0.2.x",
+      dependencies = { "kkharji/sqlite.lua" },
+    },
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -76,7 +84,7 @@ return {
 						reverse_directories = false,
 					},
 				},
-				file_ignore_patterns = { ".git/", "node_modules", ".idea", "vendor" },
+				file_ignore_patterns = file_ignore_patterns,
 				mappings = {
 					i = {
 						["<esc>"] = "close",
@@ -188,6 +196,10 @@ return {
 
 				smart_open = {
 					cwd_only = true,
+					show_scores = true,
+					ignore_patterns = file_ignore_patterns,
+					disable_devicons = false,
+					open_buffer_indicators = { previous = "👀", others = "🙈" },
 				},
 			},
 		})
@@ -201,6 +213,7 @@ return {
 			"undo",
 			"frecency",
 			"lazy",
+      "smart_open",
 		}
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)
