@@ -13,36 +13,37 @@ return {
 			{ "<leader>b", group = "buffer/bookmark" },
 			{ "<leader>c", group = "qfixlist" },
 			{ "<leader>d", group = "devdocs" },
+      -- e for tree explorer
 			{ "<leader>f", group = "find" },
 			{ "<leader>g", group = "git" },
 			{ "<leader>gd", group = "diffview" },
 			{ "<leader>h", group = "help" },
 			{ "<leader>i", group = "terms" },
-
-			{ "<leader>j", group = "just help!" },
-			{ "<leader>ja", desc = "Ask" },
-			{ "<leader>jr", desc = "Refresh" },
-			{ "<leader>je", desc = "Edit" },
-			{ "<leader>jd", desc = "Debug" },
-			{ "<leader>jh", desc = "Hint" },
-
+      -- j is available
+      -- k is available
 			{ "<leader>l", group = "lsp" },
 			{ "<leader>lt", desc = "+trouble" },
 			{ "<leader>m", group = "misc" },
-			{ "<leader>mu", group = "utils" },
 			{ "<leader>n", group = "neo-tree" },
 			{ "<leader>o", group = "obsidian" },
 			{ "<leader>of", group = "find" },
 			{ "<leader>ol", group = "link" },
+      -- p is available
+      -- q is for quit
 			{ "<leader>r", group = "rails" },
 			{ "<leader>s", group = "session" },
 			{ "<leader>t", group = "test" },
-			{ "<leader>y", group = "yaml" },
+			{ "<leader>u", group = "utils" },
+      -- v for vertical split
+      -- w for write buffer
+      -- y is available
+      -- z is for zen mode
 		})
 
 		wk.add({
 			{
 				mode = { "v" },
+				{ "<leader>a", group = "+avante" },
 				{ "<leader>g", group = "git" },
 				{ "<leader>gd", group = "diffview" },
 				{ "<leader>o", group = "obsidian" },

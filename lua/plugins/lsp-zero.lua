@@ -38,9 +38,9 @@ return {
           require('lspconfig').ruby_lsp.setup({})
         end,
 
-        solargraph = function()
-          require('lspconfig').solargraph.setup({})
-        end,
+        -- solargraph = function()
+        --   require('lspconfig').solargraph.setup({})
+        -- end,
       }
     })
 

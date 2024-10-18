@@ -127,7 +127,7 @@ return {
 			"fuzzy_ls",
 			"lua_ls",
 			"pyright",
-			"solargraph",
+			-- "solargraph",
 		}
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 

@@ -10,8 +10,8 @@ vim.g.maplocalleader = ","
 -- Magic mode search
 -- Dynamically add "\v" to enable very magic mode for all the useful commands;
 -- "substitute", "global" and "vimgrep".
--- keymap("n", "/", [[/\v]], { noremap = true })
--- keymap("n", "?", [[?\v]], { noremap = true })
+keymap("n", "/", [[/\v]], { noremap = true })
+keymap("n", "?", [[?\v]], { noremap = true })
 
 -- Quick actions
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
@@ -84,7 +84,7 @@ keymap("n", "#", "#zzzv", opts)
 keymap("n", "<esc>", "<cmd>noh<cr>", opts)
 
 -- Better paste
--- keymap("v", "p", '"_dP', opts)
+keymap("v", "p", '"_dP', opts)
 keymap("n", "x", '"_x', opts)
 keymap("n", "X", '"_X', opts)
 
@@ -107,10 +107,10 @@ keymap("x", "<", "<gv", opts)
 keymap("x", ">", ">gv", opts)
 
 -- Utils
-keymap("n", "<leader>mus", "<cmd>%!sort<cr>", opts)
-keymap("n", "<leader>muu", "<cmd>%!uniq<cr>", opts)
-keymap("n", "<leader>mut", "<cmd>pu=strftime('%b %d, %Y')<cr>", { desc = "Insert date", silent = true })
-keymap("n", "<leader>muv", "ggVG", { desc = "Select all in current buffer", silent = true })
+keymap("n", "<leader>us", "<cmd>%!sort<cr>", opts)
+keymap("n", "<leader>uu", "<cmd>%!uniq<cr>", opts)
+keymap("n", "<leader>ut", "<cmd>pu=strftime('%b %d, %Y')<cr>", { desc = "Insert date", silent = true })
+keymap("n", "<leader>uv", "ggVG", { desc = "Select all in current buffer", silent = true })
 
 -- LSP
 keymap("n", "<leader>lm", "<cmd>Mason<cr>", opts)

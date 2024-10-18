@@ -63,7 +63,16 @@ vim.opt.spell = false
 -- Obsidian requirements
 vim.g.vim_markdown_frontmatter = 1
 
--- Nvim 
+-- Nvim
 vim.g.loaded_perl_provider = 0
 vim.g.python3_host_prog = "~/.venv/bin/python3"
 vim.g.ruby_host_prog = "~/.rbenv/versions/3.0.4/bin/neovim-ruby-host"
+
+-- Lsp
+vim.diagnostic.config({
+  underline = {
+    severity = {
+      min = vim.diagnostic.severity.WARN, -- Disable underline for warning and above (ERROR, WARN)
+    },
+  },
+})
