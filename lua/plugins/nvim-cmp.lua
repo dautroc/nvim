@@ -28,6 +28,7 @@ local cmp_kinds = {
 
 return {
 	"hrsh7th/nvim-cmp",
+  enable = true,
 	event = "InsertEnter",
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
