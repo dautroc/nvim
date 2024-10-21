@@ -29,7 +29,7 @@ vim.api.nvim_create_autocmd("User", {
 return {
 	"echasnovski/mini.nvim",
 	keys = {
-		{ "<leader>e", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>", desc = "Mini file current" },
+		-- { "<leader>e", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>", desc = "Mini file current" },
 		{ "gS", "<CMD>lua MiniSplitjoin.toggle()<CR>", desc = "Mini split join" },
 		{ "<leader>mt", "<CMD>lua MiniTrailspace.trim()<CR>", desc = "Mini Trim" },
 	},
@@ -62,33 +62,32 @@ return {
     require("mini.notify").setup()
     require('mini.indentscope').setup()
     require('mini.icons').setup()
-		require("mini.files").setup({
-			mappings = {
-				close = "q",
-				go_in = "l",
-				go_in_plus = "<CR>",
-				go_out = "h",
-				go_out_plus = "H",
-				reset = "<BS>",
-        reveal_cwd  = '@',
-				show_help = "g?",
-				synchronize = "w",
-				trim_left = "<",
-				trim_right = ">",
-			},
-			windows = {
-				-- Maximum number of windows to show side by side
-				max_number = math.huge,
-				-- Whether to show preview of file/directory under cursor
-				preview = true,
-				-- Width of focused window
-				width_focus = 50,
-				-- Width of non-focused window
-				width_nofocus = 15,
-				-- Width of preview window
-				width_preview = 100,
-			},
-		})
-
+		-- require("mini.files").setup({
+		-- 	mappings = {
+		-- 		close = "q",
+		-- 		go_in = "l",
+		-- 		go_in_plus = "<CR>",
+		-- 		go_out = "h",
+		-- 		go_out_plus = "H",
+		-- 		reset = "<BS>",
+  --       reveal_cwd  = '@',
+		-- 		show_help = "g?",
+		-- 		synchronize = "w",
+		-- 		trim_left = "<",
+		-- 		trim_right = ">",
+		-- 	},
+		-- 	windows = {
+		-- 		-- Maximum number of windows to show side by side
+		-- 		max_number = math.huge,
+		-- 		-- Whether to show preview of file/directory under cursor
+		-- 		preview = true,
+		-- 		-- Width of focused window
+		-- 		width_focus = 50,
+		-- 		-- Width of non-focused window
+		-- 		width_nofocus = 15,
+		-- 		-- Width of preview window
+		-- 		width_preview = 100,
+		-- 	},
+		-- })
 	end,
 }

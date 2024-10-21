@@ -80,7 +80,7 @@ keymap({ "n", "v" }, "H", "<cmd>bprev<cr>", { desc = "Previous buffer", silent =
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 keymap("n", "*", "*zzzv", opts)
-keymap("n", "#", "#zzzv", opts)
+keymap("n", "#", "*zzzv", opts)
 keymap("n", "<esc>", "<cmd>noh<cr>", opts)
 
 -- Better paste

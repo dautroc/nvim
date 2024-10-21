@@ -1,6 +1,8 @@
 -- https://github.com/jackMort/tide.nvim
+-- Toggle right pannel with `;` this for bookmarking files
 return {
 	"jackMort/tide.nvim",
+  enabled = false,
 	config = function()
 		require("tide").setup({
 			keys = {
