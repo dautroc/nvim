@@ -8,6 +8,7 @@ return {
     },
     build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
+      model = 'gpt-4o', -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o'
       debug = true, -- Enable debugging
       prompts = {
         ReviewCode = {
