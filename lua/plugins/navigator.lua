@@ -1,5 +1,5 @@
 return {
-  -- Tmux
+	-- Tmux
 	-- {
 	-- 	"alexghergh/nvim-tmux-navigation",
 	-- 	enabled = true,
@@ -18,46 +18,58 @@ return {
 	-- 	end,
 	-- },
 
-  -- Wezterm
-	{
-		"letieu/wezterm-move.nvim",
-		keys = {
-			{
-				"<C-h>",
-				function()
-					require("wezterm-move").move("h")
-				end,
-			},
-			{
-				"<C-j>",
-				function()
-					require("wezterm-move").move("j")
-				end,
-			},
-			{
-				"<C-k>",
-				function()
-					require("wezterm-move").move("k")
-				end,
-			},
-			{
-				"<C-l>",
-				function()
-					require("wezterm-move").move("l")
-				end,
-			},
-			{
-				"<C-;>",
-				function()
-					require("wezterm-move").move("j")
-				end,
-			},
-		},
-	},
+	-- Wezterm
+	-- {
+	-- 	"letieu/wezterm-move.nvim",
+	-- 	keys = {
+	-- 		{
+	-- 			"<C-h>",
+	-- 			function()
+	-- 				require("wezterm-move").move("h")
+	-- 			end,
+	-- 		},
+	-- 		{
+	-- 			"<C-j>",
+	-- 			function()
+	-- 				require("wezterm-move").move("j")
+	-- 			end,
+	-- 		},
+	-- 		{
+	-- 			"<C-k>",
+	-- 			function()
+	-- 				require("wezterm-move").move("k")
+	-- 			end,
+	-- 		},
+	-- 		{
+	-- 			"<C-l>",
+	-- 			function()
+	-- 				require("wezterm-move").move("l")
+	-- 			end,
+	-- 		},
+	-- 		{
+	-- 			"<C-;>",
+	-- 			function()
+	-- 				require("wezterm-move").move("j")
+	-- 			end,
+	-- 		},
+	-- 	},
+	-- },
 
-  -- Zellij
-  -- {
-  --   'https://github.com/fresh2dev/zellij.vim.git',
-  --   lazy = false,
-  -- }
+	-- Zellij
+	-- {
+	--   'https://github.com/fresh2dev/zellij.vim.git',
+	--   lazy = false,
+	-- }
+  {
+    "https://git.sr.ht/~swaits/zellij-nav.nvim",
+    lazy = true,
+    event = "VeryLazy",
+    keys = {
+      { "<c-h>", "<cmd>ZellijNavigateLeftTab<cr>", { silent = true, desc = "navigate left or tab" } },
+      { "<c-j>", "<cmd>ZellijNavigateDown<cr>", { silent = true, desc = "navigate down" } },
+      { "<c-k>", "<cmd>ZellijNavigateUp<cr>", { silent = true, desc = "navigate up" } },
+      { "<c-l>", "<cmd>ZellijNavigateRightTab<cr>", { silent = true, desc = "navigate right or tab" } },
+    },
+    opts = {},
+  },
 }
