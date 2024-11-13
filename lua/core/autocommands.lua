@@ -23,15 +23,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
--- Automatically close tab/vim when nvim-tree is the last window in the tab
--- vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
---
--- vim.api.nvim_create_autocmd({ "VimResized" }, {
--- 	callback = function()
--- 		vim.cmd("tabdo wincmd =")
--- 	end,
--- })
-
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 -- -- -- TERMINAL WINDOW NAVIGATION -- -- -- --
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -57,7 +48,7 @@ vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 -- 	TaskWarrior:toggle()
 -- end
 -- vim.api.nvim_set_keymap("n", "<leader>j", "<cmd>lua _task_warrior_toggle()<CR>", { noremap = true, silent = true })
- 
+
 -- Github Dashboard
 local Terminal = require("toggleterm.terminal").Terminal
 local GhDashboard = Terminal:new({ cmd = "gh dash", hidden = true, direction = "float" })
@@ -66,47 +57,28 @@ function _gh_dash_toggle()
 end
 vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { noremap = true, silent = true })
 
--- Serpl
--- local Serpl = Terminal:new({ cmd = "serpl", hidden = true, direction = "float" })
--- function _serpl_toggle()
--- 	Serpl:toggle()
--- end
--- vim.api.nvim_set_keymap("n", "<leader>fa", "<cmd>lua _serpl_toggle()<CR>", { noremap = true, silent = true })
-
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
--- -- -- TERMINAL WINDOW NAVIGATION -- -- -- --
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
--- Automatically jump to last edit cursor position
--- vim.api.nvim_create_autocmd('BufReadPost', {
---   desc = 'Open file at the last position it was edited earlier',
---   group = misc_augroup,
---   pattern = '*',
---   command = 'silent! normal! g`"zv'
--- })
-
 -- Automatically sync WezTerm color scheme with Neovim color scheme
-vim.api.nvim_create_autocmd("ColorScheme", {
-	group = vim.api.nvim_create_augroup("wezterm_colorscheme", { clear = true }),
-	callback = function(args)
-		local colorschemes = {
-			-- Catppuccin
-			["catppuccin-frappe"] = "Catppuccin Frappe",
-			["catppuccin-latte"] = "Catppuccin Latte",
-			["catppuccin-macchiato"] = "Catppuccin Macchiato",
-			["catppuccin-mocha"] = "Catppuccin Mocha",
-		}
-		local colorscheme = colorschemes[args.match]
-		if not colorscheme then
-			return
-		end
-		-- Write the colorscheme to a file
-		local filename = vim.fn.expand("~/.config/wezterm/colorscheme")
-		assert(type(filename) == "string")
-		local file = io.open(filename, "w")
-		assert(file)
-		file:write(colorscheme)
-		file:close()
-		vim.notify("Setting WezTerm color scheme to " .. colorscheme, vim.log.levels.INFO)
-	end,
-})
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+-- 	group = vim.api.nvim_create_augroup("wezterm_colorscheme", { clear = true }),
+-- 	callback = function(args)
+-- 		local colorschemes = {
+-- 			-- Catppuccin
+-- 			["catppuccin-frappe"] = "Catppuccin Frappe",
+-- 			["catppuccin-latte"] = "Catppuccin Latte",
+-- 			["catppuccin-macchiato"] = "Catppuccin Macchiato",
+-- 			["catppuccin-mocha"] = "Catppuccin Mocha",
+-- 		}
+-- 		local colorscheme = colorschemes[args.match]
+-- 		if not colorscheme then
+-- 			return
+-- 		end
+-- 		-- Write the colorscheme to a file
+-- 		local filename = vim.fn.expand("~/.config/wezterm/colorscheme")
+-- 		assert(type(filename) == "string")
+-- 		local file = io.open(filename, "w")
+-- 		assert(file)
+-- 		file:write(colorscheme)
+-- 		file:close()
+-- 		vim.notify("Setting WezTerm color scheme to " .. colorscheme, vim.log.levels.INFO)
+-- 	end,
+-- })
