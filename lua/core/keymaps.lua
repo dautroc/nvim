@@ -19,6 +19,8 @@ keymap("n", "<leader>x", "<C-w>s", { desc = "Split" })
 keymap("n", "<leader>v", "<C-w>v", { desc = "Vsplit" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
+keymap("n", "<right>", ">>", { desc = "Move line right" })
+keymap("n", "<left>", "<<", { desc = "Move line left" })
 
 -- Layout
 keymap("n", "tl", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
@@ -66,8 +68,8 @@ keymap("n", "N", "Nzzzv")
 -- Resize
 keymap("n", "<down>", ":resize +2<cr>")
 keymap("n", "<up>", ":resize -2<cr>")
-keymap("n", "<right>", ":vertical resize +2<cr>")
-keymap("n", "<left>", ":vertical resize -2<cr>")
+-- keymap("n", "<right>", ":vertical resize +2<cr>")
+-- keymap("n", "<left>", ":vertical resize -2<cr>")
 
 -- Go mode
 keymap({ "n", "v" }, "gh", "^", { desc = "Move to line start", silent = true })
