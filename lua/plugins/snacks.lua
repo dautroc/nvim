@@ -31,7 +31,7 @@ return {
         { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')", padding = 1 },
         { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})", padding = 1 },
         { icon = " ", key = "s", desc = "Restore Session", action = ":SessionRestore", padding = 1 },
-        { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil, padding = 1 },
+        { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil, padding = 1 },
         { icon = " ", key = "q", desc = "Quit", action = ":qa", padding = 1 },
 				{
 					pane = 2,
