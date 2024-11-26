@@ -28,7 +28,7 @@ local cmp_kinds = {
 
 return {
 	"hrsh7th/nvim-cmp",
-  enable = true,
+	enable = true,
 	event = "InsertEnter",
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
@@ -44,7 +44,8 @@ return {
 		cmp.setup({
 			snippet = {
 				expand = function(args)
-					require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+					-- You need Neovim v0.10 to use vim.snippet
+					vim.snippet.expand(args.body)
 				end,
 			},
 			window = {
@@ -79,7 +80,7 @@ return {
 					end
 				end, { "i", "s" }),
 			}),
-			sources = cmp.config.sources({ { name = "nvim_lsp" }, { name = "luasnip" } }, { { name = "buffer" } }),
+			sources = cmp.config.sources({ { name = "nvim_lsp" } }, { { name = "buffer" } }),
 
 			-- Formatting completion items with icons
 			formatting = {
@@ -103,8 +104,8 @@ return {
 			mapping = cmp.mapping.preset.cmdline(),
 			sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
 			matching = {
-			  disallow_symbol_nonprefix_matching = false,
-			}
+				disallow_symbol_nonprefix_matching = false,
+			},
 		})
 
 		-- Disabling completion in certain contexts, such as comments
@@ -123,13 +124,7 @@ return {
 
 		-- Set up lspconfig.
 		local lspconfig = require("lspconfig")
-		local servers = {
-			"ruby_lsp",
-			"fuzzy_ls",
-			"lua_ls",
-			"pyright",
-			-- "solargraph",
-		}
+		local servers = require("utils").servers
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		local common_setup = {

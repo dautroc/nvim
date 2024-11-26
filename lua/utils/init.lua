@@ -27,12 +27,12 @@ M.parsers = {
 }
 
 M.servers = {
-	"ruby-lsp",
-	-- "solargraph",
-  "tsserver",
-  "golangci-lint-langserver",
+	"lua_ls",
+	"solargraph",
+  "ruby_lsp",
   "gopls",
   "pyright",
+  "ts_ls"
 }
 
 return M

@@ -1,5 +1,6 @@
 return {
 	"nvimdev/lspsaga.nvim",
+  enabled = false,
 	event = "LspAttach",
 	keys = {
 		{ "K", "<cmd>Lspsaga hover_doc<cr>", desc = "Lspsaga hover" },
