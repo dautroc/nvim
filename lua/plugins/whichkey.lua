@@ -18,7 +18,7 @@ return {
 			{ "<leader>g", group = "git" },
 			{ "<leader>gd", group = "diffview" },
 			{ "<leader>h", group = "help" },
-			{ "<leader>i", group = "terms" },
+			-- { "<leader>i", group = "terms" },
       -- j is available
       -- k is available
 			{ "<leader>l", group = "lsp" },
