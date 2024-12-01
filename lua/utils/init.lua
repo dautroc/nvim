@@ -28,7 +28,7 @@ M.parsers = {
 
 M.servers = {
 	"lua_ls",
-	"solargraph",
+	-- "solargraph",
   "ruby_lsp",
   "gopls",
   "pyright",
