@@ -8,7 +8,7 @@ return {
     },
     build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
-      model = 'o1-preview', -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o'
+      model = 'claude-3.5-sonnet', -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o', 'claude-3.5-sonnet'
       debug = true, -- Enable debugging
       prompts = {
         ReviewCode = {
@@ -29,36 +29,6 @@ return {
         TextConcise = {
           prompt = "Please rewrite the following text to make it more concise.",
         },
-      },
-      mappings = {
-        complete = {
-          insert ='<Tab>',
-        },
-        close = {
-          normal = 'q',
-          insert = '<C-c>'
-        },
-        reset = {
-          normal ='<C-r>',
-          insert = '<C-r>'
-        },
-        submit_prompt = {
-          normal = '<CR>',
-          insert = '<C-m>'
-        },
-        accept_diff = {
-          normal = '<C-y>',
-          insert = '<C-y>'
-        },
-        show_diff = {
-          normal = 'gd'
-        },
-        show_system_prompt = {
-          normal = 'gp'
-        },
-        show_user_selection = {
-          normal = 'gs'
-        }
       },
     },
     keys = {

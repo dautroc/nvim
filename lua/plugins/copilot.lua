@@ -24,7 +24,7 @@ return {
 			auto_trigger = true,
 			debounce = 75,
 			keymap = {
-				accept = "<C-e>",
+				accept = "<M-o>",
 				dismiss = "<M-h>",
 				accept_word = false,
 				accept_line = false,

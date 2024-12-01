@@ -22,7 +22,7 @@ return {
     })
     require("mini.statusline").setup()
     require("mini.splitjoin").setup()
-    require("mini.notify").setup()
+    -- require("mini.notify").setup()
     require('mini.indentscope').setup()
     require('mini.icons').setup()
   end,
