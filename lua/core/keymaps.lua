@@ -30,9 +30,8 @@ keymap("n", "tj", "<cmd>tabprev<cr>", { desc = "Previous layout" })
 keymap("n", "tt", "<cmd>tabclose<cr>", { desc = "Close layout" })
 
 -- Custom functions
-keymap("n", "<leader>ms", "<cmd>lua require('core.functions').say_word()<cr>", { desc = "Say word" })
-keymap("n", "<leader>mc", "z=", { desc = "Spell check" })
 keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>mv", "ggVG", { desc = "Select all in current buffer", silent = true })
 
 -- Buffers
 keymap("n", "<leader>by", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy buffer path" })
@@ -107,12 +106,6 @@ keymap("i", " ", " <C-g>u", opts)
 -- Stay in indent mode
 keymap("x", "<", "<gv", opts)
 keymap("x", ">", ">gv", opts)
-
--- Utils
-keymap("n", "<leader>us", "<cmd>%!sort<cr>", opts)
-keymap("n", "<leader>uu", "<cmd>%!uniq<cr>", opts)
-keymap("n", "<leader>ut", "<cmd>pu=strftime('%b %d, %Y')<cr>", { desc = "Insert date", silent = true })
-keymap("n", "<leader>uv", "ggVG", { desc = "Select all in current buffer", silent = true })
 
 -- LSP
 keymap("n", "<leader>lm", "<cmd>Mason<cr>", opts)

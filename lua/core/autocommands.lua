@@ -47,30 +47,31 @@ local GhDashboard = Terminal:new({ cmd = "gh dash", hidden = true, direction = "
 function _gh_dash_toggle()
 	GhDashboard:toggle()
 end
+
 vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { noremap = true, silent = true })
 
 -- Automatically sync WezTerm color scheme with Neovim color scheme
-vim.api.nvim_create_autocmd("ColorScheme", {
-	group = vim.api.nvim_create_augroup("wezterm_colorscheme", { clear = true }),
-	callback = function(args)
-		local colorschemes = {
-			-- Catppuccin
-			["catppuccin-frappe"] = "Catppuccin Frappe",
-			["catppuccin-latte"] = "Catppuccin Latte",
-			["catppuccin-macchiato"] = "Catppuccin Macchiato",
-			["catppuccin-mocha"] = "Catppuccin Mocha",
-		}
-		local colorscheme = colorschemes[args.match]
-		if not colorscheme then
-			return
-		end
-		-- Write the colorscheme to a file
-		local filename = vim.fn.expand("~/.config/wezterm/colorscheme")
-		assert(type(filename) == "string")
-		local file = io.open(filename, "w")
-		assert(file)
-		file:write(colorscheme)
-		file:close()
-		vim.notify("Setting WezTerm color scheme to " .. colorscheme, vim.log.levels.INFO)
-	end,
-})
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+-- 	group = vim.api.nvim_create_augroup("wezterm_colorscheme", { clear = true }),
+-- 	callback = function(args)
+-- 		local colorschemes = {
+-- 			-- Catppuccin
+-- 			["catppuccin-frappe"] = "Catppuccin Frappe",
+-- 			["catppuccin-latte"] = "Catppuccin Latte",
+-- 			["catppuccin-macchiato"] = "Catppuccin Macchiato",
+-- 			["catppuccin-mocha"] = "Catppuccin Mocha",
+-- 		}
+-- 		local colorscheme = colorschemes[args.match]
+-- 		if not colorscheme then
+-- 			return
+-- 		end
+-- 		-- Write the colorscheme to a file
+-- 		local filename = vim.fn.expand("~/.config/wezterm/colorscheme")
+-- 		assert(type(filename) == "string")
+-- 		local file = io.open(filename, "w")
+-- 		assert(file)
+-- 		file:write(colorscheme)
+-- 		file:close()
+-- 		vim.notify("Setting WezTerm color scheme to " .. colorscheme, vim.log.levels.INFO)
+-- 	end,
+-- })
