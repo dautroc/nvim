@@ -76,3 +76,6 @@ vim.diagnostic.config({
     },
   },
 })
+
+-- Tags
+vim.opt.tags = './tags;'
