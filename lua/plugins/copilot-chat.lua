@@ -5,6 +5,7 @@ return {
       { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
       { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
     },
+    branch = "main",
     build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
       model = 'claude-3.5-sonnet', -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o', 'claude-3.5-sonnet'

@@ -43,6 +43,7 @@ return {
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
 		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy finder" },
 		{ "<leader>fl", "<cmd>Telescope lazy<CR>", desc = "Lazy" },
+		{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
 		{
 			"<leader>fs",
 			"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
