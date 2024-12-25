@@ -27,10 +27,9 @@ return {
 			},
 			gitsigns = { enabled = false }, -- disables git signs
 			plugins = {
-				tmux = { enabled = false },
 				wezterm = {
 					enabled = true,
-					font = "+2", -- (10% increase per step)
+					font = "+4", -- (10% increase per step)
 				},
 			},
 		})

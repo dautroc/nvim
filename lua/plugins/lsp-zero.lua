@@ -3,7 +3,6 @@ return {
 	branch = "v2.x",
 	dependencies = {
 		{ "neovim/nvim-lspconfig" },
-		{ "netmute/ctags-lsp.nvim" },
 		{
 			"williamboman/mason.nvim",
 			build = function()
@@ -18,7 +17,6 @@ return {
 	config = function()
     -- LSP Configuration
 		local lspconfig = require("lspconfig")
-		lspconfig.ctags_lsp.setup({}) -- Setup ctags-lsp
 
 		-- Custom servers for fuzzy-ls
 		local lsp_configurations = require("lspconfig.configs")
