@@ -130,6 +130,7 @@ return {
 					base_dirs = {
 						{ path = "~/workspace", max_depth = 2 },
 						{ path = "~/.config/nvim", max_depth = 1 },
+						{ path = "~/Dendron", max_depth = 1 },
 					},
 					hidden_files = true, -- default: false
 					order_by = "asc",

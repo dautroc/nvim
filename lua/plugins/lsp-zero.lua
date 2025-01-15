@@ -15,10 +15,13 @@ return {
 		{ "L3MON4D3/LuaSnip" }, -- Required
 	},
 	config = function()
-    -- LSP Configuration
+		-- LSP Configuration
 		local lspconfig = require("lspconfig")
 
-		-- Custom servers for fuzzy-ls
+		-- Python
+		require("lspconfig").pyright.setup({})
+
+		-- Ruby
 		local lsp_configurations = require("lspconfig.configs")
 		if not lsp_configurations.fuzzy_ls then
 			lsp_configurations.fuzzy_ls = {
@@ -39,7 +42,7 @@ return {
 		end
 		lspconfig.fuzzy_ls.setup({})
 
-    -- LSP-Zero Configuration
+		-- LSP-Zero Configuration
 		local lsp_zero = require("lsp-zero")
 
 		local lsp_attach = function(client, bufnr)
