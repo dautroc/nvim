@@ -80,3 +80,9 @@ vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { n
 -- 		vim.notify("Setting WezTerm color scheme to " .. colorscheme, vim.log.levels.INFO)
 -- 	end,
 -- })
+--
+
+-- Auto resize splits when the terminal's window is resized
+vim.api.nvim_create_autocmd("VimResized", {
+    command = "wincmd =",
+})
