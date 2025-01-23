@@ -4,5 +4,6 @@
 return {
 	"aileot/emission.nvim",
 	event = "VeryLazy",
+  enabled = false,
 	opts = {},
 }
