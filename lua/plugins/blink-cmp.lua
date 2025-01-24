@@ -6,7 +6,7 @@ return {
 		keymap = {
 			["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 			["<C-e>"] = { "hide", "fallback" },
-      ['<CR>'] = { 'accept', 'fallback' },
+			["<CR>"] = { "accept", "fallback" },
 
 			-- ["<Tab>"] = {
 			-- 	function(cmp)
@@ -31,6 +31,13 @@ return {
 
 			["<C-b>"] = { "scroll_documentation_up", "fallback" },
 			["<C-f>"] = { "scroll_documentation_down", "fallback" },
+		},
+		completion = {
+			menu = {
+				auto_show = function(ctx)
+					return ctx.mode ~= "cmdline" or not vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
+				end,
+			},
 		},
 
 		appearance = {
