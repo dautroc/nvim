@@ -16,12 +16,12 @@ return {
 	config = function()
 		require("codecompanion").setup({
 			adapters = {
-				deepseek_coder = function()
+				local_deepseek = function()
 					return require("codecompanion.adapters").extend("ollama", {
-						name = "deepseek_coder",
+						name = "local_deepseek",
 						schema = {
 							model = {
-								default = "deepseek-coder-v2:latest",
+								default = "deepseek-r1:latest",
 							},
 						},
 						num_ctx = {
@@ -32,11 +32,32 @@ return {
 						},
 					})
 				end,
+				custom_copilot = function()
+					return require("codecompanion.adapters").extend("copilot", {
+						name = "custom_copilot",
+						schema = {
+							model = {
+								default = "claude-3.5-sonnet",
+							},
+						},
+					})
+				end,
 			},
 			strategies = {
-				chat = { adapter = "deepseek_coder" },
-				inline = { adapter = "deepseek_coder" },
-				agent = { adapter = "deepseek_coder" },
+				chat = { adapter = "copilot" },
+				inline = { adapter = "copilot" },
+				agent = { adapter = "copilot" },
+			},
+			display = {
+				chat = {
+					intro_message = "Welcome to CodeCompanion ✨! Press ? for options",
+					show_header_separator = false, -- Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
+					separator = "─", -- The separator between the different messages in the chat buffer
+					show_references = true, -- Show references (from slash commands and variables) in the chat buffer?
+					show_settings = true, -- Show LLM settings at the top of the chat buffer?
+					show_token_count = true, -- Show the token count for each response?
+					start_in_insert_mode = false, -- Open the chat buffer in insert mode?
+				},
 			},
 		})
 	end,
