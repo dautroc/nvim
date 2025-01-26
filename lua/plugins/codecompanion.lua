@@ -5,31 +5,38 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 	},
 	keys = {
-		{ "<leader>jj", "<CMD>CodeCompanion<CR>", desc = "Code Companion" },
-		{ "<leader>jc", "<CMD>CodeCompanionChat<CR>", desc = "Code Companion Chat" },
-		{ "<leader>jd", ":CodeCompanionCmd ", desc = "Code Companion Cmd" },
-		{ "<leader>ja", "<CMD>CodeCompanionActions<CR>", desc = "Code Companion Actions", mode = { "n", "x" } },
+		{ "<leader>jc", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Code Companion Chat" },
+		{ "<leader>jg", ":CodeCompanionCmd ", desc = "Generate command" },
+
+		-- Visual
+		{ "<leader>jj", ":CodeCompanion", desc = "Code Companion", mode = { "v" } },
+		{ "<leader>ja", "<CMD>CodeCompanionActions<CR>", desc = "Code Companion Actions", mode = { "n", "v" } },
+		{ "<leader>js", "<CMD>CodeCompanionChat Add<CR>", desc = "Add selection to chat", mode = { "v" } },
 	},
 	config = function()
-		require("codecompanion.adapters").extend("ollama", {
-			schema = {
-				model = {
-					default = "deepseek-r1:latest",
-				},
-				num_ctx = {
-					default = 131072,
-				},
-				num_predict = {
-					default = -1,
-				},
-			},
-		})
-
 		require("codecompanion").setup({
+			adapters = {
+				deepseek_coder = function()
+					return require("codecompanion.adapters").extend("ollama", {
+						name = "deepseek_coder",
+						schema = {
+							model = {
+								default = "deepseek-coder-v2:latest",
+							},
+						},
+						num_ctx = {
+							default = 16384,
+						},
+						num_predict = {
+							default = -1,
+						},
+					})
+				end,
+			},
 			strategies = {
-				chat = { adapter = "ollama" },
-				inline = { adapter = "ollama" },
-				agent = { adapter = "ollama" },
+				chat = { adapter = "deepseek_coder" },
+				inline = { adapter = "deepseek_coder" },
+				agent = { adapter = "deepseek_coder" },
 			},
 		})
 	end,
