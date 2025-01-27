@@ -16,28 +16,24 @@ return {
 	config = function()
 		require("codecompanion").setup({
 			adapters = {
-				local_deepseek = function()
-					return require("codecompanion.adapters").extend("ollama", {
-						name = "local_deepseek",
+				deepseek = function()
+					return require("codecompanion.adapters").extend("deepseek", {
 						schema = {
 							model = {
-								default = "deepseek-r1:latest",
+								default = "deepseek-reasoner",
 							},
 						},
-						num_ctx = {
-							default = 16384,
-						},
 						num_predict = {
-							default = -1,
+							default = 1,
 						},
 					})
 				end,
-				custom_copilot = function()
+
+				copilot = function()
 					return require("codecompanion.adapters").extend("copilot", {
-						name = "custom_copilot",
 						schema = {
 							model = {
-								default = "claude-3.5-sonnet",
+								default = "o1-mini",
 							},
 						},
 					})
@@ -57,6 +53,13 @@ return {
 					show_settings = true, -- Show LLM settings at the top of the chat buffer?
 					show_token_count = true, -- Show the token count for each response?
 					start_in_insert_mode = false, -- Open the chat buffer in insert mode?
+					diff = {
+						enabled = true,
+						close_chat_at = 240, -- Close an open chat buffer if the total columns of your display are less than...
+						layout = "vertical", -- vertical|horizontal split for default provider
+						opts = { "internal", "filler", "closeoff", "algorithm:patience", "followwrap", "linematch:120" },
+						provider = "mini_diff", -- default|mini_diff
+					},
 				},
 			},
 		})
