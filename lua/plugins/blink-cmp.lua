@@ -24,7 +24,13 @@ return {
 			},
 			["<S-Tab>"] = { "snippet_backward", "fallback" },
 		},
-
+		completion = {
+			menu = {
+				auto_show = function(ctx)
+					return ctx.mode ~= "cmdline" or not vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
+				end,
+			},
+		},
 		appearance = {
 			use_nvim_cmp_as_default = true,
 			nerd_font_variant = "mono",
