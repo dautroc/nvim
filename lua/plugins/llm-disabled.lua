@@ -1,22 +1,21 @@
 return {
 	"Kurama622/llm.nvim",
-	enabled = false,
 	dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
 	cmd = { "LLMSessionToggle", "LLMSelectedTextHandler", "LLMAppHandler" },
 	config = function()
 		local tools = require("llm.common.tools")
 		require("llm").setup({
-			-- Deepseek
-			url = "http://localhost:11434/api/chat",
-			model = "deepseek-r1:latest",
-			api_type = "ollama",
+      -- Deepseek
+      url = "http://localhost:11434/api/chat",
+      model = "deepseek-r1:latest",
+      api_type = "ollama",
 
-			-- Github
-			-- url = "https://models.inference.ai.azure.com/chat/completions",
-			-- model = "gpt-4o",
-			-- api_type = "openai",
+      -- Github
+      -- url = "https://models.inference.ai.azure.com/chat/completions",
+      -- model = "gpt-4o",
+      -- api_type = "openai",
 
-			-- App handler
+      -- App handler
 			app_handler = {
 				OptimizeCode = {
 					handler = tools.side_by_side_handler,
