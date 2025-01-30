@@ -13,14 +13,14 @@ return {
 			{ "<leader>b", group = "buffer/bookmark" },
 			{ "<leader>c", group = "qfixlist" },
 			{ "<leader>d", group = "devdocs" },
-      -- e for tree explorer
+      { "<leader>e", group = "explorer" },
 			{ "<leader>f", group = "find" },
 			{ "<leader>g", group = "git" },
 			{ "<leader>gd", group = "diffview" },
 			{ "<leader>h", group = "help" },
-			-- { "<leader>i", group = "terms" },
-      -- j is available
-      -- k is available
+			{ "<leader>i", group = "terms" },
+      { "<leader>j", group = "code companion" },
+      { "<leader>k", group = "llm" },
 			{ "<leader>l", group = "lsp" },
 			{ "<leader>lt", desc = "+trouble" },
 			{ "<leader>m", group = "misc" },
@@ -30,6 +30,7 @@ return {
 			{ "<leader>ol", group = "link" },
       -- p is available
       -- q is for quit
+      { "<leader>q", group = "Quite buffer" },
 			{ "<leader>r", group = "rails" },
 			{ "<leader>s", group = "session" },
 			{ "<leader>t", group = "test" },
