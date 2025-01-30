@@ -5,15 +5,15 @@ return {
 	config = function()
 		local tools = require("llm.common.tools")
 		require("llm").setup({
-      -- Ollama
-      -- url = "http://localhost:11434/api/chat",
-      -- model = "deepseek-r1:latest",
-      -- api_type = "ollama",
+      -- Deepseek
+      url = "http://localhost:11434/api/chat",
+      model = "deepseek-r1:latest",
+      api_type = "ollama",
 
       -- Github
-      url = "https://models.inference.ai.azure.com/chat/completions",
-      model = "gpt-4o",
-      api_type = "openai",
+      -- url = "https://models.inference.ai.azure.com/chat/completions",
+      -- model = "gpt-4o",
+      -- api_type = "openai",
 
       -- App handler
 			app_handler = {
