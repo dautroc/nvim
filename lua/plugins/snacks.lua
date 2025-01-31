@@ -52,5 +52,16 @@ return {
         })
       end,
     },
+ --
+ --    -- LLM intergration
+ --    {
+ --      "<C-c>",
+ --      desc = "AI Commit Msg",
+ --      function()
+ --        vim.api.nvim_win_close(vim.api.nvim_get_current_win(), true)
+ --        vim.api.nvim_command("LLMAppHandler CommitMsg")
+ --      end,
+ --      mode = "t",
+ --    },
 	}
 }
