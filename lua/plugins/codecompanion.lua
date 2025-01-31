@@ -16,18 +16,15 @@ return {
 	config = function()
 		require("codecompanion").setup({
 			adapters = {
-				-- deepseek = function()
-				-- 	return require("codecompanion.adapters").extend("deepseek", {
-				-- 		schema = {
-				-- 			model = {
-				-- 				default = "deepseek-reasoner",
-				-- 			},
-				-- 		},
-				-- 		num_predict = {
-				-- 			default = 1,
-				-- 		},
-				-- 	})
-				-- end,
+				ollama = function()
+					return require("codecompanion.adapters").extend("ollama", {
+						schema = {
+							model = {
+								default = "deepseek-r1:latest",
+							},
+						},
+					})
+				end,
 
 				copilot = function()
 					return require("codecompanion.adapters").extend("copilot", {
@@ -40,9 +37,12 @@ return {
 				end,
 			},
 			strategies = {
-				chat = { adapter = "copilot" },
-				inline = { adapter = "copilot" },
-				agent = { adapter = "copilot" },
+				-- chat = { adapter = "copilot" },
+				-- inline = { adapter = "copilot" },
+				-- agent = { adapter = "copilot" },
+				chat = { adapter = "ollama" },
+				inline = { adapter = "ollama" },
+				agent = { adapter = "ollama" },
 			},
 			display = {
 				chat = {
@@ -86,9 +86,9 @@ return {
 			-- 			{
 			-- 				role = "user",
 			-- 				content = [[I'm rewriting the documentation for my plugin CodeCompanion.nvim, as I'm moving to a vitepress website. Can you help me rewrite it?
-      --                    I'm sharing my vitepress config file so you have the context of how the documentation website is structured in the `sidebar` section of that file.cu
-      --                    I'm also sharing my `config.lua` file which I'm mapping to the `configuration` section of the sidebar.
-      --                  ]],
+			--                    I'm sharing my vitepress config file so you have the context of how the documentation website is structured in the `sidebar` section of that file.cu
+			--                    I'm also sharing my `config.lua` file which I'm mapping to the `configuration` section of the sidebar.
+			--                  ]],
 			-- 			},
 			-- 		},
 			-- 	},
