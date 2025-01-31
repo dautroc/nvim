@@ -14,7 +14,7 @@ return {
 			answer_header = "#   Copilot:",
 			error_header = "> [!ERROR] Error",
 			model = "claude-3.5-sonnet", -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o', 'claude-3.5-sonnet'
-			debug = true, -- Enable debugging
+			debug = false, -- Enable debugging
 			prompts = {
 				ReviewCode = {
 					prompt = "/COPILOT_REVIEW Please review the following code and provide suggestions for improvement.",
@@ -71,6 +71,11 @@ return {
 				end,
 				desc = "Perplexity Search",
 				mode = { "n", "v" },
+			},
+			{
+				"<leader>hm",
+				"<cmd>CopilotChatModels<CR>",
+				desc = "Copilot models",
 			},
 		},
 	},
