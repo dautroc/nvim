@@ -36,7 +36,7 @@ function _G.set_terminal_keymaps()
 	-- vim.keymap.set("t", "<C-j>", [[<CMD>lua require("wezterm-move").move("j")<CR>]], opts)
 	-- vim.keymap.set("t", "<C-k>", [[<CMD>lua require("wezterm-move").move("k")<CR>]], opts)
 	-- vim.keymap.set("t", "<C-l>", [[<CMD>lua require("wezterm-move").move("l")<CR>]], opts)
- 	vim.keymap.set("t", "<C-h>", [[<CMD>ZellijNavigateLeftTab<CR>]], opts)
+	vim.keymap.set("t", "<C-h>", [[<CMD>ZellijNavigateLeftTab<CR>]], opts)
 	vim.keymap.set("t", "<C-j>", [[<CMD>ZellijNavigateDown<CR>]], opts)
 	vim.keymap.set("t", "<C-k>", [[<CMD>ZellijNavigateUp<CR>]], opts)
 	vim.keymap.set("t", "<C-l>", [[<CMD>ZellijNavigateRightTab<CR>]], opts)
@@ -84,5 +84,6 @@ vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { n
 
 -- Auto resize splits when the terminal's window is resized
 vim.api.nvim_create_autocmd("VimResized", {
-    command = "wincmd =",
+	command = "wincmd =",
 })
+
