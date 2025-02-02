@@ -53,7 +53,7 @@ function _gh_dash_toggle()
 	GhDashboard:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { noremap = true, silent = true, desc = "Git dash" })
 
 -- Automatically sync WezTerm color scheme with Neovim color scheme
 -- vim.api.nvim_create_autocmd("ColorScheme", {
