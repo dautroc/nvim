@@ -3,9 +3,8 @@ return {
 		"CopilotC-Nvim/CopilotChat.nvim",
 		dependencies = {
 			{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-			{ "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log wrapper
+			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
 		},
-		branch = "main",
 		build = "make tiktoken", -- Only on MacOS or Linux
 		opts = {
 			highlight_headers = true,
