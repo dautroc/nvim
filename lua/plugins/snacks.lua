@@ -4,7 +4,6 @@ return {
 	lazy = false,
 	opts = {
 		bigfile = { enabled = true },
-		dashboard = { enabled = false },
 		dashboard = {
 			preset = {
 				keys = {
@@ -100,7 +99,6 @@ return {
 					},
 				},
 				-- I wanted to modify the layout width
-				--
 				vertical = {
 					layout = {
 						backdrop = false,
@@ -124,10 +122,7 @@ return {
 			win = {
 				input = {
 					keys = {
-						-- to close the picker on ESC instead of going to normal mode,
-						-- add the following keymap to your config
 						["<Esc>"] = { "close", mode = { "n", "i" } },
-						-- I'm used to scrolling like this in LazyGit
 						["J"] = { "preview_scroll_down", mode = { "i", "n" } },
 						["K"] = { "preview_scroll_up", mode = { "i", "n" } },
 						["H"] = { "preview_scroll_left", mode = { "i", "n" } },
@@ -139,110 +134,40 @@ return {
 	},
 	keys = {
 		-- Scratch
-		{
-			"<leader>.",
-			function()
-				Snacks.scratch()
-			end,
-			desc = "Toggle Scratch Buffer",
-		},
-		{
-			"<leader>S",
-			function()
-				Snacks.scratch.select()
-			end,
-			desc = "Select Scratch Buffer",
-		},
+		-- { "<leader>.", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
+		-- { "<leader>S", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
 
 		-- Notifications
-		{
-			"<leader>nh",
-			function()
-				Snacks.notifier.show_history()
-			end,
-			desc = "Notification History",
-		},
-		{
-			"<leader>nd",
-			function()
-				Snacks.notifier.hide()
-			end,
-			desc = "Dismiss All Notifications",
-		},
+		{ "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Notification history" },
+    { "<leader>nd", function() Snacks.notifier.hide() end, desc = "Dismiss notifications" },
 
 		-- Git
-		{
-			"<leader>gB",
-			function()
-				Snacks.gitbrowse()
-			end,
-			desc = "Git open in browser",
-			mode = { "n", "v" },
-		},
-		{
-			"<leader>gf",
-			function()
-				Snacks.lazygit.log_file()
-			end,
-			desc = "Lazygit Current File History",
-		},
-		{
-			"<leader>gg",
-			function()
-				Snacks.lazygit()
-			end,
-			desc = "Lazygit",
-		},
-		{
-			"<leader>gl",
-			function()
-				Snacks.lazygit.log()
-			end,
-			desc = "Lazygit Log (cwd)",
-		},
+		{ "<leader>go", function() Snacks.gitbrowse() end, desc = "Open in browser", mode = { "n", "v" }, },
+		{ "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "File history", },
+		{ "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit", },
+		{ "<leader>gl", function() Snacks.lazygit.log() end, desc = "Log", },
 
-		-- Neovim news
+    -- Searching
 		{
-			"<leader>N",
-			desc = "Neovim News",
-			function()
-				Snacks.win({
-					file = vim.api.nvim_get_runtime_file("doc/news.txt", false)[1],
-					width = 0.6,
-					height = 0.6,
-					wo = {
-						spell = false,
-						wrap = false,
-						signcolumn = "yes",
-						statuscolumn = " ",
-						conceallevel = 3,
-					},
-				})
-			end,
-		},
-
-		{
-			"<leader>fF",
+			"<leader><leader>",
 			function()
 				Snacks.picker.files({
 					finder = "files",
 					format = "file",
 					show_empty = true,
 					supports_live = true,
-					-- In case you want to override the layout for this keymap
-					-- layout = "vscode",
 				})
 			end,
-			desc = "Find Files",
+			desc = "Files",
 		},
 		{
-			"<leader>fB",
+			"<leader>fb",
 			function()
 				Snacks.picker.buffers({
-					-- I always want my buffers picker to start in normal mode
-					on_show = function()
-						vim.cmd.stopinsert()
-					end,
+					-- Start in normal mode
+					-- on_show = function()
+					-- 	vim.cmd.stopinsert()
+					-- end,
 					finder = "buffers",
 					format = "buffer",
 					hidden = false,
@@ -257,22 +182,9 @@ return {
 						},
 						list = { keys = { ["d"] = "bufdelete" } },
 					},
-					-- In case you want to override the layout for this keymap
-					-- layout = "ivy",
 				})
 			end,
-			desc = "[P]Snacks picker buffers",
+			desc = "Buffers",
 		},
-		--
-		--    -- LLM intergration
-		--    {
-		--      "<C-c>",
-		--      desc = "AI Commit Msg",
-		--      function()
-		--        vim.api.nvim_win_close(vim.api.nvim_get_current_win(), true)
-		--        vim.api.nvim_command("LLMAppHandler CommitMsg")
-		--      end,
-		--      mode = "t",
-		--    },
 	},
 }
