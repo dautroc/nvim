@@ -53,6 +53,11 @@ return {
 				wo = { wrap = true }, -- Wrap notifications
 			},
 		},
+    zen = {
+      win = {
+        width = 0.8,
+      }
+    },
 		picker = {
 			transform = function(item)
 				if not item.file then
@@ -177,5 +182,6 @@ return {
 
     -- Explorer
     { "<leader>e", function() Snacks.explorer() end, desc = "Explorer" },
+    { "<leader>z", function() Snacks.zen() end, desc = "Zen zoom" },
 	},
 }
