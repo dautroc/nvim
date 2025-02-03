@@ -32,7 +32,7 @@ return {
       -- q is for quit
       { "<leader>q", group = "Quite buffer" },
 			{ "<leader>r", group = "rails" },
-			{ "<leader>s", group = "session" },
+			-- { "<leader>s", group = "session" },
 			{ "<leader>t", group = "test" },
 			{ "<leader>u", group = "utils" },
       -- v for vertical split
