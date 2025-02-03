@@ -4,6 +4,7 @@ local file_ignore_patterns =
 return {
 	"nvim-telescope/telescope.nvim",
 	cmd = { "Telescope" },
+  enabled = false,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-project.nvim",
@@ -25,11 +26,11 @@ return {
 	keys = {
 		-- Vim mappings
 		-- { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
-		{ "<leader>fj", "<cmd>Telescope buffers<CR>", desc = "Buffer jump" },
+		-- { "<leader>fj", "<cmd>Telescope buffers<CR>", desc = "Buffer jump" },
 
 		-- Find everything
 		-- { "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
-		{ "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
+		-- { "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
 		-- { "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
 		-- { "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		-- {
@@ -51,17 +52,17 @@ return {
 		-- },
 
 		-- Rails
-		{ "<leader>ra", "<cmd>Telescope find_files cwd=app/api<CR>", desc = "[A]pi" },
-		{ "<leader>rv", "<cmd>Telescope find_files cwd=app/views<CR>", desc = "[V]iews" },
-		{ "<leader>rt", "<cmd>Telescope find_files cwd=lib/tasks<CR>", desc = "[T]asks" },
-		{ "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "[M]odels" },
-		{ "<leader>rM", "<cmd>Telescope find_files cwd=db/migrate<CR>", desc = "[M]igrates" },
-		{ "<leader>ri", "<cmd>Telescope find_files cwd=app/mailers<CR>", desc = "ma[I]lers" },
-		{ "<leader>rs", "<cmd>Telescope find_files cwd=app/services<CR>", desc = "[S]ervices" },
-		{ "<leader>rp", "<cmd>Telescope find_files cwd=app/policies<CR>", desc = "[P]olicies" },
-		{ "<leader>rf", "<cmd>Telescope find_files cwd=spec/factories<CR>", desc = "[F]actories" },
-		{ "<leader>rl", "<cmd>Telescope find_files cwd=config/locales<CR>", desc = "[L]ocales" },
-		{ "<leader>rc", "<cmd>Telescope find_files cwd=app/controllers<CR>", desc = "[C]ontrollers" },
+		-- { "<leader>ra", "<cmd>Telescope find_files cwd=app/api<CR>", desc = "[A]pi" },
+		-- { "<leader>rv", "<cmd>Telescope find_files cwd=app/views<CR>", desc = "[V]iews" },
+		-- { "<leader>rt", "<cmd>Telescope find_files cwd=lib/tasks<CR>", desc = "[T]asks" },
+		-- { "<leader>rm", "<cmd>Telescope find_files cwd=app/models<CR>", desc = "[M]odels" },
+		-- { "<leader>rM", "<cmd>Telescope find_files cwd=db/migrate<CR>", desc = "[M]igrates" },
+		-- { "<leader>ri", "<cmd>Telescope find_files cwd=app/mailers<CR>", desc = "ma[I]lers" },
+		-- { "<leader>rs", "<cmd>Telescope find_files cwd=app/services<CR>", desc = "[S]ervices" },
+		-- { "<leader>rp", "<cmd>Telescope find_files cwd=app/policies<CR>", desc = "[P]olicies" },
+		-- { "<leader>rf", "<cmd>Telescope find_files cwd=spec/factories<CR>", desc = "[F]actories" },
+		-- { "<leader>rl", "<cmd>Telescope find_files cwd=config/locales<CR>", desc = "[L]ocales" },
+		-- { "<leader>rc", "<cmd>Telescope find_files cwd=app/controllers<CR>", desc = "[C]ontrollers" },
 	},
 	config = function()
 		require("neoclip").setup()
