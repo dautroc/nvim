@@ -4,6 +4,9 @@ return {
 	lazy = false,
 	opts = {
 		bigfile = { enabled = true },
+                vim.notify("Deleting file: " .. filepath, vim.log.levels.INFO)
+                local success = vim.fn.delete(filepath)
+                if success == 0 then
 		dashboard = {
 			preset = {
 				keys = {
