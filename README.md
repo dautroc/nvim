@@ -1,8 +1,7 @@
-## Structure
-
+# Repo tree
 ```sh
-.
 ├── README.md
+├── Session.vim
 ├── after
 │   └── ftplugin
 │       └── markdown.lua
@@ -21,10 +20,11 @@
     │   ├── auto-session.lua
     │   ├── autopairs.lua
     │   ├── autotag.lua
-    │   ├── avante.lua
     │   ├── better-escape.lua
     │   ├── blame.lua
+    │   ├── blink-cmp.lua
     │   ├── bqf.lua
+    │   ├── codecompanion.lua
     │   ├── codesnap.lua
     │   ├── colorizer.lua
     │   ├── colorscheme.lua
@@ -35,36 +35,38 @@
     │   ├── diagflow.lua
     │   ├── diffview.lua
     │   ├── dressing.lua
+    │   ├── dropbar.lua
     │   ├── flash.lua
     │   ├── garbage-collector.lua
-    │   ├── gitlinker.lua
     │   ├── gitsign.lua
     │   ├── guard.lua
     │   ├── last-color.lua
     │   ├── lazydev.lua
-    │   ├── lazygit.lua
     │   ├── lint.lua
+    │   ├── llm-disabled.lua
+    │   ├── llm.lua
     │   ├── lsp-zero.lua
-    │   ├── lsp.lua
-    │   ├── lspsaga.lua
+    │   ├── lualine.lua
+    │   ├── markview.lua
     │   ├── mason.lua
+    │   ├── match-visual.lua
+    │   ├── mini-files.lua
     │   ├── mini.lua
     │   ├── multicursor.lua
     │   ├── navigator.lua
-    │   ├── neoscroll.lua
-    │   ├── neotree.lua
-    │   ├── nvim-cmp.lua
     │   ├── nvim-rip-substitude.lua
     │   ├── nvim-tree-pair.lua
     │   ├── obsidian.lua
     │   ├── rails.lua
-    │   ├── screenkey.lua
     │   ├── search-improved.lua
+    │   ├── showkey.lua
+    │   ├── snacks.lua
     │   ├── surround.lua
     │   ├── swap-buffer.lua
     │   ├── telescope.lua
     │   ├── text-object.lua
     │   ├── tide.lua
+    │   ├── tidy.lua
     │   ├── todo-comment.lua
     │   ├── toggleterm.lua
     │   ├── treesister.lua
@@ -73,13 +75,11 @@
     │   ├── vim-matchup.lua
     │   ├── vim-table.lua
     │   ├── vim-test.lua
+    │   ├── vimade.lua
     │   ├── whichkey.lua
     │   ├── winbar.lua
-    │   ├── yaml.lua
-    │   ├── yazi.lua
-    │   └── zen-mode.lua
+    │   └── yazi.lua
     ├── settings
     │   └── lua_ls.lua
     └── utils
         └── init.lua
-```

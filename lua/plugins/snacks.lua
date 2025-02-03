@@ -140,10 +140,6 @@ return {
 		},
 	},
 	keys = {
-		-- Scratch
-		{ "<leader>s", function() Snacks.scratch() end, desc = "Toggle scratch" },
-		{ "<leader>S", function() Snacks.scratch.select() end, desc = "List scratches" },
-
 		-- Notifications
 		{ "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Notification history" },
     { "<leader>nd", function() Snacks.notifier.hide() end, desc = "Dismiss notifications" },
