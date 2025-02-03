@@ -146,46 +146,31 @@ return {
 		{ "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "File history", },
 		{ "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit", },
 		{ "<leader>gl", function() Snacks.lazygit.log() end, desc = "Log", },
+    { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Status" },
 
     -- Searching
-		{
-			"<leader><leader>",
-			function()
-				Snacks.picker.files({
-					finder = "files",
-					format = "file",
-					show_empty = true,
-					supports_live = true,
-				})
-			end,
-			desc = "Files",
-		},
-		{
-			"<leader>fb",
-			function()
-				Snacks.picker.buffers({
-					-- Start in normal mode
-					-- on_show = function()
-					-- 	vim.cmd.stopinsert()
-					-- end,
-					finder = "buffers",
-					format = "buffer",
-					hidden = false,
-					unloaded = true,
-					current = true,
-					sort_lastused = true,
-					win = {
-						input = {
-							keys = {
-								["d"] = "bufdelete",
-							},
-						},
-						list = { keys = { ["d"] = "bufdelete" } },
-					},
-				})
-			end,
-			desc = "Buffers",
-		},
-    { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
+    { "<leader><leader>", function() Snacks.picker.files() end, desc = "Files" },
+    { "<leader>fr", function() Snacks.picker.resume() end, desc = "Resume" },
+    { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
+    { "<leader>fS", function() Snacks.picker.grep_buffers() end, desc = "Grep open buffers" },
+    { "<leader>fs", function() Snacks.picker.grep() end, desc = "Grep" },
+    { "<leader>fw", function() Snacks.picker.grep_word() end, desc = "Word", mode = { "n", "x" } },
+    { "<leader>fl", function() Snacks.picker.lazy() end, desc = "Lazynvim plugins" },
+    { "<leader>fz", function() Snacks.picker.lines() end, desc = "Lines" },
+    { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Config files" },
+    { "<leader>fo", function() Snacks.picker.recent() end, desc = "Recent" },
+    { "<leader>fy", function() Snacks.picker.registers() end, desc = "Registers" },
+    { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command history" },
+    { "<leader>fk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
+    { "<leader>fq", function() Snacks.picker.qflist() end, desc = "Quickfix list" },
+    { "<leader>fC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
+    { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
+
+    -- Lsp
+    { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto definition" },
+    { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
+    { "gI", function() Snacks.picker.lsp_implementations() end, desc = "Goto implementation" },
+    { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto type definition" },
+    { "<leader>ls", function() Snacks.picker.lsp_symbols() end, desc = "LSP symbols" },
 	},
 }
