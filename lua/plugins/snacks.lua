@@ -4,9 +4,8 @@ return {
 	lazy = false,
 	opts = {
 		bigfile = { enabled = true },
-                vim.notify("Deleting file: " .. filepath, vim.log.levels.INFO)
-                local success = vim.fn.delete(filepath)
-                if success == 0 then
+		indent = { enabled = true },
+		scroll = { enabled = true },
 		dashboard = {
 			preset = {
 				keys = {
@@ -137,8 +136,8 @@ return {
 	},
 	keys = {
 		-- Scratch
-		-- { "<leader>.", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
-		-- { "<leader>S", function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
+		{ "<leader>s", function() Snacks.scratch() end, desc = "Toggle scratch" },
+		{ "<leader>S", function() Snacks.scratch.select() end, desc = "List scratches" },
 
 		-- Notifications
 		{ "<leader>nh", function() Snacks.notifier.show_history() end, desc = "Notification history" },
@@ -175,5 +174,8 @@ return {
     { "gI", function() Snacks.picker.lsp_implementations() end, desc = "Goto implementation" },
     { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto type definition" },
     { "<leader>ls", function() Snacks.picker.lsp_symbols() end, desc = "LSP symbols" },
+
+    -- Explorer
+    { "<leader>e", function() Snacks.explorer() end, desc = "Explorer" },
 	},
 }
