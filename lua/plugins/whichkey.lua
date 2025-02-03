@@ -24,7 +24,7 @@ return {
 			{ "<leader>l", group = "lsp" },
 			{ "<leader>lt", desc = "+trouble" },
 			{ "<leader>m", group = "misc" },
-			{ "<leader>n", group = "neo-tree" },
+			-- { "<leader>n", group = "neo-tree" },
 			{ "<leader>o", group = "obsidian" },
 			{ "<leader>of", group = "find" },
 			{ "<leader>ol", group = "link" },
