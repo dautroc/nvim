@@ -31,7 +31,7 @@ vim.cmd("autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 function _G.set_terminal_keymaps()
 	local opts = { buffer = 0 }
-	vim.keymap.set("t", "<C-\\>", [[<C-\><C-n>]], opts)
+	vim.keymap.set("t", "<esc><esc>", [[<C-\><C-n>]], opts)
 	-- vim.keymap.set("t", "<C-h>", [[<CMD>lua require("wezterm-move").move("h")<CR>]], opts)
 	-- vim.keymap.set("t", "<C-j>", [[<CMD>lua require("wezterm-move").move("j")<CR>]], opts)
 	-- vim.keymap.set("t", "<C-k>", [[<CMD>lua require("wezterm-move").move("k")<CR>]], opts)
@@ -86,4 +86,3 @@ vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { n
 vim.api.nvim_create_autocmd("VimResized", {
 	command = "wincmd =",
 })
-
