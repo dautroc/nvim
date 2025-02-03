@@ -37,4 +37,35 @@ M.create_term = function(direction)
   end)
 end
 
+M.select_directory = function()
+  local directories = {
+    { cwd = "app/api", desc = "APIs" },
+    { cwd = "app/models", desc = "Models" },
+    { cwd = "db/migrate", desc = "Migrations" },
+    { cwd = "app/views", desc = "Views" },
+    { cwd = "app/mailers", desc = "Mailers" },
+    { cwd = "app/services", desc = "Services" },
+    { cwd = "app/policies", desc = "Policies" },
+    { cwd = "config/locales", desc = "Locales" },
+    { cwd = "app/controllers", desc = "Controllers" },
+    { cwd = "spec/factories", desc = "Factories" },
+    { cwd = "lib/tasks", desc = "Tasks" },
+  }
+
+  vim.ui.select(
+    directories,
+    {
+      prompt = "Select directory to search:",
+      format_item = function(item)
+        return string.format("%s (%s)", item.desc, item.cwd)
+      end,
+    },
+    function(choice)
+      if choice then
+        Snacks.picker.files({ cwd = choice.cwd })
+      end
+    end
+  )
+end
+
 return M

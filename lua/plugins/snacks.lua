@@ -170,17 +170,7 @@ return {
     { "<leader>fu", function() Snacks.picker.undo() end, desc = "Undo" },
 
     -- Rails
-    {"<leader>ra", function() Snacks.picker.files({cwd = "app/api"}) end, desc = "APIs"},
-    {"<leader>rm", function() Snacks.picker.files({cwd = "app/models"}) end, desc = "Models"},
-    {"<leader>rM", function() Snacks.picker.files({cwd = "db/migrate"}) end, desc = "Migrations"},
-    {"<leader>rv", function() Snacks.picker.files({cwd = "app/views"}) end, desc = "Views"},
-    {"<leader>ri", function() Snacks.picker.files({cwd = "app/mailers"}) end, desc = "Mailers"},
-    {"<leader>rs", function() Snacks.picker.files({cwd = "app/services"}) end, desc = "Services"},
-    {"<leader>rp", function() Snacks.picker.files({cwd = "app/policies"}) end, desc = "Policies"},
-    {"<leader>rl", function() Snacks.picker.files({cwd = "config/locales"}) end, desc = "Locales"},
-    {"<leader>rc", function() Snacks.picker.files({cwd = "app/controllers"}) end, desc = "Controllers"},
-    {"<leader>rf", function() Snacks.picker.files({cwd = "spec/factories"}) end, desc = "Factories"},
-    {"<leader>rt", function() Snacks.picker.files({cwd = "lib/tasks"}) end, desc = "Tasks"},
+    {"<leader>fd", ":lua require('core.functions').select_directory()<CR>", desc = "Directory"},
 
     -- Lsp
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto definition" },
