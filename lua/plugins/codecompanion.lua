@@ -39,11 +39,21 @@ return {
 				end,
 			},
 			strategies = {
-				chat = { adapter = "copilot" },
+				chat = {
+					adapter = "copilot",
+					roles = {
+						user = "Sophia Laura",
+						llm = function(adapter)
+							return adapter.formatted_name
+						end,
+					},
+				},
 				inline = { adapter = "copilot" },
 				agent = { adapter = "copilot" },
 			},
 			display = {
+				action_pallete = { provider = "snacks" },
+				slash_commands = { otps = { provider = "snacks" } },
 				chat = {
 					intro_message = "Press ? for options",
 					show_header_separator = false, -- Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
@@ -61,7 +71,7 @@ return {
 						close_chat_at = 240, -- Close an open chat buffer if the total columns of your display are less than...
 						layout = "vertical", -- vertical|horizontal split for default provider
 						opts = { "internal", "filler", "closeoff", "algorithm:patience", "followwrap", "linematch:120" },
-						provider = "mini_diff", -- default|mini_diff
+						provider = "default", -- default|mini_diff
 					},
 				},
 			},
