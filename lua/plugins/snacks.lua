@@ -141,6 +141,7 @@ return {
     { "<leader>fk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
     { "<leader>fq", function() Snacks.picker.qflist() end, desc = "Quickfix list" },
     { "<leader>fc", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
+    { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Config files" },
     { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
     { "<leader>fn", function() Snacks.picker.notifications() end, desc = "Notifications" },
     { "<leader>fa", function() Snacks.picker.pickers() end, desc = "Actions" },
