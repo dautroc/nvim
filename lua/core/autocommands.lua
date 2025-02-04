@@ -86,3 +86,6 @@ vim.api.nvim_set_keymap("n", "<leader>ga", "<cmd>lua _gh_dash_toggle()<CR>", { n
 vim.api.nvim_create_autocmd("VimResized", {
 	command = "wincmd =",
 })
+
+-- Set color scheme
+vim.cmd("colorscheme catppuccin-frappe")

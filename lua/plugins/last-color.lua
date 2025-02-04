@@ -1,6 +1,6 @@
 return {
   'raddari/last-color.nvim',
-  enabled = true,
+  enabled = false,
   config = function()
     require('last-color').setup()
     local theme = require('last-color').recall()
