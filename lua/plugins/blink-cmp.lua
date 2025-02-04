@@ -25,7 +25,7 @@ return {
 				auto_show = function(ctx)
 					return ctx.mode ~= "cmdline" or not vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
 				end,
-        border = "rounded", -- Set the border style [2, 5, 6]
+				border = "rounded", -- Set the border style [2, 5, 6]
 			},
 		},
 		appearance = {
@@ -33,9 +33,16 @@ return {
 			nerd_font_variant = "mono",
 		},
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "lsp", "path", "snippets", "buffer", "lazydev" },
 			per_filetype = {
 				codecompanion = { "codecompanion" },
+			},
+			providers = {
+				lazydev = {
+					name = "LazyDev",
+					module = "lazydev.integrations.blink",
+					score_offset = 100,
+				},
 			},
 		},
 	},
