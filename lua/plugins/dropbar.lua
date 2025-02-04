@@ -7,6 +7,6 @@ return {
 	},
 	config = function()
 		local dropbar_api = require("dropbar.api")
-		vim.keymap.set("n", "<Leader>;", dropbar_api.pick, { desc = "Pick symbols in winbar" })
+		vim.keymap.set("n", "<Leader>d", dropbar_api.pick, { desc = "Dropbar" })
 	end,
 }
