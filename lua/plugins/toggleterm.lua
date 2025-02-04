@@ -3,7 +3,8 @@ return {
   enabled = true,
 	event = "VeryLazy",
 	keys = {
-		{ "<C-t>", "<cmd>ToggleTerm<cr>", desc = "Term toggle" },
+		{ "<C-t>", "<cmd>ToggleTerm<cr>", desc = "ToggleTerm" },
+
 		-- Term direction
 		{ "<leader>iv", "<cmd>lua require('core.functions').create_term('vertical')<cr>", desc = "Term vertical" },
 		{ "<leader>ix", "<cmd>lua require('core.functions').create_term('horizontal')<cr>", desc = "Term horizontal" },
@@ -11,6 +12,7 @@ return {
 
 		-- Term actions
 		{ "<leader>il", "<cmd>TermSelect<cr>", desc = "Term select" },
+		{ "<leader>ii", "<cmd>ToggleTerm<cr>", desc = "ToggleTerm" },
 		{ "<leader>is", "<cmd>ToggleTermSetName<cr>", desc = "Term set name" },
 		{ "<leader>ik", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term execute" },
 		{ "<leader>ik", ":ToggleTermSendVisualSelection<cr>", desc = "Term execute", mode = "v" },
