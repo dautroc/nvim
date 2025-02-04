@@ -59,24 +59,24 @@ return {
       }
     },
 		picker = {
-			transform = function(item)
-				if not item.file then
-					return item
-				end
-				-- Demote the "lazyvim" keymaps file:
-				if item.file:match("lazyvim/lua/config/keymaps%.lua") then
-					item.score_add = (item.score_add or 0) - 30
-				end
-				-- Boost the "neobean" keymaps file:
-				-- if item.file:match("neobean/lua/config/keymaps%.lua") then
-				--   item.score_add = (item.score_add or 0) + 100
-				-- end
-				return item
-			end,
+			-- transform = function(item)
+			-- 	if not item.file then
+			-- 		return item
+			-- 	end
+			-- 	-- Demote the "lazyvim" keymaps file:
+			-- 	if item.file:match("lazyvim/lua/config/keymaps%.lua") then
+			-- 		item.score_add = (item.score_add or 0) - 30
+			-- 	end
+			-- 	-- Boost the "neobean" keymaps file:
+			-- 	-- if item.file:match("neobean/lua/config/keymaps%.lua") then
+			-- 	--   item.score_add = (item.score_add or 0) + 100
+			-- 	-- end
+			-- 	return item
+			-- end,
 			-- In case you want to make sure that the score manipulation above works
 			-- or if you want to check the score of each file
 			debug = {
-				scores = true, -- show scores in the list
+				scores = false, -- show scores in the list
 			},
 			-- I like the "ivy" layout, so I set it as the default globaly, you can
 			-- still override it in different keymaps

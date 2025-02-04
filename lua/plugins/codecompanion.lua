@@ -45,7 +45,7 @@ return {
 			},
 			display = {
 				chat = {
-					intro_message = "Welcome to CodeCompanion ✨! Press ? for options",
+					intro_message = "Press ? for options",
 					show_header_separator = false, -- Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
 					separator = "─", -- The separator between the different messages in the chat buffer
 					show_references = true, -- Show references (from slash commands and variables) in the chat buffer?
