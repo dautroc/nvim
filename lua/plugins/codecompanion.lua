@@ -1,8 +1,9 @@
 return {
 	"olimorris/codecompanion.nvim",
-	wadependencies = {
+	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
+		"j-hui/fidget.nvim",
 	},
 	keys = {
 		{ "<leader>jj", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Code Companion Chat" },
@@ -44,7 +45,7 @@ return {
 					roles = {
 						user = "Sophia Laura",
 						llm = function(adapter)
-							return adapter.formatted_name
+							return adapter.formatted_name .. " (" .. adapter.schema.model.default .. ")"
 						end,
 					},
 				},
@@ -76,5 +77,8 @@ return {
 				},
 			},
 		})
+	end,
+	init = function()
+		require("plugins.codecompanion.fidget-spinner"):init()
 	end,
 }
