@@ -8,11 +8,47 @@ return {
 		"j-hui/fidget.nvim",
 	},
 	keys = {
-		{ "<leader>jj", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Code Companion Chat" },
-		{ "<leader>jg", ":CodeCompanionCmd ", desc = "Generate command" },
+		{ "<leader>jj", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Toggle Chat" },
+		{ "<leader>jl", "<CMD>CodeCompanionLoad<CR>", desc = "Load saved chat" },
+		{
+			"<leader>jg",
+			function()
+				Snacks.input.input({ prompt = "Enter generate command prompt" }, function(value)
+					if value == nil then
+						return
+					end
+					vim.cmd("CodeCompanionCmd " .. value)
+				end)
+			end,
+			desc = "Generate command",
+		},
+		{
+			"<leader>js",
+			function()
+				Snacks.input.input({ prompt = "Enter chat name" }, function(value)
+					if value == nil then
+						return
+					end
+					vim.cmd("CodeCompanionSave " .. value)
+				end)
+			end,
+			desc = "Save chat",
+		},
 
 		-- Visual
-		{ "<leader>jj", ":CodeCompanion /buffer ", desc = "Ask with selected code", mode = { "v" } },
+		{
+			"<leader>jj",
+			function()
+				Snacks.input.input({ prompt = "Ask with selected code" }, function(value)
+					if value == nil then
+						return
+					end
+					vim.cmd("CodeCompanion /buffer " .. value)
+				end)
+			end,
+			desc = "Ask with selected code",
+			mode = { "v" },
+		},
 		{ "<leader>je", "<CMD>CodeCompanion /explain<CR>", desc = "Explain selected code", mode = { "v" } },
 		{ "<leader>ja", "<CMD>CodeCompanionActions<CR>", desc = "Code Companion Actions", mode = { "n", "v" } },
 		{ "<leader>js", "<CMD>CodeCompanionChat Add<CR>", desc = "Add selection to chat", mode = { "v" } },
