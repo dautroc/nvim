@@ -148,7 +148,7 @@ return {
     { "<leader>fu", function() Snacks.picker.undo() end, desc = "Undo" },
 
     -- Rails
-    {"<leader>fd", ":lua require('core.functions').select_directory()<CR>", desc = "Directory"},
+    {"<leader>fd", ":lua require('plugins.snacks.find-in-dir').select_directory()<CR>", desc = "Directory"},
 
     -- Lsp
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto definition" },
