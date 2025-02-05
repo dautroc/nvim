@@ -1,3 +1,4 @@
+-- Focus buffers
 return {
 	"tadaa/vimade",
 	-- default opts (you can partially set these or configure them however you like)
@@ -8,7 +9,7 @@ return {
 		recipe = { "default", { animate = false } },
 		-- ncmode = 'windows' will fade inactive windows.
 		-- ncmode = 'focus' will only fade after you activate the `:VimadeFocus` command.
-		ncmode = "buffers",
+		ncmode = "focus",
 		fadelevel = 0.4, -- any value between 0 and 1. 0 is hidden and 1 is opaque.
 		-- Changes the real or theoretical background color. basebg can be used to give
 		-- transparent terminals accurating dimming.  See the 'Preparing a transparent terminal'
@@ -164,5 +165,8 @@ return {
 				},
 			},
 		},
+	},
+	keys = {
+		{ "<leader>mf", "<cmd>VimadeFocus<CR>", desc = "Vimade focus" },
 	},
 }
