@@ -1,3 +1,5 @@
+local supported_adapters = require("plugins.codecompanion.adapters").supported_adapters
+
 return {
 	"olimorris/codecompanion.nvim",
 	dependencies = {
@@ -18,27 +20,7 @@ return {
 	config = function()
 		require("codecompanion").setup({
 			language = "English",
-			adapters = {
-				ollama = function()
-					return require("codecompanion.adapters").extend("ollama", {
-						schema = {
-							model = {
-								default = "deepseek-r1:latest",
-							},
-						},
-					})
-				end,
-
-				copilot = function()
-					return require("codecompanion.adapters").extend("copilot", {
-						schema = {
-							model = {
-								default = "claude-3.5-sonnet",
-							},
-						},
-					})
-				end,
-			},
+			adapters = supported_adapters,
 			strategies = {
 				chat = {
 					adapter = "copilot",
@@ -48,13 +30,18 @@ return {
 							return adapter.formatted_name .. " (" .. adapter.schema.model.default .. ")"
 						end,
 					},
+					slash_commands = {
+						["buffer"] = { opts = { provider = "snacks" } },
+						["file"] = { opts = { provider = "snacks" } },
+						["help"] = { opts = { provider = "snacks" } },
+						["symbols"] = { opts = { provider = "snacks" } },
+					},
 				},
 				inline = { adapter = "copilot" },
 				agent = { adapter = "copilot" },
 			},
 			display = {
 				action_pallete = { provider = "snacks" },
-				slash_commands = { otps = { provider = "snacks" } },
 				chat = {
 					intro_message = "Press ? for options",
 					show_header_separator = false, -- Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
@@ -80,5 +67,6 @@ return {
 	end,
 	init = function()
 		require("plugins.codecompanion.fidget-spinner"):init()
+		require("plugins.codecompanion.chat-history"):init()
 	end,
 }
