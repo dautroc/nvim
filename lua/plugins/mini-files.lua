@@ -3,29 +3,29 @@
 ----------------------------------
 
 local map_split = function(buf_id, lhs, direction)
-  local rhs = function()
-    -- Make new window and set it as target
-    local new_target_window
-    vim.api.nvim_win_call(MiniFiles.get_explorer_state().target_window, function()
-      vim.cmd(direction .. " split")
-      new_target_window = vim.api.nvim_get_current_win()
-    end)
+	local rhs = function()
+		-- Make new window and set it as target
+		local new_target_window
+		vim.api.nvim_win_call(MiniFiles.get_explorer_state().target_window, function()
+			vim.cmd(direction .. " split")
+			new_target_window = vim.api.nvim_get_current_win()
+		end)
 
-    MiniFiles.set_target_window(new_target_window)
-  end
+		MiniFiles.set_target_window(new_target_window)
+	end
 
-  -- Adding `desc` will result into `show_help` entries
-  local desc = "Split " .. direction
-  vim.keymap.set("n", lhs, rhs, { buffer = buf_id, desc = desc })
+	-- Adding `desc` will result into `show_help` entries
+	local desc = "Split " .. direction
+	vim.keymap.set("n", lhs, rhs, { buffer = buf_id, desc = desc })
 end
 
 vim.api.nvim_create_autocmd("User", {
-  pattern = "MiniFilesBufferCreate",
-  callback = function(args)
-    local buf_id = args.data.buf_id
-    map_split(buf_id, "<C-s>", "belowright horizontal")
-    map_split(buf_id, "<C-v>", "belowright vertical")
-  end,
+	pattern = "MiniFilesBufferCreate",
+	callback = function(args)
+		local buf_id = args.data.buf_id
+		map_split(buf_id, "<C-s>", "belowright horizontal")
+		map_split(buf_id, "<C-v>", "belowright vertical")
+	end,
 })
 
 return {
@@ -95,7 +95,7 @@ return {
 				-- Import 'mini.files' module
 				local mini_files = require("mini.files")
 
-        -- This will open the highlighted directory in a tmux pane on the right
+				-- This will open the highlighted directory in a tmux pane on the right
 				vim.keymap.set("n", ",", function()
 					-- Get the current entry using 'get_fs_entry()'
 					local curr_entry = mini_files.get_fs_entry()
@@ -108,8 +108,8 @@ return {
 					end
 				end, { buffer = true, noremap = true, silent = true })
 
-        -- NOTE: Copy the file or directory that the cursor is on to the system clipboard,
-        -- I use macOS, so if you use linux, you might need to change the osascript command
+				-- NOTE: Copy the file or directory that the cursor is on to the system clipboard,
+				-- I use macOS, so if you use linux, you might need to change the osascript command
 				vim.keymap.set("n", "yc", function()
 					-- Get the current entry (file or directory)
 					local curr_entry = mini_files.get_fs_entry()
@@ -132,7 +132,7 @@ return {
 					end
 				end, { buffer = true, noremap = true, silent = true, desc = "Copy file/directory to clipboard" })
 
-        -- NOTE: Zip the current file or directory and copy it to the system clipboard
+				-- NOTE: Zip the current file or directory and copy it to the system clipboard
 				vim.keymap.set("n", "yz", function()
 					local curr_entry = require("mini.files").get_fs_entry()
 					if curr_entry then
@@ -220,7 +220,7 @@ return {
 				end, { buffer = true, noremap = true, silent = true, desc = "Paste from clipboard" })
 
 				-- Define <M-c> to copy the current file or directory path (relative to home) to clipboard
-        -- NOTE: This is useful for pasting the path in the terminal or other applications
+				-- NOTE: This is useful for pasting the path in the terminal or other applications
 				vim.keymap.set("n", "<M-c>", function()
 					-- Get the current entry (file or directory)
 					local curr_entry = mini_files.get_fs_entry()
@@ -491,8 +491,18 @@ return {
 		---@return nil
 		local function updateMiniWithGit(buf_id, gitStatusMap)
 			vim.schedule(function()
+				-- Check if buffer still exists
+				if not vim.api.nvim_buf_is_valid(buf_id) then
+					return
+				end
+
+				-- Get buffer info
 				local nlines = vim.api.nvim_buf_line_count(buf_id)
 				local cwd = vim.fs.root(buf_id, ".git")
+				if not cwd then
+					return
+				end
+
 				local escapedcwd = escapePattern(cwd)
 				if vim.fn.has("win32") == 1 then
 					escapedcwd = escapedcwd:gsub("\\", "/")
@@ -509,16 +519,14 @@ return {
 					if status then
 						local is_symlink = isSymlink(entry.path)
 						local symbol, hlGroup = mapSymbols(status, is_symlink)
-						vim.api.nvim_buf_set_extmark(buf_id, nsMiniFiles, i - 1, 0, {
-							-- NOTE: if you want the signs on the right uncomment those and comment
-							-- the 3 lines after
-							-- virt_text = { { symbol, hlGroup } },
-							-- virt_text_pos = "right_align",
-							sign_text = symbol,
-							sign_hl_group = hlGroup,
-							priority = 2,
-						})
-					else
+						-- Check if buffer is still valid before setting extmark
+						if vim.api.nvim_buf_is_valid(buf_id) then
+							vim.api.nvim_buf_set_extmark(buf_id, nsMiniFiles, i - 1, 0, {
+								sign_text = symbol,
+								sign_hl_group = hlGroup,
+								priority = 2,
+							})
+						end
 					end
 				end
 			end)
