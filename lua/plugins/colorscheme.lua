@@ -4,5 +4,9 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 	},
-	{ "kepano/flexoki-neovim", name = "flexoki" },
+	{
+		"sainnhe/gruvbox-material",
+		lazy = false,
+		priority = 1000,
+	},
 }
