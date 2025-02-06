@@ -158,7 +158,7 @@ return {
     { "<leader>ls", function() Snacks.picker.lsp_symbols() end, desc = "LSP symbols" },
 
     -- Explorer
-    { "<leader>e", function() Snacks.explorer() end, desc = "Explorer" },
+    { "<leader>E", function() Snacks.explorer() end, desc = "Explorer" },
     { "<leader>z", function() Snacks.zen() end, desc = "Zen zoom" },
   },
 }
