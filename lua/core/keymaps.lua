@@ -41,6 +41,7 @@ keymap(
 	[[<cmd>let @+ = join([expand('%'),  line(".")], ':')<cr>]],
 	{ desc = "Copy buffer path with line number" }
 )
+keymap("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete buffer" })
 
 -- Navigation
 -- keymap("n", "<c-h>", "<c-w>h", { desc = "Navigate left" })
