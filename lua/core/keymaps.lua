@@ -52,10 +52,10 @@ keymap("n", "<leader>ma", "==", { desc = "Auto identation" })
 keymap("v", "<leader>ma", "==", { desc = "Auto identation" })
 
 -- Better move around
-keymap("n", "<C-d>", "<C-d>zz")
-keymap("n", "<C-u>", "<C-u>zz")
-keymap("n", "<C-o>", "<C-o>zz")
-keymap("n", "<C-i>", "<C-i>zz")
+-- keymap("n", "<C-d>", "<C-d>zz")
+-- keymap("n", "<C-u>", "<C-u>zz")
+-- keymap("n", "<C-o>", "<C-o>zz")
+-- keymap("n", "<C-i>", "<C-i>zz")
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
