@@ -27,29 +27,31 @@ M.select_directory = function()
     },
     function(choice)
       if choice then
-        local search_options = {
-          { value = "files", desc = "Search Files" },
-          { value = "grep", desc = "Search Content (Grep)" },
-        }
-
-        snacks.select(
-          search_options,
-          {
-            prompt = "Select search type:",
-            format_item = function(item)
-              return item.desc
-            end,
-          },
-          function(search_choice)
-            if search_choice then
-              if search_choice.value == "files" then
-                Snacks.picker.files({ cwd = choice.cwd })
-              else
-                Snacks.picker.grep({ cwd = choice.cwd })
-              end
-            end
-          end
-        )
+        Snacks.picker.files({ cwd = choice.cwd })
+        -- Allow to select search type
+        -- local search_options = {
+        --   { value = "files", desc = "Search Files" },
+        --   { value = "grep", desc = "Search Content (Grep)" },
+        -- }
+        --
+        -- snacks.select(
+        --   search_options,
+        --   {
+        --     prompt = "Select search type:",
+        --     format_item = function(item)
+        --       return item.desc
+        --     end,
+        --   },
+        --   function(search_choice)
+        --     if search_choice then
+        --       if search_choice.value == "files" then
+        --         Snacks.picker.files({ cwd = choice.cwd })
+        --       else
+        --         Snacks.picker.grep({ cwd = choice.cwd })
+        --       end
+        --     end
+        --   end
+        -- )
       end
     end
   )
