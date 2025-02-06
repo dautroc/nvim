@@ -19,8 +19,6 @@ keymap("n", "<leader>x", "<C-w>s", { desc = "Split" })
 keymap("n", "<leader>v", "<C-w>v", { desc = "Vsplit" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
-keymap("n", "<right>", ">>", { desc = "Move line right" })
-keymap("n", "<left>", "<<", { desc = "Move line left" })
 
 -- Layout
 keymap("n", "tl", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
@@ -34,20 +32,14 @@ keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap
 keymap("n", "<leader>mv", "ggVG", { desc = "Select all in current buffer", silent = true })
 
 -- Buffers
-keymap("n", "<leader>by", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy buffer path" })
+keymap("n", "<leader>by", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy path" })
 keymap(
 	"n",
 	"<leader>bY",
 	[[<cmd>let @+ = join([expand('%'),  line(".")], ':')<cr>]],
-	{ desc = "Copy buffer path with line number" }
+	{ desc = "Copy path with line number" }
 )
 keymap("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete buffer" })
-
--- Navigation
--- keymap("n", "<c-h>", "<c-w>h", { desc = "Navigate left" })
--- keymap("n", "<c-j>", "<c-w>j", { desc = "Navigate down" })
--- keymap("n", "<c-k>", "<c-w>k", { desc = "Navigate up" })
--- keymap("n", "<c-l>", "<c-w>l", { desc = "Navigate right" })
 
 -- Quickfix list
 keymap("n", "<leader>cn", "<cmd>cnext<cr>")
@@ -70,8 +62,8 @@ keymap("n", "N", "Nzzzv")
 -- Resize
 keymap("n", "<down>", ":resize +2<cr>")
 keymap("n", "<up>", ":resize -2<cr>")
--- keymap("n", "<right>", ":vertical resize +2<cr>")
--- keymap("n", "<left>", ":vertical resize -2<cr>")
+keymap("n", "<right>", ":vertical resize +2<cr>")
+keymap("n", "<left>", ":vertical resize -2<cr>")
 
 -- Go mode
 keymap({ "n", "v" }, "gh", "^", { desc = "Move to line start", silent = true })
