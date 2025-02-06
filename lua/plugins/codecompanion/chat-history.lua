@@ -73,7 +73,7 @@ function M:init()
 	end, {})
 
 	-- Rest of the code remains the same
-	vim.api.nvim_create_user_command("CodeCompanionSave", function(opts)
+	vim.api.nvim_create_user_command("CodeCompanionSave", function()
 		local codecompanion = require("codecompanion")
 		local success, chat = pcall(function()
 			return codecompanion.buf_get_chat(0)
@@ -82,14 +82,57 @@ function M:init()
 			vim.notify("CodeCompanionSave should only be called from CodeCompanion chat buffers", vim.log.levels.ERROR)
 			return
 		end
-		if #opts.fargs == 0 then
-			vim.notify("CodeCompanionSave requires at least 1 arg to make a file name", vim.log.levels.ERROR)
+
+		-- Get list of saved chats
+		local files = vim.fn.glob(save_path() .. "/*", false, true)
+		local choices = { "Create new chat..." }
+
+		-- Add existing chat names
+		for _, file in ipairs(files) do
+			table.insert(choices, vim.fn.fnamemodify(file, ":t:r"))
 		end
-		local save_name = table.concat(opts.fargs, "-") .. ".md"
-		local save_file = save_path():joinpath(save_name)
-		local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
-		save_file:write(table.concat(lines, "\n"), "w")
-	end, { nargs = "*" })
+
+		Snacks.picker.select(choices, {
+			prompt = "Select chat name or create new",
+			format_item = function(item)
+				return item
+			end,
+		}, function(selected)
+			if selected == nil then
+				return
+			end
+
+			if selected == "Create new chat..." then
+				-- Prompt for new chat name
+				Snacks.input.input({
+					prompt = "Enter new chat name",
+				}, function(value)
+					if value == nil or value == "" then
+						return
+					end
+
+					-- Save the chat
+					local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+					local save_file = save_path():joinpath(value .. ".md")
+					save_file:write(table.concat(lines, "\n"), "w")
+					vim.notify("Chat saved as: " .. value, vim.log.levels.INFO)
+				end)
+			else
+				-- Confirm override
+				vim.ui.select({ "Yes", "No" }, {
+					prompt = "Override existing chat '" .. selected .. "'?",
+				}, function(choice)
+					if choice == "Yes" then
+						-- Save the chat
+						local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+						local save_file = save_path():joinpath(selected .. ".md")
+						save_file:write(table.concat(lines, "\n"), "w")
+						vim.notify("Chat overwritten: " .. selected, vim.log.levels.INFO)
+					end
+				end)
+			end
+		end)
+	end, {})
 end
 
 return M

@@ -24,14 +24,7 @@ return {
 		},
 		{
 			"<leader>js",
-			function()
-				Snacks.input.input({ prompt = "Enter chat name" }, function(value)
-					if value == nil then
-						return
-					end
-					vim.cmd("CodeCompanionSave " .. value)
-				end)
-			end,
+      "<CMD>CodeCompanionSave<CR>",
 			desc = "Save chat",
 		},
 
