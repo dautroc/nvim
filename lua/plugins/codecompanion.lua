@@ -77,7 +77,7 @@ return {
 				agent = { adapter = "copilot" },
 			},
 			display = {
-				action_pallete = { provider = "snacks" },
+				action_palette = { provider = "snacks" },
 				chat = {
 					intro_message = "Press ? for options",
 					show_header_separator = false, -- Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
