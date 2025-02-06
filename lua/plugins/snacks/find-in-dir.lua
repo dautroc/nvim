@@ -15,7 +15,9 @@ M.select_directory = function()
     { cwd = "lib/tasks", desc = "Tasks" },
   }
 
-  vim.ui.select(
+  local snacks = require("snacks.picker")
+
+  snacks.select(
     directories,
     {
       prompt = "Select directory to search:",
@@ -30,7 +32,7 @@ M.select_directory = function()
           { value = "grep", desc = "Search Content (Grep)" },
         }
 
-        vim.ui.select(
+        snacks.select(
           search_options,
           {
             prompt = "Select search type:",
