@@ -1,7 +1,7 @@
 return {
 	"williamboman/mason.nvim",
 	cmd = "Mason",
-  keys = {
+	keys = {
 		{ "<leader>M", "<cmd>Mason<CR>", desc = "Opens Mason" },
 	},
 	opts = {
@@ -21,13 +21,13 @@ return {
 	dependencies = {
 		{
 			"williamboman/mason-lspconfig.nvim",
-      event = "BufReadPre",
-      config = function()
-        require("mason").setup()
-        require("mason-lspconfig").setup()
-      end,
-      opts = {
-        ensure_installed = require("utils").servers,
+			event = "BufReadPre",
+			config = function()
+				require("mason").setup()
+				require("mason-lspconfig").setup()
+			end,
+			opts = {
+				ensure_installed = require("utils").servers,
 				automatic_installation = true,
 			},
 		},

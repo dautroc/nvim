@@ -3,15 +3,6 @@ return {
 	branch = "v2.x",
 	dependencies = {
 		{ "neovim/nvim-lspconfig" },
-		{
-			"williamboman/mason.nvim",
-			build = function()
-				pcall(vim.api.nvim_command, "MasonUpdate")
-			end,
-		},
-		{ "williamboman/mason-lspconfig.nvim" },
-
-		-- Autocompletion
 		{ "L3MON4D3/LuaSnip" }, -- Required
 	},
 	config = function()
@@ -21,7 +12,10 @@ return {
 		-- Python
 		require("lspconfig").pyright.setup({})
 
-		-- Ruby
+		-- TypeScript
+		require("lspconfig").ts_ls.setup({})
+
+		-- Ruby Fuzzy server
 		local lsp_configurations = require("lspconfig.configs")
 		if not lsp_configurations.fuzzy_ls then
 			lsp_configurations.fuzzy_ls = {
@@ -42,6 +36,15 @@ return {
 		end
 		lspconfig.fuzzy_ls.setup({})
 
+		-- Ruby LSP
+		require("lspconfig").ruby_lsp.setup({})
+
+		-- Lua LSP
+		require("lspconfig").lua_ls.setup({})
+
+		-- Go LSP
+		require("lspconfig").gopls.setup({})
+
 		-- LSP-Zero Configuration
 		local lsp_zero = require("lsp-zero")
 
@@ -59,10 +62,5 @@ return {
 		lsp_zero.on_attach(function(client, bufnr)
 			lsp_zero.default_keymaps({ buffer = bufnr })
 		end)
-
-		--- if you want to know more about lsp-zero and mason.nvim
-		--- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
-		require("mason").setup({})
-		require("mason-lspconfig").setup({})
 	end,
 }
