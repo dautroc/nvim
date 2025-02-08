@@ -235,13 +235,13 @@ return {
 			end,
 			desc = "Symbols (Aerial)",
 		},
-    {
-      "<leader>fd",
-      function()
-        Snacks.picker.pick("directory")
-      end,
-      desc = "Directory",
-    },
+		{
+			"<leader>fd",
+			function()
+				Snacks.picker.pick("directory")
+			end,
+			desc = "Directory",
+		},
 		{
 			"<leader>fw",
 			function()
@@ -378,8 +378,9 @@ return {
 			"<leader>z",
 			function()
 				Snacks.zen()
+				vim.fn.system("zellij action toggle-fullscreen")
 			end,
-			desc = "Zen zoom",
+			desc = "Zen zoom + Zellij fullscreen",
 		},
 	},
 }
