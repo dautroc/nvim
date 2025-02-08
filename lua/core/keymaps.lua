@@ -32,7 +32,7 @@ keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap
 keymap("n", "<leader>mv", "ggVG", { desc = "Select all in current buffer", silent = true })
 
 -- Buffers
-keymap("n", "<leader>by", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy path" })
+keymap("n", "<leader>by", '<cmd>let @+ = fnamemodify(expand("%"), ":.")<cr>', { desc = "Copy relative path" })
 keymap(
 	"n",
 	"<leader>bY",
