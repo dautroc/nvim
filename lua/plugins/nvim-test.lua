@@ -7,6 +7,10 @@ return {
 		{ "<leader>tv", "<cmd>TestVisit<cr>", desc = "Test visit" },
 	},
 	config = function()
-		require("nvim-test").setup()
+    require("nvim-test").setup({
+      require('nvim-test.runners.rspec'):setup({
+        command = "bundle",
+      })
+		})
 	end,
 }
