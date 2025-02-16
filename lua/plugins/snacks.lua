@@ -217,7 +217,7 @@ return {
 		{
 			"<leader>fz",
 			function()
-				Snacks.picker.grep_buffers()
+				Snacks.picker.lines()
 			end,
 			desc = "Grep open buffers",
 		},

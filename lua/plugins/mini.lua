@@ -10,8 +10,6 @@ return {
 		-- require("mini.diff").setup()
 		require("mini.splitjoin").setup()
 		require("mini.icons").setup()
-		require("mini.sessions").setup({
-			autowrite = true,
-		})
+		require("mini.sessions").setup()
 	end,
 }

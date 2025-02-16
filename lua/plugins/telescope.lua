@@ -4,7 +4,7 @@ local file_ignore_patterns =
 return {
 	"nvim-telescope/telescope.nvim",
 	cmd = { "Telescope" },
-  enabled = false,
+  enabled = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-project.nvim",

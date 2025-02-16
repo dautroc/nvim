@@ -5,7 +5,7 @@ return {
   },
   keys = {
     { "<leader>lf", "<cmd>Guard fmt<cr>", desc = "Format" },
-    { "<leader>ll", "<cmd>Guard info<cr>", desc = "Info" },
+    { "<leader>lg", "<cmd>Guard info<cr>", desc = "Guard Info" },
   },
   config = function()
     local ft = require("guard.filetype")

@@ -103,5 +103,5 @@ keymap("x", "<", "<gv", opts)
 keymap("x", ">", ">gv", opts)
 
 -- LSP
-keymap("n", "<leader>lm", "<cmd>Mason<cr>", opts)
-keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
+keymap("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
+keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code action" })
