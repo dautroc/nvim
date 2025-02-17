@@ -76,3 +76,8 @@ vim.api.nvim_create_autocmd("FileType", {
 		})
 	end,
 })
+
+-- Call command mksession! after quit nvim
+vim.api.nvim_create_autocmd("VimLeavePre", {
+  command = "mksession!",
+})
