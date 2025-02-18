@@ -6,6 +6,7 @@ return {
 		bigfile = { enabled = true },
 		indent = { enabled = true },
 		scroll = { enabled = true },
+		image = { enabled = true },
 		dashboard = {
 			preset = {
 				keys = {
@@ -175,7 +176,9 @@ return {
 		{
 			"<leader><leader>",
 			function()
-				Snacks.picker.smart()
+				Snacks.picker.smart({
+					filter = { cwd = true },
+				})
 			end,
 			desc = "Smart find files",
 		},
@@ -189,7 +192,9 @@ return {
 		{
 			"<leader>;",
 			function()
-				Snacks.picker.buffers()
+				Snacks.picker.buffers({
+					filter = { cwd = true },
+				})
 			end,
 			desc = "Find buffers",
 		}, -- shortcut
@@ -203,14 +208,18 @@ return {
 		{
 			"<leader>fb",
 			function()
-				Snacks.picker.buffers()
+				Snacks.picker.buffers({
+					filter = { cwd = true },
+				})
 			end,
 			desc = "Buffers",
 		},
 		{
 			"<leader>ff",
 			function()
-				Snacks.picker.files()
+				Snacks.picker.files({
+					filter = { cwd = true },
+				})
 			end,
 			desc = "Files",
 		},
@@ -219,7 +228,7 @@ return {
 			function()
 				Snacks.picker.lines()
 			end,
-			desc = "Grep open buffers",
+			desc = "Grep lines",
 		},
 		{
 			"<leader>fs",
@@ -260,7 +269,9 @@ return {
 		{
 			"<leader>fo",
 			function()
-				Snacks.picker.recent()
+				Snacks.picker.recent({
+					filter = { cwd = true },
+				})
 			end,
 			desc = "Recent",
 		},
@@ -302,7 +313,9 @@ return {
 		{
 			"<leader>fp",
 			function()
-				Snacks.picker.projects()
+				Snacks.picker.projects({
+					dev = { "~/workspace" },
+				})
 			end,
 			desc = "Projects",
 		},
