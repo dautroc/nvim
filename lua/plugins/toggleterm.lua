@@ -1,6 +1,6 @@
 return {
 	"akinsho/toggleterm.nvim",
-  enabled = false,
+	enabled = true,
 	event = "VeryLazy",
 	keys = {
 		{ "<C-t>", "<cmd>ToggleTerm<cr>", desc = "ToggleTerm" },
@@ -15,7 +15,12 @@ return {
 		{ "<leader>ii", "<cmd>ToggleTerm<cr>", desc = "ToggleTerm" },
 		{ "<leader>is", "<cmd>ToggleTermSetName<cr>", desc = "Term set name" },
 		{ "<leader>ik", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "Term execute" },
-		{ "<leader>ik", ":ToggleTermSendVisualSelection<cr>", desc = "Term execute", mode = "v" },
+		{
+			"<leader>ik",
+			":ToggleTermSendVisualSelection<cr>",
+			desc = "Term execute",
+			mode = "v",
+		},
 	},
 	config = function()
 		require("toggleterm").setup({
@@ -46,7 +51,7 @@ return {
 			winbar = {
 				enabled = true,
 				name_formatter = function(term) --  term: Terminal
-					return term.name
+					return "Terminal: " .. term.display_name
 				end,
 			},
 		})
