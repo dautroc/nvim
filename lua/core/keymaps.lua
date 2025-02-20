@@ -17,15 +17,15 @@ vim.g.maplocalleader = ","
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>x", "<C-w>s", { desc = "Split" })
 keymap("n", "<leader>v", "<C-w>v", { desc = "Vsplit" })
-keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit file" })
+keymap("n", "<leader>q", "<cmd>bdelete<cr>", { desc = "Quit file" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit all files" })
 
 -- Layout
-keymap("n", "tl", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
-keymap("n", "ta", "<cmd>tabnew<cr>", { desc = "Add layout" })
-keymap("n", "tk", "<cmd>tabnext<cr>", { desc = "Next layout" })
-keymap("n", "tj", "<cmd>tabprev<cr>", { desc = "Previous layout" })
-keymap("n", "tt", "<cmd>tabclose<cr>", { desc = "Close layout" })
+-- keymap("n", "tl", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
+keymap("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New layout" })
+keymap("n", "<A-l>", "<cmd>tabnext<cr>", { desc = "Next layout" })
+keymap("n", "<A-h>", "<cmd>tabprev<cr>", { desc = "Previous layout" })
+keymap("n", "<A-w>", "<cmd>tabclose<cr>", { desc = "Close layout" })
 
 -- Custom functions
 keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })

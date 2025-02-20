@@ -18,7 +18,7 @@ M.smart_delete = function()
 end
 
 M.create_term = function(direction)
-  vim.ui.input({
+  Snacks.input.input({
     prompt = "Enter name: ",
   }, function(name)
 
