@@ -19,6 +19,7 @@ return {
 			{ "<leader>gd", group = "diffview" },
 			{ "<leader>h", group = "help" },
 			{ "<leader>i", group = "terms" },
+			{ "<leader>in", group = "+new" },
       { "<leader>j", group = "code companion" },
       { "<leader>k", group = "llm" },
 			{ "<leader>l", group = "lsp" },
