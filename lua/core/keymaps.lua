@@ -17,18 +17,13 @@ vim.g.maplocalleader = ","
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>x", "<C-w>s", { desc = "Split" })
 keymap("n", "<leader>v", "<C-w>v", { desc = "Vsplit" })
-keymap(
-  "n",
-  "<leader>q",
-  function()
-    if #vim.fn.getbufinfo({ buflisted = 1 }) > 1 then
-      vim.cmd("bd")
-    else
-      vim.cmd("q")
-    end
-  end,
-  { desc = "Close file or quit nvim" }
-)
+keymap("n", "<leader>q", function()
+	if #vim.fn.getbufinfo({ buflisted = 1 }) > 1 then
+		vim.cmd("bd")
+	else
+		vim.cmd("q")
+	end
+end, { desc = "Close file or quit nvim" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit nvim" })
 
 -- Layout
@@ -71,10 +66,10 @@ keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
 -- Resize
-keymap("n", "<down>", ":resize +2<cr>")
-keymap("n", "<up>", ":resize -2<cr>")
-keymap("n", "<right>", ":vertical resize +2<cr>")
-keymap("n", "<left>", ":vertical resize -2<cr>")
+-- keymap("n", "<down>", ":resize +2<cr>")
+-- keymap("n", "<up>", ":resize -2<cr>")
+-- keymap("n", "<right>", ":vertical resize +2<cr>")
+-- keymap("n", "<left>", ":vertical resize -2<cr>")
 
 -- Go mode
 keymap({ "n", "v" }, "gh", "^", { desc = "Move to line start", silent = true })
@@ -116,3 +111,9 @@ keymap("x", ">", ">gv", opts)
 -- LSP
 keymap("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
 keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code action" })
+
+-- Toggle background
+keymap("n", "<leader>mb", function()
+	local is_dark = vim.o.background == "dark"
+	vim.o.background = is_dark and "light" or "dark"
+end, { desc = "Toggle background" })
