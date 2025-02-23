@@ -123,3 +123,9 @@ keymap("n", "<leader>mt", function()
 		vim.o.background = "dark"
 	end
 end, { desc = "Toggle theme dark/light" })
+
+-- Window Navigation
+keymap({ "n", "v" }, "<C-h>", "<C-w>h", { desc = "Move to left window" })
+keymap({ "n", "v" }, "<C-j>", "<C-w>j", { desc = "Move to down window" })
+keymap({ "n", "v" }, "<C-k>", "<C-w>k", { desc = "Move to up window" })
+keymap({ "n", "v" }, "<C-l>", "<C-w>l", { desc = "Move to right window" })
