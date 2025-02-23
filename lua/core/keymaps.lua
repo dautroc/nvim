@@ -112,8 +112,14 @@ keymap("x", ">", ">gv", opts)
 keymap("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
 keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code action" })
 
--- Toggle background
-keymap("n", "<leader>mb", function()
+-- Toggle theme
+keymap("n", "<leader>mt", function()
 	local is_dark = vim.o.background == "dark"
-	vim.o.background = is_dark and "light" or "dark"
-end, { desc = "Toggle background" })
+	if is_dark then
+		vim.cmd.colorscheme("catppuccin-latte")
+		vim.o.background = "light"
+	else
+		vim.cmd.colorscheme("catppuccin-frappe")
+		vim.o.background = "dark"
+	end
+end, { desc = "Toggle theme dark/light" })

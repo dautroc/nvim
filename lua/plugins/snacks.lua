@@ -66,7 +66,7 @@ return {
 				-- inlay_hints = false,
 			},
 			show = {
-				statusline = false, -- can only be shown when using the global statusline
+				statusline = true, -- can only be shown when using the global statusline
 				tabline = false,
 			},
 		},
@@ -391,7 +391,7 @@ return {
 			"<leader>z",
 			function()
 				Snacks.zen()
-				vim.fn.system("zellij action toggle-fullscreen")
+				-- vim.fn.system("zellij action toggle-fullscreen")
 			end,
 			desc = "Zen zoom + Zellij fullscreen",
 		},
