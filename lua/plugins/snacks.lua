@@ -380,13 +380,13 @@ return {
 		},
 
 		-- Explorer
-		{
-			"<leader>E",
-			function()
-				Snacks.explorer()
-			end,
-			desc = "Explorer",
-		},
+		-- {
+		-- 	"<leader>E",
+		-- 	function()
+		-- 		Snacks.explorer()
+		-- 	end,
+		-- 	desc = "Explorer",
+		-- },
 		{
 			"<leader>z",
 			function()

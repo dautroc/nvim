@@ -25,6 +25,7 @@ keymap("n", "<leader>q", function()
 	end
 end, { desc = "Close file or quit nvim" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit nvim" })
+keymap("n", "Q", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close other buffers" })
 
 -- Layout
 -- keymap("n", "tl", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
