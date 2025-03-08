@@ -12,7 +12,7 @@ return {
 			question_header = "#   You:",
 			answer_header = "#   Copilot:",
 			error_header = "> [!ERROR] Error",
-			model = "claude-3.5-sonnet", -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o', 'claude-3.5-sonnet'
+			model = "claude-3.7-sonnet", -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o', 'claude-3.5-sonnet'
 			debug = false, -- Enable debugging
 			prompts = {
 				ReviewCode = {
