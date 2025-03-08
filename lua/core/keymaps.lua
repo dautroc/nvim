@@ -30,8 +30,8 @@ keymap("n", "Q", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close other buffers
 -- Layout
 -- keymap("n", "tl", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
 keymap("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New layout" })
-keymap("n", "<A-l>", "<cmd>tabnext<cr>", { desc = "Next layout" })
-keymap("n", "<A-h>", "<cmd>tabprev<cr>", { desc = "Previous layout" })
+keymap("n", "<A-n>", "<cmd>tabnext<cr>", { desc = "Next layout" })
+keymap("n", "<A-p>", "<cmd>tabprev<cr>", { desc = "Previous layout" })
 keymap("n", "<A-w>", "<cmd>tabclose<cr>", { desc = "Close layout" })
 
 -- Custom functions
