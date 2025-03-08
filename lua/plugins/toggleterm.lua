@@ -112,10 +112,16 @@ return {
 			vim.keymap.set("t", "jk", [[<C-\><C-n>]], opts)
 
 			-- Navigation
-			vim.keymap.set("t", "<C-h>", [[<CMD>ZellijNavigateLeftTab<CR>]], opts)
-			vim.keymap.set("t", "<C-j>", [[<CMD>ZellijNavigateDown<CR>]], opts)
-			vim.keymap.set("t", "<C-k>", [[<CMD>ZellijNavigateUp<CR>]], opts)
-			vim.keymap.set("t", "<C-l>", [[<CMD>ZellijNavigateRightTab<CR>]], opts)
+			-- vim.keymap.set("t", "<C-h>", [[<CMD>ZellijNavigateLeftTab<CR>]], opts)
+			-- vim.keymap.set("t", "<C-j>", [[<CMD>ZellijNavigateDown<CR>]], opts)
+			-- vim.keymap.set("t", "<C-k>", [[<CMD>ZellijNavigateUp<CR>]], opts)
+			-- vim.keymap.set("t", "<C-l>", [[<CMD>ZellijNavigateRightTab<CR>]], opts)
+
+      vim.keymap.set("t", "<C-h>", [[<C-w>h]], opts)
+      vim.keymap.set("t", "<C-j>", [[<C-w>j]], opts)
+      vim.keymap.set("t", "<C-k>", [[<C-w>k]], opts)
+      vim.keymap.set("t", "<C-l>", [[<C-w>l]], opts)
+
 
 			-- Toggle term
 			vim.keymap.set("t", "<A-v>", [[<CMD>ToggleTerm direction=vertical name=vertical<CR>]], opts)
