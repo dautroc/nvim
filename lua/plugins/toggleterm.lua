@@ -117,10 +117,10 @@ return {
 			-- vim.keymap.set("t", "<C-k>", [[<CMD>ZellijNavigateUp<CR>]], opts)
 			-- vim.keymap.set("t", "<C-l>", [[<CMD>ZellijNavigateRightTab<CR>]], opts)
 
-      vim.keymap.set("t", "<C-h>", [[<C-w>h]], opts)
-      vim.keymap.set("t", "<C-j>", [[<C-w>j]], opts)
-      vim.keymap.set("t", "<C-k>", [[<C-w>k]], opts)
-      vim.keymap.set("t", "<C-l>", [[<C-w>l]], opts)
+      vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
+      vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
+      vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
+      vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
 
 
 			-- Toggle term

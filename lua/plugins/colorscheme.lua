@@ -5,8 +5,8 @@ return {
 		priority = 1000,
 		init = function()
 			vim.cmd([[
-				au User LumenLight echom 'gruvbox'
-				au User LumenDark echom 'gruvbox'
+				au User LumenLight echom 'github_light'
+				au User LumenDark echom 'github_dark'
 			]])
 		end,
 	},
@@ -16,8 +16,8 @@ return {
 		-- priority = 1000,
 	},
 	{
-		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
-		config = true,
+		"projekt0n/github-nvim-theme",
+		name = "github-theme",
+    priority = 1000,
 	},
 }

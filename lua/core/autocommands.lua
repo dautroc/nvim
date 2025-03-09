@@ -61,7 +61,7 @@ vim.api.nvim_create_autocmd("VimResized", {
 })
 
 -- Set color scheme
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme github_dark")
 
 -- IWE note taking
 vim.api.nvim_create_autocmd("FileType", {
