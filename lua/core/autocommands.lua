@@ -61,7 +61,7 @@ vim.api.nvim_create_autocmd("VimResized", {
 })
 
 -- Set color scheme
-vim.cmd("colorscheme rose-pine-moon")
+-- vim.cmd("colorscheme rose-pine-moon")
 
 -- IWE note taking
 vim.api.nvim_create_autocmd("FileType", {
