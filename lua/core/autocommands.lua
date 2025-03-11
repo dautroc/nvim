@@ -1,11 +1,14 @@
-vim.api.nvim_create_autocmd("TextYankPost", {
+local autocmd = vim.api.nvim_create_autocmd
+local map = vim.keymap.set
+
+autocmd("TextYankPost", {
 	callback = function()
 		vim.highlight.on_yank()
 	end,
 	desc = "Briefly highlight yanked text",
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
+autocmd({ "FileType" }, {
 	pattern = { "qf", "help", "man", "lspinfo", "spectre_panel" },
 	callback = function()
 		vim.cmd([[
@@ -15,7 +18,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
+autocmd({ "FileType" }, {
 	pattern = { "gitcommit", "markdown" },
 	callback = function()
 		vim.opt_local.wrap = true
@@ -24,12 +27,12 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 -- Auto resize splits when the terminal's window is resized
-vim.api.nvim_create_autocmd("VimResized", {
+autocmd("VimResized", {
 	command = "wincmd =",
 })
 
 -- IWE note taking
-vim.api.nvim_create_autocmd("FileType", {
+autocmd("FileType", {
 	pattern = "markdown",
 	callback = function(args)
 		vim.lsp.start({
@@ -44,7 +47,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- Call command mksession! after quit nvim
-vim.api.nvim_create_autocmd("VimLeavePre", {
+autocmd("VimLeavePre", {
 	command = "mksession!",
 })
 
@@ -59,5 +62,4 @@ function setup_ghostty_lsp()
 		})
 	end
 end
-
-vim.api.nvim_create_autocmd("BufRead", { pattern = "*", callback = setup_ghostty_lsp })
+autocmd("BufRead", { pattern = "*", callback = setup_ghostty_lsp })
