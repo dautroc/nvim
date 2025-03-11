@@ -60,9 +60,6 @@ vim.api.nvim_create_autocmd("VimResized", {
 	command = "wincmd =",
 })
 
--- Set color scheme
-vim.cmd("colorscheme gruvbox")
-
 -- IWE note taking
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",

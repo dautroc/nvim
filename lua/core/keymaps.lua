@@ -119,10 +119,10 @@ keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Co
 keymap("n", "<leader>mt", function()
 	local is_dark = vim.o.background == "dark"
 	if is_dark then
-		vim.cmd.colorscheme("gruvbox")
+		vim.cmd.colorscheme("gruvbox-material")
 		vim.o.background = "light"
 	else
-		vim.cmd.colorscheme("gruvbox")
+		vim.cmd.colorscheme("gruvbox-material")
 		vim.o.background = "dark"
 	end
 end, { desc = "Toggle theme dark/light" })

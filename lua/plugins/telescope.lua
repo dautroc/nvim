@@ -25,31 +25,31 @@ return {
 	},
 	keys = {
 		-- Vim mappings
-		{ "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
-		{ "<leader>fj", "<cmd>Telescope buffers<CR>", desc = "Buffer jump" },
+		-- { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
+		-- { "<leader>fj", "<cmd>Telescope buffers<CR>", desc = "Buffer jump" },
 
 		-- Find everything
-		{ "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
+		-- { "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		-- { "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
 		-- { "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
-		{ "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
-		{
-			"<leader>fw",
-			"<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>",
-			desc = "Grep string",
-		},
-		{ "<leader>fc", "<cmd>Telescope colorscheme<CR>", desc = "Colorscheme" },
-		{ "<leader><leader>", "<cmd>Telescope smart_open<CR>", desc = "Files" },
-		{ "<leader>ff", "<cmd>Telescope frecency workspace=CWD<CR>", desc = "Frecency" },
-		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
-		{ "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy finder" },
+		-- { "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
+		-- {
+		-- 	"<leader>fw",
+		-- 	"<cmd>lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>",
+		-- 	desc = "Grep string",
+		-- },
+		-- { "<leader>fc", "<cmd>Telescope colorscheme<CR>", desc = "Colorscheme" },
+		-- { "<leader><leader>", "<cmd>Telescope smart_open<CR>", desc = "Files" },
+		-- { "<leader>ff", "<cmd>Telescope frecency workspace=CWD<CR>", desc = "Frecency" },
+		-- { "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Old files" },
+		-- { "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Fuzzy finder" },
 		{ "<leader>fL", "<cmd>Telescope lazy<CR>", desc = "Lazy" },
-		{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
-		{
-			"<leader>fs",
-			"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
-			desc = "Live grep args",
-		},
+		-- { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
+		-- {
+		-- 	"<leader>fs",
+		-- 	"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+		-- 	desc = "Live grep args",
+		-- },
 
 		-- Rails
 		{ "<leader>ra", "<cmd>Telescope find_files cwd=app/api<CR>", desc = "[A]pi" },
