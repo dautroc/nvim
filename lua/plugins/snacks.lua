@@ -173,136 +173,136 @@ return {
 		},
 
 		-- Searching
-		{
-			"<leader><leader>",
-			function()
-				Snacks.picker.smart({
-					filter = { cwd = true },
-				})
-			end,
-			desc = "Smart find files",
-		},
-		{
-			"<leader>:",
-			function()
-				Snacks.picker.command_history()
-			end,
-			desc = "Find command history",
-		}, -- shortcut
-		{
-			"<leader>;",
-			function()
-				Snacks.picker.buffers({
-					filter = { cwd = true },
-				})
-			end,
-			desc = "Find buffers",
-		}, -- shortcut
-		{
-			"<leader>fr",
-			function()
-				Snacks.picker.resume()
-			end,
-			desc = "Resume",
-		},
-		{
-			"<leader>fb",
-			function()
-				Snacks.picker.buffers({
-					filter = { cwd = true },
-				})
-			end,
-			desc = "Buffers",
-		},
-		{
-			"<leader>ff",
-			function()
-				Snacks.picker.files({
-					filter = { cwd = true },
-				})
-			end,
-			desc = "Files",
-		},
-		{
-			"<leader>fz",
-			function()
-				Snacks.picker.lines()
-			end,
-			desc = "Grep lines",
-		},
-		{
-			"<leader>fs",
-			function()
-				Snacks.picker.grep()
-			end,
-			desc = "Grep",
-		},
-		{
-			"<leader>fS",
-			function()
-				Snacks.picker.pick("aerial")
-			end,
-			desc = "Symbols (Aerial)",
-		},
-		{
-			"<leader>fd",
-			function()
-				Snacks.picker.pick("directory")
-			end,
-			desc = "Directory",
-		},
-		{
-			"<leader>fw",
-			function()
-				Snacks.picker.grep_word()
-			end,
-			desc = "Word",
-			mode = { "n", "x" },
-		},
-		{
-			"<leader>fl",
-			function()
-				Snacks.picker.lazy()
-			end,
-			desc = "Lazynvim plugins",
-		},
-		{
-			"<leader>fo",
-			function()
-				Snacks.picker.recent({
-					filter = { cwd = true },
-				})
-			end,
-			desc = "Recent",
-		},
-		{
-			"<leader>fy",
-			function()
-				Snacks.picker.registers()
-			end,
-			desc = "Registers",
-		},
-		{
-			"<leader>fk",
-			function()
-				Snacks.picker.keymaps()
-			end,
-			desc = "Keymaps",
-		},
-		{
-			"<leader>fq",
-			function()
-				Snacks.picker.qflist()
-			end,
-			desc = "Quickfix list",
-		},
-		{
-			"<leader>fc",
-			function()
-				Snacks.picker.colorschemes()
-			end,
-			desc = "Colorschemes",
-		},
+		-- {
+		-- 	"<leader><leader>",
+		-- 	function()
+		-- 		Snacks.picker.smart({
+		-- 			filter = { cwd = true },
+		-- 		})
+		-- 	end,
+		-- 	desc = "Smart find files",
+		-- },
+		-- {
+		-- 	"<leader>:",
+		-- 	function()
+		-- 		Snacks.picker.command_history()
+		-- 	end,
+		-- 	desc = "Find command history",
+		-- }, -- shortcut
+		-- {
+		-- 	"<leader>;",
+		-- 	function()
+		-- 		Snacks.picker.buffers({
+		-- 			filter = { cwd = true },
+		-- 		})
+		-- 	end,
+		-- 	desc = "Find buffers",
+		-- }, -- shortcut
+		-- {
+		-- 	"<leader>fr",
+		-- 	function()
+		-- 		Snacks.picker.resume()
+		-- 	end,
+		-- 	desc = "Resume",
+		-- },
+		-- {
+		-- 	"<leader>fb",
+		-- 	function()
+		-- 		Snacks.picker.buffers({
+		-- 			filter = { cwd = true },
+		-- 		})
+		-- 	end,
+		-- 	desc = "Buffers",
+		-- },
+		-- {
+		-- 	"<leader>ff",
+		-- 	function()
+		-- 		Snacks.picker.files({
+		-- 			filter = { cwd = true },
+		-- 		})
+		-- 	end,
+		-- 	desc = "Files",
+		-- },
+		-- {
+		-- 	"<leader>fz",
+		-- 	function()
+		-- 		Snacks.picker.lines()
+		-- 	end,
+		-- 	desc = "Grep lines",
+		-- },
+		-- {
+		-- 	"<leader>fs",
+		-- 	function()
+		-- 		Snacks.picker.grep()
+		-- 	end,
+		-- 	desc = "Grep",
+		-- },
+		-- {
+		-- 	"<leader>fS",
+		-- 	function()
+		-- 		Snacks.picker.pick("aerial")
+		-- 	end,
+		-- 	desc = "Symbols (Aerial)",
+		-- },
+		-- {
+		-- 	"<leader>fd",
+		-- 	function()
+		-- 		Snacks.picker.pick("directory")
+		-- 	end,
+		-- 	desc = "Directory",
+		-- },
+		-- {
+		-- 	"<leader>fw",
+		-- 	function()
+		-- 		Snacks.picker.grep_word()
+		-- 	end,
+		-- 	desc = "Word",
+		-- 	mode = { "n", "x" },
+		-- },
+		-- {
+		-- 	"<leader>fl",
+		-- 	function()
+		-- 		Snacks.picker.lazy()
+		-- 	end,
+		-- 	desc = "Lazynvim plugins",
+		-- },
+		-- {
+		-- 	"<leader>fo",
+		-- 	function()
+		-- 		Snacks.picker.recent({
+		-- 			filter = { cwd = true },
+		-- 		})
+		-- 	end,
+		-- 	desc = "Recent",
+		-- },
+		-- {
+		-- 	"<leader>fy",
+		-- 	function()
+		-- 		Snacks.picker.registers()
+		-- 	end,
+		-- 	desc = "Registers",
+		-- },
+		-- {
+		-- 	"<leader>fk",
+		-- 	function()
+		-- 		Snacks.picker.keymaps()
+		-- 	end,
+		-- 	desc = "Keymaps",
+		-- },
+		-- {
+		-- 	"<leader>fq",
+		-- 	function()
+		-- 		Snacks.picker.qflist()
+		-- 	end,
+		-- 	desc = "Quickfix list",
+		-- },
+		-- {
+		-- 	"<leader>fc",
+		-- 	function()
+		-- 		Snacks.picker.colorschemes()
+		-- 	end,
+		-- 	desc = "Colorschemes",
+		-- },
 		{
 			"<leader>fC",
 			function()

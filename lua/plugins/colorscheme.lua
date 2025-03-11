@@ -5,18 +5,20 @@ return {
 		priority = 1000,
 		init = function()
 			vim.cmd([[
-				au User LumenLight echom 'catppuccin-latte'
-				au User LumenDark echom 'catppuccin-frappe'
+				au User LumenLight echom 'gruvbox'
+				au User LumenDark echom 'gruvbox'
 			]])
 		end,
 	},
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+		-- priority = 1000,
 	},
 	{
 	  "ellisonleao/gruvbox.nvim",
-	  config = true
+	  config = true,
+		priority = 1000,
 	},
 	{
 		"projekt0n/github-nvim-theme",
@@ -25,6 +27,6 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		priority = 1000,
+		-- priority = 1000,
 	},
 }
