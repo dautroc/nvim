@@ -80,6 +80,12 @@ return {
 				preset = "ivy",
 				cycle = false,
 			},
+			formatters = {
+				file = {
+					filename_first = true,
+					truncate = 100,
+				},
+			},
 			layouts = {
 				ivy = {
 					layout = {
