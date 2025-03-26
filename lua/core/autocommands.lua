@@ -46,9 +46,17 @@ autocmd("FileType", {
 	end,
 })
 
--- Call command mksession! after quit nvim
+-- Call command mksession! after quitting nvim, but only in git repositories
 autocmd("VimLeavePre", {
-	command = "mksession!",
+  callback = function()
+    -- Check if current directory is a git repository root
+    local is_git_root = vim.fn.finddir('.git', '.') == '.git'
+
+    -- Only save session if we're in a git root
+    if is_git_root then
+      vim.cmd('mksession!')
+    end
+  end,
 })
 
 -- Ghostty LSP
