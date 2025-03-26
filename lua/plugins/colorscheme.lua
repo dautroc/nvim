@@ -1,27 +1,39 @@
 return {
-	{
-		"vimpostor/vim-lumen",
-		lazy = false,
-		priority = 1000,
-		init = function()
-			vim.cmd([[
-				au User LumenLight echom 'gruvbox-material'
-				au User LumenDark echom 'gruvbox-material'
-			]])
-		end,
-	},
+	-- {
+	-- 	"vimpostor/vim-lumen",
+	-- 	enabled = false,
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	init = function()
+	-- 		vim.cmd([[
+	-- 			au User LumenLight echom 'gruvbox-material'
+	-- 			au User LumenDark echom 'gruvbox-material'
+	-- 		]])
+	-- 	end,
+	-- },
 	-- {
 	-- 	"catppuccin/nvim",
 	-- 	name = "catppuccin",
 	--  priority = 1000,
 	-- },
+	-- {
+	-- 	"sainnhe/gruvbox-material",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		vim.g.gruvbox_material_enable_italic = true
+	-- 		vim.cmd.colorscheme("gruvbox-material")
+	-- 	end,
+	-- },
 	{
-		"sainnhe/gruvbox-material",
+		"sainnhe/everforest",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.g.gruvbox_material_enable_italic = true
-			vim.cmd.colorscheme("gruvbox-material")
+			-- Optionally configure and load the colorscheme
+			-- directly inside the plugin declaration.
+			vim.g.everforest_enable_italic = true
+			vim.cmd.colorscheme("everforest")
 		end,
 	},
 	-- {
