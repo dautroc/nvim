@@ -74,3 +74,9 @@ vim.diagnostic.config({
 
 -- Tags
 vim.opt.tags = './tags;'
+
+-- Neovide
+vim.g.neovide_input_ime = true
+vim.g.neovide_input_macos_option_key_is_meta = 'both'
+vim.g.neovide_window_blurred = true
+vim.o.guifont = "JetBrainsMono NF" -- text below applies for VimScript

@@ -56,10 +56,11 @@ return {
 	-- },
 
 	-- Zellij
-	-- {
-	--   'https://github.com/fresh2dev/zellij.vim.git',
-	--   lazy = false,
-	-- }
+	{
+	  'https://github.com/fresh2dev/zellij.vim.git',
+	  lazy = false,
+    enabled = false
+	}
   -- {
   --   "https://git.sr.ht/~swaits/zellij-nav.nvim",
   --   lazy = true,
