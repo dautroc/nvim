@@ -11,11 +11,11 @@ return {
 	-- 		]])
 	-- 	end,
 	-- },
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	name = "catppuccin",
-	--  priority = 1000,
-	-- },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+	},
 	-- {
 	-- 	"sainnhe/gruvbox-material",
 	-- 	lazy = false,
@@ -25,17 +25,17 @@ return {
 	-- 		vim.cmd.colorscheme("gruvbox-material")
 	-- 	end,
 	-- },
-	{
-		"sainnhe/everforest",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			-- Optionally configure and load the colorscheme
-			-- directly inside the plugin declaration.
-			vim.g.everforest_enable_italic = true
-			vim.cmd.colorscheme("everforest")
-		end,
-	},
+	-- {
+	-- 	"sainnhe/everforest",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		-- Optionally configure and load the colorscheme
+	-- 		-- directly inside the plugin declaration.
+	-- 		vim.g.everforest_enable_italic = true
+	-- 		vim.cmd.colorscheme("everforest")
+	-- 	end,
+	-- },
 	-- {
 	-- 	"projekt0n/github-nvim-theme",
 	-- 	name = "github-theme",
