@@ -2,70 +2,70 @@ return {
 	"akinsho/toggleterm.nvim",
 	enabled = true,
 	event = "VeryLazy",
-	keys = {
-		{
-			"<C-t>",
-			"<cmd>ToggleTerm<cr>",
-			desc = "ToggleTerm",
-		},
-
-		-- Default term
-		{
-			"<A-v>",
-			"<cmd>lua require('core.functions').create_term('vertical', 'vertical')<cr>",
-			desc = "Term vertical",
-		},
-		{
-			"<A-x>",
-			"<cmd>lua require('core.functions').create_term('horizontal', 'horizontal')<cr>",
-			desc = "Term horizontal",
-		},
-		{
-			"<A-f>",
-			"<cmd>lua require('core.functions').create_term('float', 'float')<cr>",
-			desc = "Term float",
-		},
-
-		-- Custom term with name
-		{
-			"<leader>inv",
-			"<cmd>lua require('core.functions').create_term('vertical')<cr>",
-			desc = "Term vertical",
-		},
-		{
-			"<leader>inx",
-			"<cmd>lua require('core.functions').create_term('horizontal')<cr>",
-			desc = "Term horizontal",
-		},
-		{
-			"<leader>inf",
-			"<cmd>lua require('core.functions').create_term('float')<cr>",
-			desc = "Term float",
-		},
-
-		-- Term actions
-		{
-			"<leader>il",
-			"<cmd>TermSelect<cr>",
-			desc = "Term select",
-		},
-		{
-			"<leader>is",
-			"<cmd>ToggleTermSetName<cr>",
-			desc = "Term set name",
-		},
-		{
-			"<A-k>",
-			"<cmd>ToggleTermSendCurrentLine<cr>",
-			desc = "Term execute",
-		},
-		{
-			"<A-k>",
-			":ToggleTermSendVisualSelection<cr>",
-			desc = "Term execute",
-			mode = "v",
-		},
-	},
+	-- keys = {
+	-- 	{
+	-- 		"<C-t>",
+	-- 		"<cmd>ToggleTerm<cr>",
+	-- 		desc = "ToggleTerm",
+	-- 	},
+	--
+	-- 	-- Default term
+	-- 	{
+	-- 		"<A-v>",
+	-- 		"<cmd>lua require('core.functions').create_term('vertical', 'vertical')<cr>",
+	-- 		desc = "Term vertical",
+	-- 	},
+	-- 	{
+	-- 		"<A-x>",
+	-- 		"<cmd>lua require('core.functions').create_term('horizontal', 'horizontal')<cr>",
+	-- 		desc = "Term horizontal",
+	-- 	},
+	-- 	{
+	-- 		"<A-f>",
+	-- 		"<cmd>lua require('core.functions').create_term('float', 'float')<cr>",
+	-- 		desc = "Term float",
+	-- 	},
+	--
+	-- 	-- Custom term with name
+	-- 	{
+	-- 		"<leader>inv",
+	-- 		"<cmd>lua require('core.functions').create_term('vertical')<cr>",
+	-- 		desc = "Term vertical",
+	-- 	},
+	-- 	{
+	-- 		"<leader>inx",
+	-- 		"<cmd>lua require('core.functions').create_term('horizontal')<cr>",
+	-- 		desc = "Term horizontal",
+	-- 	},
+	-- 	{
+	-- 		"<leader>inf",
+	-- 		"<cmd>lua require('core.functions').create_term('float')<cr>",
+	-- 		desc = "Term float",
+	-- 	},
+	--
+	-- 	-- Term actions
+	-- 	{
+	-- 		"<leader>il",
+	-- 		"<cmd>TermSelect<cr>",
+	-- 		desc = "Term select",
+	-- 	},
+	-- 	{
+	-- 		"<leader>is",
+	-- 		"<cmd>ToggleTermSetName<cr>",
+	-- 		desc = "Term set name",
+	-- 	},
+	-- 	{
+	-- 		"<A-k>",
+	-- 		"<cmd>ToggleTermSendCurrentLine<cr>",
+	-- 		desc = "Term execute",
+	-- 	},
+	-- 	{
+	-- 		"<A-k>",
+	-- 		":ToggleTermSendVisualSelection<cr>",
+	-- 		desc = "Term execute",
+	-- 		mode = "v",
+	-- 	},
+	-- },
 	config = function()
 		require("toggleterm").setup({
 			size = function(term)
