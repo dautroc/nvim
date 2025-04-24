@@ -78,6 +78,7 @@ vim.opt.tags = './tags;'
 -- Neovide
 vim.g.neovide_input_ime = true
 vim.g.neovide_input_macos_option_key_is_meta = 'both'
+vim.g.neovide_macos_simple_fullscreen = true
 vim.g.neovide_window_blurred = true
 vim.o.guifont = "JetBrainsMono NF" -- text below applies for VimScript
 if vim.g.neovide then
@@ -87,6 +88,13 @@ if vim.g.neovide then
   vim.keymap.set('v', '<D-v>', '"+P') -- Paste visual mode
   vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
   vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
+
+  -- Turn off Animation
+  -- vim.g.neovide_cursor_animation_length = 0.00
+  -- vim.g.neovide_cursor_animate_in_insert_mode = false
+  -- vim.g.neovide_cursor_animate_command_line = false
+  -- vim.g.neovide_scroll_animation_far_lines = 0
+  -- vim.g.neovide_scroll_animation_length = 0.00
 end
 
 -- Allow clipboard copy paste in neovim
