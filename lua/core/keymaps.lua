@@ -29,10 +29,10 @@ keymap("n", "Q", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close other buffers
 
 -- Layout
 -- keymap("n", "tl", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
-keymap("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New layout" })
-keymap("n", "<A-n>", "<cmd>tabnext<cr>", { desc = "Next layout" })
-keymap("n", "<A-p>", "<cmd>tabprev<cr>", { desc = "Previous layout" })
-keymap("n", "<A-w>", "<cmd>tabclose<cr>", { desc = "Close layout" })
+-- keymap("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New layout" })
+-- keymap("n", "<A-n>", "<cmd>tabnext<cr>", { desc = "Next layout" })
+-- keymap("n", "<A-p>", "<cmd>tabprev<cr>", { desc = "Previous layout" })
+-- keymap("n", "<A-w>", "<cmd>tabclose<cr>", { desc = "Close layout" })
 
 -- Custom functions
 keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })
@@ -128,7 +128,7 @@ keymap("n", "<leader>mt", function()
 end, { desc = "Toggle theme dark/light" })
 
 -- Window Navigation
-keymap({ "n", "v" }, "<C-h>", "<C-w>h", { desc = "Move to left window" })
-keymap({ "n", "v" }, "<C-j>", "<C-w>j", { desc = "Move to down window" })
-keymap({ "n", "v" }, "<C-k>", "<C-w>k", { desc = "Move to up window" })
-keymap({ "n", "v" }, "<C-l>", "<C-w>l", { desc = "Move to right window" })
+-- keymap({ "n", "v" }, "<C-h>", "<C-w>h", { desc = "Move to left window" })
+-- keymap({ "n", "v" }, "<C-j>", "<C-w>j", { desc = "Move to down window" })
+-- keymap({ "n", "v" }, "<C-k>", "<C-w>k", { desc = "Move to up window" })
+-- keymap({ "n", "v" }, "<C-l>", "<C-w>l", { desc = "Move to right window" })
