@@ -35,6 +35,7 @@ return {
 			{ "<leader>r", group = "rails" },
 			-- { "<leader>s", group = "session" },
 			{ "<leader>t", group = "test" },
+			{ "<leader>td", group = "+test with dap" },
 			{ "<leader>u", group = "utils" },
       -- v for vertical split
       -- w for write buffer

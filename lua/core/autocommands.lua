@@ -48,15 +48,15 @@ autocmd("FileType", {
 
 -- Call command mksession! after quitting nvim, but only in git repositories
 autocmd("VimLeavePre", {
-  callback = function()
-    -- Check if current directory is a git repository root
-    local is_git_root = vim.fn.finddir('.git', '.') == '.git'
+	callback = function()
+		-- Check if current directory is a git repository root
+		local is_git_root = vim.fn.finddir(".git", ".") == ".git"
 
-    -- Only save session if we're in a git root
-    if is_git_root then
-      vim.cmd('mksession!')
-    end
-  end,
+		-- Only save session if we're in a git root
+		if is_git_root then
+			vim.cmd("mksession!")
+		end
+	end,
 })
 
 -- Ghostty LSP
@@ -70,4 +70,19 @@ function setup_ghostty_lsp()
 		})
 	end
 end
+
 autocmd("BufRead", { pattern = "*", callback = setup_ghostty_lsp })
+
+-- Neotest output closing
+local group = vim.api.nvim_create_augroup("NeotestConfig", {})
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "neotest-output",
+	group = group,
+	callback = function(opts)
+		vim.keymap.set("n", "q", function()
+			pcall(vim.api.nvim_win_close, 0, true)
+		end, {
+			buffer = opts.buf,
+		})
+	end,
+})

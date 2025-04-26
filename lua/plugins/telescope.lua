@@ -21,7 +21,7 @@ return {
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-		},hkkk
+		},
 	},
 	keys = {
 		-- Vim mappings
@@ -83,7 +83,7 @@ return {
 				selection_caret = " ",
 				path_display = {
 					filename_first = {
-						reverse_directories = false,
+						reverse_directories = true,
 					},
 				},
 				file_ignore_patterns = file_ignore_patterns,
