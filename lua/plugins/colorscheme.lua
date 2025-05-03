@@ -6,8 +6,8 @@ return {
 		priority = 1000,
 		init = function()
 			vim.cmd([[
-				au User LumenLight echom 'gruvbox-material'
-				au User LumenDark echom 'gruvbox-material'
+				au User LumenLight echom 'everforest'
+				au User LumenDark echom 'everforest'
 			]])
 		end,
 	},
