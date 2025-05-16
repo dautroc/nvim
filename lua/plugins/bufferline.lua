@@ -1,6 +1,6 @@
 return {
 	"akinsho/bufferline.nvim",
-  enabled = false,
+  enabled = true,
 	version = "*",
 	lazy = false,
 	dependencies = "tiagovla/scope.nvim",
@@ -19,21 +19,21 @@ return {
 			-- }),
 		})
 	end,
-	-- keys = {
-	-- 	{
-	-- 		"<A-r>",
-	-- 		function()
-	-- 			Snacks.input.input({
-	-- 				prompt = "Enter tab name: ",
-	-- 			}, function(name)
-	-- 				if name == "" then
-	-- 					print("Name cannot be empty")
-	-- 					return
-	-- 				end
-	--
-	-- 				vim.cmd("BufferLineTabRename " .. name)
-	-- 			end)
-	-- 		end,
-	-- 	},
-	-- },
+	keys = {
+		{
+			"<A-r>",
+			function()
+				Snacks.input.input({
+					prompt = "Enter tab name: ",
+				}, function(name)
+					if name == "" then
+						print("Name cannot be empty")
+						return
+					end
+
+					vim.cmd("BufferLineTabRename " .. name)
+				end)
+			end,
+		},
+	},
 }

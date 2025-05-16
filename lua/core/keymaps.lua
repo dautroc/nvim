@@ -33,10 +33,10 @@ vim.keymap.set("t", "<c-;>", [[<C-\><C-n>]])
 
 -- Layout
 -- keymap("n", "tl", "<cmd>Telescope telescope-tabs list_tabs<cr>", { desc = "List layouts" })
--- keymap("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New layout" })
--- keymap("n", "<A-n>", "<cmd>tabnext<cr>", { desc = "Next layout" })
--- keymap("n", "<A-p>", "<cmd>tabprev<cr>", { desc = "Previous layout" })
--- keymap("n", "<A-w>", "<cmd>tabclose<cr>", { desc = "Close layout" })
+keymap("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New layout" })
+keymap("n", "<A-n>", "<cmd>tabnext<cr>", { desc = "Next layout" })
+keymap("n", "<A-p>", "<cmd>tabprev<cr>", { desc = "Previous layout" })
+keymap("n", "<A-w>", "<cmd>tabclose<cr>", { desc = "Close layout" })
 
 -- Custom functions
 keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })
