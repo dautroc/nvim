@@ -1,14 +1,15 @@
 return {
 	"A7Lavinraj/fyler.nvim",
 	dependencies = { "echasnovski/mini.icons" },
+	enabled = false,
 	branch = "stable",
-  keys = {
-    {
-      "<leader>e",
-      "<cmd>Fyler<cr>",
-      desc = "Open Fyler Explorer",
-    },
-  },
+	keys = {
+		{
+			"<leader>e",
+			"<cmd>Fyler<cr>",
+			desc = "Open Fyler Explorer",
+		},
+	},
 	opts = {
 		-- Allow user to confirm simple edits
 		auto_confirm_simple_edits = false,
@@ -20,7 +21,7 @@ return {
 
 		-- Close open file:
 		-- This enable user to close fyler window on opening a file
-		close_on_select = true,
+		close_on_select = false,
 
 		-- Defines icon provider used by fyler, integrated ones are below:
 		-- - "mini-icons"

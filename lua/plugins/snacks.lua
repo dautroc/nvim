@@ -387,7 +387,7 @@ return {
 
 		-- Explorer
 		{
-			"<leader>fe",
+			"<leader>e",
 			function()
 				Snacks.explorer()
 			end,
