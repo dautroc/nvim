@@ -1,6 +1,7 @@
 return {
 	"nvzone/floaterm",
 	dependencies = "nvzone/volt",
+	enabled = false,
 	opts = {
 		border = false,
 		size = { h = 100, w = 100 },

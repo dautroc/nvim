@@ -17,6 +17,7 @@ vim.g.maplocalleader = ","
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>x", "<C-w>s", { desc = "Split" })
 keymap("n", "<leader>v", "<C-w>v", { desc = "Vsplit" })
+keymap("n", "Q", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close other buffers" })
 keymap("n", "<leader>q", function()
 	if #vim.fn.getbufinfo({ buflisted = 1 }) > 1 then
 		vim.cmd("bd")
@@ -24,7 +25,6 @@ keymap("n", "<leader>q", function()
 		vim.cmd("q")
 	end
 end, { desc = "Close file or quit nvim" })
--- keymap("n", "<leader>q", "<cmd>bd<cr>", { desc = "Delete buffer" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit nvim" })
 keymap("n", "Q", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close other buffers" })
 

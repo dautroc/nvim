@@ -10,13 +10,6 @@ return {
 			options = {
 				themable = true,
 			},
-			-- highlights = require("catppuccin.groups.integrations.bufferline").get({
-			-- 	custom = {
-			-- 		all = {
-			-- 			fill = { bg = "#303446" }, -- Frappe base color
-			-- 		},
-			-- 	},
-			-- }),
 		})
 	end,
 	keys = {
