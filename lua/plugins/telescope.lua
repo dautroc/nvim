@@ -9,6 +9,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-project.nvim",
 		"nvim-telescope/telescope-live-grep-args.nvim",
+		"LukasPietzschmann/telescope-tabs",
 		"AckslD/nvim-neoclip.lua",
 		"debugloop/telescope-undo.nvim",
 		"nvim-telescope/telescope-frecency.nvim",
@@ -31,7 +32,8 @@ return {
 		-- Find everything
 		-- { "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		-- { "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
-		{ "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Projects" },
+		{ "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Find projects" },
+		{ "<leader>ft", "<cmd>Telescope telescope-tabs list_tabs<CR>", desc = "Find tabs" },
 		-- { "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		-- {
 		-- 	"<leader>fw",
@@ -69,6 +71,16 @@ return {
 
 		local lga_actions = require("telescope-live-grep-args.actions")
 		-- local actions = require("telescope.actions")
+    -- Telescope tabs
+		require("telescope-tabs").setup({
+			entry_formatter = function(tab_id, buffer_ids, file_names, file_paths, is_current)
+				local tab_name = require("tabby.feature.tab_name").get(tab_id)
+				return string.format("%d: %s%s", tab_id, tab_name, is_current and " <" or "")
+			end,
+			entry_ordinal = function(tab_id, buffer_ids, file_names, file_paths, is_current)
+				return require("tabby.feature.tab_name").get(tab_id)
+			end,
+		})
 		require("telescope").setup({
 			defaults = {
 				-- Layout config
@@ -204,8 +216,19 @@ return {
 					disable_devicons = false,
 					open_buffer_indicators = { previous = "👀", others = "🙈" },
 				},
-			},
 
+				telescope_tabs = {
+					show_preview = true,
+					show_preview_icon = "",
+					theme = "ivy",
+					mappings = {
+						i = {
+							["<C-j>"] = "move_selection_next",
+							["<C-k>"] = "move_selection_previous",
+						},
+					},
+				},
+			},
 		})
 
 		-- Extensions
@@ -219,6 +242,7 @@ return {
 			"frecency",
 			"lazy",
 			"smart_open",
+			"telescope-tabs",
 		}
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)
