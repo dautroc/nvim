@@ -8,6 +8,7 @@ return {
 		"j-hui/fidget.nvim",
 	},
 	keys = {
+		{ "<A-i>", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Toggle Chat" },
 		{ "<leader>jj", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Toggle Chat" },
 		{ "<leader>jl", "<CMD>CodeCompanionLoad<CR>", desc = "Load saved chat" },
 		{

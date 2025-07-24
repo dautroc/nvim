@@ -164,6 +164,13 @@ return {
 			desc = "Lazygit",
 		},
 		{
+			"<A-g>",
+			function()
+				Snacks.lazygit()
+			end,
+			desc = "Lazygit",
+		},
+		{
 			"<leader>gl",
 			function()
 				Snacks.lazygit.log()
