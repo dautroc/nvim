@@ -4,7 +4,7 @@ local file_ignore_patterns =
 return {
 	"nvim-telescope/telescope.nvim",
 	cmd = { "Telescope" },
-  enabled = true,
+	enabled = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-project.nvim",
@@ -13,11 +13,11 @@ return {
 		"debugloop/telescope-undo.nvim",
 		"nvim-telescope/telescope-frecency.nvim",
 		"tsakirist/telescope-lazy.nvim",
-    {
-      "danielfalk/smart-open.nvim",
-      branch = "0.2.x",
-      dependencies = { "kkharji/sqlite.lua" },
-    },
+		{
+			"danielfalk/smart-open.nvim",
+			branch = "0.2.x",
+			dependencies = { "kkharji/sqlite.lua" },
+		},
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -31,7 +31,7 @@ return {
 		-- Find everything
 		-- { "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		-- { "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
-		-- { "<leader>fp", "<cmd>Telescope project<CR>", desc = "Projects" },
+		{ "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Projects" },
 		-- { "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		-- {
 		-- 	"<leader>fw",
@@ -205,18 +205,20 @@ return {
 					open_buffer_indicators = { previous = "👀", others = "🙈" },
 				},
 			},
+
 		})
 
 		-- Extensions
 		local extensions = {
 			"fzf",
-			"project",
+			-- "project", -- Disabled because it conflicts with the project.nvim plugin
+			"projects",
 			"live_grep_args",
 			"neoclip",
 			"undo",
 			"frecency",
 			"lazy",
-      "smart_open",
+			"smart_open",
 		}
 		for _, ext in ipairs(extensions) do
 			require("telescope").load_extension(ext)

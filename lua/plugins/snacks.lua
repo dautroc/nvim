@@ -323,15 +323,15 @@ return {
 			end,
 			desc = "Config files",
 		},
-		{
-			"<leader>fp",
-			function()
-				Snacks.picker.projects({
-					dev = { "~/workspace" },
-				})
-			end,
-			desc = "Projects",
-		},
+		-- {
+		-- 	"<leader>fp",
+		-- 	function()
+		-- 		Snacks.picker.projects({
+		-- 			dev = { "~/workspace" },
+		-- 		})
+		-- 	end,
+		-- 	desc = "Projects",
+		-- },
 		{
 			"<leader>fn",
 			function()
