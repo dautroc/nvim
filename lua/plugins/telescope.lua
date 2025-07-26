@@ -1,6 +1,43 @@
 local file_ignore_patterns =
 	{ "*.git/*", "node_modules", ".idea", "vendor", ".venv/", ".cache", ".DS_Store", "*/tmp/*" }
 
+local function find_projects_in_new_tab()
+	-- Create new tab
+	vim.cmd("tabnew")
+
+	-- Setup telescope projects with custom action
+	require("telescope").extensions.projects.projects({
+		attach_mappings = function(prompt_bufnr, map)
+			local actions = require("telescope.actions")
+			local action_state = require("telescope.actions.state")
+
+			-- Override the default select action
+			actions.select_default:replace(function()
+				local selection = action_state.get_selected_entry()
+				if selection then
+					-- Close telescope
+					actions.close(prompt_bufnr)
+
+					-- Use the correct fields from telescope-projects
+					local project_path = selection.value
+					local project_name = selection.name
+
+					if project_path then
+						-- Change to project directory
+						vim.cmd("cd " .. vim.fn.fnameescape(project_path))
+						-- Rename tab to project name using Tabby
+						if project_name then
+							vim.cmd("Tabby rename_tab " .. project_name)
+						end
+					end
+				end
+			end)
+
+			return true
+		end,
+	})
+end
+
 return {
 	"nvim-telescope/telescope.nvim",
 	cmd = { "Telescope" },
@@ -32,7 +69,8 @@ return {
 		-- Find everything
 		-- { "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		-- { "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
-		{ "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Find projects" },
+		-- { "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Find projects" },
+		{ "<leader>fp", find_projects_in_new_tab, desc = "Find projects in new tab" },
 		{ "<leader>ft", "<cmd>Telescope telescope-tabs list_tabs<CR>", desc = "Find tabs" },
 		-- { "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		-- {
@@ -71,7 +109,7 @@ return {
 
 		local lga_actions = require("telescope-live-grep-args.actions")
 		-- local actions = require("telescope.actions")
-    -- Telescope tabs
+		-- Telescope tabs
 		require("telescope-tabs").setup({
 			entry_formatter = function(tab_id, buffer_ids, file_names, file_paths, is_current)
 				local tab_name = require("tabby.feature.tab_name").get(tab_id)
