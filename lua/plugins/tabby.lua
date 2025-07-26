@@ -1,5 +1,6 @@
 return {
 	"nanozuki/tabby.nvim",
+	enabled = false,
 	event = "VeryLazy",
 	config = function()
 		local theme = {
@@ -62,7 +63,7 @@ return {
 
 				if project_name and project_name ~= "" then
 					vim.t.tab_name = project_name
-          vim.cmd("Tabby rename_tab " .. project_name)
+					vim.cmd("Tabby rename_tab " .. project_name)
 				end
 			end,
 		},

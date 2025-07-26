@@ -1,6 +1,6 @@
 return {
 	"akinsho/toggleterm.nvim",
-	enabled = true,
+	enabled = false,
 	event = "VeryLazy",
 	keys = {
 		{
@@ -117,11 +117,10 @@ return {
 			-- vim.keymap.set("t", "<C-k>", [[<CMD>ZellijNavigateUp<CR>]], opts)
 			-- vim.keymap.set("t", "<C-l>", [[<CMD>ZellijNavigateRightTab<CR>]], opts)
 
-      vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
-      vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
-      vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
-      vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
-
+			vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
+			vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
+			vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
+			vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
 
 			-- Toggle term
 			vim.keymap.set("t", "<A-v>", [[<CMD>ToggleTerm direction=vertical name=vertical<CR>]], opts)
