@@ -57,16 +57,13 @@ return {
 		{
 			"<A-r>",
 			function()
-				Snacks.input.input({
-					prompt = "Enter tab name: ",
-				}, function(name)
-					if name == "" then
-						print("Name cannot be empty")
-						return
-					end
+				local cwd = vim.fn.getcwd()
+				local project_name = vim.fn.fnamemodify(cwd, ":t")
 
-					vim.cmd("Tabby rename_tab " .. name)
-				end)
+				if project_name and project_name ~= "" then
+					vim.t.tab_name = project_name
+          vim.cmd("Tabby rename_tab " .. project_name)
+				end
 			end,
 		},
 	},
