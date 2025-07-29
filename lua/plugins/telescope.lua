@@ -69,8 +69,8 @@ return {
 		-- Find everything
 		-- { "<leader>fr", "<cmd>Telescope resume<CR>", desc = "Resume" },
 		-- { "<leader>fu", "<cmd>Telescope undo<CR>", desc = "Undo" },
-		-- { "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Find projects" },
-		{ "<leader>fp", find_projects_in_new_tab, desc = "Find projects in new tab" },
+		{ "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Find projects" },
+		-- { "<leader>fp", find_projects_in_new_tab, desc = "Find projects in new tab" },
 		{ "<leader>ft", "<cmd>Telescope telescope-tabs list_tabs<CR>", desc = "Find tabs" },
 		-- { "<leader>fy", "<cmd>Telescope neoclip<CR>", desc = "Yanked text" },
 		-- {
