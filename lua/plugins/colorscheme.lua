@@ -46,6 +46,13 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-	 priority = 1000,
+		priority = 1000,
+	},
+	{
+		"mcauley-penney/techbase.nvim",
+		config = function(_, opts)
+			vim.cmd.colorscheme("techbase")
+		end,
+		priority = 1000,
 	},
 }
