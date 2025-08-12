@@ -1,6 +1,6 @@
 return {
   'rmagatti/auto-session',
-  enabled = false,
+  enabled = true,
   event = "VeryLazy",
   keys = {
     {
