@@ -20,8 +20,7 @@ require("lazy").setup("plugins", {
   },
   install = {
     missing = true,
-    -- colorscheme = { "gruvbox-material" },
-    colorscheme = { "catppuccin-frappe" },
+    colorscheme = { "everforest" },
   },
   ui = {
     size = { width = 0.8, height = 0.8 },
