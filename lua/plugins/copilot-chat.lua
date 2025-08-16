@@ -43,39 +43,39 @@ return {
 		},
 		keys = {
 			{
-				"<leader>ho",
+				"<leader>gc",
 				function()
 					require("CopilotChat").open()
 				end,
 				desc = "Open chat",
 			},
-			{
-				"<leader>hp",
-				function()
-					local actions = require("CopilotChat.actions")
-					require("CopilotChat.integrations.snacks").pick(actions.prompt_actions())
-				end,
-				desc = "Prompt actions",
-			},
-			{
-				"<leader>hs",
-				function()
-					local input = vim.fn.input("Perplexity: ")
-					if input ~= "" then
-						require("CopilotChat").ask(input, {
-							agent = "perplexityai",
-							selection = false,
-						})
-					end
-				end,
-				desc = "Perplexity Search",
-				mode = { "n", "v" },
-			},
-			{
-				"<leader>hm",
-				"<cmd>CopilotChatModels<CR>",
-				desc = "Copilot models",
-			},
+			-- {
+			-- 	"<leader>hp",
+			-- 	function()
+			-- 		local actions = require("CopilotChat.actions")
+			-- 		require("CopilotChat.integrations.snacks").pick(actions.prompt_actions())
+			-- 	end,
+			-- 	desc = "Prompt actions",
+			-- },
+			-- {
+			-- 	"<leader>hs",
+			-- 	function()
+			-- 		local input = vim.fn.input("Perplexity: ")
+			-- 		if input ~= "" then
+			-- 			require("CopilotChat").ask(input, {
+			-- 				agent = "perplexityai",
+			-- 				selection = false,
+			-- 			})
+			-- 		end
+			-- 	end,
+			-- 	desc = "Perplexity Search",
+			-- 	mode = { "n", "v" },
+			-- },
+			-- {
+			-- 	"<leader>hm",
+			-- 	"<cmd>CopilotChatModels<CR>",
+			-- 	desc = "Copilot models",
+			-- },
 		},
 	},
 }
