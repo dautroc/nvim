@@ -25,6 +25,7 @@ keymap("n", "<leader>q", function()
 		vim.cmd("q")
 	end
 end, { desc = "Close file or quit nvim" })
+keymap("n", "Q", "<cmd>only<cr>", { desc = "Close other buffers" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit nvim" })
 
 -- Terminal
