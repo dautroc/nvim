@@ -21,8 +21,9 @@ return {
 	},
 	config = function()
 		require("auto-session").setup({
-			auto_restore_last_session = true,
+			auto_restore_last_session = false,
 			git_use_branch_name = true,
+      cwd_change_handling = true,
 			session_lens = {
 				buftypes_to_ignore = {},
 				load_on_setup = true,

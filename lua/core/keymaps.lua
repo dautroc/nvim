@@ -27,6 +27,7 @@ keymap("n", "<leader>q", function()
 end, { desc = "Close file or quit nvim" })
 keymap("n", "Q", "<cmd>only<cr>", { desc = "Close other buffers" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit nvim" })
+keymap("n", "<C-Esc>", "<cmd>qa<cr>", { desc = "Quit nvim" })
 
 -- Terminal
 vim.keymap.set("t", "<c-;>", [[<C-\><C-n>]])
