@@ -4,7 +4,10 @@ local rails_projections = {
 		type = "controller",
 	},
 	["app/models/*.rb"] = {
-		alternate = "spec/models/{}_spec.rb",
+		alternate = {
+      "spec/models/{}_spec.rb",
+      "app/views/{}/*.html.erb",
+    },
 		type = "model",
 	},
 	["app/views/*/*.html.erb"] = {

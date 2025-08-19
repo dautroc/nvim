@@ -12,7 +12,7 @@ vim.opt.mouse = "a" -- allow the mouse to be used in neovim
 vim.opt.pumheight = 10 -- pop up menu height
 vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
 vim.opt.showtabline = 0 -- always show tabs
-vim.opt.sessionoptions = 'curdir,folds,globals,help,tabpages,terminal,winsize'
+vim.opt.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 vim.opt.smartcase = true -- smart case
 vim.opt.smartindent = true -- make indenting smarter again
 vim.opt.splitbelow = true -- force all horizontal splits to go below current window
@@ -37,7 +37,7 @@ vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would sh
 vim.opt.wrap = false -- display lines as one long line
 vim.opt.scrolloff = 8 -- minimal number of screen lines to keep above and below the cursor
 vim.opt.sidescrolloff = 8 -- minimal number of screen columns to keep to the left and right of the cursor if wrap is `false`
-vim.opt.guifont = "JetBrains Mono" -- the font used in graphical neovim applications
+vim.opt.guifont = "JetBrainsMonoNL Nerd Font Mono" -- the font used in graphical neovim applications
 vim.opt.shortmess:append("c") -- hide all the completion messages, e.g. "-- XXX completion (YYY)", "match 1 of 2", "The only match", "Pattern not found"
 vim.opt.whichwrap:append("<,>,[,],h,l") -- keys allowed to move to the previous/next line when the beginning/end of line is reached
 -- vim.opt.iskeyword:append("-") -- treats words with `-` as single words
@@ -81,7 +81,6 @@ vim.g.neovide_input_ime = true
 vim.g.neovide_input_macos_option_key_is_meta = 'both'
 vim.g.neovide_macos_simple_fullscreen = true
 vim.g.neovide_window_blurred = true
-vim.o.guifont = "JetBrainsMono NF" -- text below applies for VimScript
 if vim.g.neovide then
   vim.keymap.set('n', '<D-s>', ':w<CR>') -- Save
   vim.keymap.set('v', '<D-c>', '"+y') -- Copy

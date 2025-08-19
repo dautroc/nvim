@@ -1,6 +1,6 @@
 return {
 	"akinsho/toggleterm.nvim",
-	enabled = false,
+	enabled = true,
 	event = "VeryLazy",
 	keys = {
 		{
@@ -11,17 +11,17 @@ return {
 
 		-- Default term
 		{
-			"<A-v>",
+			"<leader>iv",
 			"<cmd>lua require('core.functions').create_term('vertical', 'vertical')<cr>",
 			desc = "Term vertical",
 		},
 		{
-			"<A-x>",
+			"<leader>ix",
 			"<cmd>lua require('core.functions').create_term('horizontal', 'horizontal')<cr>",
 			desc = "Term horizontal",
 		},
 		{
-			"<A-f>",
+			"<leader>if",
 			"<cmd>lua require('core.functions').create_term('float', 'float')<cr>",
 			desc = "Term float",
 		},
@@ -55,12 +55,12 @@ return {
 			desc = "Term set name",
 		},
 		{
-			"<A-k>",
+			"<leader>ie",
 			"<cmd>ToggleTermSendCurrentLine<cr>",
 			desc = "Term execute",
 		},
 		{
-			"<A-k>",
+			"<leader>ie",
 			":ToggleTermSendVisualSelection<cr>",
 			desc = "Term execute",
 			mode = "v",

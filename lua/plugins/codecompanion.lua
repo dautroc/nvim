@@ -9,7 +9,15 @@ return {
 	},
 	keys = {
 		{ "<A-i>", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Toggle Chat" },
-		{ "<leader>jj", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Toggle Chat" },
+		-- { "<leader>jj", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Toggle Chat" },
+		{
+			"<leader>jj",
+			function()
+				vim.cmd("CodeCompanionChat Toggle")
+				vim.cmd("wincmd =")
+			end,
+			desc = "Toggle Chat",
+		},
 		{ "<leader>jl", "<CMD>CodeCompanionLoad<CR>", desc = "Load saved chat" },
 		{
 			"<leader>jg",
@@ -25,7 +33,7 @@ return {
 		},
 		{
 			"<leader>js",
-      "<CMD>CodeCompanionSave<CR>",
+			"<CMD>CodeCompanionSave<CR>",
 			desc = "Save chat",
 		},
 
