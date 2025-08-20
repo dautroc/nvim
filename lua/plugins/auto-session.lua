@@ -1,6 +1,6 @@
 return {
 	"rmagatti/auto-session",
-	enabled = true,
+	enabled = false,
 	lazy = false,
 	keys = {
 		{
@@ -23,7 +23,7 @@ return {
 		require("auto-session").setup({
 			auto_restore_last_session = false,
 			git_use_branch_name = true,
-      cwd_change_handling = true,
+			cwd_change_handling = false,
 			session_lens = {
 				buftypes_to_ignore = {},
 				load_on_setup = true,
