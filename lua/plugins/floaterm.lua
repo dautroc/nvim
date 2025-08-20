@@ -5,14 +5,14 @@ return {
 		vim.g.floaterm_shell = vim.o.shell
 		vim.g.floaterm_title = "floaterm: $1/$2"
 		vim.g.floaterm_wintype = "float" -- Changed to float for title visibility
-		vim.g.floaterm_width = 0.8
-		vim.g.floaterm_height = 0.8
-		vim.g.floaterm_position = "center"
+		vim.g.floaterm_width = 0.99
+		vim.g.floaterm_height = 0.3
+		vim.g.floaterm_position = "bottom"
 		vim.g.floaterm_borderchars = "─│─│┌┐┘└"
-		vim.g.floaterm_autoclose = 1
-		vim.g.floaterm_autohide = 1
+		vim.g.floaterm_autoclose = 0
+		vim.g.floaterm_autohide = 0
 		vim.g.floaterm_autoinsert = true
-		vim.g.floaterm_titleposition = "right"
+		vim.g.floaterm_titleposition = "left"
 
 		-- Keymaps (normal mode)
 		vim.keymap.set("n", "<A-n>", ":FloatermNew<CR>", { silent = true, desc = "Floaterm New" })
@@ -27,6 +27,10 @@ return {
 		vim.keymap.set("n", "<A-k>", ":FloatermPrev<CR>", { silent = true, desc = "Floaterm Prev" })
 		vim.keymap.set("n", "<A-j>", ":FloatermNext<CR>", { silent = true, desc = "Floaterm Next" })
 		vim.keymap.set("n", "<A-t>", ":FloatermToggle<CR>", { silent = true, desc = "Floaterm Toggle" })
+		vim.keymap.set("n", "<A-e>", ":FloatermSend<CR>", { silent = true, desc = "Send current line to floaterm" })
+
+		-- Send visual selection to terminal
+		vim.keymap.set("v", "<A-e>", ":FloatermSend<CR>", { silent = true, desc = "Send selection to floaterm" })
 
 		-- Terminal mode keymaps
 		vim.api.nvim_create_autocmd("FileType", {

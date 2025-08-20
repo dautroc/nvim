@@ -68,7 +68,6 @@
     │   ├── tide.lua
     │   ├── tidy.lua
     │   ├── todo-comment.lua
-    │   ├── toggleterm.lua
     │   ├── treesister.lua
     │   ├── trouble.lua
     │   ├── vim-dispatch.lua
