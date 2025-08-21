@@ -15,7 +15,7 @@ vim.g.maplocalleader = ","
 
 -- Quick actions
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
-keymap("n", "<leader>x", "<C-w>s", { desc = "Split" })
+keymap("n", "<leader>s", "<C-w>s", { desc = "Split" })
 keymap("n", "<leader>v", "<C-w>v", { desc = "Vsplit" })
 -- keymap("n", "Q", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close other buffers" })
 -- keymap("n", "<leader>q", function()
@@ -31,13 +31,17 @@ keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit nvim" })
 keymap("n", "<C-Esc>", "<cmd>qa<cr>", { desc = "Quit nvim" })
 
 -- Terminal
-vim.keymap.set("t", "<c-;>", [[<C-\><C-n>]])
+keymap("t", "<c-;>", [[<C-\><C-n>]])
+keymap("t", "<c-h>", [[<C-\><C-n><C-w>h]])
+keymap("t", "<c-j>", [[<C-\><C-n><C-w>j]])
+keymap("t", "<c-k>", [[<C-\><C-n><C-w>k]])
+keymap("t", "<c-l>", [[<C-\><C-n><C-w>l]])
 
 -- Layout
--- keymap("n", "<A-t>", "<cmd>tabnew<cr>", { desc = "New layout" })
--- keymap("n", "<A-n>", "<cmd>tabnext<cr>", { desc = "Next layout" })
--- keymap("n", "<A-p>", "<cmd>tabprev<cr>", { desc = "Previous layout" })
--- keymap("n", "<A-w>", "<cmd>tabclose<cr>", { desc = "Close layout" })
+keymap({ "n", "t" }, "<A-t>", "<cmd>tabnew<cr>", { desc = "New layout" })
+keymap({ "n", "t" }, "<A-n>", "<cmd>tabnext<cr>", { desc = "Next layout" })
+keymap({ "n", "t" }, "<A-p>", "<cmd>tabprev<cr>", { desc = "Previous layout" })
+keymap({ "n", "t" }, "<A-w>", "<cmd>tabclose<cr>", { desc = "Close layout" })
 
 -- Custom functions
 keymap("n", "dd", ":lua require('core.functions').smart_delete()<CR>", { noremap = true, silent = true })
@@ -125,11 +129,11 @@ keymap("n", "<leader>mt", function()
 	local is_dark = vim.o.background == "dark"
 	if is_dark then
 		-- vim.cmd.colorscheme("gruvbox-material")
-		vim.cmd.colorscheme("catppuccin-latte")
+		vim.cmd.colorscheme("gruvbox-material")
 		vim.o.background = "light"
 	else
 		-- vim.cmd.colorscheme("gruvbox-material")
-		vim.cmd.colorscheme("catppuccin-frappe")
+		vim.cmd.colorscheme("gruvbox-material")
 		vim.o.background = "dark"
 	end
 end, { desc = "Toggle theme dark/light" })
