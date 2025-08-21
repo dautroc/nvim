@@ -9,8 +9,8 @@ return {
 		{ "<leader>nf", "<cmd>Tdo files<cr>", desc = "Today's entry" },
 		{ "<leader>ns", "<cmd>Tdo find<cr>", desc = "Seach note" },
 		{ "<leader>nc", "<cmd>Tdo note<cr>", desc = "Create note" },
-		{ "<leader>ni", "<cmd>Tdo notes<cr>", desc = "Incomplete todo" },
-		{ "<leader>nt", "<cmd>Tdo toggle<cr>", desc = "Toggle todo" },
+		{ "<leader>nt", "<cmd>Tdo todos<cr>", desc = "Incomplete todos" },
+		{ "<leader>nx", "<cmd>Tdo toggle<cr>", desc = "Toggle todo" },
 
     -- Navigation
 		{ "<leader>nh", "<cmd>Tdo yesterday<cr>", desc = "Yesterday's note" },
