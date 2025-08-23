@@ -1,5 +1,6 @@
 return {
 	"williamboman/mason.nvim",
+  enabled = false,
 	cmd = "Mason",
 	keys = {
 		{ "<leader>M", "<cmd>Mason<CR>", desc = "Opens Mason" },
@@ -31,5 +32,6 @@ return {
 				automatic_installation = true,
 			},
 		},
+		{ "neovim/nvim-lspconfig" },
 	},
 }

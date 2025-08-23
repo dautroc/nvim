@@ -356,42 +356,42 @@ return {
 		},
 
 		-- Lsp
-		{
-			"gd",
-			function()
-				Snacks.picker.lsp_definitions()
-			end,
-			desc = "Goto definition",
-		},
-		{
-			"gr",
-			function()
-				Snacks.picker.lsp_references()
-			end,
-			nowait = true,
-			desc = "References",
-		},
-		{
-			"gI",
-			function()
-				Snacks.picker.lsp_implementations()
-			end,
-			desc = "Goto implementation",
-		},
-		{
-			"gy",
-			function()
-				Snacks.picker.lsp_type_definitions()
-			end,
-			desc = "Goto type definition",
-		},
-		{
-			"<leader>ls",
-			function()
-				Snacks.picker.lsp_symbols()
-			end,
-			desc = "LSP symbols",
-		},
+		-- {
+		-- 	"gd",
+		-- 	function()
+		-- 		Snacks.picker.lsp_definitions()
+		-- 	end,
+		-- 	desc = "Goto definition",
+		-- },
+		-- {
+		-- 	"gr",
+		-- 	function()
+		-- 		Snacks.picker.lsp_references()
+		-- 	end,
+		-- 	nowait = true,
+		-- 	desc = "References",
+		-- },
+		-- {
+		-- 	"gI",
+		-- 	function()
+		-- 		Snacks.picker.lsp_implementations()
+		-- 	end,
+		-- 	desc = "Goto implementation",
+		-- },
+		-- {
+		-- 	"gy",
+		-- 	function()
+		-- 		Snacks.picker.lsp_type_definitions()
+		-- 	end,
+		-- 	desc = "Goto type definition",
+		-- },
+		-- {
+		-- 	"<leader>ls",
+		-- 	function()
+		-- 		Snacks.picker.lsp_symbols()
+		-- 	end,
+		-- 	desc = "LSP symbols",
+		-- },
 
 		-- Explorer
 		{

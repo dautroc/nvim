@@ -7,44 +7,34 @@ return {
 		{ "L3MON4D3/LuaSnip" }, -- Required
 	},
 	config = function()
-		-- LSP Configuration
 		local lspconfig = require("lspconfig")
 
-		-- Python
 		require("lspconfig").pyright.setup({})
-
-		-- TypeScript
 		require("lspconfig").ts_ls.setup({})
+		require("lspconfig").ruby_lsp.setup({})
+		require("lspconfig").lua_ls.setup({})
+		require("lspconfig").gopls.setup({})
 
 		-- Ruby Fuzzy server
-		local lsp_configurations = require("lspconfig.configs")
-		if not lsp_configurations.fuzzy_ls then
-			lsp_configurations.fuzzy_ls = {
-				default_config = {
-					cmd = { "fuzzy" },
-					filetypes = { "ruby" },
-					root_dir = function(fname)
-						return require("lspconfig.util").find_git_ancestor(fname)
-					end,
-					settings = {},
-					init_options = {
-						allocationType = "ram",
-						indexGems = true,
-						reportDiagnostics = true,
-					},
-				},
-			}
-		end
-		lspconfig.fuzzy_ls.setup({})
-
-		-- Ruby LSP
-		require("lspconfig").ruby_lsp.setup({})
-
-		-- Lua LSP
-		require("lspconfig").lua_ls.setup({})
-
-		-- Go LSP
-		require("lspconfig").gopls.setup({})
+		-- local lsp_configurations = require("lspconfig.configs")
+		-- if not lsp_configurations.fuzzy_ls then
+		-- 	lsp_configurations.fuzzy_ls = {
+		-- 		default_config = {
+		-- 			cmd = { "fuzzy" },
+		-- 			filetypes = { "ruby" },
+		-- 			root_dir = function(fname)
+		-- 				return require("lspconfig.util").find_git_ancestor(fname)
+		-- 			end,
+		-- 			settings = {},
+		-- 			init_options = {
+		-- 				allocationType = "ram",
+		-- 				indexGems = true,
+		-- 				reportDiagnostics = true,
+		-- 			},
+		-- 		},
+		-- 	}
+		-- end
+		-- lspconfig.fuzzy_ls.setup({})
 
 		-- LSP-Zero Configuration
 		local lsp_zero = require("lsp-zero")
