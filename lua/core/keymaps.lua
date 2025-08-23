@@ -18,7 +18,7 @@ keymap("n", "<C-Esc>", "<cmd>qa<cr>", { desc = "Quit nvim" })
 
 -- Terminal
 keymap("t", "<c-;>", [[<C-\><C-n>]])
-keymap("t", "<a-x>", [[<C-\><C-n>]<C-d>])
+keymap("t", "<a-x>", [[<C-\><C-n>]<C-d>]])
 keymap("t", "<c-h>", [[<C-\><C-n><C-w>h]])
 keymap("t", "<c-j>", [[<C-\><C-n><C-w>j]])
 keymap("t", "<c-k>", [[<C-\><C-n><C-w>k]])
