@@ -7,24 +7,10 @@ local opts = { silent = true }
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
--- Magic mode search
--- Dynamically add "\v" to enable very magic mode for all the useful commands;
--- "substitute", "global" and "vimgrep".
--- keymap("n", "/", [[/\v]], { noremap = true })
--- keymap("n", "?", [[?\v]], { noremap = true })
-
 -- Quick actions
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
 keymap("n", "<leader>s", "<C-w>s", { desc = "Split" })
 keymap("n", "<leader>v", "<C-w>v", { desc = "Vsplit" })
--- keymap("n", "Q", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close other buffers" })
--- keymap("n", "<leader>q", function()
--- 	if #vim.fn.getbufinfo({ buflisted = 1 }) > 1 then
--- 		vim.cmd("bd")
--- 	else
--- 		vim.cmd("q")
--- 	end
--- end, { desc = "Close file or quit nvim" })
 keymap("n", "q", "<cmd>q<cr>", { desc = "Close buffer" })
 keymap("n", "Q", "<cmd>only<cr>", { desc = "Close other buffers" })
 keymap("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit nvim" })
@@ -68,19 +54,8 @@ keymap("n", "<leader>cc", "<cmd>cclose<cr>")
 keymap("n", "<leader>ma", "==", { desc = "Auto identation" })
 keymap("v", "<leader>ma", "==", { desc = "Auto identation" })
 
--- Better move around
--- keymap("n", "<C-d>", "<C-d>zz")
--- keymap("n", "<C-u>", "<C-u>zz")
--- keymap("n", "<C-o>", "<C-o>zz")
--- keymap("n", "<C-i>", "<C-i>zz")
 keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
-
--- Resize
--- keymap("n", "<down>", ":resize +2<cr>")
--- keymap("n", "<up>", ":resize -2<cr>")
--- keymap("n", "<right>", ":vertical resize +2<cr>")
--- keymap("n", "<left>", ":vertical resize -2<cr>")
 
 -- Go mode
 keymap({ "n", "v" }, "gh", "^", { desc = "Move to line start", silent = true })
@@ -121,10 +96,6 @@ keymap("i", " ", " <C-g>u", opts)
 keymap("x", "<", "<gv", opts)
 keymap("x", ">", ">gv", opts)
 
--- LSP
-keymap("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
-keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code action" })
-
 -- Toggle theme
 keymap("n", "<leader>mt", function()
 	local is_dark = vim.o.background == "dark"
@@ -138,9 +109,3 @@ keymap("n", "<leader>mt", function()
 		vim.o.background = "dark"
 	end
 end, { desc = "Toggle theme dark/light" })
-
--- Window Navigation
--- keymap({ "n", "v" }, "<C-h>", "<C-w>h", { desc = "Move to left window" })
--- keymap({ "n", "v" }, "<C-j>", "<C-w>j", { desc = "Move to down window" })
--- keymap({ "n", "v" }, "<C-k>", "<C-w>k", { desc = "Move to up window" })
--- keymap({ "n", "v" }, "<C-l>", "<C-w>l", { desc = "Move to right window" })
