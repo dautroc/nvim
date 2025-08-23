@@ -52,26 +52,52 @@ function setup_ghostty_lsp()
 end
 autocmd("BufRead", { pattern = "*", callback = setup_ghostty_lsp })
 
--- LSP Keymaps
-local on_lsp_attach = function(client, bufnr)
-  local opts = {buffer = bufnr}
-
-  -- Example keymaps:
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts) -- Go to definition
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts) -- Go to declaration
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts) -- Find references
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts) -- Go to implementation
-  vim.keymap.set('n', 'go', vim.lsp.buf.document_symbol, opts) -- Go to symbol in document
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts) -- Show hover documentation
-  vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, opts) -- Rename symbol
-  vim.keymap.set('n', '<leader>lh', vim.lsp.buf.signature_help, opts) -- Signature help
-  vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, opts) -- Code actions
-  vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, opts) -- Format document
-  vim.keymap.set('n', '<leader>lq', vim.diagnostic.set_loclist, opts) -- Populate quickfix list with diagnostics
-  -- Add more keymaps as needed
-end
-
-vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('user_lsp_attach', {clear = true}),
-  callback = on_lsp_attach,
-})
+-- -- LSP Keymaps
+-- local on_lsp_attach = function(client, bufnr)
+--   -- Guard against nil client
+--   if not client then
+--     vim.notify("LSP client is nil in on_attach callback", vim.log.levels.WARN)
+--     return
+--   end
+--
+--   local opts = {buffer = bufnr}
+--
+--   -- Navigation keymaps
+--   map('n', 'gd', vim.lsp.buf.definition, opts) -- Go to definition
+--   map('n', 'gD', vim.lsp.buf.declaration, opts) -- Go to declaration
+--   map('n', 'gr', vim.lsp.buf.references, opts) -- Find references
+--   map('n', 'gi', vim.lsp.buf.implementation, opts) -- Go to implementation
+--   map('n', 'gt', vim.lsp.buf.type_definition, opts) -- Go to type definition
+--
+--   -- Documentation
+--   map('n', 'K', vim.lsp.buf.hover, opts) -- Show hover documentation
+--   map('n', '<leader>lh', vim.lsp.buf.signature_help, opts) -- Signature help
+--
+--   -- Code actions
+--   map('n', '<leader>la', vim.lsp.buf.code_action, opts) -- Code actions
+--   map('n', '<leader>lr', vim.lsp.buf.rename, opts) -- Rename symbol
+--
+--   -- Formatting (only if server supports it)
+--   if client.server_capabilities and client.server_capabilities.documentFormattingProvider then
+--     map('n', '<leader>lf', vim.lsp.buf.format, opts) -- Format document
+--   end
+--
+--   -- Diagnostics
+--   map('n', '<leader>ld', vim.diagnostic.open_float, opts) -- Show diagnostic popup
+--   map('n', '[d', vim.diagnostic.goto_prev, opts) -- Previous diagnostic
+--   map('n', ']d', vim.diagnostic.goto_next, opts) -- Next diagnostic
+--   map('n', '<leader>lq', vim.diagnostic.setloclist, opts) -- Populate location list with diagnostics
+--
+--   -- Workspace symbols (better than document symbols for most cases)
+--   map('n', '<leader>ls', vim.lsp.buf.workspace_symbol, opts) -- Search workspace symbols
+--
+--   -- Document symbols (alternative mapping)
+--   map('n', '<leader>lo', vim.lsp.buf.document_symbol, opts) -- Document outline/symbols
+--
+--   -- Inlay hints toggle (if supported)
+--   if client.server_capabilities and client.server_capabilities.inlayHintProvider then
+--     map('n', '<leader>lI', function()
+--       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+--     end, opts)
+--   end
+-- end
