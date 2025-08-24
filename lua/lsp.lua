@@ -243,8 +243,7 @@ end, {
   desc = "Get all the lsp logs",
 })
 
-vim.api.nvim_create_user_command("LspInfo", function()
-  vim.cmd("silent checkhealth vim.lsp")
+vim.api.nvim_create_user_command("LspInfo", function() vFm.cmd("silent checkhealth vim.lsp")
 end, {
   desc = "Get all the information about all LSP attached",
 })
