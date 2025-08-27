@@ -22,6 +22,13 @@ local server_configs = {
     cmd = { "gopls" },
     filetypes = { "go", "gomod", "gowork", "gotmpl" },
   },
+  copilot = {
+    settings = {
+      telemetry = {
+        telemetryLelvel = "off",
+      },
+    },
+  }
 }
 
 for server_name, config in pairs(server_configs) do

@@ -35,10 +35,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
 
     -- -- nightly has inbuilt completions, this can replace all completion plugins
-    -- if client:supports_method("textDocument/completion", bufnr) then
-    --   -- Enable auto-completion
-    --   vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
-    -- end
+    if client:supports_method("textDocument/completion", bufnr) then
+      -- Enable auto-completion
+      vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
+    end
 
     --- Disable semantic tokens
     ---@diagnostic disable-next-line need-check-nil
