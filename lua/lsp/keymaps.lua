@@ -61,7 +61,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opt("Get the definition in a float"))
     keymap("n", "gi", function() lsp.buf.implementation({ border = "single" })  end, opt("Go to implementation"))
     keymap("n", "gr", lsp.buf.references, opt("Show References"))
-    keymap("n", "gl", vim.diagnostic.open_float, opt("Open diagnostic in float"))
+    keymap("n", "gL", vim.diagnostic.open_float, opt("Open diagnostic in float"))
     keymap("n", "<C-k>", lsp.buf.signature_help, opts)
     -- disable the default binding first before using a custom one
     pcall(vim.keymap.del, "n", "K", { buffer = ev.buf })
