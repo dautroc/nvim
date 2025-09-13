@@ -7,6 +7,7 @@ capabilities.textDocument.foldingRange = {
   lineFoldingOnly = true,
 }
 
+capabilities.textDocument.onTypeFormatting = { dynamicRegistration = false }
 capabilities.textDocument.semanticTokens.multilineTokenSupport = true
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
