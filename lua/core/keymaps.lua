@@ -9,7 +9,7 @@ vim.g.maplocalleader = ","
 
 -- Quick actions
 keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
-keymap("n", "<leader>s", "<C-w>s", { desc = "Split" })
+keymap("n", "<leader>x", "<C-w>s", { desc = "Split" })
 keymap("n", "<leader>v", "<C-w>v", { desc = "Vsplit" })
 keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Close buffer" })
 keymap("n", "Q", "<cmd>only<cr>", { desc = "Close other buffers" })

@@ -33,16 +33,9 @@ return {
 			nerd_font_variant = "mono",
 		},
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer", "lazydev" },
+			default = { "lsp", "path", "snippets", "buffer" },
 			per_filetype = {
 				codecompanion = { "codecompanion" },
-			},
-			providers = {
-				lazydev = {
-					name = "LazyDev",
-					module = "lazydev.integrations.blink",
-					score_offset = 100,
-				},
 			},
 		},
 	},
