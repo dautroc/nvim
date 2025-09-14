@@ -6,10 +6,11 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
     "j-hui/fidget.nvim",
+    "ravitemer/codecompanion-history.nvim",
   },
   keys = {
     { "<A-i>",      "<cmd>CodeCompanionChat Toggle<cr>", desc = "Toggle Chat" },
-    { "<leader>jl", "<CMD>CodeCompanionLoad<CR>",        desc = "Load saved chat" },
+    { "<leader>jl", "<CMD>CodeCompanionHistory<CR>",     desc = "Load saved chat" },
     {
       "<leader>jg",
       function()
@@ -21,11 +22,6 @@ return {
         end)
       end,
       desc = "Generate command",
-    },
-    {
-      "<leader>js",
-      "<CMD>CodeCompanionSave<CR>",
-      desc = "Save chat",
     },
 
     -- Visual
@@ -99,6 +95,10 @@ return {
           },
         },
       },
+      extensions = {
+        history = require("plugins.codecompanion.extensions.history"),
+        vectorcode = require("plugins.codecompanion.extensions.vectorcode"),
+      },
     })
 
     vim.api.nvim_create_autocmd("User", {
@@ -117,6 +117,5 @@ return {
   end,
   init = function()
     require("plugins.codecompanion.fidget-spinner"):init()
-    require("plugins.codecompanion.chat-history"):init()
   end,
 }
