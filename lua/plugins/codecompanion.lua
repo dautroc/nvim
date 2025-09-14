@@ -21,7 +21,7 @@ return {
           vim.cmd("CodeCompanionCmd " .. value)
         end)
       end,
-      desc = "Generate command",
+      desc = "Generate vim command",
     },
 
     -- Visual
@@ -98,6 +98,7 @@ return {
       extensions = {
         history = require("plugins.codecompanion.extensions.history"),
         vectorcode = require("plugins.codecompanion.extensions.vectorcode"),
+        mcphub = require("plugins.codecompanion.extensions.mcphub"),
       },
     })
 
