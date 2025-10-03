@@ -36,14 +36,14 @@ return {
       desc = "Sidekick Toggle CLI",
       mode = { "n", "v" },
     },
-    -- {
-    --   "<leader>ic",
-    --   function()
-    --     require("sidekick.cli").toggle({ name = "claude", focus = true })
-    --   end,
-    --   desc = "Sidekick Claude Toggle",
-    --   mode = { "n", "v" },
-    -- },
+    {
+      "<leader>ia",
+      function()
+        require("sidekick.cli").toggle({ name = "claude", focus = true })
+      end,
+      desc = "Sidekick Claude Toggle",
+      mode = { "n", "v" },
+    },
     {
       "<leader>ig",
       function()
