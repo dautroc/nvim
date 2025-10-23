@@ -6,6 +6,11 @@ return {
         backend = "zellij",
         enabled = true,
       },
+      tools = {
+        kilocode = {
+          cmd = { "kilocode" },
+        },
+      }
     },
   },
   keys = {
@@ -33,31 +38,7 @@ return {
       function()
         require("sidekick.cli").toggle({ focus = true })
       end,
-      desc = "Sidekick Toggle CLI",
-      mode = { "n", "v" },
-    },
-    {
-      "<leader>ia",
-      function()
-        require("sidekick.cli").toggle({ name = "claude", focus = true })
-      end,
-      desc = "Sidekick Claude Toggle",
-      mode = { "n", "v" },
-    },
-    {
-      "<leader>ig",
-      function()
-        require("sidekick.cli").toggle({ name = "gemini", focus = true })
-      end,
-      desc = "Sidekick Gemini Toggle",
-      mode = { "n", "v" },
-    },
-    {
-      "<leader>ic",
-      function()
-        require("sidekick.cli").toggle({ name = "copilot", focus = true })
-      end,
-      desc = "Sidekick Copilot Toggle",
+      desc = "Toggle CLI",
       mode = { "n", "v" },
     },
     {
@@ -65,8 +46,35 @@ return {
       function()
         require("sidekick.cli").select_prompt()
       end,
-      desc = "Sidekick Ask Prompt",
+      desc = "Prompt",
       mode = { "n", "v" },
+    },
+    {
+      "<leader>iv",
+      function() require("sidekick.cli").send({ msg = "{selection}" }) end,
+      mode = { "x" },
+      desc = "Send Visual Selection",
+    },
+    {
+      "<leader>is",
+      function() require("sidekick.cli").select() end,
+      desc = "Select CLI",
+    },
+    {
+      "<leader>id",
+      function() require("sidekick.cli").close() end,
+      desc = "Detach a CLI Session",
+    },
+    {
+      "<leader>it",
+      function() require("sidekick.cli").send({ msg = "{this}" }) end,
+      mode = { "x", "n" },
+      desc = "Send This",
+    },
+    {
+      "<leader>if",
+      function() require("sidekick.cli").send({ msg = "{file}" }) end,
+      desc = "Send File",
     },
   },
 }
