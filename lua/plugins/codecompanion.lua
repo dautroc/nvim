@@ -9,8 +9,8 @@ return {
     "ravitemer/codecompanion-history.nvim",
   },
   keys = {
-    { "<A-i>",      "<cmd>CodeCompanionChat Toggle<cr>", desc = "Toggle Chat" },
-    { "<leader>jl", "<CMD>CodeCompanionHistory<CR>",     desc = "Load saved chat" },
+    { "<A-i>",      "<cmd>CodeCompanionChat Toggle<cr>", desc = "Toggle Chat", mode = { "n", "i", "t"} },
+    { "<leader>jh", "<CMD>CodeCompanionHistory<CR>",     desc = "History" },
     {
       "<leader>jg",
       function()
@@ -21,26 +21,13 @@ return {
           vim.cmd("CodeCompanionCmd " .. value)
         end)
       end,
-      desc = "Generate vim command",
+      desc = "Generate Command",
     },
 
     -- Visual
-    {
-      "<leader>jj",
-      function()
-        Snacks.input.input({ prompt = "Ask with selected code" }, function(value)
-          if value == nil then
-            return
-          end
-          vim.cmd("CodeCompanion /buffer " .. value)
-        end)
-      end,
-      desc = "Ask with selected code",
-      mode = { "v" },
-    },
-    { "<leader>je", "<CMD>CodeCompanion /explain<CR>", desc = "Explain selected code",  mode = { "v" } },
-    { "<leader>ja", "<CMD>CodeCompanionActions<CR>",   desc = "Code Companion Actions", mode = { "n", "v" } },
-    { "<leader>js", "<CMD>CodeCompanionChat Add<CR>",  desc = "Add selection to chat",  mode = { "v" } },
+    { "<leader>je", "<CMD>CodeCompanion /explain<CR>", desc = "Explain Code",   mode = { "v" } },
+    { "<leader>ja", "<CMD>CodeCompanionActions<CR>",   desc = "Select Actions", mode = { "n", "v" } },
+    { "<leader>js", "<CMD>CodeCompanionChat Add<CR>",  desc = "Send to Chat",   mode = { "v" } },
   },
   config = function()
     require("codecompanion").setup({
@@ -54,6 +41,20 @@ return {
         },
       },
       strategies = {
+        inline = {
+          adater = "copilot",
+          keymaps = {
+            accept_change = {
+              modes = { n = "ga" },
+              description = "Accept the suggested change",
+            },
+            reject_change = {
+              modes = { n = "gr" },
+              opts = { nowait = true },
+              description = "Reject the suggested change",
+            },
+          },
+        },
         chat = {
           adapter = "copilot",
           roles = {
@@ -69,17 +70,16 @@ return {
             ["symbols"] = { opts = { provider = "snacks" } },
           },
         },
-        inline = { adapter = "copilot" },
         agent = { adapter = "copilot" },
       },
       display = {
         action_palette = { provider = "snacks" },
         chat = {
           intro_message = "Press ? for options",
-          show_header_separator = false, -- Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
+          show_header_separator = true, -- Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
           separator = "─", -- The separator between the different messages in the chat buffer
           show_references = true, -- Show references (from slash commands and variables) in the chat buffer?
-          show_settings = false, -- Show LLM settings at the top of the chat buffer?
+          show_settings = true, -- Show LLM settings at the top of the chat buffer?
           show_token_count = true, -- Show the token count for each response?
           start_in_insert_mode = false, -- Open the chat buffer in insert mode?
           icons = {
@@ -88,10 +88,10 @@ return {
           },
           diff = {
             enabled = true,
-            close_chat_at = 240,  -- Close an open chat buffer if the total columns of your display are less than...
-            layout = "vertical",  -- vertical|horizontal split for default provider
+            close_chat_at = 240,    -- Close an open chat buffer if the total columns of your display are less than...
+            layout = "vertical",    -- vertical|horizontal split for default provider
             opts = { "internal", "filler", "closeoff", "algorithm:patience", "followwrap", "linematch:120" },
-            provider = "default", -- default|mini_diff
+            provider = "mini_diff", -- default|mini_diff
           },
         },
       },
