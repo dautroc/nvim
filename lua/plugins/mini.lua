@@ -7,7 +7,7 @@ return {
 	version = false,
 	lazy = false,
 	config = function()
-		-- require("mini.diff").setup()
+		require("mini.diff").setup()
 		require("mini.splitjoin").setup()
 		require("mini.icons").setup()
 		require("mini.sessions").setup()
